@@ -1,0 +1,30 @@
+- name: aws-groundstation-cancel-contact
+  pattern: (?i)aws\s+cancel\-contact\b
+  severity: block
+  message: CancelContact — destructive operation
+  category: cloud
+- name: aws-groundstation-delete-config
+  pattern: (?i)aws\s+delete\-config\b
+  severity: block
+  message: DeleteConfig — destructive operation
+  category: cloud
+- name: aws-groundstation-delete-dataflow-endpoint-group
+  pattern: (?i)aws\s+delete\-dataflow\-endpoint\-group\b
+  severity: block
+  message: DeleteDataflowEndpointGroup — destructive operation
+  category: cloud
+- name: aws-groundstation-delete-ephemeris
+  pattern: (?i)aws\s+delete\-ephemeris\b
+  severity: block
+  message: DeleteEphemeris — destructive operation
+  category: cloud
+- name: aws-groundstation-delete-mission-profile
+  pattern: (?i)aws\s+delete\-mission\-profile\b
+  severity: block
+  message: DeleteMissionProfile — destructive operation
+  category: cloud
+- name: aws-groundstation-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

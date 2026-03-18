@@ -1,0 +1,75 @@
+- name: aws-chime-sdk-voice-batch-delete-phone-number
+  pattern: (?i)aws\s+batch\-delete\-phone\-number\b
+  severity: warn
+  message: BatchDeletePhoneNumber — destructive operation
+  category: cloud
+- name: aws-chime-sdk-voice-delete-phone-number
+  pattern: (?i)aws\s+delete\-phone\-number\b
+  severity: block
+  message: DeletePhoneNumber — destructive operation
+  category: cloud
+- name: aws-chime-sdk-voice-delete-proxy-session
+  pattern: (?i)aws\s+delete\-proxy\-session\b
+  severity: block
+  message: DeleteProxySession — destructive operation
+  category: cloud
+- name: aws-chime-sdk-voice-delete-sip-media-application
+  pattern: (?i)aws\s+delete\-sip\-media\-application\b
+  severity: block
+  message: DeleteSipMediaApplication — destructive operation
+  category: cloud
+- name: aws-chime-sdk-voice-delete-sip-rule
+  pattern: (?i)aws\s+delete\-sip\-rule\b
+  severity: warn
+  message: DeleteSipRule — destructive operation
+  category: cloud
+- name: aws-chime-sdk-voice-delete-voice-connector
+  pattern: (?i)aws\s+delete\-voice\-connector\b
+  severity: block
+  message: DeleteVoiceConnector — destructive operation
+  category: cloud
+- name: aws-chime-sdk-voice-delete-voice-connector-emergency-calling-configuration
+  pattern: (?i)aws\s+delete\-voice\-connector\-emergency\-calling\-configuration\b
+  severity: block
+  message: DeleteVoiceConnectorEmergencyCallingConfiguration — destructive operation
+  category: cloud
+- name: aws-chime-sdk-voice-delete-voice-connector-group
+  pattern: (?i)aws\s+delete\-voice\-connector\-group\b
+  severity: block
+  message: DeleteVoiceConnectorGroup — destructive operation
+  category: cloud
+- name: aws-chime-sdk-voice-delete-voice-connector-origination
+  pattern: (?i)aws\s+delete\-voice\-connector\-origination\b
+  severity: block
+  message: DeleteVoiceConnectorOrigination — destructive operation
+  category: cloud
+- name: aws-chime-sdk-voice-delete-voice-connector-proxy
+  pattern: (?i)aws\s+delete\-voice\-connector\-proxy\b
+  severity: block
+  message: DeleteVoiceConnectorProxy — destructive operation
+  category: cloud
+- name: aws-chime-sdk-voice-delete-voice-connector-streaming-configuration
+  pattern: (?i)aws\s+delete\-voice\-connector\-streaming\-configuration\b
+  severity: block
+  message: DeleteVoiceConnectorStreamingConfiguration — destructive operation
+  category: cloud
+- name: aws-chime-sdk-voice-delete-voice-connector-termination
+  pattern: (?i)aws\s+delete\-voice\-connector\-termination\b
+  severity: block
+  message: DeleteVoiceConnectorTermination — destructive operation
+  category: cloud
+- name: aws-chime-sdk-voice-delete-voice-connector-termination-credentials
+  pattern: (?i)aws\s+delete\-voice\-connector\-termination\-credentials\b
+  severity: block
+  message: DeleteVoiceConnectorTerminationCredentials — destructive operation
+  category: cloud
+- name: aws-chime-sdk-voice-disassociate-phone-numbers-from-voice-connector
+  pattern: (?i)aws\s+disassociate\-phone\-numbers\-from\-voice\-connector\b
+  severity: warn
+  message: DisassociatePhoneNumbersFromVoiceConnector — destructive operation
+  category: cloud
+- name: aws-chime-sdk-voice-disassociate-phone-numbers-from-voice-connector-group
+  pattern: (?i)aws\s+disassociate\-phone\-numbers\-from\-voice\-connector\-group\b
+  severity: block
+  message: DisassociatePhoneNumbersFromVoiceConnectorGroup — destructive operation
+  category: cloud

@@ -1,0 +1,30 @@
+- name: aws-worklink-delete-fleet
+  pattern: (?i)aws\s+delete\-fleet\b
+  severity: warn
+  message: DeleteFleet — destructive operation
+  category: cloud
+- name: aws-worklink-disassociate-domain
+  pattern: (?i)aws\s+disassociate\-domain\b
+  severity: warn
+  message: DisassociateDomain — destructive operation
+  category: cloud
+- name: aws-worklink-disassociate-website-authorization-provider
+  pattern: (?i)aws\s+disassociate\-website\-authorization\-provider\b
+  severity: block
+  message: DisassociateWebsiteAuthorizationProvider — destructive operation
+  category: cloud
+- name: aws-worklink-disassociate-website-certificate-authority
+  pattern: (?i)aws\s+disassociate\-website\-certificate\-authority\b
+  severity: block
+  message: DisassociateWebsiteCertificateAuthority — destructive operation
+  category: cloud
+- name: aws-worklink-revoke-domain-access
+  pattern: (?i)aws\s+revoke\-domain\-access\b
+  severity: warn
+  message: RevokeDomainAccess — destructive operation
+  category: cloud
+- name: aws-worklink-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

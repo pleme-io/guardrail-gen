@@ -1,0 +1,20 @@
+- name: aws-iotthingsgraph-delete-flow-template
+  pattern: (?i)aws\s+delete\-flow\-template\b
+  severity: warn
+  message: DeleteFlowTemplate — destructive operation
+  category: cloud
+- name: aws-iotthingsgraph-delete-namespace
+  pattern: (?i)aws\s+delete\-namespace\b
+  severity: block
+  message: DeleteNamespace — destructive operation
+  category: cloud
+- name: aws-iotthingsgraph-delete-system-instance
+  pattern: (?i)aws\s+delete\-system\-instance\b
+  severity: block
+  message: DeleteSystemInstance — destructive operation
+  category: cloud
+- name: aws-iotthingsgraph-delete-system-template
+  pattern: (?i)aws\s+delete\-system\-template\b
+  severity: warn
+  message: DeleteSystemTemplate — destructive operation
+  category: cloud

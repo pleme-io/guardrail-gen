@@ -1,0 +1,10 @@
+- name: aws-rbin-delete-rule
+  pattern: (?i)aws\s+delete\-rule\b
+  severity: warn
+  message: DeleteRule — destructive operation
+  category: cloud
+- name: aws-rbin-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

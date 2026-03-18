@@ -1,0 +1,40 @@
+- name: aws-globalaccelerator-delete-accelerator
+  pattern: (?i)aws\s+delete\-accelerator\b
+  severity: warn
+  message: DeleteAccelerator — destructive operation
+  category: cloud
+- name: aws-globalaccelerator-delete-custom-routing-accelerator
+  pattern: (?i)aws\s+delete\-custom\-routing\-accelerator\b
+  severity: warn
+  message: DeleteCustomRoutingAccelerator — destructive operation
+  category: cloud
+- name: aws-globalaccelerator-delete-custom-routing-endpoint-group
+  pattern: (?i)aws\s+delete\-custom\-routing\-endpoint\-group\b
+  severity: block
+  message: DeleteCustomRoutingEndpointGroup — destructive operation
+  category: cloud
+- name: aws-globalaccelerator-delete-custom-routing-listener
+  pattern: (?i)aws\s+delete\-custom\-routing\-listener\b
+  severity: warn
+  message: DeleteCustomRoutingListener — destructive operation
+  category: cloud
+- name: aws-globalaccelerator-delete-endpoint-group
+  pattern: (?i)aws\s+delete\-endpoint\-group\b
+  severity: block
+  message: DeleteEndpointGroup — destructive operation
+  category: cloud
+- name: aws-globalaccelerator-delete-listener
+  pattern: (?i)aws\s+delete\-listener\b
+  severity: warn
+  message: DeleteListener — destructive operation
+  category: cloud
+- name: aws-globalaccelerator-remove-custom-routing-endpoints
+  pattern: (?i)aws\s+remove\-custom\-routing\-endpoints\b
+  severity: warn
+  message: RemoveCustomRoutingEndpoints — destructive operation
+  category: cloud
+- name: aws-globalaccelerator-remove-endpoints
+  pattern: (?i)aws\s+remove\-endpoints\b
+  severity: warn
+  message: RemoveEndpoints — destructive operation
+  category: cloud

@@ -1,0 +1,15 @@
+- name: aws-support-app-delete-account-alias
+  pattern: (?i)aws\s+delete\-account\-alias\b
+  severity: block
+  message: DeleteAccountAlias — destructive operation
+  category: cloud
+- name: aws-support-app-delete-slack-channel-configuration
+  pattern: (?i)aws\s+delete\-slack\-channel\-configuration\b
+  severity: warn
+  message: DeleteSlackChannelConfiguration — destructive operation
+  category: cloud
+- name: aws-support-app-delete-slack-workspace-configuration
+  pattern: (?i)aws\s+delete\-slack\-workspace\-configuration\b
+  severity: warn
+  message: DeleteSlackWorkspaceConfiguration — destructive operation
+  category: cloud

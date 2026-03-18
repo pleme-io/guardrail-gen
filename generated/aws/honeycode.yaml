@@ -1,0 +1,10 @@
+- name: aws-honeycode-batch-delete-table-rows
+  pattern: (?i)aws\s+batch\-delete\-table\-rows\b
+  severity: warn
+  message: BatchDeleteTableRows — destructive operation
+  category: cloud
+- name: aws-honeycode-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

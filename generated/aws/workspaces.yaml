@@ -1,0 +1,60 @@
+- name: aws-workspaces-delete-client-branding
+  pattern: (?i)aws\s+delete\-client\-branding\b
+  severity: warn
+  message: DeleteClientBranding — destructive operation
+  category: cloud
+- name: aws-workspaces-delete-connect-client-add-in
+  pattern: (?i)aws\s+delete\-connect\-client\-add\-in\b
+  severity: warn
+  message: DeleteConnectClientAddIn — destructive operation
+  category: cloud
+- name: aws-workspaces-delete-connection-alias
+  pattern: (?i)aws\s+delete\-connection\-alias\b
+  severity: warn
+  message: DeleteConnectionAlias — destructive operation
+  category: cloud
+- name: aws-workspaces-delete-ip-group
+  pattern: (?i)aws\s+delete\-ip\-group\b
+  severity: block
+  message: DeleteIpGroup — destructive operation
+  category: cloud
+- name: aws-workspaces-delete-tags
+  pattern: (?i)aws\s+delete\-tags\b
+  severity: warn
+  message: DeleteTags — destructive operation
+  category: cloud
+- name: aws-workspaces-delete-workspace-bundle
+  pattern: (?i)aws\s+delete\-workspace\-bundle\b
+  severity: warn
+  message: DeleteWorkspaceBundle — destructive operation
+  category: cloud
+- name: aws-workspaces-delete-workspace-image
+  pattern: (?i)aws\s+delete\-workspace\-image\b
+  severity: warn
+  message: DeleteWorkspaceImage — destructive operation
+  category: cloud
+- name: aws-workspaces-deregister-workspace-directory
+  pattern: (?i)aws\s+deregister\-workspace\-directory\b
+  severity: warn
+  message: DeregisterWorkspaceDirectory — destructive operation
+  category: cloud
+- name: aws-workspaces-disassociate-connection-alias
+  pattern: (?i)aws\s+disassociate\-connection\-alias\b
+  severity: warn
+  message: DisassociateConnectionAlias — destructive operation
+  category: cloud
+- name: aws-workspaces-disassociate-ip-groups
+  pattern: (?i)aws\s+disassociate\-ip\-groups\b
+  severity: block
+  message: DisassociateIpGroups — destructive operation
+  category: cloud
+- name: aws-workspaces-revoke-ip-rules
+  pattern: (?i)aws\s+revoke\-ip\-rules\b
+  severity: warn
+  message: RevokeIpRules — destructive operation
+  category: cloud
+- name: aws-workspaces-terminate-workspaces
+  pattern: (?i)aws\s+terminate\-workspaces\b
+  severity: warn
+  message: TerminateWorkspaces — destructive operation
+  category: cloud

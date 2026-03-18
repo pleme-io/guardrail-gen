@@ -1,0 +1,10 @@
+- name: aws-service-quotas-delete-service-quota-increase-request-from-template
+  pattern: (?i)aws\s+delete\-service\-quota\-increase\-request\-from\-template\b
+  severity: warn
+  message: DeleteServiceQuotaIncreaseRequestFromTemplate — destructive operation
+  category: cloud
+- name: aws-service-quotas-disassociate-service-quota-template
+  pattern: (?i)aws\s+disassociate\-service\-quota\-template\b
+  severity: warn
+  message: DisassociateServiceQuotaTemplate — destructive operation
+  category: cloud

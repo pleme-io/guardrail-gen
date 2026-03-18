@@ -1,0 +1,15 @@
+- name: aws-swf-request-cancel-workflow-execution
+  pattern: (?i)aws\s+request\-cancel\-workflow\-execution\b
+  severity: warn
+  message: RequestCancelWorkflowExecution — destructive operation
+  category: cloud
+- name: aws-swf-respond-activity-task-canceled
+  pattern: (?i)aws\s+respond\-activity\-task\-canceled\b
+  severity: warn
+  message: RespondActivityTaskCanceled — destructive operation
+  category: cloud
+- name: aws-swf-terminate-workflow-execution
+  pattern: (?i)aws\s+terminate\-workflow\-execution\b
+  severity: warn
+  message: TerminateWorkflowExecution — destructive operation
+  category: cloud

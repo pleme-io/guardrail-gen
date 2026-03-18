@@ -1,0 +1,40 @@
+- name: aws-opensearch-cancel-service-software-update
+  pattern: (?i)aws\s+cancel\-service\-software\-update\b
+  severity: warn
+  message: CancelServiceSoftwareUpdate — destructive operation
+  category: cloud
+- name: aws-opensearch-delete-domain
+  pattern: (?i)aws\s+delete\-domain\b
+  severity: block
+  message: DeleteDomain — destructive operation
+  category: cloud
+- name: aws-opensearch-delete-inbound-connection
+  pattern: (?i)aws\s+delete\-inbound\-connection\b
+  severity: block
+  message: DeleteInboundConnection — destructive operation
+  category: cloud
+- name: aws-opensearch-delete-outbound-connection
+  pattern: (?i)aws\s+delete\-outbound\-connection\b
+  severity: block
+  message: DeleteOutboundConnection — destructive operation
+  category: cloud
+- name: aws-opensearch-delete-package
+  pattern: (?i)aws\s+delete\-package\b
+  severity: block
+  message: DeletePackage — destructive operation
+  category: cloud
+- name: aws-opensearch-delete-vpc-endpoint
+  pattern: (?i)aws\s+delete\-vpc\-endpoint\b
+  severity: block
+  message: DeleteVpcEndpoint — destructive operation
+  category: cloud
+- name: aws-opensearch-remove-tags
+  pattern: (?i)aws\s+remove\-tags\b
+  severity: warn
+  message: RemoveTags — destructive operation
+  category: cloud
+- name: aws-opensearch-revoke-vpc-endpoint-access
+  pattern: (?i)aws\s+revoke\-vpc\-endpoint\-access\b
+  severity: warn
+  message: RevokeVpcEndpointAccess — destructive operation
+  category: cloud

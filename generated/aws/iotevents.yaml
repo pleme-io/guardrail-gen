@@ -1,0 +1,20 @@
+- name: aws-iotevents-delete-alarm-model
+  pattern: (?i)aws\s+delete\-alarm\-model\b
+  severity: warn
+  message: DeleteAlarmModel — destructive operation
+  category: cloud
+- name: aws-iotevents-delete-detector-model
+  pattern: (?i)aws\s+delete\-detector\-model\b
+  severity: block
+  message: DeleteDetectorModel — destructive operation
+  category: cloud
+- name: aws-iotevents-delete-input
+  pattern: (?i)aws\s+delete\-input\b
+  severity: block
+  message: DeleteInput — destructive operation
+  category: cloud
+- name: aws-iotevents-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

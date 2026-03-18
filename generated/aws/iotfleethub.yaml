@@ -1,0 +1,10 @@
+- name: aws-iotfleethub-delete-application
+  pattern: (?i)aws\s+delete\-application\b
+  severity: block
+  message: DeleteApplication — destructive operation
+  category: cloud
+- name: aws-iotfleethub-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

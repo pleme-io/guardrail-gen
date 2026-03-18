@@ -1,0 +1,30 @@
+- name: aws-codeartifact-delete-domain
+  pattern: (?i)aws\s+delete\-domain\b
+  severity: block
+  message: DeleteDomain — destructive operation
+  category: cloud
+- name: aws-codeartifact-delete-domain-permissions-policy
+  pattern: (?i)aws\s+delete\-domain\-permissions\-policy\b
+  severity: block
+  message: DeleteDomainPermissionsPolicy — destructive operation
+  category: cloud
+- name: aws-codeartifact-delete-package-versions
+  pattern: (?i)aws\s+delete\-package\-versions\b
+  severity: warn
+  message: DeletePackageVersions — destructive operation
+  category: cloud
+- name: aws-codeartifact-delete-repository
+  pattern: (?i)aws\s+delete\-repository\b
+  severity: block
+  message: DeleteRepository — destructive operation
+  category: cloud
+- name: aws-codeartifact-delete-repository-permissions-policy
+  pattern: (?i)aws\s+delete\-repository\-permissions\-policy\b
+  severity: block
+  message: DeleteRepositoryPermissionsPolicy — destructive operation
+  category: cloud
+- name: aws-codeartifact-disassociate-external-connection
+  pattern: (?i)aws\s+disassociate\-external\-connection\b
+  severity: block
+  message: DisassociateExternalConnection — destructive operation
+  category: cloud

@@ -1,0 +1,15 @@
+- name: aws-identitystore-delete-group
+  pattern: (?i)aws\s+delete\-group\b
+  severity: block
+  message: DeleteGroup — destructive operation
+  category: cloud
+- name: aws-identitystore-delete-group-membership
+  pattern: (?i)aws\s+delete\-group\-membership\b
+  severity: block
+  message: DeleteGroupMembership — destructive operation
+  category: cloud
+- name: aws-identitystore-delete-user
+  pattern: (?i)aws\s+delete\-user\b
+  severity: warn
+  message: DeleteUser — destructive operation
+  category: cloud

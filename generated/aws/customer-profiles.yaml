@@ -1,0 +1,40 @@
+- name: aws-customer-profiles-delete-domain
+  pattern: (?i)aws\s+delete\-domain\b
+  severity: block
+  message: DeleteDomain — destructive operation
+  category: cloud
+- name: aws-customer-profiles-delete-integration
+  pattern: (?i)aws\s+delete\-integration\b
+  severity: warn
+  message: DeleteIntegration — destructive operation
+  category: cloud
+- name: aws-customer-profiles-delete-profile
+  pattern: (?i)aws\s+delete\-profile\b
+  severity: warn
+  message: DeleteProfile — destructive operation
+  category: cloud
+- name: aws-customer-profiles-delete-profile-key
+  pattern: (?i)aws\s+delete\-profile\-key\b
+  severity: block
+  message: DeleteProfileKey — destructive operation
+  category: cloud
+- name: aws-customer-profiles-delete-profile-object
+  pattern: (?i)aws\s+delete\-profile\-object\b
+  severity: warn
+  message: DeleteProfileObject — destructive operation
+  category: cloud
+- name: aws-customer-profiles-delete-profile-object-type
+  pattern: (?i)aws\s+delete\-profile\-object\-type\b
+  severity: block
+  message: DeleteProfileObjectType — destructive operation
+  category: cloud
+- name: aws-customer-profiles-delete-workflow
+  pattern: (?i)aws\s+delete\-workflow\b
+  severity: block
+  message: DeleteWorkflow — destructive operation
+  category: cloud
+- name: aws-customer-profiles-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

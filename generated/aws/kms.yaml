@@ -1,0 +1,35 @@
+- name: aws-kms-cancel-key-deletion
+  pattern: (?i)aws\s+cancel\-key\-deletion\b
+  severity: block
+  message: CancelKeyDeletion — destructive operation
+  category: cloud
+- name: aws-kms-delete-alias
+  pattern: (?i)aws\s+delete\-alias\b
+  severity: warn
+  message: DeleteAlias — destructive operation
+  category: cloud
+- name: aws-kms-delete-custom-key-store
+  pattern: (?i)aws\s+delete\-custom\-key\-store\b
+  severity: block
+  message: DeleteCustomKeyStore — destructive operation
+  category: cloud
+- name: aws-kms-delete-imported-key-material
+  pattern: (?i)aws\s+delete\-imported\-key\-material\b
+  severity: block
+  message: DeleteImportedKeyMaterial — destructive operation
+  category: cloud
+- name: aws-kms-disable-key
+  pattern: (?i)aws\s+disable\-key\b
+  severity: block
+  message: DisableKey — destructive operation
+  category: cloud
+- name: aws-kms-disable-key-rotation
+  pattern: (?i)aws\s+disable\-key\-rotation\b
+  severity: block
+  message: DisableKeyRotation — destructive operation
+  category: cloud
+- name: aws-kms-revoke-grant
+  pattern: (?i)aws\s+revoke\-grant\b
+  severity: warn
+  message: RevokeGrant — destructive operation
+  category: cloud

@@ -1,0 +1,15 @@
+- name: aws-ce-delete-anomaly-monitor
+  pattern: (?i)aws\s+delete\-anomaly\-monitor\b
+  severity: warn
+  message: DeleteAnomalyMonitor — destructive operation
+  category: cloud
+- name: aws-ce-delete-anomaly-subscription
+  pattern: (?i)aws\s+delete\-anomaly\-subscription\b
+  severity: warn
+  message: DeleteAnomalySubscription — destructive operation
+  category: cloud
+- name: aws-ce-delete-cost-category-definition
+  pattern: (?i)aws\s+delete\-cost\-category\-definition\b
+  severity: warn
+  message: DeleteCostCategoryDefinition — destructive operation
+  category: cloud

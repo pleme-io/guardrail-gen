@@ -1,0 +1,5 @@
+- name: aws-runtime.lex-delete-session
+  pattern: (?i)aws\s+delete\-session\b
+  severity: block
+  message: DeleteSession — destructive operation
+  category: cloud

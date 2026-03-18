@@ -1,0 +1,15 @@
+- name: aws-scheduler-delete-schedule
+  pattern: (?i)aws\s+delete\-schedule\b
+  severity: block
+  message: DeleteSchedule — destructive operation
+  category: cloud
+- name: aws-scheduler-delete-schedule-group
+  pattern: (?i)aws\s+delete\-schedule\-group\b
+  severity: block
+  message: DeleteScheduleGroup — destructive operation
+  category: cloud
+- name: aws-scheduler-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

@@ -1,0 +1,655 @@
+- name: aws-ec2-cancel-bundle-task
+  pattern: (?i)aws\s+cancel\-bundle\-task\b
+  severity: warn
+  message: CancelBundleTask — destructive operation
+  category: cloud
+- name: aws-ec2-cancel-capacity-reservation
+  pattern: (?i)aws\s+cancel\-capacity\-reservation\b
+  severity: warn
+  message: CancelCapacityReservation — destructive operation
+  category: cloud
+- name: aws-ec2-cancel-capacity-reservation-fleets
+  pattern: (?i)aws\s+cancel\-capacity\-reservation\-fleets\b
+  severity: warn
+  message: CancelCapacityReservationFleets — destructive operation
+  category: cloud
+- name: aws-ec2-cancel-conversion-task
+  pattern: (?i)aws\s+cancel\-conversion\-task\b
+  severity: warn
+  message: CancelConversionTask — destructive operation
+  category: cloud
+- name: aws-ec2-cancel-export-task
+  pattern: (?i)aws\s+cancel\-export\-task\b
+  severity: warn
+  message: CancelExportTask — destructive operation
+  category: cloud
+- name: aws-ec2-cancel-image-launch-permission
+  pattern: (?i)aws\s+cancel\-image\-launch\-permission\b
+  severity: warn
+  message: CancelImageLaunchPermission — destructive operation
+  category: cloud
+- name: aws-ec2-cancel-import-task
+  pattern: (?i)aws\s+cancel\-import\-task\b
+  severity: warn
+  message: CancelImportTask — destructive operation
+  category: cloud
+- name: aws-ec2-cancel-reserved-instances-listing
+  pattern: (?i)aws\s+cancel\-reserved\-instances\-listing\b
+  severity: block
+  message: CancelReservedInstancesListing — destructive operation
+  category: cloud
+- name: aws-ec2-cancel-spot-fleet-requests
+  pattern: (?i)aws\s+cancel\-spot\-fleet\-requests\b
+  severity: warn
+  message: CancelSpotFleetRequests — destructive operation
+  category: cloud
+- name: aws-ec2-cancel-spot-instance-requests
+  pattern: (?i)aws\s+cancel\-spot\-instance\-requests\b
+  severity: block
+  message: CancelSpotInstanceRequests — destructive operation
+  category: cloud
+- name: aws-ec2-delete-carrier-gateway
+  pattern: (?i)aws\s+delete\-carrier\-gateway\b
+  severity: block
+  message: DeleteCarrierGateway — destructive operation
+  category: cloud
+- name: aws-ec2-delete-client-vpn-endpoint
+  pattern: (?i)aws\s+delete\-client\-vpn\-endpoint\b
+  severity: warn
+  message: DeleteClientVpnEndpoint — destructive operation
+  category: cloud
+- name: aws-ec2-delete-client-vpn-route
+  pattern: (?i)aws\s+delete\-client\-vpn\-route\b
+  severity: warn
+  message: DeleteClientVpnRoute — destructive operation
+  category: cloud
+- name: aws-ec2-delete-coip-cidr
+  pattern: (?i)aws\s+delete\-coip\-cidr\b
+  severity: warn
+  message: DeleteCoipCidr — destructive operation
+  category: cloud
+- name: aws-ec2-delete-coip-pool
+  pattern: (?i)aws\s+delete\-coip\-pool\b
+  severity: warn
+  message: DeleteCoipPool — destructive operation
+  category: cloud
+- name: aws-ec2-delete-customer-gateway
+  pattern: (?i)aws\s+delete\-customer\-gateway\b
+  severity: block
+  message: DeleteCustomerGateway — destructive operation
+  category: cloud
+- name: aws-ec2-delete-dhcp-options
+  pattern: (?i)aws\s+delete\-dhcp\-options\b
+  severity: warn
+  message: DeleteDhcpOptions — destructive operation
+  category: cloud
+- name: aws-ec2-delete-egress-only-internet-gateway
+  pattern: (?i)aws\s+delete\-egress\-only\-internet\-gateway\b
+  severity: block
+  message: DeleteEgressOnlyInternetGateway — destructive operation
+  category: cloud
+- name: aws-ec2-delete-fleets
+  pattern: (?i)aws\s+delete\-fleets\b
+  severity: warn
+  message: DeleteFleets — destructive operation
+  category: cloud
+- name: aws-ec2-delete-flow-logs
+  pattern: (?i)aws\s+delete\-flow\-logs\b
+  severity: warn
+  message: DeleteFlowLogs — destructive operation
+  category: cloud
+- name: aws-ec2-delete-fpga-image
+  pattern: (?i)aws\s+delete\-fpga\-image\b
+  severity: warn
+  message: DeleteFpgaImage — destructive operation
+  category: cloud
+- name: aws-ec2-delete-instance-event-window
+  pattern: (?i)aws\s+delete\-instance\-event\-window\b
+  severity: block
+  message: DeleteInstanceEventWindow — destructive operation
+  category: cloud
+- name: aws-ec2-delete-internet-gateway
+  pattern: (?i)aws\s+delete\-internet\-gateway\b
+  severity: block
+  message: DeleteInternetGateway — destructive operation
+  category: cloud
+- name: aws-ec2-delete-ipam
+  pattern: (?i)aws\s+delete\-ipam\b
+  severity: warn
+  message: DeleteIpam — destructive operation
+  category: cloud
+- name: aws-ec2-delete-ipam-pool
+  pattern: (?i)aws\s+delete\-ipam\-pool\b
+  severity: warn
+  message: DeleteIpamPool — destructive operation
+  category: cloud
+- name: aws-ec2-delete-ipam-scope
+  pattern: (?i)aws\s+delete\-ipam\-scope\b
+  severity: warn
+  message: DeleteIpamScope — destructive operation
+  category: cloud
+- name: aws-ec2-delete-key-pair
+  pattern: (?i)aws\s+delete\-key\-pair\b
+  severity: block
+  message: DeleteKeyPair — destructive operation
+  category: cloud
+- name: aws-ec2-delete-launch-template
+  pattern: (?i)aws\s+delete\-launch\-template\b
+  severity: warn
+  message: DeleteLaunchTemplate — destructive operation
+  category: cloud
+- name: aws-ec2-delete-launch-template-versions
+  pattern: (?i)aws\s+delete\-launch\-template\-versions\b
+  severity: warn
+  message: DeleteLaunchTemplateVersions — destructive operation
+  category: cloud
+- name: aws-ec2-delete-local-gateway-route
+  pattern: (?i)aws\s+delete\-local\-gateway\-route\b
+  severity: block
+  message: DeleteLocalGatewayRoute — destructive operation
+  category: cloud
+- name: aws-ec2-delete-local-gateway-route-table
+  pattern: (?i)aws\s+delete\-local\-gateway\-route\-table\b
+  severity: block
+  message: DeleteLocalGatewayRouteTable — destructive operation
+  category: cloud
+- name: aws-ec2-delete-local-gateway-route-table-virtual-interface-group-association
+  pattern: (?i)aws\s+delete\-local\-gateway\-route\-table\-virtual\-interface\-group\-association\b
+  severity: block
+  message: DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation — destructive operation
+  category: cloud
+- name: aws-ec2-delete-local-gateway-route-table-vpc-association
+  pattern: (?i)aws\s+delete\-local\-gateway\-route\-table\-vpc\-association\b
+  severity: block
+  message: DeleteLocalGatewayRouteTableVpcAssociation — destructive operation
+  category: cloud
+- name: aws-ec2-delete-managed-prefix-list
+  pattern: (?i)aws\s+delete\-managed\-prefix\-list\b
+  severity: warn
+  message: DeleteManagedPrefixList — destructive operation
+  category: cloud
+- name: aws-ec2-delete-nat-gateway
+  pattern: (?i)aws\s+delete\-nat\-gateway\b
+  severity: block
+  message: DeleteNatGateway — destructive operation
+  category: cloud
+- name: aws-ec2-delete-network-acl
+  pattern: (?i)aws\s+delete\-network\-acl\b
+  severity: warn
+  message: DeleteNetworkAcl — destructive operation
+  category: cloud
+- name: aws-ec2-delete-network-acl-entry
+  pattern: (?i)aws\s+delete\-network\-acl\-entry\b
+  severity: warn
+  message: DeleteNetworkAclEntry — destructive operation
+  category: cloud
+- name: aws-ec2-delete-network-insights-access-scope
+  pattern: (?i)aws\s+delete\-network\-insights\-access\-scope\b
+  severity: warn
+  message: DeleteNetworkInsightsAccessScope — destructive operation
+  category: cloud
+- name: aws-ec2-delete-network-insights-access-scope-analysis
+  pattern: (?i)aws\s+delete\-network\-insights\-access\-scope\-analysis\b
+  severity: warn
+  message: DeleteNetworkInsightsAccessScopeAnalysis — destructive operation
+  category: cloud
+- name: aws-ec2-delete-network-insights-analysis
+  pattern: (?i)aws\s+delete\-network\-insights\-analysis\b
+  severity: warn
+  message: DeleteNetworkInsightsAnalysis — destructive operation
+  category: cloud
+- name: aws-ec2-delete-network-insights-path
+  pattern: (?i)aws\s+delete\-network\-insights\-path\b
+  severity: warn
+  message: DeleteNetworkInsightsPath — destructive operation
+  category: cloud
+- name: aws-ec2-delete-network-interface
+  pattern: (?i)aws\s+delete\-network\-interface\b
+  severity: warn
+  message: DeleteNetworkInterface — destructive operation
+  category: cloud
+- name: aws-ec2-delete-network-interface-permission
+  pattern: (?i)aws\s+delete\-network\-interface\-permission\b
+  severity: warn
+  message: DeleteNetworkInterfacePermission — destructive operation
+  category: cloud
+- name: aws-ec2-delete-placement-group
+  pattern: (?i)aws\s+delete\-placement\-group\b
+  severity: block
+  message: DeletePlacementGroup — destructive operation
+  category: cloud
+- name: aws-ec2-delete-public-ipv4-pool
+  pattern: (?i)aws\s+delete\-public\-ipv4\-pool\b
+  severity: warn
+  message: DeletePublicIpv4Pool — destructive operation
+  category: cloud
+- name: aws-ec2-delete-queued-reserved-instances
+  pattern: (?i)aws\s+delete\-queued\-reserved\-instances\b
+  severity: block
+  message: DeleteQueuedReservedInstances — destructive operation
+  category: cloud
+- name: aws-ec2-delete-route
+  pattern: (?i)aws\s+delete\-route\b
+  severity: warn
+  message: DeleteRoute — destructive operation
+  category: cloud
+- name: aws-ec2-delete-route-table
+  pattern: (?i)aws\s+delete\-route\-table\b
+  severity: warn
+  message: DeleteRouteTable — destructive operation
+  category: cloud
+- name: aws-ec2-delete-security-group
+  pattern: (?i)aws\s+delete\-security\-group\b
+  severity: block
+  message: DeleteSecurityGroup — destructive operation
+  category: cloud
+- name: aws-ec2-delete-snapshot
+  pattern: (?i)aws\s+delete\-snapshot\b
+  severity: warn
+  message: DeleteSnapshot — destructive operation
+  category: cloud
+- name: aws-ec2-delete-spot-datafeed-subscription
+  pattern: (?i)aws\s+delete\-spot\-datafeed\-subscription\b
+  severity: warn
+  message: DeleteSpotDatafeedSubscription — destructive operation
+  category: cloud
+- name: aws-ec2-delete-subnet
+  pattern: (?i)aws\s+delete\-subnet\b
+  severity: warn
+  message: DeleteSubnet — destructive operation
+  category: cloud
+- name: aws-ec2-delete-subnet-cidr-reservation
+  pattern: (?i)aws\s+delete\-subnet\-cidr\-reservation\b
+  severity: warn
+  message: DeleteSubnetCidrReservation — destructive operation
+  category: cloud
+- name: aws-ec2-delete-tags
+  pattern: (?i)aws\s+delete\-tags\b
+  severity: warn
+  message: DeleteTags — destructive operation
+  category: cloud
+- name: aws-ec2-delete-traffic-mirror-filter
+  pattern: (?i)aws\s+delete\-traffic\-mirror\-filter\b
+  severity: warn
+  message: DeleteTrafficMirrorFilter — destructive operation
+  category: cloud
+- name: aws-ec2-delete-traffic-mirror-filter-rule
+  pattern: (?i)aws\s+delete\-traffic\-mirror\-filter\-rule\b
+  severity: warn
+  message: DeleteTrafficMirrorFilterRule — destructive operation
+  category: cloud
+- name: aws-ec2-delete-traffic-mirror-session
+  pattern: (?i)aws\s+delete\-traffic\-mirror\-session\b
+  severity: warn
+  message: DeleteTrafficMirrorSession — destructive operation
+  category: cloud
+- name: aws-ec2-delete-traffic-mirror-target
+  pattern: (?i)aws\s+delete\-traffic\-mirror\-target\b
+  severity: block
+  message: DeleteTrafficMirrorTarget — destructive operation
+  category: cloud
+- name: aws-ec2-delete-transit-gateway
+  pattern: (?i)aws\s+delete\-transit\-gateway\b
+  severity: block
+  message: DeleteTransitGateway — destructive operation
+  category: cloud
+- name: aws-ec2-delete-transit-gateway-connect
+  pattern: (?i)aws\s+delete\-transit\-gateway\-connect\b
+  severity: block
+  message: DeleteTransitGatewayConnect — destructive operation
+  category: cloud
+- name: aws-ec2-delete-transit-gateway-connect-peer
+  pattern: (?i)aws\s+delete\-transit\-gateway\-connect\-peer\b
+  severity: block
+  message: DeleteTransitGatewayConnectPeer — destructive operation
+  category: cloud
+- name: aws-ec2-delete-transit-gateway-multicast-domain
+  pattern: (?i)aws\s+delete\-transit\-gateway\-multicast\-domain\b
+  severity: block
+  message: DeleteTransitGatewayMulticastDomain — destructive operation
+  category: cloud
+- name: aws-ec2-delete-transit-gateway-peering-attachment
+  pattern: (?i)aws\s+delete\-transit\-gateway\-peering\-attachment\b
+  severity: block
+  message: DeleteTransitGatewayPeeringAttachment — destructive operation
+  category: cloud
+- name: aws-ec2-delete-transit-gateway-policy-table
+  pattern: (?i)aws\s+delete\-transit\-gateway\-policy\-table\b
+  severity: block
+  message: DeleteTransitGatewayPolicyTable — destructive operation
+  category: cloud
+- name: aws-ec2-delete-transit-gateway-prefix-list-reference
+  pattern: (?i)aws\s+delete\-transit\-gateway\-prefix\-list\-reference\b
+  severity: block
+  message: DeleteTransitGatewayPrefixListReference — destructive operation
+  category: cloud
+- name: aws-ec2-delete-transit-gateway-route
+  pattern: (?i)aws\s+delete\-transit\-gateway\-route\b
+  severity: block
+  message: DeleteTransitGatewayRoute — destructive operation
+  category: cloud
+- name: aws-ec2-delete-transit-gateway-route-table
+  pattern: (?i)aws\s+delete\-transit\-gateway\-route\-table\b
+  severity: block
+  message: DeleteTransitGatewayRouteTable — destructive operation
+  category: cloud
+- name: aws-ec2-delete-transit-gateway-route-table-announcement
+  pattern: (?i)aws\s+delete\-transit\-gateway\-route\-table\-announcement\b
+  severity: block
+  message: DeleteTransitGatewayRouteTableAnnouncement — destructive operation
+  category: cloud
+- name: aws-ec2-delete-transit-gateway-vpc-attachment
+  pattern: (?i)aws\s+delete\-transit\-gateway\-vpc\-attachment\b
+  severity: block
+  message: DeleteTransitGatewayVpcAttachment — destructive operation
+  category: cloud
+- name: aws-ec2-delete-verified-access-endpoint
+  pattern: (?i)aws\s+delete\-verified\-access\-endpoint\b
+  severity: warn
+  message: DeleteVerifiedAccessEndpoint — destructive operation
+  category: cloud
+- name: aws-ec2-delete-verified-access-group
+  pattern: (?i)aws\s+delete\-verified\-access\-group\b
+  severity: block
+  message: DeleteVerifiedAccessGroup — destructive operation
+  category: cloud
+- name: aws-ec2-delete-verified-access-instance
+  pattern: (?i)aws\s+delete\-verified\-access\-instance\b
+  severity: block
+  message: DeleteVerifiedAccessInstance — destructive operation
+  category: cloud
+- name: aws-ec2-delete-verified-access-trust-provider
+  pattern: (?i)aws\s+delete\-verified\-access\-trust\-provider\b
+  severity: warn
+  message: DeleteVerifiedAccessTrustProvider — destructive operation
+  category: cloud
+- name: aws-ec2-delete-volume
+  pattern: (?i)aws\s+delete\-volume\b
+  severity: block
+  message: DeleteVolume — destructive operation
+  category: cloud
+- name: aws-ec2-delete-vpc
+  pattern: (?i)aws\s+delete\-vpc\b
+  severity: warn
+  message: DeleteVpc — destructive operation
+  category: cloud
+- name: aws-ec2-delete-vpc-endpoint-connection-notifications
+  pattern: (?i)aws\s+delete\-vpc\-endpoint\-connection\-notifications\b
+  severity: warn
+  message: DeleteVpcEndpointConnectionNotifications — destructive operation
+  category: cloud
+- name: aws-ec2-delete-vpc-endpoint-service-configurations
+  pattern: (?i)aws\s+delete\-vpc\-endpoint\-service\-configurations\b
+  severity: warn
+  message: DeleteVpcEndpointServiceConfigurations — destructive operation
+  category: cloud
+- name: aws-ec2-delete-vpc-endpoints
+  pattern: (?i)aws\s+delete\-vpc\-endpoints\b
+  severity: warn
+  message: DeleteVpcEndpoints — destructive operation
+  category: cloud
+- name: aws-ec2-delete-vpc-peering-connection
+  pattern: (?i)aws\s+delete\-vpc\-peering\-connection\b
+  severity: warn
+  message: DeleteVpcPeeringConnection — destructive operation
+  category: cloud
+- name: aws-ec2-delete-vpn-connection
+  pattern: (?i)aws\s+delete\-vpn\-connection\b
+  severity: warn
+  message: DeleteVpnConnection — destructive operation
+  category: cloud
+- name: aws-ec2-delete-vpn-connection-route
+  pattern: (?i)aws\s+delete\-vpn\-connection\-route\b
+  severity: warn
+  message: DeleteVpnConnectionRoute — destructive operation
+  category: cloud
+- name: aws-ec2-delete-vpn-gateway
+  pattern: (?i)aws\s+delete\-vpn\-gateway\b
+  severity: block
+  message: DeleteVpnGateway — destructive operation
+  category: cloud
+- name: aws-ec2-deregister-image
+  pattern: (?i)aws\s+deregister\-image\b
+  severity: warn
+  message: DeregisterImage — destructive operation
+  category: cloud
+- name: aws-ec2-deregister-instance-event-notification-attributes
+  pattern: (?i)aws\s+deregister\-instance\-event\-notification\-attributes\b
+  severity: block
+  message: DeregisterInstanceEventNotificationAttributes — destructive operation
+  category: cloud
+- name: aws-ec2-deregister-transit-gateway-multicast-group-members
+  pattern: (?i)aws\s+deregister\-transit\-gateway\-multicast\-group\-members\b
+  severity: block
+  message: DeregisterTransitGatewayMulticastGroupMembers — destructive operation
+  category: cloud
+- name: aws-ec2-deregister-transit-gateway-multicast-group-sources
+  pattern: (?i)aws\s+deregister\-transit\-gateway\-multicast\-group\-sources\b
+  severity: block
+  message: DeregisterTransitGatewayMulticastGroupSources — destructive operation
+  category: cloud
+- name: aws-ec2-detach-classic-link-vpc
+  pattern: (?i)aws\s+detach\-classic\-link\-vpc\b
+  severity: warn
+  message: DetachClassicLinkVpc — destructive operation
+  category: cloud
+- name: aws-ec2-detach-internet-gateway
+  pattern: (?i)aws\s+detach\-internet\-gateway\b
+  severity: block
+  message: DetachInternetGateway — destructive operation
+  category: cloud
+- name: aws-ec2-detach-network-interface
+  pattern: (?i)aws\s+detach\-network\-interface\b
+  severity: warn
+  message: DetachNetworkInterface — destructive operation
+  category: cloud
+- name: aws-ec2-detach-verified-access-trust-provider
+  pattern: (?i)aws\s+detach\-verified\-access\-trust\-provider\b
+  severity: warn
+  message: DetachVerifiedAccessTrustProvider — destructive operation
+  category: cloud
+- name: aws-ec2-detach-volume
+  pattern: (?i)aws\s+detach\-volume\b
+  severity: block
+  message: DetachVolume — destructive operation
+  category: cloud
+- name: aws-ec2-detach-vpn-gateway
+  pattern: (?i)aws\s+detach\-vpn\-gateway\b
+  severity: block
+  message: DetachVpnGateway — destructive operation
+  category: cloud
+- name: aws-ec2-disable-address-transfer
+  pattern: (?i)aws\s+disable\-address\-transfer\b
+  severity: warn
+  message: DisableAddressTransfer — destructive operation
+  category: cloud
+- name: aws-ec2-disable-aws-network-performance-metric-subscription
+  pattern: (?i)aws\s+disable\-aws\-network\-performance\-metric\-subscription\b
+  severity: warn
+  message: DisableAwsNetworkPerformanceMetricSubscription — destructive operation
+  category: cloud
+- name: aws-ec2-disable-ebs-encryption-by-default
+  pattern: (?i)aws\s+disable\-ebs\-encryption\-by\-default\b
+  severity: warn
+  message: DisableEbsEncryptionByDefault — destructive operation
+  category: cloud
+- name: aws-ec2-disable-fast-launch
+  pattern: (?i)aws\s+disable\-fast\-launch\b
+  severity: warn
+  message: DisableFastLaunch — destructive operation
+  category: cloud
+- name: aws-ec2-disable-fast-snapshot-restores
+  pattern: (?i)aws\s+disable\-fast\-snapshot\-restores\b
+  severity: warn
+  message: DisableFastSnapshotRestores — destructive operation
+  category: cloud
+- name: aws-ec2-disable-image-deprecation
+  pattern: (?i)aws\s+disable\-image\-deprecation\b
+  severity: warn
+  message: DisableImageDeprecation — destructive operation
+  category: cloud
+- name: aws-ec2-disable-ipam-organization-admin-account
+  pattern: (?i)aws\s+disable\-ipam\-organization\-admin\-account\b
+  severity: block
+  message: DisableIpamOrganizationAdminAccount — destructive operation
+  category: cloud
+- name: aws-ec2-disable-serial-console-access
+  pattern: (?i)aws\s+disable\-serial\-console\-access\b
+  severity: warn
+  message: DisableSerialConsoleAccess — destructive operation
+  category: cloud
+- name: aws-ec2-disable-transit-gateway-route-table-propagation
+  pattern: (?i)aws\s+disable\-transit\-gateway\-route\-table\-propagation\b
+  severity: block
+  message: DisableTransitGatewayRouteTablePropagation — destructive operation
+  category: cloud
+- name: aws-ec2-disable-vgw-route-propagation
+  pattern: (?i)aws\s+disable\-vgw\-route\-propagation\b
+  severity: warn
+  message: DisableVgwRoutePropagation — destructive operation
+  category: cloud
+- name: aws-ec2-disable-vpc-classic-link
+  pattern: (?i)aws\s+disable\-vpc\-classic\-link\b
+  severity: warn
+  message: DisableVpcClassicLink — destructive operation
+  category: cloud
+- name: aws-ec2-disable-vpc-classic-link-dns-support
+  pattern: (?i)aws\s+disable\-vpc\-classic\-link\-dns\-support\b
+  severity: warn
+  message: DisableVpcClassicLinkDnsSupport — destructive operation
+  category: cloud
+- name: aws-ec2-disassociate-address
+  pattern: (?i)aws\s+disassociate\-address\b
+  severity: warn
+  message: DisassociateAddress — destructive operation
+  category: cloud
+- name: aws-ec2-disassociate-client-vpn-target-network
+  pattern: (?i)aws\s+disassociate\-client\-vpn\-target\-network\b
+  severity: block
+  message: DisassociateClientVpnTargetNetwork — destructive operation
+  category: cloud
+- name: aws-ec2-disassociate-enclave-certificate-iam-role
+  pattern: (?i)aws\s+disassociate\-enclave\-certificate\-iam\-role\b
+  severity: block
+  message: DisassociateEnclaveCertificateIamRole — destructive operation
+  category: cloud
+- name: aws-ec2-disassociate-iam-instance-profile
+  pattern: (?i)aws\s+disassociate\-iam\-instance\-profile\b
+  severity: block
+  message: DisassociateIamInstanceProfile — destructive operation
+  category: cloud
+- name: aws-ec2-disassociate-instance-event-window
+  pattern: (?i)aws\s+disassociate\-instance\-event\-window\b
+  severity: block
+  message: DisassociateInstanceEventWindow — destructive operation
+  category: cloud
+- name: aws-ec2-disassociate-route-table
+  pattern: (?i)aws\s+disassociate\-route\-table\b
+  severity: warn
+  message: DisassociateRouteTable — destructive operation
+  category: cloud
+- name: aws-ec2-disassociate-subnet-cidr-block
+  pattern: (?i)aws\s+disassociate\-subnet\-cidr\-block\b
+  severity: warn
+  message: DisassociateSubnetCidrBlock — destructive operation
+  category: cloud
+- name: aws-ec2-disassociate-transit-gateway-multicast-domain
+  pattern: (?i)aws\s+disassociate\-transit\-gateway\-multicast\-domain\b
+  severity: block
+  message: DisassociateTransitGatewayMulticastDomain — destructive operation
+  category: cloud
+- name: aws-ec2-disassociate-transit-gateway-policy-table
+  pattern: (?i)aws\s+disassociate\-transit\-gateway\-policy\-table\b
+  severity: block
+  message: DisassociateTransitGatewayPolicyTable — destructive operation
+  category: cloud
+- name: aws-ec2-disassociate-transit-gateway-route-table
+  pattern: (?i)aws\s+disassociate\-transit\-gateway\-route\-table\b
+  severity: block
+  message: DisassociateTransitGatewayRouteTable — destructive operation
+  category: cloud
+- name: aws-ec2-disassociate-trunk-interface
+  pattern: (?i)aws\s+disassociate\-trunk\-interface\b
+  severity: warn
+  message: DisassociateTrunkInterface — destructive operation
+  category: cloud
+- name: aws-ec2-disassociate-vpc-cidr-block
+  pattern: (?i)aws\s+disassociate\-vpc\-cidr\-block\b
+  severity: warn
+  message: DisassociateVpcCidrBlock — destructive operation
+  category: cloud
+- name: aws-ec2-release-address
+  pattern: (?i)aws\s+release\-address\b
+  severity: warn
+  message: ReleaseAddress — destructive operation
+  category: cloud
+- name: aws-ec2-release-hosts
+  pattern: (?i)aws\s+release\-hosts\b
+  severity: warn
+  message: ReleaseHosts — destructive operation
+  category: cloud
+- name: aws-ec2-release-ipam-pool-allocation
+  pattern: (?i)aws\s+release\-ipam\-pool\-allocation\b
+  severity: warn
+  message: ReleaseIpamPoolAllocation — destructive operation
+  category: cloud
+- name: aws-ec2-reset-address-attribute
+  pattern: (?i)aws\s+reset\-address\-attribute\b
+  severity: warn
+  message: ResetAddressAttribute — destructive operation
+  category: cloud
+- name: aws-ec2-reset-ebs-default-kms-key-id
+  pattern: (?i)aws\s+reset\-ebs\-default\-kms\-key\-id\b
+  severity: block
+  message: ResetEbsDefaultKmsKeyId — destructive operation
+  category: cloud
+- name: aws-ec2-reset-fpga-image-attribute
+  pattern: (?i)aws\s+reset\-fpga\-image\-attribute\b
+  severity: warn
+  message: ResetFpgaImageAttribute — destructive operation
+  category: cloud
+- name: aws-ec2-reset-image-attribute
+  pattern: (?i)aws\s+reset\-image\-attribute\b
+  severity: warn
+  message: ResetImageAttribute — destructive operation
+  category: cloud
+- name: aws-ec2-reset-instance-attribute
+  pattern: (?i)aws\s+reset\-instance\-attribute\b
+  severity: block
+  message: ResetInstanceAttribute — destructive operation
+  category: cloud
+- name: aws-ec2-reset-network-interface-attribute
+  pattern: (?i)aws\s+reset\-network\-interface\-attribute\b
+  severity: warn
+  message: ResetNetworkInterfaceAttribute — destructive operation
+  category: cloud
+- name: aws-ec2-reset-snapshot-attribute
+  pattern: (?i)aws\s+reset\-snapshot\-attribute\b
+  severity: warn
+  message: ResetSnapshotAttribute — destructive operation
+  category: cloud
+- name: aws-ec2-revoke-client-vpn-ingress
+  pattern: (?i)aws\s+revoke\-client\-vpn\-ingress\b
+  severity: warn
+  message: RevokeClientVpnIngress — destructive operation
+  category: cloud
+- name: aws-ec2-revoke-security-group-egress
+  pattern: (?i)aws\s+revoke\-security\-group\-egress\b
+  severity: block
+  message: RevokeSecurityGroupEgress — destructive operation
+  category: cloud
+- name: aws-ec2-revoke-security-group-ingress
+  pattern: (?i)aws\s+revoke\-security\-group\-ingress\b
+  severity: block
+  message: RevokeSecurityGroupIngress — destructive operation
+  category: cloud
+- name: aws-ec2-terminate-client-vpn-connections
+  pattern: (?i)aws\s+terminate\-client\-vpn\-connections\b
+  severity: warn
+  message: TerminateClientVpnConnections — destructive operation
+  category: cloud
+- name: aws-ec2-terminate-instances
+  pattern: (?i)aws\s+terminate\-instances\b
+  severity: block
+  message: TerminateInstances — destructive operation
+  category: cloud

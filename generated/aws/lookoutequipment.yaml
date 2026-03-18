@@ -1,0 +1,25 @@
+- name: aws-lookoutequipment-delete-dataset
+  pattern: (?i)aws\s+delete\-dataset\b
+  severity: warn
+  message: DeleteDataset — destructive operation
+  category: cloud
+- name: aws-lookoutequipment-delete-inference-scheduler
+  pattern: (?i)aws\s+delete\-inference\-scheduler\b
+  severity: warn
+  message: DeleteInferenceScheduler — destructive operation
+  category: cloud
+- name: aws-lookoutequipment-delete-label
+  pattern: (?i)aws\s+delete\-label\b
+  severity: warn
+  message: DeleteLabel — destructive operation
+  category: cloud
+- name: aws-lookoutequipment-delete-label-group
+  pattern: (?i)aws\s+delete\-label\-group\b
+  severity: block
+  message: DeleteLabelGroup — destructive operation
+  category: cloud
+- name: aws-lookoutequipment-delete-model
+  pattern: (?i)aws\s+delete\-model\b
+  severity: warn
+  message: DeleteModel — destructive operation
+  category: cloud

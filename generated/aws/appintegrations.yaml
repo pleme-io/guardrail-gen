@@ -1,0 +1,15 @@
+- name: aws-appintegrations-delete-data-integration
+  pattern: (?i)aws\s+delete\-data\-integration\b
+  severity: block
+  message: DeleteDataIntegration — destructive operation
+  category: cloud
+- name: aws-appintegrations-delete-event-integration
+  pattern: (?i)aws\s+delete\-event\-integration\b
+  severity: warn
+  message: DeleteEventIntegration — destructive operation
+  category: cloud
+- name: aws-appintegrations-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

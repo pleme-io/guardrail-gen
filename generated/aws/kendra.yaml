@@ -1,0 +1,55 @@
+- name: aws-kendra-batch-delete-document
+  pattern: (?i)aws\s+batch\-delete\-document\b
+  severity: warn
+  message: BatchDeleteDocument — destructive operation
+  category: cloud
+- name: aws-kendra-delete-access-control-configuration
+  pattern: (?i)aws\s+delete\-access\-control\-configuration\b
+  severity: warn
+  message: DeleteAccessControlConfiguration — destructive operation
+  category: cloud
+- name: aws-kendra-delete-data-source
+  pattern: (?i)aws\s+delete\-data\-source\b
+  severity: warn
+  message: DeleteDataSource — destructive operation
+  category: cloud
+- name: aws-kendra-delete-experience
+  pattern: (?i)aws\s+delete\-experience\b
+  severity: warn
+  message: DeleteExperience — destructive operation
+  category: cloud
+- name: aws-kendra-delete-faq
+  pattern: (?i)aws\s+delete\-faq\b
+  severity: warn
+  message: DeleteFaq — destructive operation
+  category: cloud
+- name: aws-kendra-delete-index
+  pattern: (?i)aws\s+delete\-index\b
+  severity: warn
+  message: DeleteIndex — destructive operation
+  category: cloud
+- name: aws-kendra-delete-principal-mapping
+  pattern: (?i)aws\s+delete\-principal\-mapping\b
+  severity: warn
+  message: DeletePrincipalMapping — destructive operation
+  category: cloud
+- name: aws-kendra-delete-query-suggestions-block-list
+  pattern: (?i)aws\s+delete\-query\-suggestions\-block\-list\b
+  severity: warn
+  message: DeleteQuerySuggestionsBlockList — destructive operation
+  category: cloud
+- name: aws-kendra-delete-thesaurus
+  pattern: (?i)aws\s+delete\-thesaurus\b
+  severity: warn
+  message: DeleteThesaurus — destructive operation
+  category: cloud
+- name: aws-kendra-disassociate-entities-from-experience
+  pattern: (?i)aws\s+disassociate\-entities\-from\-experience\b
+  severity: warn
+  message: DisassociateEntitiesFromExperience — destructive operation
+  category: cloud
+- name: aws-kendra-disassociate-personas-from-entities
+  pattern: (?i)aws\s+disassociate\-personas\-from\-entities\b
+  severity: warn
+  message: DisassociatePersonasFromEntities — destructive operation
+  category: cloud

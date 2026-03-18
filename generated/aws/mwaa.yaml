@@ -1,0 +1,10 @@
+- name: aws-mwaa-delete-environment
+  pattern: (?i)aws\s+delete\-environment\b
+  severity: block
+  message: DeleteEnvironment — destructive operation
+  category: cloud
+- name: aws-mwaa-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

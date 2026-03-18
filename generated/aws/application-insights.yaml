@@ -1,0 +1,15 @@
+- name: aws-application-insights-delete-application
+  pattern: (?i)aws\s+delete\-application\b
+  severity: warn
+  message: DeleteApplication — destructive operation
+  category: cloud
+- name: aws-application-insights-delete-component
+  pattern: (?i)aws\s+delete\-component\b
+  severity: warn
+  message: DeleteComponent — destructive operation
+  category: cloud
+- name: aws-application-insights-delete-log-pattern
+  pattern: (?i)aws\s+delete\-log\-pattern\b
+  severity: warn
+  message: DeleteLogPattern — destructive operation
+  category: cloud

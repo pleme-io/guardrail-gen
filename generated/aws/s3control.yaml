@@ -1,0 +1,65 @@
+- name: aws-s3control-delete-access-point
+  pattern: (?i)aws\s+delete\-access\-point\b
+  severity: block
+  message: DeleteAccessPoint — destructive operation
+  category: cloud
+- name: aws-s3control-delete-access-point-for-object-lambda
+  pattern: (?i)aws\s+delete\-access\-point\-for\-object\-lambda\b
+  severity: block
+  message: DeleteAccessPointForObjectLambda — destructive operation
+  category: cloud
+- name: aws-s3control-delete-access-point-policy
+  pattern: (?i)aws\s+delete\-access\-point\-policy\b
+  severity: block
+  message: DeleteAccessPointPolicy — destructive operation
+  category: cloud
+- name: aws-s3control-delete-access-point-policy-for-object-lambda
+  pattern: (?i)aws\s+delete\-access\-point\-policy\-for\-object\-lambda\b
+  severity: block
+  message: DeleteAccessPointPolicyForObjectLambda — destructive operation
+  category: cloud
+- name: aws-s3control-delete-bucket
+  pattern: (?i)aws\s+delete\-bucket\b
+  severity: block
+  message: DeleteBucket — destructive operation
+  category: cloud
+- name: aws-s3control-delete-bucket-lifecycle-configuration
+  pattern: (?i)aws\s+delete\-bucket\-lifecycle\-configuration\b
+  severity: block
+  message: DeleteBucketLifecycleConfiguration — destructive operation
+  category: cloud
+- name: aws-s3control-delete-bucket-policy
+  pattern: (?i)aws\s+delete\-bucket\-policy\b
+  severity: block
+  message: DeleteBucketPolicy — destructive operation
+  category: cloud
+- name: aws-s3control-delete-bucket-tagging
+  pattern: (?i)aws\s+delete\-bucket\-tagging\b
+  severity: block
+  message: DeleteBucketTagging — destructive operation
+  category: cloud
+- name: aws-s3control-delete-job-tagging
+  pattern: (?i)aws\s+delete\-job\-tagging\b
+  severity: warn
+  message: DeleteJobTagging — destructive operation
+  category: cloud
+- name: aws-s3control-delete-multi-region-access-point
+  pattern: (?i)aws\s+delete\-multi\-region\-access\-point\b
+  severity: warn
+  message: DeleteMultiRegionAccessPoint — destructive operation
+  category: cloud
+- name: aws-s3control-delete-public-access-block
+  pattern: (?i)aws\s+delete\-public\-access\-block\b
+  severity: block
+  message: DeletePublicAccessBlock — destructive operation
+  category: cloud
+- name: aws-s3control-delete-storage-lens-configuration
+  pattern: (?i)aws\s+delete\-storage\-lens\-configuration\b
+  severity: block
+  message: DeleteStorageLensConfiguration — destructive operation
+  category: cloud
+- name: aws-s3control-delete-storage-lens-configuration-tagging
+  pattern: (?i)aws\s+delete\-storage\-lens\-configuration\-tagging\b
+  severity: warn
+  message: DeleteStorageLensConfigurationTagging — destructive operation
+  category: cloud

@@ -1,0 +1,40 @@
+- name: aws-amplify-delete-app
+  pattern: (?i)aws\s+delete\-app\b
+  severity: block
+  message: DeleteApp — destructive operation
+  category: cloud
+- name: aws-amplify-delete-backend-environment
+  pattern: (?i)aws\s+delete\-backend\-environment\b
+  severity: block
+  message: DeleteBackendEnvironment — destructive operation
+  category: cloud
+- name: aws-amplify-delete-branch
+  pattern: (?i)aws\s+delete\-branch\b
+  severity: block
+  message: DeleteBranch — destructive operation
+  category: cloud
+- name: aws-amplify-delete-domain-association
+  pattern: (?i)aws\s+delete\-domain\-association\b
+  severity: warn
+  message: DeleteDomainAssociation — destructive operation
+  category: cloud
+- name: aws-amplify-delete-job
+  pattern: (?i)aws\s+delete\-job\b
+  severity: block
+  message: DeleteJob — destructive operation
+  category: cloud
+- name: aws-amplify-delete-webhook
+  pattern: (?i)aws\s+delete\-webhook\b
+  severity: block
+  message: DeleteWebhook — destructive operation
+  category: cloud
+- name: aws-amplify-stop-job
+  pattern: (?i)aws\s+stop\-job\b
+  severity: block
+  message: StopJob — destructive operation
+  category: cloud
+- name: aws-amplify-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

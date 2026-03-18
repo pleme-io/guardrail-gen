@@ -1,0 +1,40 @@
+- name: aws-databrew-batch-delete-recipe-version
+  pattern: (?i)aws\s+batch\-delete\-recipe\-version\b
+  severity: warn
+  message: BatchDeleteRecipeVersion — destructive operation
+  category: cloud
+- name: aws-databrew-delete-dataset
+  pattern: (?i)aws\s+delete\-dataset\b
+  severity: block
+  message: DeleteDataset — destructive operation
+  category: cloud
+- name: aws-databrew-delete-job
+  pattern: (?i)aws\s+delete\-job\b
+  severity: block
+  message: DeleteJob — destructive operation
+  category: cloud
+- name: aws-databrew-delete-project
+  pattern: (?i)aws\s+delete\-project\b
+  severity: block
+  message: DeleteProject — destructive operation
+  category: cloud
+- name: aws-databrew-delete-recipe-version
+  pattern: (?i)aws\s+delete\-recipe\-version\b
+  severity: block
+  message: DeleteRecipeVersion — destructive operation
+  category: cloud
+- name: aws-databrew-delete-ruleset
+  pattern: (?i)aws\s+delete\-ruleset\b
+  severity: warn
+  message: DeleteRuleset — destructive operation
+  category: cloud
+- name: aws-databrew-delete-schedule
+  pattern: (?i)aws\s+delete\-schedule\b
+  severity: block
+  message: DeleteSchedule — destructive operation
+  category: cloud
+- name: aws-databrew-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

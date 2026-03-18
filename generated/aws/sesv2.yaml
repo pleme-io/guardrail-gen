@@ -1,0 +1,55 @@
+- name: aws-sesv2-delete-configuration-set
+  pattern: (?i)aws\s+delete\-configuration\-set\b
+  severity: block
+  message: DeleteConfigurationSet — destructive operation
+  category: cloud
+- name: aws-sesv2-delete-configuration-set-event-destination
+  pattern: (?i)aws\s+delete\-configuration\-set\-event\-destination\b
+  severity: warn
+  message: DeleteConfigurationSetEventDestination — destructive operation
+  category: cloud
+- name: aws-sesv2-delete-contact
+  pattern: (?i)aws\s+delete\-contact\b
+  severity: block
+  message: DeleteContact — destructive operation
+  category: cloud
+- name: aws-sesv2-delete-contact-list
+  pattern: (?i)aws\s+delete\-contact\-list\b
+  severity: block
+  message: DeleteContactList — destructive operation
+  category: cloud
+- name: aws-sesv2-delete-custom-verification-email-template
+  pattern: (?i)aws\s+delete\-custom\-verification\-email\-template\b
+  severity: block
+  message: DeleteCustomVerificationEmailTemplate — destructive operation
+  category: cloud
+- name: aws-sesv2-delete-dedicated-ip-pool
+  pattern: (?i)aws\s+delete\-dedicated\-ip\-pool\b
+  severity: block
+  message: DeleteDedicatedIpPool — destructive operation
+  category: cloud
+- name: aws-sesv2-delete-email-identity
+  pattern: (?i)aws\s+delete\-email\-identity\b
+  severity: block
+  message: DeleteEmailIdentity — destructive operation
+  category: cloud
+- name: aws-sesv2-delete-email-identity-policy
+  pattern: (?i)aws\s+delete\-email\-identity\-policy\b
+  severity: block
+  message: DeleteEmailIdentityPolicy — destructive operation
+  category: cloud
+- name: aws-sesv2-delete-email-template
+  pattern: (?i)aws\s+delete\-email\-template\b
+  severity: block
+  message: DeleteEmailTemplate — destructive operation
+  category: cloud
+- name: aws-sesv2-delete-suppressed-destination
+  pattern: (?i)aws\s+delete\-suppressed\-destination\b
+  severity: block
+  message: DeleteSuppressedDestination — destructive operation
+  category: cloud
+- name: aws-sesv2-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

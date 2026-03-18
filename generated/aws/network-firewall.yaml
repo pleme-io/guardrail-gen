@@ -1,0 +1,25 @@
+- name: aws-network-firewall-delete-firewall
+  pattern: (?i)aws\s+delete\-firewall\b
+  severity: warn
+  message: DeleteFirewall — destructive operation
+  category: cloud
+- name: aws-network-firewall-delete-firewall-policy
+  pattern: (?i)aws\s+delete\-firewall\-policy\b
+  severity: block
+  message: DeleteFirewallPolicy — destructive operation
+  category: cloud
+- name: aws-network-firewall-delete-resource-policy
+  pattern: (?i)aws\s+delete\-resource\-policy\b
+  severity: block
+  message: DeleteResourcePolicy — destructive operation
+  category: cloud
+- name: aws-network-firewall-delete-rule-group
+  pattern: (?i)aws\s+delete\-rule\-group\b
+  severity: block
+  message: DeleteRuleGroup — destructive operation
+  category: cloud
+- name: aws-network-firewall-disassociate-subnets
+  pattern: (?i)aws\s+disassociate\-subnets\b
+  severity: warn
+  message: DisassociateSubnets — destructive operation
+  category: cloud

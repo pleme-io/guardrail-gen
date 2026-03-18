@@ -1,0 +1,70 @@
+- name: aws-proton-cancel-component-deployment
+  pattern: (?i)aws\s+cancel\-component\-deployment\b
+  severity: warn
+  message: CancelComponentDeployment — destructive operation
+  category: cloud
+- name: aws-proton-cancel-environment-deployment
+  pattern: (?i)aws\s+cancel\-environment\-deployment\b
+  severity: warn
+  message: CancelEnvironmentDeployment — destructive operation
+  category: cloud
+- name: aws-proton-cancel-service-instance-deployment
+  pattern: (?i)aws\s+cancel\-service\-instance\-deployment\b
+  severity: block
+  message: CancelServiceInstanceDeployment — destructive operation
+  category: cloud
+- name: aws-proton-cancel-service-pipeline-deployment
+  pattern: (?i)aws\s+cancel\-service\-pipeline\-deployment\b
+  severity: warn
+  message: CancelServicePipelineDeployment — destructive operation
+  category: cloud
+- name: aws-proton-delete-component
+  pattern: (?i)aws\s+delete\-component\b
+  severity: warn
+  message: DeleteComponent — destructive operation
+  category: cloud
+- name: aws-proton-delete-environment
+  pattern: (?i)aws\s+delete\-environment\b
+  severity: warn
+  message: DeleteEnvironment — destructive operation
+  category: cloud
+- name: aws-proton-delete-environment-account-connection
+  pattern: (?i)aws\s+delete\-environment\-account\-connection\b
+  severity: block
+  message: DeleteEnvironmentAccountConnection — destructive operation
+  category: cloud
+- name: aws-proton-delete-environment-template
+  pattern: (?i)aws\s+delete\-environment\-template\b
+  severity: warn
+  message: DeleteEnvironmentTemplate — destructive operation
+  category: cloud
+- name: aws-proton-delete-environment-template-version
+  pattern: (?i)aws\s+delete\-environment\-template\-version\b
+  severity: warn
+  message: DeleteEnvironmentTemplateVersion — destructive operation
+  category: cloud
+- name: aws-proton-delete-repository
+  pattern: (?i)aws\s+delete\-repository\b
+  severity: warn
+  message: DeleteRepository — destructive operation
+  category: cloud
+- name: aws-proton-delete-service
+  pattern: (?i)aws\s+delete\-service\b
+  severity: warn
+  message: DeleteService — destructive operation
+  category: cloud
+- name: aws-proton-delete-service-template
+  pattern: (?i)aws\s+delete\-service\-template\b
+  severity: warn
+  message: DeleteServiceTemplate — destructive operation
+  category: cloud
+- name: aws-proton-delete-service-template-version
+  pattern: (?i)aws\s+delete\-service\-template\-version\b
+  severity: warn
+  message: DeleteServiceTemplateVersion — destructive operation
+  category: cloud
+- name: aws-proton-delete-template-sync-config
+  pattern: (?i)aws\s+delete\-template\-sync\-config\b
+  severity: warn
+  message: DeleteTemplateSyncConfig — destructive operation
+  category: cloud

@@ -1,0 +1,35 @@
+- name: aws-codedeploy-delete-application
+  pattern: (?i)aws\s+delete\-application\b
+  severity: warn
+  message: DeleteApplication — destructive operation
+  category: cloud
+- name: aws-codedeploy-delete-deployment-config
+  pattern: (?i)aws\s+delete\-deployment\-config\b
+  severity: warn
+  message: DeleteDeploymentConfig — destructive operation
+  category: cloud
+- name: aws-codedeploy-delete-deployment-group
+  pattern: (?i)aws\s+delete\-deployment\-group\b
+  severity: block
+  message: DeleteDeploymentGroup — destructive operation
+  category: cloud
+- name: aws-codedeploy-delete-git-hub-account-token
+  pattern: (?i)aws\s+delete\-git\-hub\-account\-token\b
+  severity: block
+  message: DeleteGitHubAccountToken — destructive operation
+  category: cloud
+- name: aws-codedeploy-delete-resources-by-external-id
+  pattern: (?i)aws\s+delete\-resources\-by\-external\-id\b
+  severity: warn
+  message: DeleteResourcesByExternalId — destructive operation
+  category: cloud
+- name: aws-codedeploy-deregister-on-premises-instance
+  pattern: (?i)aws\s+deregister\-on\-premises\-instance\b
+  severity: block
+  message: DeregisterOnPremisesInstance — destructive operation
+  category: cloud
+- name: aws-codedeploy-remove-tags-from-on-premises-instances
+  pattern: (?i)aws\s+remove\-tags\-from\-on\-premises\-instances\b
+  severity: block
+  message: RemoveTagsFromOnPremisesInstances — destructive operation
+  category: cloud

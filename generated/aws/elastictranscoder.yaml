@@ -1,0 +1,15 @@
+- name: aws-elastictranscoder-cancel-job
+  pattern: (?i)aws\s+cancel\-job\b
+  severity: block
+  message: CancelJob — destructive operation
+  category: cloud
+- name: aws-elastictranscoder-delete-pipeline
+  pattern: (?i)aws\s+delete\-pipeline\b
+  severity: block
+  message: DeletePipeline — destructive operation
+  category: cloud
+- name: aws-elastictranscoder-delete-preset
+  pattern: (?i)aws\s+delete\-preset\b
+  severity: block
+  message: DeletePreset — destructive operation
+  category: cloud

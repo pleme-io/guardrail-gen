@@ -1,0 +1,10 @@
+- name: aws-chime-sdk-meetings-delete-attendee
+  pattern: (?i)aws\s+delete\-attendee\b
+  severity: block
+  message: DeleteAttendee — destructive operation
+  category: cloud
+- name: aws-chime-sdk-meetings-delete-meeting
+  pattern: (?i)aws\s+delete\-meeting\b
+  severity: block
+  message: DeleteMeeting — destructive operation
+  category: cloud

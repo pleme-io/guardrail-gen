@@ -1,0 +1,15 @@
+- name: aws-appflow-delete-connector-profile
+  pattern: (?i)aws\s+delete\-connector\-profile\b
+  severity: warn
+  message: DeleteConnectorProfile — destructive operation
+  category: cloud
+- name: aws-appflow-delete-flow
+  pattern: (?i)aws\s+delete\-flow\b
+  severity: warn
+  message: DeleteFlow — destructive operation
+  category: cloud
+- name: aws-appflow-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

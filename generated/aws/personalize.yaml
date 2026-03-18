@@ -1,0 +1,45 @@
+- name: aws-personalize-delete-campaign
+  pattern: (?i)aws\s+delete\-campaign\b
+  severity: warn
+  message: DeleteCampaign — destructive operation
+  category: cloud
+- name: aws-personalize-delete-dataset
+  pattern: (?i)aws\s+delete\-dataset\b
+  severity: warn
+  message: DeleteDataset — destructive operation
+  category: cloud
+- name: aws-personalize-delete-dataset-group
+  pattern: (?i)aws\s+delete\-dataset\-group\b
+  severity: block
+  message: DeleteDatasetGroup — destructive operation
+  category: cloud
+- name: aws-personalize-delete-event-tracker
+  pattern: (?i)aws\s+delete\-event\-tracker\b
+  severity: warn
+  message: DeleteEventTracker — destructive operation
+  category: cloud
+- name: aws-personalize-delete-filter
+  pattern: (?i)aws\s+delete\-filter\b
+  severity: warn
+  message: DeleteFilter — destructive operation
+  category: cloud
+- name: aws-personalize-delete-metric-attribution
+  pattern: (?i)aws\s+delete\-metric\-attribution\b
+  severity: warn
+  message: DeleteMetricAttribution — destructive operation
+  category: cloud
+- name: aws-personalize-delete-recommender
+  pattern: (?i)aws\s+delete\-recommender\b
+  severity: warn
+  message: DeleteRecommender — destructive operation
+  category: cloud
+- name: aws-personalize-delete-schema
+  pattern: (?i)aws\s+delete\-schema\b
+  severity: warn
+  message: DeleteSchema — destructive operation
+  category: cloud
+- name: aws-personalize-delete-solution
+  pattern: (?i)aws\s+delete\-solution\b
+  severity: warn
+  message: DeleteSolution — destructive operation
+  category: cloud

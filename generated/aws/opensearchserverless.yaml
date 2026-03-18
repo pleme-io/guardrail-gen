@@ -1,0 +1,25 @@
+- name: aws-opensearchserverless-delete-access-policy
+  pattern: (?i)aws\s+delete\-access\-policy\b
+  severity: block
+  message: DeleteAccessPolicy — destructive operation
+  category: cloud
+- name: aws-opensearchserverless-delete-collection
+  pattern: (?i)aws\s+delete\-collection\b
+  severity: warn
+  message: DeleteCollection — destructive operation
+  category: cloud
+- name: aws-opensearchserverless-delete-security-config
+  pattern: (?i)aws\s+delete\-security\-config\b
+  severity: warn
+  message: DeleteSecurityConfig — destructive operation
+  category: cloud
+- name: aws-opensearchserverless-delete-security-policy
+  pattern: (?i)aws\s+delete\-security\-policy\b
+  severity: block
+  message: DeleteSecurityPolicy — destructive operation
+  category: cloud
+- name: aws-opensearchserverless-delete-vpc-endpoint
+  pattern: (?i)aws\s+delete\-vpc\-endpoint\b
+  severity: warn
+  message: DeleteVpcEndpoint — destructive operation
+  category: cloud

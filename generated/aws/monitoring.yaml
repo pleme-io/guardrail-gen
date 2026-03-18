@@ -1,0 +1,35 @@
+- name: aws-monitoring-delete-alarms
+  pattern: (?i)aws\s+delete\-alarms\b
+  severity: warn
+  message: DeleteAlarms — destructive operation
+  category: cloud
+- name: aws-monitoring-delete-anomaly-detector
+  pattern: (?i)aws\s+delete\-anomaly\-detector\b
+  severity: warn
+  message: DeleteAnomalyDetector — destructive operation
+  category: cloud
+- name: aws-monitoring-delete-dashboards
+  pattern: (?i)aws\s+delete\-dashboards\b
+  severity: warn
+  message: DeleteDashboards — destructive operation
+  category: cloud
+- name: aws-monitoring-delete-insight-rules
+  pattern: (?i)aws\s+delete\-insight\-rules\b
+  severity: warn
+  message: DeleteInsightRules — destructive operation
+  category: cloud
+- name: aws-monitoring-delete-metric-stream
+  pattern: (?i)aws\s+delete\-metric\-stream\b
+  severity: warn
+  message: DeleteMetricStream — destructive operation
+  category: cloud
+- name: aws-monitoring-disable-alarm-actions
+  pattern: (?i)aws\s+disable\-alarm\-actions\b
+  severity: warn
+  message: DisableAlarmActions — destructive operation
+  category: cloud
+- name: aws-monitoring-disable-insight-rules
+  pattern: (?i)aws\s+disable\-insight\-rules\b
+  severity: warn
+  message: DisableInsightRules — destructive operation
+  category: cloud

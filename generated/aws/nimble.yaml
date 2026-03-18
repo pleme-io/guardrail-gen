@@ -1,0 +1,40 @@
+- name: aws-nimble-delete-launch-profile
+  pattern: (?i)aws\s+delete\-launch\-profile\b
+  severity: block
+  message: DeleteLaunchProfile — destructive operation
+  category: cloud
+- name: aws-nimble-delete-launch-profile-member
+  pattern: (?i)aws\s+delete\-launch\-profile\-member\b
+  severity: block
+  message: DeleteLaunchProfileMember — destructive operation
+  category: cloud
+- name: aws-nimble-delete-streaming-image
+  pattern: (?i)aws\s+delete\-streaming\-image\b
+  severity: block
+  message: DeleteStreamingImage — destructive operation
+  category: cloud
+- name: aws-nimble-delete-streaming-session
+  pattern: (?i)aws\s+delete\-streaming\-session\b
+  severity: block
+  message: DeleteStreamingSession — destructive operation
+  category: cloud
+- name: aws-nimble-delete-studio
+  pattern: (?i)aws\s+delete\-studio\b
+  severity: block
+  message: DeleteStudio — destructive operation
+  category: cloud
+- name: aws-nimble-delete-studio-component
+  pattern: (?i)aws\s+delete\-studio\-component\b
+  severity: block
+  message: DeleteStudioComponent — destructive operation
+  category: cloud
+- name: aws-nimble-delete-studio-member
+  pattern: (?i)aws\s+delete\-studio\-member\b
+  severity: block
+  message: DeleteStudioMember — destructive operation
+  category: cloud
+- name: aws-nimble-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

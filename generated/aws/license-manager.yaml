@@ -1,0 +1,25 @@
+- name: aws-license-manager-delete-grant
+  pattern: (?i)aws\s+delete\-grant\b
+  severity: warn
+  message: DeleteGrant — destructive operation
+  category: cloud
+- name: aws-license-manager-delete-license
+  pattern: (?i)aws\s+delete\-license\b
+  severity: warn
+  message: DeleteLicense — destructive operation
+  category: cloud
+- name: aws-license-manager-delete-license-configuration
+  pattern: (?i)aws\s+delete\-license\-configuration\b
+  severity: warn
+  message: DeleteLicenseConfiguration — destructive operation
+  category: cloud
+- name: aws-license-manager-delete-license-manager-report-generator
+  pattern: (?i)aws\s+delete\-license\-manager\-report\-generator\b
+  severity: warn
+  message: DeleteLicenseManagerReportGenerator — destructive operation
+  category: cloud
+- name: aws-license-manager-delete-token
+  pattern: (?i)aws\s+delete\-token\b
+  severity: warn
+  message: DeleteToken — destructive operation
+  category: cloud

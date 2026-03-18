@@ -1,0 +1,20 @@
+- name: aws-cloudhsm-delete-hapg
+  pattern: (?i)aws\s+delete\-hapg\b
+  severity: warn
+  message: DeleteHapg — destructive operation
+  category: cloud
+- name: aws-cloudhsm-delete-hsm
+  pattern: (?i)aws\s+delete\-hsm\b
+  severity: warn
+  message: DeleteHsm — destructive operation
+  category: cloud
+- name: aws-cloudhsm-delete-luna-client
+  pattern: (?i)aws\s+delete\-luna\-client\b
+  severity: warn
+  message: DeleteLunaClient — destructive operation
+  category: cloud
+- name: aws-cloudhsm-remove-tags-from-resource
+  pattern: (?i)aws\s+remove\-tags\-from\-resource\b
+  severity: warn
+  message: RemoveTagsFromResource — destructive operation
+  category: cloud

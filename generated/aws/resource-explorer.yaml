@@ -1,0 +1,20 @@
+- name: aws-resource-explorer-delete-index
+  pattern: (?i)aws\s+delete\-index\b
+  severity: warn
+  message: DeleteIndex — destructive operation
+  category: cloud
+- name: aws-resource-explorer-delete-view
+  pattern: (?i)aws\s+delete\-view\b
+  severity: warn
+  message: DeleteView — destructive operation
+  category: cloud
+- name: aws-resource-explorer-disassociate-default-view
+  pattern: (?i)aws\s+disassociate\-default\-view\b
+  severity: warn
+  message: DisassociateDefaultView — destructive operation
+  category: cloud
+- name: aws-resource-explorer-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

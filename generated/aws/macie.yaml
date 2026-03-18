@@ -1,0 +1,10 @@
+- name: aws-macie-disassociate-member-account
+  pattern: (?i)aws\s+disassociate\-member\-account\b
+  severity: block
+  message: DisassociateMemberAccount — destructive operation
+  category: cloud
+- name: aws-macie-disassociate-s3-resources
+  pattern: (?i)aws\s+disassociate\-s3\-resources\b
+  severity: warn
+  message: DisassociateS3Resources — destructive operation
+  category: cloud

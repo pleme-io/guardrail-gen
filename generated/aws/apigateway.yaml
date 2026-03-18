@@ -1,0 +1,120 @@
+- name: aws-apigateway-delete-api-key
+  pattern: (?i)aws\s+delete\-api\-key\b
+  severity: block
+  message: DeleteApiKey — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-authorizer
+  pattern: (?i)aws\s+delete\-authorizer\b
+  severity: block
+  message: DeleteAuthorizer — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-base-path-mapping
+  pattern: (?i)aws\s+delete\-base\-path\-mapping\b
+  severity: block
+  message: DeleteBasePathMapping — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-client-certificate
+  pattern: (?i)aws\s+delete\-client\-certificate\b
+  severity: block
+  message: DeleteClientCertificate — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-deployment
+  pattern: (?i)aws\s+delete\-deployment\b
+  severity: block
+  message: DeleteDeployment — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-documentation-part
+  pattern: (?i)aws\s+delete\-documentation\-part\b
+  severity: block
+  message: DeleteDocumentationPart — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-documentation-version
+  pattern: (?i)aws\s+delete\-documentation\-version\b
+  severity: block
+  message: DeleteDocumentationVersion — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-domain-name
+  pattern: (?i)aws\s+delete\-domain\-name\b
+  severity: block
+  message: DeleteDomainName — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-gateway-response
+  pattern: (?i)aws\s+delete\-gateway\-response\b
+  severity: block
+  message: DeleteGatewayResponse — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-integration
+  pattern: (?i)aws\s+delete\-integration\b
+  severity: block
+  message: DeleteIntegration — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-integration-response
+  pattern: (?i)aws\s+delete\-integration\-response\b
+  severity: block
+  message: DeleteIntegrationResponse — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-method
+  pattern: (?i)aws\s+delete\-method\b
+  severity: block
+  message: DeleteMethod — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-method-response
+  pattern: (?i)aws\s+delete\-method\-response\b
+  severity: block
+  message: DeleteMethodResponse — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-model
+  pattern: (?i)aws\s+delete\-model\b
+  severity: block
+  message: DeleteModel — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-request-validator
+  pattern: (?i)aws\s+delete\-request\-validator\b
+  severity: block
+  message: DeleteRequestValidator — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-resource
+  pattern: (?i)aws\s+delete\-resource\b
+  severity: block
+  message: DeleteResource — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-rest-api
+  pattern: (?i)aws\s+delete\-rest\-api\b
+  severity: block
+  message: DeleteRestApi — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-stage
+  pattern: (?i)aws\s+delete\-stage\b
+  severity: warn
+  message: DeleteStage — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-usage-plan
+  pattern: (?i)aws\s+delete\-usage\-plan\b
+  severity: block
+  message: DeleteUsagePlan — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-usage-plan-key
+  pattern: (?i)aws\s+delete\-usage\-plan\-key\b
+  severity: block
+  message: DeleteUsagePlanKey — destructive operation
+  category: cloud
+- name: aws-apigateway-delete-vpc-link
+  pattern: (?i)aws\s+delete\-vpc\-link\b
+  severity: block
+  message: DeleteVpcLink — destructive operation
+  category: cloud
+- name: aws-apigateway-flush-stage-authorizers-cache
+  pattern: (?i)aws\s+flush\-stage\-authorizers\-cache\b
+  severity: block
+  message: FlushStageAuthorizersCache — destructive operation
+  category: cloud
+- name: aws-apigateway-flush-stage-cache
+  pattern: (?i)aws\s+flush\-stage\-cache\b
+  severity: warn
+  message: FlushStageCache — destructive operation
+  category: cloud
+- name: aws-apigateway-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

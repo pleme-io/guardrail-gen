@@ -1,0 +1,25 @@
+- name: aws-detective-delete-graph
+  pattern: (?i)aws\s+delete\-graph\b
+  severity: warn
+  message: DeleteGraph — destructive operation
+  category: cloud
+- name: aws-detective-delete-members
+  pattern: (?i)aws\s+delete\-members\b
+  severity: warn
+  message: DeleteMembers — destructive operation
+  category: cloud
+- name: aws-detective-disable-organization-admin-account
+  pattern: (?i)aws\s+disable\-organization\-admin\-account\b
+  severity: block
+  message: DisableOrganizationAdminAccount — destructive operation
+  category: cloud
+- name: aws-detective-disassociate-membership
+  pattern: (?i)aws\s+disassociate\-membership\b
+  severity: warn
+  message: DisassociateMembership — destructive operation
+  category: cloud
+- name: aws-detective-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

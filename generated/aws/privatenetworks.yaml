@@ -1,0 +1,15 @@
+- name: aws-privatenetworks-delete-network
+  pattern: (?i)aws\s+delete\-network\b
+  severity: block
+  message: DeleteNetwork — destructive operation
+  category: cloud
+- name: aws-privatenetworks-delete-network-site
+  pattern: (?i)aws\s+delete\-network\-site\b
+  severity: block
+  message: DeleteNetworkSite — destructive operation
+  category: cloud
+- name: aws-privatenetworks-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

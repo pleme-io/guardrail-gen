@@ -1,0 +1,50 @@
+- name: aws-lex-models-delete-bot
+  pattern: (?i)aws\s+delete\-bot\b
+  severity: block
+  message: DeleteBot — destructive operation
+  category: cloud
+- name: aws-lex-models-delete-bot-alias
+  pattern: (?i)aws\s+delete\-bot\-alias\b
+  severity: block
+  message: DeleteBotAlias — destructive operation
+  category: cloud
+- name: aws-lex-models-delete-bot-channel-association
+  pattern: (?i)aws\s+delete\-bot\-channel\-association\b
+  severity: warn
+  message: DeleteBotChannelAssociation — destructive operation
+  category: cloud
+- name: aws-lex-models-delete-bot-version
+  pattern: (?i)aws\s+delete\-bot\-version\b
+  severity: block
+  message: DeleteBotVersion — destructive operation
+  category: cloud
+- name: aws-lex-models-delete-intent
+  pattern: (?i)aws\s+delete\-intent\b
+  severity: block
+  message: DeleteIntent — destructive operation
+  category: cloud
+- name: aws-lex-models-delete-intent-version
+  pattern: (?i)aws\s+delete\-intent\-version\b
+  severity: block
+  message: DeleteIntentVersion — destructive operation
+  category: cloud
+- name: aws-lex-models-delete-slot-type
+  pattern: (?i)aws\s+delete\-slot\-type\b
+  severity: block
+  message: DeleteSlotType — destructive operation
+  category: cloud
+- name: aws-lex-models-delete-slot-type-version
+  pattern: (?i)aws\s+delete\-slot\-type\-version\b
+  severity: block
+  message: DeleteSlotTypeVersion — destructive operation
+  category: cloud
+- name: aws-lex-models-delete-utterances
+  pattern: (?i)aws\s+delete\-utterances\b
+  severity: block
+  message: DeleteUtterances — destructive operation
+  category: cloud
+- name: aws-lex-models-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

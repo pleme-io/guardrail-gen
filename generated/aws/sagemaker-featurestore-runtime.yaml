@@ -1,0 +1,5 @@
+- name: aws-sagemaker-featurestore-runtime-delete-record
+  pattern: (?i)aws\s+delete\-record\b
+  severity: block
+  message: DeleteRecord — destructive operation
+  category: cloud

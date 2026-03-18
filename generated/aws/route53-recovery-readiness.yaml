@@ -1,0 +1,30 @@
+- name: aws-route53-recovery-readiness-delete-cell
+  pattern: (?i)aws\s+delete\-cell\b
+  severity: block
+  message: DeleteCell — destructive operation
+  category: cloud
+- name: aws-route53-recovery-readiness-delete-cross-account-authorization
+  pattern: (?i)aws\s+delete\-cross\-account\-authorization\b
+  severity: block
+  message: DeleteCrossAccountAuthorization — destructive operation
+  category: cloud
+- name: aws-route53-recovery-readiness-delete-readiness-check
+  pattern: (?i)aws\s+delete\-readiness\-check\b
+  severity: block
+  message: DeleteReadinessCheck — destructive operation
+  category: cloud
+- name: aws-route53-recovery-readiness-delete-recovery-group
+  pattern: (?i)aws\s+delete\-recovery\-group\b
+  severity: block
+  message: DeleteRecoveryGroup — destructive operation
+  category: cloud
+- name: aws-route53-recovery-readiness-delete-resource-set
+  pattern: (?i)aws\s+delete\-resource\-set\b
+  severity: block
+  message: DeleteResourceSet — destructive operation
+  category: cloud
+- name: aws-route53-recovery-readiness-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

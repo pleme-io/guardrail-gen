@@ -1,0 +1,55 @@
+- name: aws-clouddirectory-delete-directory
+  pattern: (?i)aws\s+delete\-directory\b
+  severity: warn
+  message: DeleteDirectory — destructive operation
+  category: cloud
+- name: aws-clouddirectory-delete-facet
+  pattern: (?i)aws\s+delete\-facet\b
+  severity: warn
+  message: DeleteFacet — destructive operation
+  category: cloud
+- name: aws-clouddirectory-delete-object
+  pattern: (?i)aws\s+delete\-object\b
+  severity: warn
+  message: DeleteObject — destructive operation
+  category: cloud
+- name: aws-clouddirectory-delete-schema
+  pattern: (?i)aws\s+delete\-schema\b
+  severity: warn
+  message: DeleteSchema — destructive operation
+  category: cloud
+- name: aws-clouddirectory-delete-typed-link-facet
+  pattern: (?i)aws\s+delete\-typed\-link\-facet\b
+  severity: warn
+  message: DeleteTypedLinkFacet — destructive operation
+  category: cloud
+- name: aws-clouddirectory-detach-from-index
+  pattern: (?i)aws\s+detach\-from\-index\b
+  severity: warn
+  message: DetachFromIndex — destructive operation
+  category: cloud
+- name: aws-clouddirectory-detach-object
+  pattern: (?i)aws\s+detach\-object\b
+  severity: warn
+  message: DetachObject — destructive operation
+  category: cloud
+- name: aws-clouddirectory-detach-policy
+  pattern: (?i)aws\s+detach\-policy\b
+  severity: block
+  message: DetachPolicy — destructive operation
+  category: cloud
+- name: aws-clouddirectory-detach-typed-link
+  pattern: (?i)aws\s+detach\-typed\-link\b
+  severity: warn
+  message: DetachTypedLink — destructive operation
+  category: cloud
+- name: aws-clouddirectory-disable-directory
+  pattern: (?i)aws\s+disable\-directory\b
+  severity: warn
+  message: DisableDirectory — destructive operation
+  category: cloud
+- name: aws-clouddirectory-remove-facet-from-object
+  pattern: (?i)aws\s+remove\-facet\-from\-object\b
+  severity: warn
+  message: RemoveFacetFromObject — destructive operation
+  category: cloud

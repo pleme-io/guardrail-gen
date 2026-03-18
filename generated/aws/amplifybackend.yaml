@@ -1,0 +1,35 @@
+- name: aws-amplifybackend-delete-backend
+  pattern: (?i)aws\s+delete\-backend\b
+  severity: warn
+  message: DeleteBackend — destructive operation
+  category: cloud
+- name: aws-amplifybackend-delete-backend-a-p-i
+  pattern: (?i)aws\s+delete\-backend\-a\-p\-i\b
+  severity: warn
+  message: DeleteBackendAPI — destructive operation
+  category: cloud
+- name: aws-amplifybackend-delete-backend-auth
+  pattern: (?i)aws\s+delete\-backend\-auth\b
+  severity: block
+  message: DeleteBackendAuth — destructive operation
+  category: cloud
+- name: aws-amplifybackend-delete-backend-storage
+  pattern: (?i)aws\s+delete\-backend\-storage\b
+  severity: warn
+  message: DeleteBackendStorage — destructive operation
+  category: cloud
+- name: aws-amplifybackend-delete-token
+  pattern: (?i)aws\s+delete\-token\b
+  severity: warn
+  message: DeleteToken — destructive operation
+  category: cloud
+- name: aws-amplifybackend-remove-all-backends
+  pattern: (?i)aws\s+remove\-all\-backends\b
+  severity: warn
+  message: RemoveAllBackends — destructive operation
+  category: cloud
+- name: aws-amplifybackend-remove-backend-config
+  pattern: (?i)aws\s+remove\-backend\-config\b
+  severity: warn
+  message: RemoveBackendConfig — destructive operation
+  category: cloud

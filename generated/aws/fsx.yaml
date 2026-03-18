@@ -1,0 +1,50 @@
+- name: aws-fsx-cancel-data-repository-task
+  pattern: (?i)aws\s+cancel\-data\-repository\-task\b
+  severity: warn
+  message: CancelDataRepositoryTask — destructive operation
+  category: cloud
+- name: aws-fsx-delete-backup
+  pattern: (?i)aws\s+delete\-backup\b
+  severity: warn
+  message: DeleteBackup — destructive operation
+  category: cloud
+- name: aws-fsx-delete-data-repository-association
+  pattern: (?i)aws\s+delete\-data\-repository\-association\b
+  severity: warn
+  message: DeleteDataRepositoryAssociation — destructive operation
+  category: cloud
+- name: aws-fsx-delete-file-cache
+  pattern: (?i)aws\s+delete\-file\-cache\b
+  severity: warn
+  message: DeleteFileCache — destructive operation
+  category: cloud
+- name: aws-fsx-delete-file-system
+  pattern: (?i)aws\s+delete\-file\-system\b
+  severity: warn
+  message: DeleteFileSystem — destructive operation
+  category: cloud
+- name: aws-fsx-delete-snapshot
+  pattern: (?i)aws\s+delete\-snapshot\b
+  severity: warn
+  message: DeleteSnapshot — destructive operation
+  category: cloud
+- name: aws-fsx-delete-storage-virtual-machine
+  pattern: (?i)aws\s+delete\-storage\-virtual\-machine\b
+  severity: warn
+  message: DeleteStorageVirtualMachine — destructive operation
+  category: cloud
+- name: aws-fsx-delete-volume
+  pattern: (?i)aws\s+delete\-volume\b
+  severity: block
+  message: DeleteVolume — destructive operation
+  category: cloud
+- name: aws-fsx-disassociate-file-system-aliases
+  pattern: (?i)aws\s+disassociate\-file\-system\-aliases\b
+  severity: warn
+  message: DisassociateFileSystemAliases — destructive operation
+  category: cloud
+- name: aws-fsx-release-file-system-nfs-v3-locks
+  pattern: (?i)aws\s+release\-file\-system\-nfs\-v3\-locks\b
+  severity: warn
+  message: ReleaseFileSystemNfsV3Locks — destructive operation
+  category: cloud

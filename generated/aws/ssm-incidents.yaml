@@ -1,0 +1,30 @@
+- name: aws-ssm-incidents-delete-incident-record
+  pattern: (?i)aws\s+delete\-incident\-record\b
+  severity: warn
+  message: DeleteIncidentRecord — destructive operation
+  category: cloud
+- name: aws-ssm-incidents-delete-replication-set
+  pattern: (?i)aws\s+delete\-replication\-set\b
+  severity: warn
+  message: DeleteReplicationSet — destructive operation
+  category: cloud
+- name: aws-ssm-incidents-delete-resource-policy
+  pattern: (?i)aws\s+delete\-resource\-policy\b
+  severity: block
+  message: DeleteResourcePolicy — destructive operation
+  category: cloud
+- name: aws-ssm-incidents-delete-response-plan
+  pattern: (?i)aws\s+delete\-response\-plan\b
+  severity: warn
+  message: DeleteResponsePlan — destructive operation
+  category: cloud
+- name: aws-ssm-incidents-delete-timeline-event
+  pattern: (?i)aws\s+delete\-timeline\-event\b
+  severity: warn
+  message: DeleteTimelineEvent — destructive operation
+  category: cloud
+- name: aws-ssm-incidents-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

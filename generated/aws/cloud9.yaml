@@ -1,0 +1,10 @@
+- name: aws-cloud9-delete-environment
+  pattern: (?i)aws\s+delete\-environment\b
+  severity: warn
+  message: DeleteEnvironment — destructive operation
+  category: cloud
+- name: aws-cloud9-delete-environment-membership
+  pattern: (?i)aws\s+delete\-environment\-membership\b
+  severity: warn
+  message: DeleteEnvironmentMembership — destructive operation
+  category: cloud

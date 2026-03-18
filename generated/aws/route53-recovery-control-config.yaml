@@ -1,0 +1,25 @@
+- name: aws-route53-recovery-control-config-delete-cluster
+  pattern: (?i)aws\s+delete\-cluster\b
+  severity: block
+  message: DeleteCluster — destructive operation
+  category: cloud
+- name: aws-route53-recovery-control-config-delete-control-panel
+  pattern: (?i)aws\s+delete\-control\-panel\b
+  severity: block
+  message: DeleteControlPanel — destructive operation
+  category: cloud
+- name: aws-route53-recovery-control-config-delete-routing-control
+  pattern: (?i)aws\s+delete\-routing\-control\b
+  severity: block
+  message: DeleteRoutingControl — destructive operation
+  category: cloud
+- name: aws-route53-recovery-control-config-delete-safety-rule
+  pattern: (?i)aws\s+delete\-safety\-rule\b
+  severity: warn
+  message: DeleteSafetyRule — destructive operation
+  category: cloud
+- name: aws-route53-recovery-control-config-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

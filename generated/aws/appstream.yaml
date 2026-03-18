@@ -1,0 +1,80 @@
+- name: aws-appstream-batch-disassociate-user-stack
+  pattern: (?i)aws\s+batch\-disassociate\-user\-stack\b
+  severity: block
+  message: BatchDisassociateUserStack — destructive operation
+  category: cloud
+- name: aws-appstream-delete-app-block
+  pattern: (?i)aws\s+delete\-app\-block\b
+  severity: warn
+  message: DeleteAppBlock — destructive operation
+  category: cloud
+- name: aws-appstream-delete-application
+  pattern: (?i)aws\s+delete\-application\b
+  severity: warn
+  message: DeleteApplication — destructive operation
+  category: cloud
+- name: aws-appstream-delete-directory-config
+  pattern: (?i)aws\s+delete\-directory\-config\b
+  severity: warn
+  message: DeleteDirectoryConfig — destructive operation
+  category: cloud
+- name: aws-appstream-delete-entitlement
+  pattern: (?i)aws\s+delete\-entitlement\b
+  severity: warn
+  message: DeleteEntitlement — destructive operation
+  category: cloud
+- name: aws-appstream-delete-fleet
+  pattern: (?i)aws\s+delete\-fleet\b
+  severity: warn
+  message: DeleteFleet — destructive operation
+  category: cloud
+- name: aws-appstream-delete-image
+  pattern: (?i)aws\s+delete\-image\b
+  severity: warn
+  message: DeleteImage — destructive operation
+  category: cloud
+- name: aws-appstream-delete-image-builder
+  pattern: (?i)aws\s+delete\-image\-builder\b
+  severity: warn
+  message: DeleteImageBuilder — destructive operation
+  category: cloud
+- name: aws-appstream-delete-image-permissions
+  pattern: (?i)aws\s+delete\-image\-permissions\b
+  severity: warn
+  message: DeleteImagePermissions — destructive operation
+  category: cloud
+- name: aws-appstream-delete-stack
+  pattern: (?i)aws\s+delete\-stack\b
+  severity: block
+  message: DeleteStack — destructive operation
+  category: cloud
+- name: aws-appstream-delete-usage-report-subscription
+  pattern: (?i)aws\s+delete\-usage\-report\-subscription\b
+  severity: warn
+  message: DeleteUsageReportSubscription — destructive operation
+  category: cloud
+- name: aws-appstream-delete-user
+  pattern: (?i)aws\s+delete\-user\b
+  severity: warn
+  message: DeleteUser — destructive operation
+  category: cloud
+- name: aws-appstream-disable-user
+  pattern: (?i)aws\s+disable\-user\b
+  severity: warn
+  message: DisableUser — destructive operation
+  category: cloud
+- name: aws-appstream-disassociate-application-fleet
+  pattern: (?i)aws\s+disassociate\-application\-fleet\b
+  severity: warn
+  message: DisassociateApplicationFleet — destructive operation
+  category: cloud
+- name: aws-appstream-disassociate-application-from-entitlement
+  pattern: (?i)aws\s+disassociate\-application\-from\-entitlement\b
+  severity: warn
+  message: DisassociateApplicationFromEntitlement — destructive operation
+  category: cloud
+- name: aws-appstream-disassociate-fleet
+  pattern: (?i)aws\s+disassociate\-fleet\b
+  severity: warn
+  message: DisassociateFleet — destructive operation
+  category: cloud

@@ -1,0 +1,80 @@
+- name: aws-ds-cancel-schema-extension
+  pattern: (?i)aws\s+cancel\-schema\-extension\b
+  severity: warn
+  message: CancelSchemaExtension — destructive operation
+  category: cloud
+- name: aws-ds-delete-conditional-forwarder
+  pattern: (?i)aws\s+delete\-conditional\-forwarder\b
+  severity: warn
+  message: DeleteConditionalForwarder — destructive operation
+  category: cloud
+- name: aws-ds-delete-directory
+  pattern: (?i)aws\s+delete\-directory\b
+  severity: warn
+  message: DeleteDirectory — destructive operation
+  category: cloud
+- name: aws-ds-delete-log-subscription
+  pattern: (?i)aws\s+delete\-log\-subscription\b
+  severity: warn
+  message: DeleteLogSubscription — destructive operation
+  category: cloud
+- name: aws-ds-delete-snapshot
+  pattern: (?i)aws\s+delete\-snapshot\b
+  severity: warn
+  message: DeleteSnapshot — destructive operation
+  category: cloud
+- name: aws-ds-delete-trust
+  pattern: (?i)aws\s+delete\-trust\b
+  severity: warn
+  message: DeleteTrust — destructive operation
+  category: cloud
+- name: aws-ds-deregister-certificate
+  pattern: (?i)aws\s+deregister\-certificate\b
+  severity: block
+  message: DeregisterCertificate — destructive operation
+  category: cloud
+- name: aws-ds-deregister-event-topic
+  pattern: (?i)aws\s+deregister\-event\-topic\b
+  severity: warn
+  message: DeregisterEventTopic — destructive operation
+  category: cloud
+- name: aws-ds-disable-client-authentication
+  pattern: (?i)aws\s+disable\-client\-authentication\b
+  severity: block
+  message: DisableClientAuthentication — destructive operation
+  category: cloud
+- name: aws-ds-disable-l-d-a-p-s
+  pattern: (?i)aws\s+disable\-l\-d\-a\-p\-s\b
+  severity: warn
+  message: DisableLDAPS — destructive operation
+  category: cloud
+- name: aws-ds-disable-radius
+  pattern: (?i)aws\s+disable\-radius\b
+  severity: warn
+  message: DisableRadius — destructive operation
+  category: cloud
+- name: aws-ds-disable-sso
+  pattern: (?i)aws\s+disable\-sso\b
+  severity: warn
+  message: DisableSso — destructive operation
+  category: cloud
+- name: aws-ds-remove-ip-routes
+  pattern: (?i)aws\s+remove\-ip\-routes\b
+  severity: warn
+  message: RemoveIpRoutes — destructive operation
+  category: cloud
+- name: aws-ds-remove-region
+  pattern: (?i)aws\s+remove\-region\b
+  severity: warn
+  message: RemoveRegion — destructive operation
+  category: cloud
+- name: aws-ds-remove-tags-from-resource
+  pattern: (?i)aws\s+remove\-tags\-from\-resource\b
+  severity: warn
+  message: RemoveTagsFromResource — destructive operation
+  category: cloud
+- name: aws-ds-reset-user-password
+  pattern: (?i)aws\s+reset\-user\-password\b
+  severity: warn
+  message: ResetUserPassword — destructive operation
+  category: cloud

@@ -1,0 +1,15 @@
+- name: aws-oam-delete-link
+  pattern: (?i)aws\s+delete\-link\b
+  severity: warn
+  message: DeleteLink — destructive operation
+  category: cloud
+- name: aws-oam-delete-sink
+  pattern: (?i)aws\s+delete\-sink\b
+  severity: warn
+  message: DeleteSink — destructive operation
+  category: cloud
+- name: aws-oam-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

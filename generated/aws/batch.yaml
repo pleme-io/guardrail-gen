@@ -1,0 +1,35 @@
+- name: aws-batch-cancel-job
+  pattern: (?i)aws\s+cancel\-job\b
+  severity: warn
+  message: CancelJob — destructive operation
+  category: cloud
+- name: aws-batch-delete-compute-environment
+  pattern: (?i)aws\s+delete\-compute\-environment\b
+  severity: warn
+  message: DeleteComputeEnvironment — destructive operation
+  category: cloud
+- name: aws-batch-delete-job-queue
+  pattern: (?i)aws\s+delete\-job\-queue\b
+  severity: warn
+  message: DeleteJobQueue — destructive operation
+  category: cloud
+- name: aws-batch-delete-scheduling-policy
+  pattern: (?i)aws\s+delete\-scheduling\-policy\b
+  severity: block
+  message: DeleteSchedulingPolicy — destructive operation
+  category: cloud
+- name: aws-batch-deregister-job-definition
+  pattern: (?i)aws\s+deregister\-job\-definition\b
+  severity: warn
+  message: DeregisterJobDefinition — destructive operation
+  category: cloud
+- name: aws-batch-terminate-job
+  pattern: (?i)aws\s+terminate\-job\b
+  severity: warn
+  message: TerminateJob — destructive operation
+  category: cloud
+- name: aws-batch-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

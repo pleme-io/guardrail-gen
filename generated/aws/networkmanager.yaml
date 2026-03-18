@@ -1,0 +1,85 @@
+- name: aws-networkmanager-delete-attachment
+  pattern: (?i)aws\s+delete\-attachment\b
+  severity: warn
+  message: DeleteAttachment — destructive operation
+  category: cloud
+- name: aws-networkmanager-delete-connect-peer
+  pattern: (?i)aws\s+delete\-connect\-peer\b
+  severity: block
+  message: DeleteConnectPeer — destructive operation
+  category: cloud
+- name: aws-networkmanager-delete-connection
+  pattern: (?i)aws\s+delete\-connection\b
+  severity: block
+  message: DeleteConnection — destructive operation
+  category: cloud
+- name: aws-networkmanager-delete-core-network
+  pattern: (?i)aws\s+delete\-core\-network\b
+  severity: block
+  message: DeleteCoreNetwork — destructive operation
+  category: cloud
+- name: aws-networkmanager-delete-core-network-policy-version
+  pattern: (?i)aws\s+delete\-core\-network\-policy\-version\b
+  severity: block
+  message: DeleteCoreNetworkPolicyVersion — destructive operation
+  category: cloud
+- name: aws-networkmanager-delete-device
+  pattern: (?i)aws\s+delete\-device\b
+  severity: block
+  message: DeleteDevice — destructive operation
+  category: cloud
+- name: aws-networkmanager-delete-global-network
+  pattern: (?i)aws\s+delete\-global\-network\b
+  severity: block
+  message: DeleteGlobalNetwork — destructive operation
+  category: cloud
+- name: aws-networkmanager-delete-link
+  pattern: (?i)aws\s+delete\-link\b
+  severity: block
+  message: DeleteLink — destructive operation
+  category: cloud
+- name: aws-networkmanager-delete-peering
+  pattern: (?i)aws\s+delete\-peering\b
+  severity: block
+  message: DeletePeering — destructive operation
+  category: cloud
+- name: aws-networkmanager-delete-resource-policy
+  pattern: (?i)aws\s+delete\-resource\-policy\b
+  severity: block
+  message: DeleteResourcePolicy — destructive operation
+  category: cloud
+- name: aws-networkmanager-delete-site
+  pattern: (?i)aws\s+delete\-site\b
+  severity: block
+  message: DeleteSite — destructive operation
+  category: cloud
+- name: aws-networkmanager-deregister-transit-gateway
+  pattern: (?i)aws\s+deregister\-transit\-gateway\b
+  severity: block
+  message: DeregisterTransitGateway — destructive operation
+  category: cloud
+- name: aws-networkmanager-disassociate-connect-peer
+  pattern: (?i)aws\s+disassociate\-connect\-peer\b
+  severity: warn
+  message: DisassociateConnectPeer — destructive operation
+  category: cloud
+- name: aws-networkmanager-disassociate-customer-gateway
+  pattern: (?i)aws\s+disassociate\-customer\-gateway\b
+  severity: block
+  message: DisassociateCustomerGateway — destructive operation
+  category: cloud
+- name: aws-networkmanager-disassociate-link
+  pattern: (?i)aws\s+disassociate\-link\b
+  severity: warn
+  message: DisassociateLink — destructive operation
+  category: cloud
+- name: aws-networkmanager-disassociate-transit-gateway-connect-peer
+  pattern: (?i)aws\s+disassociate\-transit\-gateway\-connect\-peer\b
+  severity: block
+  message: DisassociateTransitGatewayConnectPeer — destructive operation
+  category: cloud
+- name: aws-networkmanager-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

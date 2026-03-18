@@ -1,0 +1,10 @@
+- name: aws-states-delete-activity
+  pattern: (?i)aws\s+delete\-activity\b
+  severity: warn
+  message: DeleteActivity — destructive operation
+  category: cloud
+- name: aws-states-delete-state-machine
+  pattern: (?i)aws\s+delete\-state\-machine\b
+  severity: warn
+  message: DeleteStateMachine — destructive operation
+  category: cloud

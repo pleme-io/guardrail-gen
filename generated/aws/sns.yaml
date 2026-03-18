@@ -1,0 +1,25 @@
+- name: aws-sns-delete-endpoint
+  pattern: (?i)aws\s+delete\-endpoint\b
+  severity: warn
+  message: DeleteEndpoint — destructive operation
+  category: cloud
+- name: aws-sns-delete-platform-application
+  pattern: (?i)aws\s+delete\-platform\-application\b
+  severity: warn
+  message: DeletePlatformApplication — destructive operation
+  category: cloud
+- name: aws-sns-delete-s-m-s-sandbox-phone-number
+  pattern: (?i)aws\s+delete\-s\-m\-s\-sandbox\-phone\-number\b
+  severity: block
+  message: DeleteSMSSandboxPhoneNumber — destructive operation
+  category: cloud
+- name: aws-sns-delete-topic
+  pattern: (?i)aws\s+delete\-topic\b
+  severity: warn
+  message: DeleteTopic — destructive operation
+  category: cloud
+- name: aws-sns-remove-permission
+  pattern: (?i)aws\s+remove\-permission\b
+  severity: warn
+  message: RemovePermission — destructive operation
+  category: cloud

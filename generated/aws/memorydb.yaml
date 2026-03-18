@@ -1,0 +1,35 @@
+- name: aws-memorydb-delete-a-c-l
+  pattern: (?i)aws\s+delete\-a\-c\-l\b
+  severity: warn
+  message: DeleteACL — destructive operation
+  category: cloud
+- name: aws-memorydb-delete-cluster
+  pattern: (?i)aws\s+delete\-cluster\b
+  severity: block
+  message: DeleteCluster — destructive operation
+  category: cloud
+- name: aws-memorydb-delete-parameter-group
+  pattern: (?i)aws\s+delete\-parameter\-group\b
+  severity: block
+  message: DeleteParameterGroup — destructive operation
+  category: cloud
+- name: aws-memorydb-delete-snapshot
+  pattern: (?i)aws\s+delete\-snapshot\b
+  severity: warn
+  message: DeleteSnapshot — destructive operation
+  category: cloud
+- name: aws-memorydb-delete-subnet-group
+  pattern: (?i)aws\s+delete\-subnet\-group\b
+  severity: block
+  message: DeleteSubnetGroup — destructive operation
+  category: cloud
+- name: aws-memorydb-delete-user
+  pattern: (?i)aws\s+delete\-user\b
+  severity: warn
+  message: DeleteUser — destructive operation
+  category: cloud
+- name: aws-memorydb-reset-parameter-group
+  pattern: (?i)aws\s+reset\-parameter\-group\b
+  severity: block
+  message: ResetParameterGroup — destructive operation
+  category: cloud

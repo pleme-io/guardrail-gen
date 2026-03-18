@@ -1,0 +1,45 @@
+- name: aws-elasticmapreduce-cancel-steps
+  pattern: (?i)aws\s+cancel\-steps\b
+  severity: warn
+  message: CancelSteps — destructive operation
+  category: cloud
+- name: aws-elasticmapreduce-delete-security-configuration
+  pattern: (?i)aws\s+delete\-security\-configuration\b
+  severity: warn
+  message: DeleteSecurityConfiguration — destructive operation
+  category: cloud
+- name: aws-elasticmapreduce-delete-studio
+  pattern: (?i)aws\s+delete\-studio\b
+  severity: warn
+  message: DeleteStudio — destructive operation
+  category: cloud
+- name: aws-elasticmapreduce-delete-studio-session-mapping
+  pattern: (?i)aws\s+delete\-studio\-session\-mapping\b
+  severity: warn
+  message: DeleteStudioSessionMapping — destructive operation
+  category: cloud
+- name: aws-elasticmapreduce-remove-auto-scaling-policy
+  pattern: (?i)aws\s+remove\-auto\-scaling\-policy\b
+  severity: block
+  message: RemoveAutoScalingPolicy — destructive operation
+  category: cloud
+- name: aws-elasticmapreduce-remove-auto-termination-policy
+  pattern: (?i)aws\s+remove\-auto\-termination\-policy\b
+  severity: block
+  message: RemoveAutoTerminationPolicy — destructive operation
+  category: cloud
+- name: aws-elasticmapreduce-remove-managed-scaling-policy
+  pattern: (?i)aws\s+remove\-managed\-scaling\-policy\b
+  severity: block
+  message: RemoveManagedScalingPolicy — destructive operation
+  category: cloud
+- name: aws-elasticmapreduce-remove-tags
+  pattern: (?i)aws\s+remove\-tags\b
+  severity: warn
+  message: RemoveTags — destructive operation
+  category: cloud
+- name: aws-elasticmapreduce-terminate-job-flows
+  pattern: (?i)aws\s+terminate\-job\-flows\b
+  severity: warn
+  message: TerminateJobFlows — destructive operation
+  category: cloud

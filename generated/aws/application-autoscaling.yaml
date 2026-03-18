@@ -1,0 +1,15 @@
+- name: aws-application-autoscaling-delete-scaling-policy
+  pattern: (?i)aws\s+delete\-scaling\-policy\b
+  severity: block
+  message: DeleteScalingPolicy — destructive operation
+  category: cloud
+- name: aws-application-autoscaling-delete-scheduled-action
+  pattern: (?i)aws\s+delete\-scheduled\-action\b
+  severity: warn
+  message: DeleteScheduledAction — destructive operation
+  category: cloud
+- name: aws-application-autoscaling-deregister-scalable-target
+  pattern: (?i)aws\s+deregister\-scalable\-target\b
+  severity: block
+  message: DeregisterScalableTarget — destructive operation
+  category: cloud

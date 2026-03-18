@@ -1,0 +1,225 @@
+- name: aws-iot-cancel-audit-mitigation-actions-task
+  pattern: (?i)aws\s+cancel\-audit\-mitigation\-actions\-task\b
+  severity: warn
+  message: CancelAuditMitigationActionsTask — destructive operation
+  category: cloud
+- name: aws-iot-cancel-audit-task
+  pattern: (?i)aws\s+cancel\-audit\-task\b
+  severity: warn
+  message: CancelAuditTask — destructive operation
+  category: cloud
+- name: aws-iot-cancel-certificate-transfer
+  pattern: (?i)aws\s+cancel\-certificate\-transfer\b
+  severity: block
+  message: CancelCertificateTransfer — destructive operation
+  category: cloud
+- name: aws-iot-cancel-detect-mitigation-actions-task
+  pattern: (?i)aws\s+cancel\-detect\-mitigation\-actions\-task\b
+  severity: warn
+  message: CancelDetectMitigationActionsTask — destructive operation
+  category: cloud
+- name: aws-iot-cancel-job
+  pattern: (?i)aws\s+cancel\-job\b
+  severity: warn
+  message: CancelJob — destructive operation
+  category: cloud
+- name: aws-iot-cancel-job-execution
+  pattern: (?i)aws\s+cancel\-job\-execution\b
+  severity: warn
+  message: CancelJobExecution — destructive operation
+  category: cloud
+- name: aws-iot-clear-default-authorizer
+  pattern: (?i)aws\s+clear\-default\-authorizer\b
+  severity: block
+  message: ClearDefaultAuthorizer — destructive operation
+  category: cloud
+- name: aws-iot-delete-account-audit-configuration
+  pattern: (?i)aws\s+delete\-account\-audit\-configuration\b
+  severity: block
+  message: DeleteAccountAuditConfiguration — destructive operation
+  category: cloud
+- name: aws-iot-delete-audit-suppression
+  pattern: (?i)aws\s+delete\-audit\-suppression\b
+  severity: warn
+  message: DeleteAuditSuppression — destructive operation
+  category: cloud
+- name: aws-iot-delete-authorizer
+  pattern: (?i)aws\s+delete\-authorizer\b
+  severity: block
+  message: DeleteAuthorizer — destructive operation
+  category: cloud
+- name: aws-iot-delete-billing-group
+  pattern: (?i)aws\s+delete\-billing\-group\b
+  severity: block
+  message: DeleteBillingGroup — destructive operation
+  category: cloud
+- name: aws-iot-delete-c-a-certificate
+  pattern: (?i)aws\s+delete\-c\-a\-certificate\b
+  severity: block
+  message: DeleteCACertificate — destructive operation
+  category: cloud
+- name: aws-iot-delete-certificate
+  pattern: (?i)aws\s+delete\-certificate\b
+  severity: block
+  message: DeleteCertificate — destructive operation
+  category: cloud
+- name: aws-iot-delete-custom-metric
+  pattern: (?i)aws\s+delete\-custom\-metric\b
+  severity: warn
+  message: DeleteCustomMetric — destructive operation
+  category: cloud
+- name: aws-iot-delete-dimension
+  pattern: (?i)aws\s+delete\-dimension\b
+  severity: block
+  message: DeleteDimension — destructive operation
+  category: cloud
+- name: aws-iot-delete-domain-configuration
+  pattern: (?i)aws\s+delete\-domain\-configuration\b
+  severity: block
+  message: DeleteDomainConfiguration — destructive operation
+  category: cloud
+- name: aws-iot-delete-dynamic-thing-group
+  pattern: (?i)aws\s+delete\-dynamic\-thing\-group\b
+  severity: block
+  message: DeleteDynamicThingGroup — destructive operation
+  category: cloud
+- name: aws-iot-delete-fleet-metric
+  pattern: (?i)aws\s+delete\-fleet\-metric\b
+  severity: warn
+  message: DeleteFleetMetric — destructive operation
+  category: cloud
+- name: aws-iot-delete-job
+  pattern: (?i)aws\s+delete\-job\b
+  severity: block
+  message: DeleteJob — destructive operation
+  category: cloud
+- name: aws-iot-delete-job-execution
+  pattern: (?i)aws\s+delete\-job\-execution\b
+  severity: block
+  message: DeleteJobExecution — destructive operation
+  category: cloud
+- name: aws-iot-delete-job-template
+  pattern: (?i)aws\s+delete\-job\-template\b
+  severity: block
+  message: DeleteJobTemplate — destructive operation
+  category: cloud
+- name: aws-iot-delete-mitigation-action
+  pattern: (?i)aws\s+delete\-mitigation\-action\b
+  severity: block
+  message: DeleteMitigationAction — destructive operation
+  category: cloud
+- name: aws-iot-delete-o-t-a-update
+  pattern: (?i)aws\s+delete\-o\-t\-a\-update\b
+  severity: block
+  message: DeleteOTAUpdate — destructive operation
+  category: cloud
+- name: aws-iot-delete-policy
+  pattern: (?i)aws\s+delete\-policy\b
+  severity: block
+  message: DeletePolicy — destructive operation
+  category: cloud
+- name: aws-iot-delete-policy-version
+  pattern: (?i)aws\s+delete\-policy\-version\b
+  severity: block
+  message: DeletePolicyVersion — destructive operation
+  category: cloud
+- name: aws-iot-delete-provisioning-template
+  pattern: (?i)aws\s+delete\-provisioning\-template\b
+  severity: block
+  message: DeleteProvisioningTemplate — destructive operation
+  category: cloud
+- name: aws-iot-delete-provisioning-template-version
+  pattern: (?i)aws\s+delete\-provisioning\-template\-version\b
+  severity: block
+  message: DeleteProvisioningTemplateVersion — destructive operation
+  category: cloud
+- name: aws-iot-delete-registration-code
+  pattern: (?i)aws\s+delete\-registration\-code\b
+  severity: block
+  message: DeleteRegistrationCode — destructive operation
+  category: cloud
+- name: aws-iot-delete-role-alias
+  pattern: (?i)aws\s+delete\-role\-alias\b
+  severity: block
+  message: DeleteRoleAlias — destructive operation
+  category: cloud
+- name: aws-iot-delete-scheduled-audit
+  pattern: (?i)aws\s+delete\-scheduled\-audit\b
+  severity: block
+  message: DeleteScheduledAudit — destructive operation
+  category: cloud
+- name: aws-iot-delete-security-profile
+  pattern: (?i)aws\s+delete\-security\-profile\b
+  severity: block
+  message: DeleteSecurityProfile — destructive operation
+  category: cloud
+- name: aws-iot-delete-stream
+  pattern: (?i)aws\s+delete\-stream\b
+  severity: block
+  message: DeleteStream — destructive operation
+  category: cloud
+- name: aws-iot-delete-thing
+  pattern: (?i)aws\s+delete\-thing\b
+  severity: block
+  message: DeleteThing — destructive operation
+  category: cloud
+- name: aws-iot-delete-thing-group
+  pattern: (?i)aws\s+delete\-thing\-group\b
+  severity: block
+  message: DeleteThingGroup — destructive operation
+  category: cloud
+- name: aws-iot-delete-thing-type
+  pattern: (?i)aws\s+delete\-thing\-type\b
+  severity: block
+  message: DeleteThingType — destructive operation
+  category: cloud
+- name: aws-iot-delete-topic-rule
+  pattern: (?i)aws\s+delete\-topic\-rule\b
+  severity: warn
+  message: DeleteTopicRule — destructive operation
+  category: cloud
+- name: aws-iot-delete-topic-rule-destination
+  pattern: (?i)aws\s+delete\-topic\-rule\-destination\b
+  severity: warn
+  message: DeleteTopicRuleDestination — destructive operation
+  category: cloud
+- name: aws-iot-delete-v2-logging-level
+  pattern: (?i)aws\s+delete\-v2\-logging\-level\b
+  severity: warn
+  message: DeleteV2LoggingLevel — destructive operation
+  category: cloud
+- name: aws-iot-detach-policy
+  pattern: (?i)aws\s+detach\-policy\b
+  severity: block
+  message: DetachPolicy — destructive operation
+  category: cloud
+- name: aws-iot-detach-principal-policy
+  pattern: (?i)aws\s+detach\-principal\-policy\b
+  severity: block
+  message: DetachPrincipalPolicy — destructive operation
+  category: cloud
+- name: aws-iot-detach-security-profile
+  pattern: (?i)aws\s+detach\-security\-profile\b
+  severity: block
+  message: DetachSecurityProfile — destructive operation
+  category: cloud
+- name: aws-iot-detach-thing-principal
+  pattern: (?i)aws\s+detach\-thing\-principal\b
+  severity: block
+  message: DetachThingPrincipal — destructive operation
+  category: cloud
+- name: aws-iot-disable-topic-rule
+  pattern: (?i)aws\s+disable\-topic\-rule\b
+  severity: warn
+  message: DisableTopicRule — destructive operation
+  category: cloud
+- name: aws-iot-remove-thing-from-billing-group
+  pattern: (?i)aws\s+remove\-thing\-from\-billing\-group\b
+  severity: block
+  message: RemoveThingFromBillingGroup — destructive operation
+  category: cloud
+- name: aws-iot-remove-thing-from-thing-group
+  pattern: (?i)aws\s+remove\-thing\-from\-thing\-group\b
+  severity: block
+  message: RemoveThingFromThingGroup — destructive operation
+  category: cloud

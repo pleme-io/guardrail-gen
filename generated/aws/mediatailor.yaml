@@ -1,0 +1,45 @@
+- name: aws-mediatailor-delete-channel
+  pattern: (?i)aws\s+delete\-channel\b
+  severity: block
+  message: DeleteChannel — destructive operation
+  category: cloud
+- name: aws-mediatailor-delete-channel-policy
+  pattern: (?i)aws\s+delete\-channel\-policy\b
+  severity: block
+  message: DeleteChannelPolicy — destructive operation
+  category: cloud
+- name: aws-mediatailor-delete-live-source
+  pattern: (?i)aws\s+delete\-live\-source\b
+  severity: block
+  message: DeleteLiveSource — destructive operation
+  category: cloud
+- name: aws-mediatailor-delete-playback-configuration
+  pattern: (?i)aws\s+delete\-playback\-configuration\b
+  severity: block
+  message: DeletePlaybackConfiguration — destructive operation
+  category: cloud
+- name: aws-mediatailor-delete-prefetch-schedule
+  pattern: (?i)aws\s+delete\-prefetch\-schedule\b
+  severity: block
+  message: DeletePrefetchSchedule — destructive operation
+  category: cloud
+- name: aws-mediatailor-delete-program
+  pattern: (?i)aws\s+delete\-program\b
+  severity: block
+  message: DeleteProgram — destructive operation
+  category: cloud
+- name: aws-mediatailor-delete-source-location
+  pattern: (?i)aws\s+delete\-source\-location\b
+  severity: block
+  message: DeleteSourceLocation — destructive operation
+  category: cloud
+- name: aws-mediatailor-delete-vod-source
+  pattern: (?i)aws\s+delete\-vod\-source\b
+  severity: block
+  message: DeleteVodSource — destructive operation
+  category: cloud
+- name: aws-mediatailor-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

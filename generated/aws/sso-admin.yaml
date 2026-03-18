@@ -1,0 +1,35 @@
+- name: aws-sso-admin-delete-account-assignment
+  pattern: (?i)aws\s+delete\-account\-assignment\b
+  severity: block
+  message: DeleteAccountAssignment — destructive operation
+  category: cloud
+- name: aws-sso-admin-delete-inline-policy-from-permission-set
+  pattern: (?i)aws\s+delete\-inline\-policy\-from\-permission\-set\b
+  severity: block
+  message: DeleteInlinePolicyFromPermissionSet — destructive operation
+  category: cloud
+- name: aws-sso-admin-delete-instance-access-control-attribute-configuration
+  pattern: (?i)aws\s+delete\-instance\-access\-control\-attribute\-configuration\b
+  severity: block
+  message: DeleteInstanceAccessControlAttributeConfiguration — destructive operation
+  category: cloud
+- name: aws-sso-admin-delete-permission-set
+  pattern: (?i)aws\s+delete\-permission\-set\b
+  severity: warn
+  message: DeletePermissionSet — destructive operation
+  category: cloud
+- name: aws-sso-admin-delete-permissions-boundary-from-permission-set
+  pattern: (?i)aws\s+delete\-permissions\-boundary\-from\-permission\-set\b
+  severity: warn
+  message: DeletePermissionsBoundaryFromPermissionSet — destructive operation
+  category: cloud
+- name: aws-sso-admin-detach-customer-managed-policy-reference-from-permission-set
+  pattern: (?i)aws\s+detach\-customer\-managed\-policy\-reference\-from\-permission\-set\b
+  severity: block
+  message: DetachCustomerManagedPolicyReferenceFromPermissionSet — destructive operation
+  category: cloud
+- name: aws-sso-admin-detach-managed-policy-from-permission-set
+  pattern: (?i)aws\s+detach\-managed\-policy\-from\-permission\-set\b
+  severity: block
+  message: DetachManagedPolicyFromPermissionSet — destructive operation
+  category: cloud

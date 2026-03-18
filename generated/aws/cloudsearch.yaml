@@ -1,0 +1,25 @@
+- name: aws-cloudsearch-delete-analysis-scheme
+  pattern: (?i)aws\s+delete\-analysis\-scheme\b
+  severity: warn
+  message: DeleteAnalysisScheme — destructive operation
+  category: cloud
+- name: aws-cloudsearch-delete-domain
+  pattern: (?i)aws\s+delete\-domain\b
+  severity: warn
+  message: DeleteDomain — destructive operation
+  category: cloud
+- name: aws-cloudsearch-delete-expression
+  pattern: (?i)aws\s+delete\-expression\b
+  severity: warn
+  message: DeleteExpression — destructive operation
+  category: cloud
+- name: aws-cloudsearch-delete-index-field
+  pattern: (?i)aws\s+delete\-index\-field\b
+  severity: warn
+  message: DeleteIndexField — destructive operation
+  category: cloud
+- name: aws-cloudsearch-delete-suggester
+  pattern: (?i)aws\s+delete\-suggester\b
+  severity: warn
+  message: DeleteSuggester — destructive operation
+  category: cloud

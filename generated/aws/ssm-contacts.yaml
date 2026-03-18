@@ -1,0 +1,10 @@
+- name: aws-ssm-contacts-delete-contact
+  pattern: (?i)aws\s+delete\-contact\b
+  severity: warn
+  message: DeleteContact — destructive operation
+  category: cloud
+- name: aws-ssm-contacts-delete-contact-channel
+  pattern: (?i)aws\s+delete\-contact\-channel\b
+  severity: warn
+  message: DeleteContactChannel — destructive operation
+  category: cloud

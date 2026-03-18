@@ -1,0 +1,5 @@
+- name: aws-polly-delete-lexicon
+  pattern: (?i)aws\s+delete\-lexicon\b
+  severity: block
+  message: DeleteLexicon — destructive operation
+  category: cloud

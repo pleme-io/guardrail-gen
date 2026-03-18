@@ -1,0 +1,40 @@
+- name: aws-lakeformation-batch-revoke-permissions
+  pattern: (?i)aws\s+batch\-revoke\-permissions\b
+  severity: warn
+  message: BatchRevokePermissions — destructive operation
+  category: cloud
+- name: aws-lakeformation-cancel-transaction
+  pattern: (?i)aws\s+cancel\-transaction\b
+  severity: warn
+  message: CancelTransaction — destructive operation
+  category: cloud
+- name: aws-lakeformation-delete-data-cells-filter
+  pattern: (?i)aws\s+delete\-data\-cells\-filter\b
+  severity: warn
+  message: DeleteDataCellsFilter — destructive operation
+  category: cloud
+- name: aws-lakeformation-delete-l-f-tag
+  pattern: (?i)aws\s+delete\-l\-f\-tag\b
+  severity: warn
+  message: DeleteLFTag — destructive operation
+  category: cloud
+- name: aws-lakeformation-delete-objects-on-cancel
+  pattern: (?i)aws\s+delete\-objects\-on\-cancel\b
+  severity: warn
+  message: DeleteObjectsOnCancel — destructive operation
+  category: cloud
+- name: aws-lakeformation-deregister-resource
+  pattern: (?i)aws\s+deregister\-resource\b
+  severity: warn
+  message: DeregisterResource — destructive operation
+  category: cloud
+- name: aws-lakeformation-remove-l-f-tags-from-resource
+  pattern: (?i)aws\s+remove\-l\-f\-tags\-from\-resource\b
+  severity: warn
+  message: RemoveLFTagsFromResource — destructive operation
+  category: cloud
+- name: aws-lakeformation-revoke-permissions
+  pattern: (?i)aws\s+revoke\-permissions\b
+  severity: warn
+  message: RevokePermissions — destructive operation
+  category: cloud

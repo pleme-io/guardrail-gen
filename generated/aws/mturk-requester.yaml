@@ -1,0 +1,20 @@
+- name: aws-mturk-requester-delete-h-i-t
+  pattern: (?i)aws\s+delete\-h\-i\-t\b
+  severity: warn
+  message: DeleteHIT — destructive operation
+  category: cloud
+- name: aws-mturk-requester-delete-qualification-type
+  pattern: (?i)aws\s+delete\-qualification\-type\b
+  severity: warn
+  message: DeleteQualificationType — destructive operation
+  category: cloud
+- name: aws-mturk-requester-delete-worker-block
+  pattern: (?i)aws\s+delete\-worker\-block\b
+  severity: warn
+  message: DeleteWorkerBlock — destructive operation
+  category: cloud
+- name: aws-mturk-requester-disassociate-qualification-from-worker
+  pattern: (?i)aws\s+disassociate\-qualification\-from\-worker\b
+  severity: warn
+  message: DisassociateQualificationFromWorker — destructive operation
+  category: cloud

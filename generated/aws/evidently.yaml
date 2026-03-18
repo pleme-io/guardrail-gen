@@ -1,0 +1,30 @@
+- name: aws-evidently-delete-experiment
+  pattern: (?i)aws\s+delete\-experiment\b
+  severity: block
+  message: DeleteExperiment — destructive operation
+  category: cloud
+- name: aws-evidently-delete-feature
+  pattern: (?i)aws\s+delete\-feature\b
+  severity: block
+  message: DeleteFeature — destructive operation
+  category: cloud
+- name: aws-evidently-delete-launch
+  pattern: (?i)aws\s+delete\-launch\b
+  severity: block
+  message: DeleteLaunch — destructive operation
+  category: cloud
+- name: aws-evidently-delete-project
+  pattern: (?i)aws\s+delete\-project\b
+  severity: block
+  message: DeleteProject — destructive operation
+  category: cloud
+- name: aws-evidently-delete-segment
+  pattern: (?i)aws\s+delete\-segment\b
+  severity: block
+  message: DeleteSegment — destructive operation
+  category: cloud
+- name: aws-evidently-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

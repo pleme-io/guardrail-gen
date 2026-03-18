@@ -1,0 +1,240 @@
+- name: aws-sagemaker-delete-action
+  pattern: (?i)aws\s+delete\-action\b
+  severity: warn
+  message: DeleteAction — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-algorithm
+  pattern: (?i)aws\s+delete\-algorithm\b
+  severity: warn
+  message: DeleteAlgorithm — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-app
+  pattern: (?i)aws\s+delete\-app\b
+  severity: warn
+  message: DeleteApp — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-app-image-config
+  pattern: (?i)aws\s+delete\-app\-image\-config\b
+  severity: warn
+  message: DeleteAppImageConfig — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-artifact
+  pattern: (?i)aws\s+delete\-artifact\b
+  severity: warn
+  message: DeleteArtifact — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-association
+  pattern: (?i)aws\s+delete\-association\b
+  severity: warn
+  message: DeleteAssociation — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-code-repository
+  pattern: (?i)aws\s+delete\-code\-repository\b
+  severity: warn
+  message: DeleteCodeRepository — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-context
+  pattern: (?i)aws\s+delete\-context\b
+  severity: warn
+  message: DeleteContext — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-data-quality-job-definition
+  pattern: (?i)aws\s+delete\-data\-quality\-job\-definition\b
+  severity: warn
+  message: DeleteDataQualityJobDefinition — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-device-fleet
+  pattern: (?i)aws\s+delete\-device\-fleet\b
+  severity: warn
+  message: DeleteDeviceFleet — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-domain
+  pattern: (?i)aws\s+delete\-domain\b
+  severity: warn
+  message: DeleteDomain — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-edge-deployment-plan
+  pattern: (?i)aws\s+delete\-edge\-deployment\-plan\b
+  severity: warn
+  message: DeleteEdgeDeploymentPlan — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-edge-deployment-stage
+  pattern: (?i)aws\s+delete\-edge\-deployment\-stage\b
+  severity: warn
+  message: DeleteEdgeDeploymentStage — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-endpoint
+  pattern: (?i)aws\s+delete\-endpoint\b
+  severity: warn
+  message: DeleteEndpoint — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-endpoint-config
+  pattern: (?i)aws\s+delete\-endpoint\-config\b
+  severity: warn
+  message: DeleteEndpointConfig — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-experiment
+  pattern: (?i)aws\s+delete\-experiment\b
+  severity: warn
+  message: DeleteExperiment — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-feature-group
+  pattern: (?i)aws\s+delete\-feature\-group\b
+  severity: block
+  message: DeleteFeatureGroup — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-flow-definition
+  pattern: (?i)aws\s+delete\-flow\-definition\b
+  severity: warn
+  message: DeleteFlowDefinition — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-hub
+  pattern: (?i)aws\s+delete\-hub\b
+  severity: warn
+  message: DeleteHub — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-hub-content
+  pattern: (?i)aws\s+delete\-hub\-content\b
+  severity: warn
+  message: DeleteHubContent — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-human-task-ui
+  pattern: (?i)aws\s+delete\-human\-task\-ui\b
+  severity: warn
+  message: DeleteHumanTaskUi — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-image
+  pattern: (?i)aws\s+delete\-image\b
+  severity: warn
+  message: DeleteImage — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-image-version
+  pattern: (?i)aws\s+delete\-image\-version\b
+  severity: warn
+  message: DeleteImageVersion — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-inference-experiment
+  pattern: (?i)aws\s+delete\-inference\-experiment\b
+  severity: warn
+  message: DeleteInferenceExperiment — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-model
+  pattern: (?i)aws\s+delete\-model\b
+  severity: warn
+  message: DeleteModel — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-model-bias-job-definition
+  pattern: (?i)aws\s+delete\-model\-bias\-job\-definition\b
+  severity: warn
+  message: DeleteModelBiasJobDefinition — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-model-card
+  pattern: (?i)aws\s+delete\-model\-card\b
+  severity: warn
+  message: DeleteModelCard — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-model-explainability-job-definition
+  pattern: (?i)aws\s+delete\-model\-explainability\-job\-definition\b
+  severity: warn
+  message: DeleteModelExplainabilityJobDefinition — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-model-package
+  pattern: (?i)aws\s+delete\-model\-package\b
+  severity: warn
+  message: DeleteModelPackage — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-model-package-group
+  pattern: (?i)aws\s+delete\-model\-package\-group\b
+  severity: block
+  message: DeleteModelPackageGroup — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-model-package-group-policy
+  pattern: (?i)aws\s+delete\-model\-package\-group\-policy\b
+  severity: block
+  message: DeleteModelPackageGroupPolicy — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-model-quality-job-definition
+  pattern: (?i)aws\s+delete\-model\-quality\-job\-definition\b
+  severity: warn
+  message: DeleteModelQualityJobDefinition — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-monitoring-schedule
+  pattern: (?i)aws\s+delete\-monitoring\-schedule\b
+  severity: warn
+  message: DeleteMonitoringSchedule — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-notebook-instance
+  pattern: (?i)aws\s+delete\-notebook\-instance\b
+  severity: block
+  message: DeleteNotebookInstance — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-notebook-instance-lifecycle-config
+  pattern: (?i)aws\s+delete\-notebook\-instance\-lifecycle\-config\b
+  severity: block
+  message: DeleteNotebookInstanceLifecycleConfig — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-pipeline
+  pattern: (?i)aws\s+delete\-pipeline\b
+  severity: warn
+  message: DeletePipeline — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-project
+  pattern: (?i)aws\s+delete\-project\b
+  severity: block
+  message: DeleteProject — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-space
+  pattern: (?i)aws\s+delete\-space\b
+  severity: warn
+  message: DeleteSpace — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-studio-lifecycle-config
+  pattern: (?i)aws\s+delete\-studio\-lifecycle\-config\b
+  severity: warn
+  message: DeleteStudioLifecycleConfig — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-tags
+  pattern: (?i)aws\s+delete\-tags\b
+  severity: warn
+  message: DeleteTags — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-trial
+  pattern: (?i)aws\s+delete\-trial\b
+  severity: warn
+  message: DeleteTrial — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-trial-component
+  pattern: (?i)aws\s+delete\-trial\-component\b
+  severity: warn
+  message: DeleteTrialComponent — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-user-profile
+  pattern: (?i)aws\s+delete\-user\-profile\b
+  severity: warn
+  message: DeleteUserProfile — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-workforce
+  pattern: (?i)aws\s+delete\-workforce\b
+  severity: warn
+  message: DeleteWorkforce — destructive operation
+  category: cloud
+- name: aws-sagemaker-delete-workteam
+  pattern: (?i)aws\s+delete\-workteam\b
+  severity: warn
+  message: DeleteWorkteam — destructive operation
+  category: cloud
+- name: aws-sagemaker-deregister-devices
+  pattern: (?i)aws\s+deregister\-devices\b
+  severity: warn
+  message: DeregisterDevices — destructive operation
+  category: cloud
+- name: aws-sagemaker-disable-sagemaker-servicecatalog-portfolio
+  pattern: (?i)aws\s+disable\-sagemaker\-servicecatalog\-portfolio\b
+  severity: warn
+  message: DisableSagemakerServicecatalogPortfolio — destructive operation
+  category: cloud
+- name: aws-sagemaker-disassociate-trial-component
+  pattern: (?i)aws\s+disassociate\-trial\-component\b
+  severity: warn
+  message: DisassociateTrialComponent — destructive operation
+  category: cloud

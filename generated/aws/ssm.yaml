@@ -1,0 +1,105 @@
+- name: aws-ssm-cancel-command
+  pattern: (?i)aws\s+cancel\-command\b
+  severity: warn
+  message: CancelCommand — destructive operation
+  category: cloud
+- name: aws-ssm-cancel-maintenance-window-execution
+  pattern: (?i)aws\s+cancel\-maintenance\-window\-execution\b
+  severity: warn
+  message: CancelMaintenanceWindowExecution — destructive operation
+  category: cloud
+- name: aws-ssm-delete-activation
+  pattern: (?i)aws\s+delete\-activation\b
+  severity: warn
+  message: DeleteActivation — destructive operation
+  category: cloud
+- name: aws-ssm-delete-association
+  pattern: (?i)aws\s+delete\-association\b
+  severity: warn
+  message: DeleteAssociation — destructive operation
+  category: cloud
+- name: aws-ssm-delete-document
+  pattern: (?i)aws\s+delete\-document\b
+  severity: warn
+  message: DeleteDocument — destructive operation
+  category: cloud
+- name: aws-ssm-delete-inventory
+  pattern: (?i)aws\s+delete\-inventory\b
+  severity: warn
+  message: DeleteInventory — destructive operation
+  category: cloud
+- name: aws-ssm-delete-maintenance-window
+  pattern: (?i)aws\s+delete\-maintenance\-window\b
+  severity: warn
+  message: DeleteMaintenanceWindow — destructive operation
+  category: cloud
+- name: aws-ssm-delete-ops-metadata
+  pattern: (?i)aws\s+delete\-ops\-metadata\b
+  severity: warn
+  message: DeleteOpsMetadata — destructive operation
+  category: cloud
+- name: aws-ssm-delete-parameter
+  pattern: (?i)aws\s+delete\-parameter\b
+  severity: warn
+  message: DeleteParameter — destructive operation
+  category: cloud
+- name: aws-ssm-delete-parameters
+  pattern: (?i)aws\s+delete\-parameters\b
+  severity: warn
+  message: DeleteParameters — destructive operation
+  category: cloud
+- name: aws-ssm-delete-patch-baseline
+  pattern: (?i)aws\s+delete\-patch\-baseline\b
+  severity: warn
+  message: DeletePatchBaseline — destructive operation
+  category: cloud
+- name: aws-ssm-delete-resource-data-sync
+  pattern: (?i)aws\s+delete\-resource\-data\-sync\b
+  severity: warn
+  message: DeleteResourceDataSync — destructive operation
+  category: cloud
+- name: aws-ssm-delete-resource-policy
+  pattern: (?i)aws\s+delete\-resource\-policy\b
+  severity: block
+  message: DeleteResourcePolicy — destructive operation
+  category: cloud
+- name: aws-ssm-deregister-managed-instance
+  pattern: (?i)aws\s+deregister\-managed\-instance\b
+  severity: block
+  message: DeregisterManagedInstance — destructive operation
+  category: cloud
+- name: aws-ssm-deregister-patch-baseline-for-patch-group
+  pattern: (?i)aws\s+deregister\-patch\-baseline\-for\-patch\-group\b
+  severity: block
+  message: DeregisterPatchBaselineForPatchGroup — destructive operation
+  category: cloud
+- name: aws-ssm-deregister-target-from-maintenance-window
+  pattern: (?i)aws\s+deregister\-target\-from\-maintenance\-window\b
+  severity: block
+  message: DeregisterTargetFromMaintenanceWindow — destructive operation
+  category: cloud
+- name: aws-ssm-deregister-task-from-maintenance-window
+  pattern: (?i)aws\s+deregister\-task\-from\-maintenance\-window\b
+  severity: warn
+  message: DeregisterTaskFromMaintenanceWindow — destructive operation
+  category: cloud
+- name: aws-ssm-disassociate-ops-item-related-item
+  pattern: (?i)aws\s+disassociate\-ops\-item\-related\-item\b
+  severity: block
+  message: DisassociateOpsItemRelatedItem — destructive operation
+  category: cloud
+- name: aws-ssm-remove-tags-from-resource
+  pattern: (?i)aws\s+remove\-tags\-from\-resource\b
+  severity: warn
+  message: RemoveTagsFromResource — destructive operation
+  category: cloud
+- name: aws-ssm-reset-service-setting
+  pattern: (?i)aws\s+reset\-service\-setting\b
+  severity: warn
+  message: ResetServiceSetting — destructive operation
+  category: cloud
+- name: aws-ssm-terminate-session
+  pattern: (?i)aws\s+terminate\-session\b
+  severity: warn
+  message: TerminateSession — destructive operation
+  category: cloud

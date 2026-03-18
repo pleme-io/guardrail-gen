@@ -1,0 +1,20 @@
+- name: aws-iot1click-projects-delete-placement
+  pattern: (?i)aws\s+delete\-placement\b
+  severity: block
+  message: DeletePlacement — destructive operation
+  category: cloud
+- name: aws-iot1click-projects-delete-project
+  pattern: (?i)aws\s+delete\-project\b
+  severity: block
+  message: DeleteProject — destructive operation
+  category: cloud
+- name: aws-iot1click-projects-disassociate-device-from-placement
+  pattern: (?i)aws\s+disassociate\-device\-from\-placement\b
+  severity: block
+  message: DisassociateDeviceFromPlacement — destructive operation
+  category: cloud
+- name: aws-iot1click-projects-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

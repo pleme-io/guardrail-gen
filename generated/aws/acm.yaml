@@ -1,0 +1,10 @@
+- name: aws-acm-delete-certificate
+  pattern: (?i)aws\s+delete\-certificate\b
+  severity: block
+  message: DeleteCertificate — destructive operation
+  category: cloud
+- name: aws-acm-remove-tags-from-certificate
+  pattern: (?i)aws\s+remove\-tags\-from\-certificate\b
+  severity: block
+  message: RemoveTagsFromCertificate — destructive operation
+  category: cloud

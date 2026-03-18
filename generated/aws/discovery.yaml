@@ -1,0 +1,20 @@
+- name: aws-discovery-batch-delete-import-data
+  pattern: (?i)aws\s+batch\-delete\-import\-data\b
+  severity: warn
+  message: BatchDeleteImportData — destructive operation
+  category: cloud
+- name: aws-discovery-delete-applications
+  pattern: (?i)aws\s+delete\-applications\b
+  severity: warn
+  message: DeleteApplications — destructive operation
+  category: cloud
+- name: aws-discovery-delete-tags
+  pattern: (?i)aws\s+delete\-tags\b
+  severity: warn
+  message: DeleteTags — destructive operation
+  category: cloud
+- name: aws-discovery-disassociate-configuration-items-from-application
+  pattern: (?i)aws\s+disassociate\-configuration\-items\-from\-application\b
+  severity: block
+  message: DisassociateConfigurationItemsFromApplication — destructive operation
+  category: cloud

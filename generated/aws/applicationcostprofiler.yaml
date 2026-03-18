@@ -1,0 +1,5 @@
+- name: aws-applicationcostprofiler-delete-report-definition
+  pattern: (?i)aws\s+delete\-report\-definition\b
+  severity: block
+  message: DeleteReportDefinition — destructive operation
+  category: cloud

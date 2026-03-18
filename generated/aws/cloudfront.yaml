@@ -1,0 +1,75 @@
+- name: aws-cloudfront-delete-cache-policy
+  pattern: (?i)aws\s+delete\-cache\-policy\b
+  severity: block
+  message: DeleteCachePolicy — destructive operation
+  category: cloud
+- name: aws-cloudfront-delete-cloud-front-origin-access-identity
+  pattern: (?i)aws\s+delete\-cloud\-front\-origin\-access\-identity\b
+  severity: block
+  message: DeleteCloudFrontOriginAccessIdentity — destructive operation
+  category: cloud
+- name: aws-cloudfront-delete-continuous-deployment-policy
+  pattern: (?i)aws\s+delete\-continuous\-deployment\-policy\b
+  severity: block
+  message: DeleteContinuousDeploymentPolicy — destructive operation
+  category: cloud
+- name: aws-cloudfront-delete-distribution
+  pattern: (?i)aws\s+delete\-distribution\b
+  severity: block
+  message: DeleteDistribution — destructive operation
+  category: cloud
+- name: aws-cloudfront-delete-field-level-encryption-config
+  pattern: (?i)aws\s+delete\-field\-level\-encryption\-config\b
+  severity: block
+  message: DeleteFieldLevelEncryptionConfig — destructive operation
+  category: cloud
+- name: aws-cloudfront-delete-field-level-encryption-profile
+  pattern: (?i)aws\s+delete\-field\-level\-encryption\-profile\b
+  severity: block
+  message: DeleteFieldLevelEncryptionProfile — destructive operation
+  category: cloud
+- name: aws-cloudfront-delete-function
+  pattern: (?i)aws\s+delete\-function\b
+  severity: block
+  message: DeleteFunction — destructive operation
+  category: cloud
+- name: aws-cloudfront-delete-key-group
+  pattern: (?i)aws\s+delete\-key\-group\b
+  severity: block
+  message: DeleteKeyGroup — destructive operation
+  category: cloud
+- name: aws-cloudfront-delete-monitoring-subscription
+  pattern: (?i)aws\s+delete\-monitoring\-subscription\b
+  severity: warn
+  message: DeleteMonitoringSubscription — destructive operation
+  category: cloud
+- name: aws-cloudfront-delete-origin-access-control
+  pattern: (?i)aws\s+delete\-origin\-access\-control\b
+  severity: block
+  message: DeleteOriginAccessControl — destructive operation
+  category: cloud
+- name: aws-cloudfront-delete-origin-request-policy
+  pattern: (?i)aws\s+delete\-origin\-request\-policy\b
+  severity: block
+  message: DeleteOriginRequestPolicy — destructive operation
+  category: cloud
+- name: aws-cloudfront-delete-public-key
+  pattern: (?i)aws\s+delete\-public\-key\b
+  severity: block
+  message: DeletePublicKey — destructive operation
+  category: cloud
+- name: aws-cloudfront-delete-realtime-log-config
+  pattern: (?i)aws\s+delete\-realtime\-log\-config\b
+  severity: warn
+  message: DeleteRealtimeLogConfig — destructive operation
+  category: cloud
+- name: aws-cloudfront-delete-response-headers-policy
+  pattern: (?i)aws\s+delete\-response\-headers\-policy\b
+  severity: block
+  message: DeleteResponseHeadersPolicy — destructive operation
+  category: cloud
+- name: aws-cloudfront-delete-streaming-distribution
+  pattern: (?i)aws\s+delete\-streaming\-distribution\b
+  severity: block
+  message: DeleteStreamingDistribution — destructive operation
+  category: cloud

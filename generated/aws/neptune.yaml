@@ -1,0 +1,75 @@
+- name: aws-neptune-delete-d-b-cluster
+  pattern: (?i)aws\s+delete\-d\-b\-cluster\b
+  severity: block
+  message: DeleteDBCluster — destructive operation
+  category: cloud
+- name: aws-neptune-delete-d-b-cluster-endpoint
+  pattern: (?i)aws\s+delete\-d\-b\-cluster\-endpoint\b
+  severity: block
+  message: DeleteDBClusterEndpoint — destructive operation
+  category: cloud
+- name: aws-neptune-delete-d-b-cluster-parameter-group
+  pattern: (?i)aws\s+delete\-d\-b\-cluster\-parameter\-group\b
+  severity: block
+  message: DeleteDBClusterParameterGroup — destructive operation
+  category: cloud
+- name: aws-neptune-delete-d-b-cluster-snapshot
+  pattern: (?i)aws\s+delete\-d\-b\-cluster\-snapshot\b
+  severity: block
+  message: DeleteDBClusterSnapshot — destructive operation
+  category: cloud
+- name: aws-neptune-delete-d-b-instance
+  pattern: (?i)aws\s+delete\-d\-b\-instance\b
+  severity: block
+  message: DeleteDBInstance — destructive operation
+  category: cloud
+- name: aws-neptune-delete-d-b-parameter-group
+  pattern: (?i)aws\s+delete\-d\-b\-parameter\-group\b
+  severity: block
+  message: DeleteDBParameterGroup — destructive operation
+  category: cloud
+- name: aws-neptune-delete-d-b-subnet-group
+  pattern: (?i)aws\s+delete\-d\-b\-subnet\-group\b
+  severity: block
+  message: DeleteDBSubnetGroup — destructive operation
+  category: cloud
+- name: aws-neptune-delete-event-subscription
+  pattern: (?i)aws\s+delete\-event\-subscription\b
+  severity: warn
+  message: DeleteEventSubscription — destructive operation
+  category: cloud
+- name: aws-neptune-delete-global-cluster
+  pattern: (?i)aws\s+delete\-global\-cluster\b
+  severity: block
+  message: DeleteGlobalCluster — destructive operation
+  category: cloud
+- name: aws-neptune-remove-from-global-cluster
+  pattern: (?i)aws\s+remove\-from\-global\-cluster\b
+  severity: block
+  message: RemoveFromGlobalCluster — destructive operation
+  category: cloud
+- name: aws-neptune-remove-role-from-d-b-cluster
+  pattern: (?i)aws\s+remove\-role\-from\-d\-b\-cluster\b
+  severity: block
+  message: RemoveRoleFromDBCluster — destructive operation
+  category: cloud
+- name: aws-neptune-remove-source-identifier-from-subscription
+  pattern: (?i)aws\s+remove\-source\-identifier\-from\-subscription\b
+  severity: warn
+  message: RemoveSourceIdentifierFromSubscription — destructive operation
+  category: cloud
+- name: aws-neptune-remove-tags-from-resource
+  pattern: (?i)aws\s+remove\-tags\-from\-resource\b
+  severity: warn
+  message: RemoveTagsFromResource — destructive operation
+  category: cloud
+- name: aws-neptune-reset-d-b-cluster-parameter-group
+  pattern: (?i)aws\s+reset\-d\-b\-cluster\-parameter\-group\b
+  severity: block
+  message: ResetDBClusterParameterGroup — destructive operation
+  category: cloud
+- name: aws-neptune-reset-d-b-parameter-group
+  pattern: (?i)aws\s+reset\-d\-b\-parameter\-group\b
+  severity: block
+  message: ResetDBParameterGroup — destructive operation
+  category: cloud

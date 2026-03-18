@@ -1,0 +1,10 @@
+- name: aws-timestream-write-delete-database
+  pattern: (?i)aws\s+delete\-database\b
+  severity: block
+  message: DeleteDatabase — destructive operation
+  category: cloud
+- name: aws-timestream-write-delete-table
+  pattern: (?i)aws\s+delete\-table\b
+  severity: warn
+  message: DeleteTable — destructive operation
+  category: cloud

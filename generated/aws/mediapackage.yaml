@@ -1,0 +1,15 @@
+- name: aws-mediapackage-delete-channel
+  pattern: (?i)aws\s+delete\-channel\b
+  severity: block
+  message: DeleteChannel — destructive operation
+  category: cloud
+- name: aws-mediapackage-delete-origin-endpoint
+  pattern: (?i)aws\s+delete\-origin\-endpoint\b
+  severity: block
+  message: DeleteOriginEndpoint — destructive operation
+  category: cloud
+- name: aws-mediapackage-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

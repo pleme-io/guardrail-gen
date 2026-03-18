@@ -1,0 +1,55 @@
+- name: aws-email-delete-configuration-set
+  pattern: (?i)aws\s+delete\-configuration\-set\b
+  severity: warn
+  message: DeleteConfigurationSet — destructive operation
+  category: cloud
+- name: aws-email-delete-configuration-set-event-destination
+  pattern: (?i)aws\s+delete\-configuration\-set\-event\-destination\b
+  severity: warn
+  message: DeleteConfigurationSetEventDestination — destructive operation
+  category: cloud
+- name: aws-email-delete-configuration-set-tracking-options
+  pattern: (?i)aws\s+delete\-configuration\-set\-tracking\-options\b
+  severity: warn
+  message: DeleteConfigurationSetTrackingOptions — destructive operation
+  category: cloud
+- name: aws-email-delete-custom-verification-email-template
+  pattern: (?i)aws\s+delete\-custom\-verification\-email\-template\b
+  severity: warn
+  message: DeleteCustomVerificationEmailTemplate — destructive operation
+  category: cloud
+- name: aws-email-delete-identity
+  pattern: (?i)aws\s+delete\-identity\b
+  severity: warn
+  message: DeleteIdentity — destructive operation
+  category: cloud
+- name: aws-email-delete-identity-policy
+  pattern: (?i)aws\s+delete\-identity\-policy\b
+  severity: block
+  message: DeleteIdentityPolicy — destructive operation
+  category: cloud
+- name: aws-email-delete-receipt-filter
+  pattern: (?i)aws\s+delete\-receipt\-filter\b
+  severity: warn
+  message: DeleteReceiptFilter — destructive operation
+  category: cloud
+- name: aws-email-delete-receipt-rule
+  pattern: (?i)aws\s+delete\-receipt\-rule\b
+  severity: warn
+  message: DeleteReceiptRule — destructive operation
+  category: cloud
+- name: aws-email-delete-receipt-rule-set
+  pattern: (?i)aws\s+delete\-receipt\-rule\-set\b
+  severity: warn
+  message: DeleteReceiptRuleSet — destructive operation
+  category: cloud
+- name: aws-email-delete-template
+  pattern: (?i)aws\s+delete\-template\b
+  severity: warn
+  message: DeleteTemplate — destructive operation
+  category: cloud
+- name: aws-email-delete-verified-email-address
+  pattern: (?i)aws\s+delete\-verified\-email\-address\b
+  severity: warn
+  message: DeleteVerifiedEmailAddress — destructive operation
+  category: cloud

@@ -1,0 +1,30 @@
+- name: aws-athena-delete-data-catalog
+  pattern: (?i)aws\s+delete\-data\-catalog\b
+  severity: warn
+  message: DeleteDataCatalog — destructive operation
+  category: cloud
+- name: aws-athena-delete-named-query
+  pattern: (?i)aws\s+delete\-named\-query\b
+  severity: warn
+  message: DeleteNamedQuery — destructive operation
+  category: cloud
+- name: aws-athena-delete-notebook
+  pattern: (?i)aws\s+delete\-notebook\b
+  severity: warn
+  message: DeleteNotebook — destructive operation
+  category: cloud
+- name: aws-athena-delete-prepared-statement
+  pattern: (?i)aws\s+delete\-prepared\-statement\b
+  severity: warn
+  message: DeletePreparedStatement — destructive operation
+  category: cloud
+- name: aws-athena-delete-work-group
+  pattern: (?i)aws\s+delete\-work\-group\b
+  severity: block
+  message: DeleteWorkGroup — destructive operation
+  category: cloud
+- name: aws-athena-terminate-session
+  pattern: (?i)aws\s+terminate\-session\b
+  severity: warn
+  message: TerminateSession — destructive operation
+  category: cloud

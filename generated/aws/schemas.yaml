@@ -1,0 +1,30 @@
+- name: aws-schemas-delete-discoverer
+  pattern: (?i)aws\s+delete\-discoverer\b
+  severity: block
+  message: DeleteDiscoverer — destructive operation
+  category: cloud
+- name: aws-schemas-delete-registry
+  pattern: (?i)aws\s+delete\-registry\b
+  severity: block
+  message: DeleteRegistry — destructive operation
+  category: cloud
+- name: aws-schemas-delete-resource-policy
+  pattern: (?i)aws\s+delete\-resource\-policy\b
+  severity: block
+  message: DeleteResourcePolicy — destructive operation
+  category: cloud
+- name: aws-schemas-delete-schema
+  pattern: (?i)aws\s+delete\-schema\b
+  severity: block
+  message: DeleteSchema — destructive operation
+  category: cloud
+- name: aws-schemas-delete-schema-version
+  pattern: (?i)aws\s+delete\-schema\-version\b
+  severity: block
+  message: DeleteSchemaVersion — destructive operation
+  category: cloud
+- name: aws-schemas-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

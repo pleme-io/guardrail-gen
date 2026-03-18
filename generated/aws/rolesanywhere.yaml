@@ -1,0 +1,30 @@
+- name: aws-rolesanywhere-delete-crl
+  pattern: (?i)aws\s+delete\-crl\b
+  severity: block
+  message: DeleteCrl — destructive operation
+  category: cloud
+- name: aws-rolesanywhere-delete-profile
+  pattern: (?i)aws\s+delete\-profile\b
+  severity: block
+  message: DeleteProfile — destructive operation
+  category: cloud
+- name: aws-rolesanywhere-delete-trust-anchor
+  pattern: (?i)aws\s+delete\-trust\-anchor\b
+  severity: block
+  message: DeleteTrustAnchor — destructive operation
+  category: cloud
+- name: aws-rolesanywhere-disable-crl
+  pattern: (?i)aws\s+disable\-crl\b
+  severity: warn
+  message: DisableCrl — destructive operation
+  category: cloud
+- name: aws-rolesanywhere-disable-profile
+  pattern: (?i)aws\s+disable\-profile\b
+  severity: warn
+  message: DisableProfile — destructive operation
+  category: cloud
+- name: aws-rolesanywhere-disable-trust-anchor
+  pattern: (?i)aws\s+disable\-trust\-anchor\b
+  severity: warn
+  message: DisableTrustAnchor — destructive operation
+  category: cloud

@@ -1,0 +1,40 @@
+- name: aws-fms-batch-disassociate-resource
+  pattern: (?i)aws\s+batch\-disassociate\-resource\b
+  severity: warn
+  message: BatchDisassociateResource — destructive operation
+  category: cloud
+- name: aws-fms-delete-apps-list
+  pattern: (?i)aws\s+delete\-apps\-list\b
+  severity: warn
+  message: DeleteAppsList — destructive operation
+  category: cloud
+- name: aws-fms-delete-notification-channel
+  pattern: (?i)aws\s+delete\-notification\-channel\b
+  severity: warn
+  message: DeleteNotificationChannel — destructive operation
+  category: cloud
+- name: aws-fms-delete-policy
+  pattern: (?i)aws\s+delete\-policy\b
+  severity: block
+  message: DeletePolicy — destructive operation
+  category: cloud
+- name: aws-fms-delete-protocols-list
+  pattern: (?i)aws\s+delete\-protocols\-list\b
+  severity: warn
+  message: DeleteProtocolsList — destructive operation
+  category: cloud
+- name: aws-fms-delete-resource-set
+  pattern: (?i)aws\s+delete\-resource\-set\b
+  severity: warn
+  message: DeleteResourceSet — destructive operation
+  category: cloud
+- name: aws-fms-disassociate-admin-account
+  pattern: (?i)aws\s+disassociate\-admin\-account\b
+  severity: block
+  message: DisassociateAdminAccount — destructive operation
+  category: cloud
+- name: aws-fms-disassociate-third-party-firewall
+  pattern: (?i)aws\s+disassociate\-third\-party\-firewall\b
+  severity: warn
+  message: DisassociateThirdPartyFirewall — destructive operation
+  category: cloud

@@ -1,0 +1,140 @@
+- name: aws-lightsail-delete-alarm
+  pattern: (?i)aws\s+delete\-alarm\b
+  severity: warn
+  message: DeleteAlarm — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-auto-snapshot
+  pattern: (?i)aws\s+delete\-auto\-snapshot\b
+  severity: warn
+  message: DeleteAutoSnapshot — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-bucket
+  pattern: (?i)aws\s+delete\-bucket\b
+  severity: block
+  message: DeleteBucket — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-bucket-access-key
+  pattern: (?i)aws\s+delete\-bucket\-access\-key\b
+  severity: block
+  message: DeleteBucketAccessKey — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-certificate
+  pattern: (?i)aws\s+delete\-certificate\b
+  severity: block
+  message: DeleteCertificate — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-contact-method
+  pattern: (?i)aws\s+delete\-contact\-method\b
+  severity: warn
+  message: DeleteContactMethod — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-container-image
+  pattern: (?i)aws\s+delete\-container\-image\b
+  severity: warn
+  message: DeleteContainerImage — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-container-service
+  pattern: (?i)aws\s+delete\-container\-service\b
+  severity: warn
+  message: DeleteContainerService — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-disk
+  pattern: (?i)aws\s+delete\-disk\b
+  severity: warn
+  message: DeleteDisk — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-disk-snapshot
+  pattern: (?i)aws\s+delete\-disk\-snapshot\b
+  severity: warn
+  message: DeleteDiskSnapshot — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-distribution
+  pattern: (?i)aws\s+delete\-distribution\b
+  severity: warn
+  message: DeleteDistribution — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-domain
+  pattern: (?i)aws\s+delete\-domain\b
+  severity: warn
+  message: DeleteDomain — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-domain-entry
+  pattern: (?i)aws\s+delete\-domain\-entry\b
+  severity: warn
+  message: DeleteDomainEntry — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-instance
+  pattern: (?i)aws\s+delete\-instance\b
+  severity: block
+  message: DeleteInstance — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-instance-snapshot
+  pattern: (?i)aws\s+delete\-instance\-snapshot\b
+  severity: block
+  message: DeleteInstanceSnapshot — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-key-pair
+  pattern: (?i)aws\s+delete\-key\-pair\b
+  severity: block
+  message: DeleteKeyPair — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-known-host-keys
+  pattern: (?i)aws\s+delete\-known\-host\-keys\b
+  severity: block
+  message: DeleteKnownHostKeys — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-load-balancer
+  pattern: (?i)aws\s+delete\-load\-balancer\b
+  severity: block
+  message: DeleteLoadBalancer — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-load-balancer-tls-certificate
+  pattern: (?i)aws\s+delete\-load\-balancer\-tls\-certificate\b
+  severity: block
+  message: DeleteLoadBalancerTlsCertificate — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-relational-database
+  pattern: (?i)aws\s+delete\-relational\-database\b
+  severity: block
+  message: DeleteRelationalDatabase — destructive operation
+  category: cloud
+- name: aws-lightsail-delete-relational-database-snapshot
+  pattern: (?i)aws\s+delete\-relational\-database\-snapshot\b
+  severity: block
+  message: DeleteRelationalDatabaseSnapshot — destructive operation
+  category: cloud
+- name: aws-lightsail-detach-certificate-from-distribution
+  pattern: (?i)aws\s+detach\-certificate\-from\-distribution\b
+  severity: block
+  message: DetachCertificateFromDistribution — destructive operation
+  category: cloud
+- name: aws-lightsail-detach-disk
+  pattern: (?i)aws\s+detach\-disk\b
+  severity: warn
+  message: DetachDisk — destructive operation
+  category: cloud
+- name: aws-lightsail-detach-instances-from-load-balancer
+  pattern: (?i)aws\s+detach\-instances\-from\-load\-balancer\b
+  severity: block
+  message: DetachInstancesFromLoadBalancer — destructive operation
+  category: cloud
+- name: aws-lightsail-detach-static-ip
+  pattern: (?i)aws\s+detach\-static\-ip\b
+  severity: warn
+  message: DetachStaticIp — destructive operation
+  category: cloud
+- name: aws-lightsail-disable-add-on
+  pattern: (?i)aws\s+disable\-add\-on\b
+  severity: warn
+  message: DisableAddOn — destructive operation
+  category: cloud
+- name: aws-lightsail-release-static-ip
+  pattern: (?i)aws\s+release\-static\-ip\b
+  severity: warn
+  message: ReleaseStaticIp — destructive operation
+  category: cloud
+- name: aws-lightsail-reset-distribution-cache
+  pattern: (?i)aws\s+reset\-distribution\-cache\b
+  severity: warn
+  message: ResetDistributionCache — destructive operation
+  category: cloud

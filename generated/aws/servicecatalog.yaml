@@ -1,0 +1,80 @@
+- name: aws-servicecatalog-batch-disassociate-service-action-from-provisioning-artifact
+  pattern: (?i)aws\s+batch\-disassociate\-service\-action\-from\-provisioning\-artifact\b
+  severity: warn
+  message: BatchDisassociateServiceActionFromProvisioningArtifact — destructive operation
+  category: cloud
+- name: aws-servicecatalog-delete-constraint
+  pattern: (?i)aws\s+delete\-constraint\b
+  severity: warn
+  message: DeleteConstraint — destructive operation
+  category: cloud
+- name: aws-servicecatalog-delete-portfolio
+  pattern: (?i)aws\s+delete\-portfolio\b
+  severity: warn
+  message: DeletePortfolio — destructive operation
+  category: cloud
+- name: aws-servicecatalog-delete-portfolio-share
+  pattern: (?i)aws\s+delete\-portfolio\-share\b
+  severity: warn
+  message: DeletePortfolioShare — destructive operation
+  category: cloud
+- name: aws-servicecatalog-delete-product
+  pattern: (?i)aws\s+delete\-product\b
+  severity: warn
+  message: DeleteProduct — destructive operation
+  category: cloud
+- name: aws-servicecatalog-delete-provisioned-product-plan
+  pattern: (?i)aws\s+delete\-provisioned\-product\-plan\b
+  severity: warn
+  message: DeleteProvisionedProductPlan — destructive operation
+  category: cloud
+- name: aws-servicecatalog-delete-provisioning-artifact
+  pattern: (?i)aws\s+delete\-provisioning\-artifact\b
+  severity: warn
+  message: DeleteProvisioningArtifact — destructive operation
+  category: cloud
+- name: aws-servicecatalog-delete-service-action
+  pattern: (?i)aws\s+delete\-service\-action\b
+  severity: warn
+  message: DeleteServiceAction — destructive operation
+  category: cloud
+- name: aws-servicecatalog-delete-tag-option
+  pattern: (?i)aws\s+delete\-tag\-option\b
+  severity: warn
+  message: DeleteTagOption — destructive operation
+  category: cloud
+- name: aws-servicecatalog-disable-a-w-s-organizations-access
+  pattern: (?i)aws\s+disable\-a\-w\-s\-organizations\-access\b
+  severity: warn
+  message: DisableAWSOrganizationsAccess — destructive operation
+  category: cloud
+- name: aws-servicecatalog-disassociate-budget-from-resource
+  pattern: (?i)aws\s+disassociate\-budget\-from\-resource\b
+  severity: warn
+  message: DisassociateBudgetFromResource — destructive operation
+  category: cloud
+- name: aws-servicecatalog-disassociate-principal-from-portfolio
+  pattern: (?i)aws\s+disassociate\-principal\-from\-portfolio\b
+  severity: warn
+  message: DisassociatePrincipalFromPortfolio — destructive operation
+  category: cloud
+- name: aws-servicecatalog-disassociate-product-from-portfolio
+  pattern: (?i)aws\s+disassociate\-product\-from\-portfolio\b
+  severity: warn
+  message: DisassociateProductFromPortfolio — destructive operation
+  category: cloud
+- name: aws-servicecatalog-disassociate-service-action-from-provisioning-artifact
+  pattern: (?i)aws\s+disassociate\-service\-action\-from\-provisioning\-artifact\b
+  severity: warn
+  message: DisassociateServiceActionFromProvisioningArtifact — destructive operation
+  category: cloud
+- name: aws-servicecatalog-disassociate-tag-option-from-resource
+  pattern: (?i)aws\s+disassociate\-tag\-option\-from\-resource\b
+  severity: warn
+  message: DisassociateTagOptionFromResource — destructive operation
+  category: cloud
+- name: aws-servicecatalog-terminate-provisioned-product
+  pattern: (?i)aws\s+terminate\-provisioned\-product\b
+  severity: warn
+  message: TerminateProvisionedProduct — destructive operation
+  category: cloud

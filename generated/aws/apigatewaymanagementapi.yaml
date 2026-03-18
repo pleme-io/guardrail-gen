@@ -1,0 +1,5 @@
+- name: aws-apigatewaymanagementapi-delete-connection
+  pattern: (?i)aws\s+delete\-connection\b
+  severity: block
+  message: DeleteConnection — destructive operation
+  category: cloud

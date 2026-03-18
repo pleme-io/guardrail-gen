@@ -1,0 +1,15 @@
+- name: aws-xray-delete-group
+  pattern: (?i)aws\s+delete\-group\b
+  severity: block
+  message: DeleteGroup — destructive operation
+  category: cloud
+- name: aws-xray-delete-resource-policy
+  pattern: (?i)aws\s+delete\-resource\-policy\b
+  severity: block
+  message: DeleteResourcePolicy — destructive operation
+  category: cloud
+- name: aws-xray-delete-sampling-rule
+  pattern: (?i)aws\s+delete\-sampling\-rule\b
+  severity: warn
+  message: DeleteSamplingRule — destructive operation
+  category: cloud

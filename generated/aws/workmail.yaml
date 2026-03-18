@@ -1,0 +1,95 @@
+- name: aws-workmail-cancel-mailbox-export-job
+  pattern: (?i)aws\s+cancel\-mailbox\-export\-job\b
+  severity: warn
+  message: CancelMailboxExportJob — destructive operation
+  category: cloud
+- name: aws-workmail-delete-access-control-rule
+  pattern: (?i)aws\s+delete\-access\-control\-rule\b
+  severity: warn
+  message: DeleteAccessControlRule — destructive operation
+  category: cloud
+- name: aws-workmail-delete-alias
+  pattern: (?i)aws\s+delete\-alias\b
+  severity: warn
+  message: DeleteAlias — destructive operation
+  category: cloud
+- name: aws-workmail-delete-availability-configuration
+  pattern: (?i)aws\s+delete\-availability\-configuration\b
+  severity: warn
+  message: DeleteAvailabilityConfiguration — destructive operation
+  category: cloud
+- name: aws-workmail-delete-email-monitoring-configuration
+  pattern: (?i)aws\s+delete\-email\-monitoring\-configuration\b
+  severity: warn
+  message: DeleteEmailMonitoringConfiguration — destructive operation
+  category: cloud
+- name: aws-workmail-delete-group
+  pattern: (?i)aws\s+delete\-group\b
+  severity: block
+  message: DeleteGroup — destructive operation
+  category: cloud
+- name: aws-workmail-delete-impersonation-role
+  pattern: (?i)aws\s+delete\-impersonation\-role\b
+  severity: block
+  message: DeleteImpersonationRole — destructive operation
+  category: cloud
+- name: aws-workmail-delete-mailbox-permissions
+  pattern: (?i)aws\s+delete\-mailbox\-permissions\b
+  severity: warn
+  message: DeleteMailboxPermissions — destructive operation
+  category: cloud
+- name: aws-workmail-delete-mobile-device-access-override
+  pattern: (?i)aws\s+delete\-mobile\-device\-access\-override\b
+  severity: warn
+  message: DeleteMobileDeviceAccessOverride — destructive operation
+  category: cloud
+- name: aws-workmail-delete-mobile-device-access-rule
+  pattern: (?i)aws\s+delete\-mobile\-device\-access\-rule\b
+  severity: warn
+  message: DeleteMobileDeviceAccessRule — destructive operation
+  category: cloud
+- name: aws-workmail-delete-organization
+  pattern: (?i)aws\s+delete\-organization\b
+  severity: warn
+  message: DeleteOrganization — destructive operation
+  category: cloud
+- name: aws-workmail-delete-resource
+  pattern: (?i)aws\s+delete\-resource\b
+  severity: warn
+  message: DeleteResource — destructive operation
+  category: cloud
+- name: aws-workmail-delete-retention-policy
+  pattern: (?i)aws\s+delete\-retention\-policy\b
+  severity: block
+  message: DeleteRetentionPolicy — destructive operation
+  category: cloud
+- name: aws-workmail-delete-user
+  pattern: (?i)aws\s+delete\-user\b
+  severity: warn
+  message: DeleteUser — destructive operation
+  category: cloud
+- name: aws-workmail-deregister-from-work-mail
+  pattern: (?i)aws\s+deregister\-from\-work\-mail\b
+  severity: warn
+  message: DeregisterFromWorkMail — destructive operation
+  category: cloud
+- name: aws-workmail-deregister-mail-domain
+  pattern: (?i)aws\s+deregister\-mail\-domain\b
+  severity: warn
+  message: DeregisterMailDomain — destructive operation
+  category: cloud
+- name: aws-workmail-disassociate-delegate-from-resource
+  pattern: (?i)aws\s+disassociate\-delegate\-from\-resource\b
+  severity: warn
+  message: DisassociateDelegateFromResource — destructive operation
+  category: cloud
+- name: aws-workmail-disassociate-member-from-group
+  pattern: (?i)aws\s+disassociate\-member\-from\-group\b
+  severity: block
+  message: DisassociateMemberFromGroup — destructive operation
+  category: cloud
+- name: aws-workmail-reset-password
+  pattern: (?i)aws\s+reset\-password\b
+  severity: warn
+  message: ResetPassword — destructive operation
+  category: cloud

@@ -1,0 +1,5 @@
+- name: aws-mobile-delete-project
+  pattern: (?i)aws\s+delete\-project\b
+  severity: block
+  message: DeleteProject — destructive operation
+  category: cloud

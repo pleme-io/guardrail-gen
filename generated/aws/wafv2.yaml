@@ -1,0 +1,45 @@
+- name: aws-wafv2-delete-firewall-manager-rule-groups
+  pattern: (?i)aws\s+delete\-firewall\-manager\-rule\-groups\b
+  severity: block
+  message: DeleteFirewallManagerRuleGroups — destructive operation
+  category: cloud
+- name: aws-wafv2-delete-i-p-set
+  pattern: (?i)aws\s+delete\-i\-p\-set\b
+  severity: warn
+  message: DeleteIPSet — destructive operation
+  category: cloud
+- name: aws-wafv2-delete-logging-configuration
+  pattern: (?i)aws\s+delete\-logging\-configuration\b
+  severity: warn
+  message: DeleteLoggingConfiguration — destructive operation
+  category: cloud
+- name: aws-wafv2-delete-permission-policy
+  pattern: (?i)aws\s+delete\-permission\-policy\b
+  severity: block
+  message: DeletePermissionPolicy — destructive operation
+  category: cloud
+- name: aws-wafv2-delete-regex-pattern-set
+  pattern: (?i)aws\s+delete\-regex\-pattern\-set\b
+  severity: warn
+  message: DeleteRegexPatternSet — destructive operation
+  category: cloud
+- name: aws-wafv2-delete-rule-group
+  pattern: (?i)aws\s+delete\-rule\-group\b
+  severity: block
+  message: DeleteRuleGroup — destructive operation
+  category: cloud
+- name: aws-wafv2-delete-web-a-c-l
+  pattern: (?i)aws\s+delete\-web\-a\-c\-l\b
+  severity: warn
+  message: DeleteWebACL — destructive operation
+  category: cloud
+- name: aws-wafv2-disassociate-web-a-c-l
+  pattern: (?i)aws\s+disassociate\-web\-a\-c\-l\b
+  severity: warn
+  message: DisassociateWebACL — destructive operation
+  category: cloud
+- name: aws-wafv2-generate-mobile-sdk-release-url
+  pattern: (?i)aws\s+generate\-mobile\-sdk\-release\-url\b
+  severity: warn
+  message: GenerateMobileSdkReleaseUrl — destructive operation
+  category: cloud

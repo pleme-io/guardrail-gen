@@ -1,0 +1,65 @@
+- name: aws-workdocs-abort-document-version-upload
+  pattern: (?i)aws\s+abort\-document\-version\-upload\b
+  severity: block
+  message: AbortDocumentVersionUpload — destructive operation
+  category: cloud
+- name: aws-workdocs-deactivate-user
+  pattern: (?i)aws\s+deactivate\-user\b
+  severity: block
+  message: DeactivateUser — destructive operation
+  category: cloud
+- name: aws-workdocs-delete-comment
+  pattern: (?i)aws\s+delete\-comment\b
+  severity: block
+  message: DeleteComment — destructive operation
+  category: cloud
+- name: aws-workdocs-delete-custom-metadata
+  pattern: (?i)aws\s+delete\-custom\-metadata\b
+  severity: block
+  message: DeleteCustomMetadata — destructive operation
+  category: cloud
+- name: aws-workdocs-delete-document
+  pattern: (?i)aws\s+delete\-document\b
+  severity: block
+  message: DeleteDocument — destructive operation
+  category: cloud
+- name: aws-workdocs-delete-document-version
+  pattern: (?i)aws\s+delete\-document\-version\b
+  severity: block
+  message: DeleteDocumentVersion — destructive operation
+  category: cloud
+- name: aws-workdocs-delete-folder
+  pattern: (?i)aws\s+delete\-folder\b
+  severity: block
+  message: DeleteFolder — destructive operation
+  category: cloud
+- name: aws-workdocs-delete-folder-contents
+  pattern: (?i)aws\s+delete\-folder\-contents\b
+  severity: block
+  message: DeleteFolderContents — destructive operation
+  category: cloud
+- name: aws-workdocs-delete-labels
+  pattern: (?i)aws\s+delete\-labels\b
+  severity: warn
+  message: DeleteLabels — destructive operation
+  category: cloud
+- name: aws-workdocs-delete-notification-subscription
+  pattern: (?i)aws\s+delete\-notification\-subscription\b
+  severity: warn
+  message: DeleteNotificationSubscription — destructive operation
+  category: cloud
+- name: aws-workdocs-delete-user
+  pattern: (?i)aws\s+delete\-user\b
+  severity: block
+  message: DeleteUser — destructive operation
+  category: cloud
+- name: aws-workdocs-remove-all-resource-permissions
+  pattern: (?i)aws\s+remove\-all\-resource\-permissions\b
+  severity: warn
+  message: RemoveAllResourcePermissions — destructive operation
+  category: cloud
+- name: aws-workdocs-remove-resource-permission
+  pattern: (?i)aws\s+remove\-resource\-permission\b
+  severity: warn
+  message: RemoveResourcePermission — destructive operation
+  category: cloud

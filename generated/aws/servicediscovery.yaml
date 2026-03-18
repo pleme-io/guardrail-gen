@@ -1,0 +1,15 @@
+- name: aws-servicediscovery-delete-namespace
+  pattern: (?i)aws\s+delete\-namespace\b
+  severity: block
+  message: DeleteNamespace — destructive operation
+  category: cloud
+- name: aws-servicediscovery-delete-service
+  pattern: (?i)aws\s+delete\-service\b
+  severity: warn
+  message: DeleteService — destructive operation
+  category: cloud
+- name: aws-servicediscovery-deregister-instance
+  pattern: (?i)aws\s+deregister\-instance\b
+  severity: block
+  message: DeregisterInstance — destructive operation
+  category: cloud

@@ -1,0 +1,10 @@
+- name: aws-pipes-delete-pipe
+  pattern: (?i)aws\s+delete\-pipe\b
+  severity: block
+  message: DeletePipe — destructive operation
+  category: cloud
+- name: aws-pipes-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

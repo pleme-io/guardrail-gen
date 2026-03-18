@@ -1,0 +1,10 @@
+- name: aws-chime-sdk-media-pipelines-delete-media-capture-pipeline
+  pattern: (?i)aws\s+delete\-media\-capture\-pipeline\b
+  severity: block
+  message: DeleteMediaCapturePipeline — destructive operation
+  category: cloud
+- name: aws-chime-sdk-media-pipelines-delete-media-pipeline
+  pattern: (?i)aws\s+delete\-media\-pipeline\b
+  severity: block
+  message: DeleteMediaPipeline — destructive operation
+  category: cloud

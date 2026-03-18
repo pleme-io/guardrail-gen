@@ -1,0 +1,25 @@
+- name: aws-managedblockchain-delete-accessor
+  pattern: (?i)aws\s+delete\-accessor\b
+  severity: block
+  message: DeleteAccessor — destructive operation
+  category: cloud
+- name: aws-managedblockchain-delete-member
+  pattern: (?i)aws\s+delete\-member\b
+  severity: block
+  message: DeleteMember — destructive operation
+  category: cloud
+- name: aws-managedblockchain-delete-node
+  pattern: (?i)aws\s+delete\-node\b
+  severity: block
+  message: DeleteNode — destructive operation
+  category: cloud
+- name: aws-managedblockchain-reject-invitation
+  pattern: (?i)aws\s+reject\-invitation\b
+  severity: block
+  message: RejectInvitation — destructive operation
+  category: cloud
+- name: aws-managedblockchain-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

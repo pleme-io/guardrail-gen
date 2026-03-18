@@ -1,0 +1,30 @@
+- name: aws-redshift-serverless-delete-endpoint-access
+  pattern: (?i)aws\s+delete\-endpoint\-access\b
+  severity: warn
+  message: DeleteEndpointAccess — destructive operation
+  category: cloud
+- name: aws-redshift-serverless-delete-namespace
+  pattern: (?i)aws\s+delete\-namespace\b
+  severity: block
+  message: DeleteNamespace — destructive operation
+  category: cloud
+- name: aws-redshift-serverless-delete-resource-policy
+  pattern: (?i)aws\s+delete\-resource\-policy\b
+  severity: block
+  message: DeleteResourcePolicy — destructive operation
+  category: cloud
+- name: aws-redshift-serverless-delete-snapshot
+  pattern: (?i)aws\s+delete\-snapshot\b
+  severity: warn
+  message: DeleteSnapshot — destructive operation
+  category: cloud
+- name: aws-redshift-serverless-delete-usage-limit
+  pattern: (?i)aws\s+delete\-usage\-limit\b
+  severity: warn
+  message: DeleteUsageLimit — destructive operation
+  category: cloud
+- name: aws-redshift-serverless-delete-workgroup
+  pattern: (?i)aws\s+delete\-workgroup\b
+  severity: block
+  message: DeleteWorkgroup — destructive operation
+  category: cloud

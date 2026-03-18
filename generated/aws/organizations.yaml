@@ -1,0 +1,50 @@
+- name: aws-organizations-cancel-handshake
+  pattern: (?i)aws\s+cancel\-handshake\b
+  severity: warn
+  message: CancelHandshake — destructive operation
+  category: cloud
+- name: aws-organizations-delete-organization
+  pattern: (?i)aws\s+delete\-organization\b
+  severity: warn
+  message: DeleteOrganization — destructive operation
+  category: cloud
+- name: aws-organizations-delete-organizational-unit
+  pattern: (?i)aws\s+delete\-organizational\-unit\b
+  severity: warn
+  message: DeleteOrganizationalUnit — destructive operation
+  category: cloud
+- name: aws-organizations-delete-policy
+  pattern: (?i)aws\s+delete\-policy\b
+  severity: block
+  message: DeletePolicy — destructive operation
+  category: cloud
+- name: aws-organizations-delete-resource-policy
+  pattern: (?i)aws\s+delete\-resource\-policy\b
+  severity: block
+  message: DeleteResourcePolicy — destructive operation
+  category: cloud
+- name: aws-organizations-deregister-delegated-administrator
+  pattern: (?i)aws\s+deregister\-delegated\-administrator\b
+  severity: warn
+  message: DeregisterDelegatedAdministrator — destructive operation
+  category: cloud
+- name: aws-organizations-detach-policy
+  pattern: (?i)aws\s+detach\-policy\b
+  severity: block
+  message: DetachPolicy — destructive operation
+  category: cloud
+- name: aws-organizations-disable-a-w-s-service-access
+  pattern: (?i)aws\s+disable\-a\-w\-s\-service\-access\b
+  severity: warn
+  message: DisableAWSServiceAccess — destructive operation
+  category: cloud
+- name: aws-organizations-disable-policy-type
+  pattern: (?i)aws\s+disable\-policy\-type\b
+  severity: block
+  message: DisablePolicyType — destructive operation
+  category: cloud
+- name: aws-organizations-remove-account-from-organization
+  pattern: (?i)aws\s+remove\-account\-from\-organization\b
+  severity: block
+  message: RemoveAccountFromOrganization — destructive operation
+  category: cloud

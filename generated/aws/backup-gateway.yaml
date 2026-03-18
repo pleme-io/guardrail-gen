@@ -1,0 +1,15 @@
+- name: aws-backup-gateway-delete-gateway
+  pattern: (?i)aws\s+delete\-gateway\b
+  severity: block
+  message: DeleteGateway — destructive operation
+  category: cloud
+- name: aws-backup-gateway-delete-hypervisor
+  pattern: (?i)aws\s+delete\-hypervisor\b
+  severity: warn
+  message: DeleteHypervisor — destructive operation
+  category: cloud
+- name: aws-backup-gateway-disassociate-gateway-from-server
+  pattern: (?i)aws\s+disassociate\-gateway\-from\-server\b
+  severity: block
+  message: DisassociateGatewayFromServer — destructive operation
+  category: cloud

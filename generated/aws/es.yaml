@@ -1,0 +1,45 @@
+- name: aws-es-cancel-elasticsearch-service-software-update
+  pattern: (?i)aws\s+cancel\-elasticsearch\-service\-software\-update\b
+  severity: warn
+  message: CancelElasticsearchServiceSoftwareUpdate — destructive operation
+  category: cloud
+- name: aws-es-delete-elasticsearch-domain
+  pattern: (?i)aws\s+delete\-elasticsearch\-domain\b
+  severity: block
+  message: DeleteElasticsearchDomain — destructive operation
+  category: cloud
+- name: aws-es-delete-elasticsearch-service-role
+  pattern: (?i)aws\s+delete\-elasticsearch\-service\-role\b
+  severity: block
+  message: DeleteElasticsearchServiceRole — destructive operation
+  category: cloud
+- name: aws-es-delete-inbound-cross-cluster-search-connection
+  pattern: (?i)aws\s+delete\-inbound\-cross\-cluster\-search\-connection\b
+  severity: block
+  message: DeleteInboundCrossClusterSearchConnection — destructive operation
+  category: cloud
+- name: aws-es-delete-outbound-cross-cluster-search-connection
+  pattern: (?i)aws\s+delete\-outbound\-cross\-cluster\-search\-connection\b
+  severity: block
+  message: DeleteOutboundCrossClusterSearchConnection — destructive operation
+  category: cloud
+- name: aws-es-delete-package
+  pattern: (?i)aws\s+delete\-package\b
+  severity: block
+  message: DeletePackage — destructive operation
+  category: cloud
+- name: aws-es-delete-vpc-endpoint
+  pattern: (?i)aws\s+delete\-vpc\-endpoint\b
+  severity: block
+  message: DeleteVpcEndpoint — destructive operation
+  category: cloud
+- name: aws-es-remove-tags
+  pattern: (?i)aws\s+remove\-tags\b
+  severity: warn
+  message: RemoveTags — destructive operation
+  category: cloud
+- name: aws-es-revoke-vpc-endpoint-access
+  pattern: (?i)aws\s+revoke\-vpc\-endpoint\-access\b
+  severity: warn
+  message: RevokeVpcEndpointAccess — destructive operation
+  category: cloud

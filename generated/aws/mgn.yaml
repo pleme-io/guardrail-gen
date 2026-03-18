@@ -1,0 +1,65 @@
+- name: aws-mgn-delete-application
+  pattern: (?i)aws\s+delete\-application\b
+  severity: warn
+  message: DeleteApplication — destructive operation
+  category: cloud
+- name: aws-mgn-delete-job
+  pattern: (?i)aws\s+delete\-job\b
+  severity: warn
+  message: DeleteJob — destructive operation
+  category: cloud
+- name: aws-mgn-delete-launch-configuration-template
+  pattern: (?i)aws\s+delete\-launch\-configuration\-template\b
+  severity: warn
+  message: DeleteLaunchConfigurationTemplate — destructive operation
+  category: cloud
+- name: aws-mgn-delete-replication-configuration-template
+  pattern: (?i)aws\s+delete\-replication\-configuration\-template\b
+  severity: warn
+  message: DeleteReplicationConfigurationTemplate — destructive operation
+  category: cloud
+- name: aws-mgn-delete-source-server
+  pattern: (?i)aws\s+delete\-source\-server\b
+  severity: block
+  message: DeleteSourceServer — destructive operation
+  category: cloud
+- name: aws-mgn-delete-vcenter-client
+  pattern: (?i)aws\s+delete\-vcenter\-client\b
+  severity: warn
+  message: DeleteVcenterClient — destructive operation
+  category: cloud
+- name: aws-mgn-delete-wave
+  pattern: (?i)aws\s+delete\-wave\b
+  severity: warn
+  message: DeleteWave — destructive operation
+  category: cloud
+- name: aws-mgn-disassociate-applications
+  pattern: (?i)aws\s+disassociate\-applications\b
+  severity: warn
+  message: DisassociateApplications — destructive operation
+  category: cloud
+- name: aws-mgn-disassociate-source-servers
+  pattern: (?i)aws\s+disassociate\-source\-servers\b
+  severity: block
+  message: DisassociateSourceServers — destructive operation
+  category: cloud
+- name: aws-mgn-remove-source-server-action
+  pattern: (?i)aws\s+remove\-source\-server\-action\b
+  severity: block
+  message: RemoveSourceServerAction — destructive operation
+  category: cloud
+- name: aws-mgn-remove-template-action
+  pattern: (?i)aws\s+remove\-template\-action\b
+  severity: warn
+  message: RemoveTemplateAction — destructive operation
+  category: cloud
+- name: aws-mgn-terminate-target-instances
+  pattern: (?i)aws\s+terminate\-target\-instances\b
+  severity: block
+  message: TerminateTargetInstances — destructive operation
+  category: cloud
+- name: aws-mgn-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

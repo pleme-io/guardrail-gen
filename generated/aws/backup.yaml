@@ -1,0 +1,60 @@
+- name: aws-backup-cancel-legal-hold
+  pattern: (?i)aws\s+cancel\-legal\-hold\b
+  severity: block
+  message: CancelLegalHold — destructive operation
+  category: cloud
+- name: aws-backup-delete-backup-plan
+  pattern: (?i)aws\s+delete\-backup\-plan\b
+  severity: block
+  message: DeleteBackupPlan — destructive operation
+  category: cloud
+- name: aws-backup-delete-backup-selection
+  pattern: (?i)aws\s+delete\-backup\-selection\b
+  severity: block
+  message: DeleteBackupSelection — destructive operation
+  category: cloud
+- name: aws-backup-delete-backup-vault
+  pattern: (?i)aws\s+delete\-backup\-vault\b
+  severity: block
+  message: DeleteBackupVault — destructive operation
+  category: cloud
+- name: aws-backup-delete-backup-vault-access-policy
+  pattern: (?i)aws\s+delete\-backup\-vault\-access\-policy\b
+  severity: block
+  message: DeleteBackupVaultAccessPolicy — destructive operation
+  category: cloud
+- name: aws-backup-delete-backup-vault-lock-configuration
+  pattern: (?i)aws\s+delete\-backup\-vault\-lock\-configuration\b
+  severity: block
+  message: DeleteBackupVaultLockConfiguration — destructive operation
+  category: cloud
+- name: aws-backup-delete-backup-vault-notifications
+  pattern: (?i)aws\s+delete\-backup\-vault\-notifications\b
+  severity: block
+  message: DeleteBackupVaultNotifications — destructive operation
+  category: cloud
+- name: aws-backup-delete-framework
+  pattern: (?i)aws\s+delete\-framework\b
+  severity: block
+  message: DeleteFramework — destructive operation
+  category: cloud
+- name: aws-backup-delete-recovery-point
+  pattern: (?i)aws\s+delete\-recovery\-point\b
+  severity: block
+  message: DeleteRecoveryPoint — destructive operation
+  category: cloud
+- name: aws-backup-delete-report-plan
+  pattern: (?i)aws\s+delete\-report\-plan\b
+  severity: block
+  message: DeleteReportPlan — destructive operation
+  category: cloud
+- name: aws-backup-disassociate-recovery-point
+  pattern: (?i)aws\s+disassociate\-recovery\-point\b
+  severity: block
+  message: DisassociateRecoveryPoint — destructive operation
+  category: cloud
+- name: aws-backup-disassociate-recovery-point-from-parent
+  pattern: (?i)aws\s+disassociate\-recovery\-point\-from\-parent\b
+  severity: block
+  message: DisassociateRecoveryPointFromParent — destructive operation
+  category: cloud

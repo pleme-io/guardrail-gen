@@ -1,0 +1,30 @@
+- name: aws-cloudformation-cancel-update-stack
+  pattern: (?i)aws\s+cancel\-update\-stack\b
+  severity: block
+  message: CancelUpdateStack — destructive operation
+  category: cloud
+- name: aws-cloudformation-delete-change-set
+  pattern: (?i)aws\s+delete\-change\-set\b
+  severity: warn
+  message: DeleteChangeSet — destructive operation
+  category: cloud
+- name: aws-cloudformation-delete-stack
+  pattern: (?i)aws\s+delete\-stack\b
+  severity: block
+  message: DeleteStack — destructive operation
+  category: cloud
+- name: aws-cloudformation-delete-stack-instances
+  pattern: (?i)aws\s+delete\-stack\-instances\b
+  severity: block
+  message: DeleteStackInstances — destructive operation
+  category: cloud
+- name: aws-cloudformation-delete-stack-set
+  pattern: (?i)aws\s+delete\-stack\-set\b
+  severity: block
+  message: DeleteStackSet — destructive operation
+  category: cloud
+- name: aws-cloudformation-deregister-type
+  pattern: (?i)aws\s+deregister\-type\b
+  severity: warn
+  message: DeregisterType — destructive operation
+  category: cloud

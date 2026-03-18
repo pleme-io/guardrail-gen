@@ -1,0 +1,45 @@
+- name: aws-location-batch-delete-device-position-history
+  pattern: (?i)aws\s+batch\-delete\-device\-position\-history\b
+  severity: warn
+  message: BatchDeleteDevicePositionHistory — destructive operation
+  category: cloud
+- name: aws-location-batch-delete-geofence
+  pattern: (?i)aws\s+batch\-delete\-geofence\b
+  severity: warn
+  message: BatchDeleteGeofence — destructive operation
+  category: cloud
+- name: aws-location-delete-geofence-collection
+  pattern: (?i)aws\s+delete\-geofence\-collection\b
+  severity: block
+  message: DeleteGeofenceCollection — destructive operation
+  category: cloud
+- name: aws-location-delete-map
+  pattern: (?i)aws\s+delete\-map\b
+  severity: block
+  message: DeleteMap — destructive operation
+  category: cloud
+- name: aws-location-delete-place-index
+  pattern: (?i)aws\s+delete\-place\-index\b
+  severity: block
+  message: DeletePlaceIndex — destructive operation
+  category: cloud
+- name: aws-location-delete-route-calculator
+  pattern: (?i)aws\s+delete\-route\-calculator\b
+  severity: block
+  message: DeleteRouteCalculator — destructive operation
+  category: cloud
+- name: aws-location-delete-tracker
+  pattern: (?i)aws\s+delete\-tracker\b
+  severity: block
+  message: DeleteTracker — destructive operation
+  category: cloud
+- name: aws-location-disassociate-tracker-consumer
+  pattern: (?i)aws\s+disassociate\-tracker\-consumer\b
+  severity: block
+  message: DisassociateTrackerConsumer — destructive operation
+  category: cloud
+- name: aws-location-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

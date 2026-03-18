@@ -1,0 +1,25 @@
+- name: aws-emr-containers-cancel-job-run
+  pattern: (?i)aws\s+cancel\-job\-run\b
+  severity: block
+  message: CancelJobRun — destructive operation
+  category: cloud
+- name: aws-emr-containers-delete-job-template
+  pattern: (?i)aws\s+delete\-job\-template\b
+  severity: block
+  message: DeleteJobTemplate — destructive operation
+  category: cloud
+- name: aws-emr-containers-delete-managed-endpoint
+  pattern: (?i)aws\s+delete\-managed\-endpoint\b
+  severity: block
+  message: DeleteManagedEndpoint — destructive operation
+  category: cloud
+- name: aws-emr-containers-delete-virtual-cluster
+  pattern: (?i)aws\s+delete\-virtual\-cluster\b
+  severity: block
+  message: DeleteVirtualCluster — destructive operation
+  category: cloud
+- name: aws-emr-containers-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

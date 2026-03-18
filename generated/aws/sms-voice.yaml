@@ -1,0 +1,10 @@
+- name: aws-sms-voice-delete-configuration-set
+  pattern: (?i)aws\s+delete\-configuration\-set\b
+  severity: block
+  message: DeleteConfigurationSet — destructive operation
+  category: cloud
+- name: aws-sms-voice-delete-configuration-set-event-destination
+  pattern: (?i)aws\s+delete\-configuration\-set\-event\-destination\b
+  severity: warn
+  message: DeleteConfigurationSetEventDestination — destructive operation
+  category: cloud

@@ -1,0 +1,5 @@
+- name: aws-autoscaling-plans-delete-scaling-plan
+  pattern: (?i)aws\s+delete\-scaling\-plan\b
+  severity: warn
+  message: DeleteScalingPlan — destructive operation
+  category: cloud

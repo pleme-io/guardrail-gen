@@ -1,0 +1,70 @@
+- name: aws-waf-delete-byte-match-set
+  pattern: (?i)aws\s+delete\-byte\-match\-set\b
+  severity: warn
+  message: DeleteByteMatchSet — destructive operation
+  category: cloud
+- name: aws-waf-delete-geo-match-set
+  pattern: (?i)aws\s+delete\-geo\-match\-set\b
+  severity: warn
+  message: DeleteGeoMatchSet — destructive operation
+  category: cloud
+- name: aws-waf-delete-i-p-set
+  pattern: (?i)aws\s+delete\-i\-p\-set\b
+  severity: warn
+  message: DeleteIPSet — destructive operation
+  category: cloud
+- name: aws-waf-delete-logging-configuration
+  pattern: (?i)aws\s+delete\-logging\-configuration\b
+  severity: warn
+  message: DeleteLoggingConfiguration — destructive operation
+  category: cloud
+- name: aws-waf-delete-permission-policy
+  pattern: (?i)aws\s+delete\-permission\-policy\b
+  severity: block
+  message: DeletePermissionPolicy — destructive operation
+  category: cloud
+- name: aws-waf-delete-rate-based-rule
+  pattern: (?i)aws\s+delete\-rate\-based\-rule\b
+  severity: warn
+  message: DeleteRateBasedRule — destructive operation
+  category: cloud
+- name: aws-waf-delete-regex-match-set
+  pattern: (?i)aws\s+delete\-regex\-match\-set\b
+  severity: warn
+  message: DeleteRegexMatchSet — destructive operation
+  category: cloud
+- name: aws-waf-delete-regex-pattern-set
+  pattern: (?i)aws\s+delete\-regex\-pattern\-set\b
+  severity: warn
+  message: DeleteRegexPatternSet — destructive operation
+  category: cloud
+- name: aws-waf-delete-rule
+  pattern: (?i)aws\s+delete\-rule\b
+  severity: warn
+  message: DeleteRule — destructive operation
+  category: cloud
+- name: aws-waf-delete-rule-group
+  pattern: (?i)aws\s+delete\-rule\-group\b
+  severity: block
+  message: DeleteRuleGroup — destructive operation
+  category: cloud
+- name: aws-waf-delete-size-constraint-set
+  pattern: (?i)aws\s+delete\-size\-constraint\-set\b
+  severity: warn
+  message: DeleteSizeConstraintSet — destructive operation
+  category: cloud
+- name: aws-waf-delete-sql-injection-match-set
+  pattern: (?i)aws\s+delete\-sql\-injection\-match\-set\b
+  severity: warn
+  message: DeleteSqlInjectionMatchSet — destructive operation
+  category: cloud
+- name: aws-waf-delete-web-a-c-l
+  pattern: (?i)aws\s+delete\-web\-a\-c\-l\b
+  severity: warn
+  message: DeleteWebACL — destructive operation
+  category: cloud
+- name: aws-waf-delete-xss-match-set
+  pattern: (?i)aws\s+delete\-xss\-match\-set\b
+  severity: warn
+  message: DeleteXssMatchSet — destructive operation
+  category: cloud

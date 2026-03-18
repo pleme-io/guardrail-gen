@@ -1,0 +1,30 @@
+- name: aws-wisdom-delete-assistant
+  pattern: (?i)aws\s+delete\-assistant\b
+  severity: block
+  message: DeleteAssistant — destructive operation
+  category: cloud
+- name: aws-wisdom-delete-assistant-association
+  pattern: (?i)aws\s+delete\-assistant\-association\b
+  severity: warn
+  message: DeleteAssistantAssociation — destructive operation
+  category: cloud
+- name: aws-wisdom-delete-content
+  pattern: (?i)aws\s+delete\-content\b
+  severity: block
+  message: DeleteContent — destructive operation
+  category: cloud
+- name: aws-wisdom-delete-knowledge-base
+  pattern: (?i)aws\s+delete\-knowledge\-base\b
+  severity: block
+  message: DeleteKnowledgeBase — destructive operation
+  category: cloud
+- name: aws-wisdom-remove-knowledge-base-template-uri
+  pattern: (?i)aws\s+remove\-knowledge\-base\-template\-uri\b
+  severity: block
+  message: RemoveKnowledgeBaseTemplateUri — destructive operation
+  category: cloud
+- name: aws-wisdom-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

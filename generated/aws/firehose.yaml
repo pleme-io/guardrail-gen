@@ -1,0 +1,5 @@
+- name: aws-firehose-delete-delivery-stream
+  pattern: (?i)aws\s+delete\-delivery\-stream\b
+  severity: warn
+  message: DeleteDeliveryStream — destructive operation
+  category: cloud

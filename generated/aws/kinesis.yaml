@@ -1,0 +1,20 @@
+- name: aws-kinesis-delete-stream
+  pattern: (?i)aws\s+delete\-stream\b
+  severity: warn
+  message: DeleteStream — destructive operation
+  category: cloud
+- name: aws-kinesis-deregister-stream-consumer
+  pattern: (?i)aws\s+deregister\-stream\-consumer\b
+  severity: warn
+  message: DeregisterStreamConsumer — destructive operation
+  category: cloud
+- name: aws-kinesis-disable-enhanced-monitoring
+  pattern: (?i)aws\s+disable\-enhanced\-monitoring\b
+  severity: warn
+  message: DisableEnhancedMonitoring — destructive operation
+  category: cloud
+- name: aws-kinesis-remove-tags-from-stream
+  pattern: (?i)aws\s+remove\-tags\-from\-stream\b
+  severity: warn
+  message: RemoveTagsFromStream — destructive operation
+  category: cloud

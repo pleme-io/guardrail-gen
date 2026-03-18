@@ -1,0 +1,5 @@
+- name: aws-savingsplans-delete-queued-savings-plan
+  pattern: (?i)aws\s+delete\-queued\-savings\-plan\b
+  severity: warn
+  message: DeleteQueuedSavingsPlan — destructive operation
+  category: cloud

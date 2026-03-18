@@ -1,0 +1,10 @@
+- name: aws-license-manager-user-subscriptions-deregister-identity-provider
+  pattern: (?i)aws\s+deregister\-identity\-provider\b
+  severity: warn
+  message: DeregisterIdentityProvider — destructive operation
+  category: cloud
+- name: aws-license-manager-user-subscriptions-disassociate-user
+  pattern: (?i)aws\s+disassociate\-user\b
+  severity: warn
+  message: DisassociateUser — destructive operation
+  category: cloud

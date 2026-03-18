@@ -1,0 +1,5 @@
+- name: aws-account-delete-alternate-contact
+  pattern: (?i)aws\s+delete\-alternate\-contact\b
+  severity: warn
+  message: DeleteAlternateContact — destructive operation
+  category: cloud

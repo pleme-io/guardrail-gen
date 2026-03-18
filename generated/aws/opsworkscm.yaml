@@ -1,0 +1,15 @@
+- name: aws-opsworkscm-delete-backup
+  pattern: (?i)aws\s+delete\-backup\b
+  severity: warn
+  message: DeleteBackup — destructive operation
+  category: cloud
+- name: aws-opsworkscm-delete-server
+  pattern: (?i)aws\s+delete\-server\b
+  severity: block
+  message: DeleteServer — destructive operation
+  category: cloud
+- name: aws-opsworkscm-disassociate-node
+  pattern: (?i)aws\s+disassociate\-node\b
+  severity: warn
+  message: DisassociateNode — destructive operation
+  category: cloud

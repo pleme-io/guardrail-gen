@@ -1,0 +1,60 @@
+- name: aws-guardduty-delete-detector
+  pattern: (?i)aws\s+delete\-detector\b
+  severity: block
+  message: DeleteDetector — destructive operation
+  category: cloud
+- name: aws-guardduty-delete-filter
+  pattern: (?i)aws\s+delete\-filter\b
+  severity: block
+  message: DeleteFilter — destructive operation
+  category: cloud
+- name: aws-guardduty-delete-i-p-set
+  pattern: (?i)aws\s+delete\-i\-p\-set\b
+  severity: block
+  message: DeleteIPSet — destructive operation
+  category: cloud
+- name: aws-guardduty-delete-invitations
+  pattern: (?i)aws\s+delete\-invitations\b
+  severity: warn
+  message: DeleteInvitations — destructive operation
+  category: cloud
+- name: aws-guardduty-delete-members
+  pattern: (?i)aws\s+delete\-members\b
+  severity: warn
+  message: DeleteMembers — destructive operation
+  category: cloud
+- name: aws-guardduty-delete-publishing-destination
+  pattern: (?i)aws\s+delete\-publishing\-destination\b
+  severity: block
+  message: DeletePublishingDestination — destructive operation
+  category: cloud
+- name: aws-guardduty-delete-threat-intel-set
+  pattern: (?i)aws\s+delete\-threat\-intel\-set\b
+  severity: block
+  message: DeleteThreatIntelSet — destructive operation
+  category: cloud
+- name: aws-guardduty-disable-organization-admin-account
+  pattern: (?i)aws\s+disable\-organization\-admin\-account\b
+  severity: block
+  message: DisableOrganizationAdminAccount — destructive operation
+  category: cloud
+- name: aws-guardduty-disassociate-from-administrator-account
+  pattern: (?i)aws\s+disassociate\-from\-administrator\-account\b
+  severity: block
+  message: DisassociateFromAdministratorAccount — destructive operation
+  category: cloud
+- name: aws-guardduty-disassociate-from-master-account
+  pattern: (?i)aws\s+disassociate\-from\-master\-account\b
+  severity: block
+  message: DisassociateFromMasterAccount — destructive operation
+  category: cloud
+- name: aws-guardduty-disassociate-members
+  pattern: (?i)aws\s+disassociate\-members\b
+  severity: warn
+  message: DisassociateMembers — destructive operation
+  category: cloud
+- name: aws-guardduty-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

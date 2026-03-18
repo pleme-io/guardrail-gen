@@ -1,0 +1,50 @@
+- name: aws-directconnect-delete-b-g-p-peer
+  pattern: (?i)aws\s+delete\-b\-g\-p\-peer\b
+  severity: warn
+  message: DeleteBGPPeer — destructive operation
+  category: cloud
+- name: aws-directconnect-delete-connection
+  pattern: (?i)aws\s+delete\-connection\b
+  severity: warn
+  message: DeleteConnection — destructive operation
+  category: cloud
+- name: aws-directconnect-delete-direct-connect-gateway
+  pattern: (?i)aws\s+delete\-direct\-connect\-gateway\b
+  severity: block
+  message: DeleteDirectConnectGateway — destructive operation
+  category: cloud
+- name: aws-directconnect-delete-direct-connect-gateway-association
+  pattern: (?i)aws\s+delete\-direct\-connect\-gateway\-association\b
+  severity: block
+  message: DeleteDirectConnectGatewayAssociation — destructive operation
+  category: cloud
+- name: aws-directconnect-delete-direct-connect-gateway-association-proposal
+  pattern: (?i)aws\s+delete\-direct\-connect\-gateway\-association\-proposal\b
+  severity: block
+  message: DeleteDirectConnectGatewayAssociationProposal — destructive operation
+  category: cloud
+- name: aws-directconnect-delete-interconnect
+  pattern: (?i)aws\s+delete\-interconnect\b
+  severity: warn
+  message: DeleteInterconnect — destructive operation
+  category: cloud
+- name: aws-directconnect-delete-lag
+  pattern: (?i)aws\s+delete\-lag\b
+  severity: warn
+  message: DeleteLag — destructive operation
+  category: cloud
+- name: aws-directconnect-delete-virtual-interface
+  pattern: (?i)aws\s+delete\-virtual\-interface\b
+  severity: warn
+  message: DeleteVirtualInterface — destructive operation
+  category: cloud
+- name: aws-directconnect-disassociate-connection-from-lag
+  pattern: (?i)aws\s+disassociate\-connection\-from\-lag\b
+  severity: warn
+  message: DisassociateConnectionFromLag — destructive operation
+  category: cloud
+- name: aws-directconnect-disassociate-mac-sec-key
+  pattern: (?i)aws\s+disassociate\-mac\-sec\-key\b
+  severity: block
+  message: DisassociateMacSecKey — destructive operation
+  category: cloud

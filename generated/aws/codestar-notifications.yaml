@@ -1,0 +1,10 @@
+- name: aws-codestar-notifications-delete-notification-rule
+  pattern: (?i)aws\s+delete\-notification\-rule\b
+  severity: warn
+  message: DeleteNotificationRule — destructive operation
+  category: cloud
+- name: aws-codestar-notifications-delete-target
+  pattern: (?i)aws\s+delete\-target\b
+  severity: block
+  message: DeleteTarget — destructive operation
+  category: cloud

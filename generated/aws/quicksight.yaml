@@ -1,0 +1,100 @@
+- name: aws-quicksight-cancel-ingestion
+  pattern: (?i)aws\s+cancel\-ingestion\b
+  severity: block
+  message: CancelIngestion — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-account-customization
+  pattern: (?i)aws\s+delete\-account\-customization\b
+  severity: block
+  message: DeleteAccountCustomization — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-account-subscription
+  pattern: (?i)aws\s+delete\-account\-subscription\b
+  severity: block
+  message: DeleteAccountSubscription — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-analysis
+  pattern: (?i)aws\s+delete\-analysis\b
+  severity: block
+  message: DeleteAnalysis — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-dashboard
+  pattern: (?i)aws\s+delete\-dashboard\b
+  severity: block
+  message: DeleteDashboard — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-data-set
+  pattern: (?i)aws\s+delete\-data\-set\b
+  severity: block
+  message: DeleteDataSet — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-data-source
+  pattern: (?i)aws\s+delete\-data\-source\b
+  severity: block
+  message: DeleteDataSource — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-folder
+  pattern: (?i)aws\s+delete\-folder\b
+  severity: block
+  message: DeleteFolder — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-folder-membership
+  pattern: (?i)aws\s+delete\-folder\-membership\b
+  severity: block
+  message: DeleteFolderMembership — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-group
+  pattern: (?i)aws\s+delete\-group\b
+  severity: block
+  message: DeleteGroup — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-group-membership
+  pattern: (?i)aws\s+delete\-group\-membership\b
+  severity: block
+  message: DeleteGroupMembership — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-i-a-m-policy-assignment
+  pattern: (?i)aws\s+delete\-i\-a\-m\-policy\-assignment\b
+  severity: block
+  message: DeleteIAMPolicyAssignment — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-namespace
+  pattern: (?i)aws\s+delete\-namespace\b
+  severity: block
+  message: DeleteNamespace — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-template
+  pattern: (?i)aws\s+delete\-template\b
+  severity: block
+  message: DeleteTemplate — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-template-alias
+  pattern: (?i)aws\s+delete\-template\-alias\b
+  severity: block
+  message: DeleteTemplateAlias — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-theme
+  pattern: (?i)aws\s+delete\-theme\b
+  severity: block
+  message: DeleteTheme — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-theme-alias
+  pattern: (?i)aws\s+delete\-theme\-alias\b
+  severity: block
+  message: DeleteThemeAlias — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-user
+  pattern: (?i)aws\s+delete\-user\b
+  severity: block
+  message: DeleteUser — destructive operation
+  category: cloud
+- name: aws-quicksight-delete-user-by-principal-id
+  pattern: (?i)aws\s+delete\-user\-by\-principal\-id\b
+  severity: block
+  message: DeleteUserByPrincipalId — destructive operation
+  category: cloud
+- name: aws-quicksight-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

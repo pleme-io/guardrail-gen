@@ -1,0 +1,20 @@
+- name: aws-lookoutvision-delete-dataset
+  pattern: (?i)aws\s+delete\-dataset\b
+  severity: block
+  message: DeleteDataset — destructive operation
+  category: cloud
+- name: aws-lookoutvision-delete-model
+  pattern: (?i)aws\s+delete\-model\b
+  severity: block
+  message: DeleteModel — destructive operation
+  category: cloud
+- name: aws-lookoutvision-delete-project
+  pattern: (?i)aws\s+delete\-project\b
+  severity: block
+  message: DeleteProject — destructive operation
+  category: cloud
+- name: aws-lookoutvision-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

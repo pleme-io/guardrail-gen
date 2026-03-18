@@ -1,0 +1,20 @@
+- name: aws-comprehend-delete-document-classifier
+  pattern: (?i)aws\s+delete\-document\-classifier\b
+  severity: warn
+  message: DeleteDocumentClassifier — destructive operation
+  category: cloud
+- name: aws-comprehend-delete-endpoint
+  pattern: (?i)aws\s+delete\-endpoint\b
+  severity: warn
+  message: DeleteEndpoint — destructive operation
+  category: cloud
+- name: aws-comprehend-delete-entity-recognizer
+  pattern: (?i)aws\s+delete\-entity\-recognizer\b
+  severity: warn
+  message: DeleteEntityRecognizer — destructive operation
+  category: cloud
+- name: aws-comprehend-delete-resource-policy
+  pattern: (?i)aws\s+delete\-resource\-policy\b
+  severity: block
+  message: DeleteResourcePolicy — destructive operation
+  category: cloud

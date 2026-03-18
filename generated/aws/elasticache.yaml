@@ -1,0 +1,65 @@
+- name: aws-elasticache-delete-cache-cluster
+  pattern: (?i)aws\s+delete\-cache\-cluster\b
+  severity: block
+  message: DeleteCacheCluster — destructive operation
+  category: cloud
+- name: aws-elasticache-delete-cache-parameter-group
+  pattern: (?i)aws\s+delete\-cache\-parameter\-group\b
+  severity: block
+  message: DeleteCacheParameterGroup — destructive operation
+  category: cloud
+- name: aws-elasticache-delete-cache-security-group
+  pattern: (?i)aws\s+delete\-cache\-security\-group\b
+  severity: block
+  message: DeleteCacheSecurityGroup — destructive operation
+  category: cloud
+- name: aws-elasticache-delete-cache-subnet-group
+  pattern: (?i)aws\s+delete\-cache\-subnet\-group\b
+  severity: block
+  message: DeleteCacheSubnetGroup — destructive operation
+  category: cloud
+- name: aws-elasticache-delete-global-replication-group
+  pattern: (?i)aws\s+delete\-global\-replication\-group\b
+  severity: block
+  message: DeleteGlobalReplicationGroup — destructive operation
+  category: cloud
+- name: aws-elasticache-delete-replication-group
+  pattern: (?i)aws\s+delete\-replication\-group\b
+  severity: block
+  message: DeleteReplicationGroup — destructive operation
+  category: cloud
+- name: aws-elasticache-delete-snapshot
+  pattern: (?i)aws\s+delete\-snapshot\b
+  severity: warn
+  message: DeleteSnapshot — destructive operation
+  category: cloud
+- name: aws-elasticache-delete-user
+  pattern: (?i)aws\s+delete\-user\b
+  severity: warn
+  message: DeleteUser — destructive operation
+  category: cloud
+- name: aws-elasticache-delete-user-group
+  pattern: (?i)aws\s+delete\-user\-group\b
+  severity: block
+  message: DeleteUserGroup — destructive operation
+  category: cloud
+- name: aws-elasticache-disassociate-global-replication-group
+  pattern: (?i)aws\s+disassociate\-global\-replication\-group\b
+  severity: block
+  message: DisassociateGlobalReplicationGroup — destructive operation
+  category: cloud
+- name: aws-elasticache-remove-tags-from-resource
+  pattern: (?i)aws\s+remove\-tags\-from\-resource\b
+  severity: warn
+  message: RemoveTagsFromResource — destructive operation
+  category: cloud
+- name: aws-elasticache-reset-cache-parameter-group
+  pattern: (?i)aws\s+reset\-cache\-parameter\-group\b
+  severity: block
+  message: ResetCacheParameterGroup — destructive operation
+  category: cloud
+- name: aws-elasticache-revoke-cache-security-group-ingress
+  pattern: (?i)aws\s+revoke\-cache\-security\-group\-ingress\b
+  severity: block
+  message: RevokeCacheSecurityGroupIngress — destructive operation
+  category: cloud

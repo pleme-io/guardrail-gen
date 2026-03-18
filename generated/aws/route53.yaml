@@ -1,0 +1,55 @@
+- name: aws-route53-delete-cidr-collection
+  pattern: (?i)aws\s+delete\-cidr\-collection\b
+  severity: block
+  message: DeleteCidrCollection — destructive operation
+  category: cloud
+- name: aws-route53-delete-health-check
+  pattern: (?i)aws\s+delete\-health\-check\b
+  severity: block
+  message: DeleteHealthCheck — destructive operation
+  category: cloud
+- name: aws-route53-delete-hosted-zone
+  pattern: (?i)aws\s+delete\-hosted\-zone\b
+  severity: block
+  message: DeleteHostedZone — destructive operation
+  category: cloud
+- name: aws-route53-delete-key-signing-key
+  pattern: (?i)aws\s+delete\-key\-signing\-key\b
+  severity: block
+  message: DeleteKeySigningKey — destructive operation
+  category: cloud
+- name: aws-route53-delete-query-logging-config
+  pattern: (?i)aws\s+delete\-query\-logging\-config\b
+  severity: warn
+  message: DeleteQueryLoggingConfig — destructive operation
+  category: cloud
+- name: aws-route53-delete-reusable-delegation-set
+  pattern: (?i)aws\s+delete\-reusable\-delegation\-set\b
+  severity: block
+  message: DeleteReusableDelegationSet — destructive operation
+  category: cloud
+- name: aws-route53-delete-traffic-policy
+  pattern: (?i)aws\s+delete\-traffic\-policy\b
+  severity: block
+  message: DeleteTrafficPolicy — destructive operation
+  category: cloud
+- name: aws-route53-delete-traffic-policy-instance
+  pattern: (?i)aws\s+delete\-traffic\-policy\-instance\b
+  severity: block
+  message: DeleteTrafficPolicyInstance — destructive operation
+  category: cloud
+- name: aws-route53-delete-v-p-c-association-authorization
+  pattern: (?i)aws\s+delete\-v\-p\-c\-association\-authorization\b
+  severity: block
+  message: DeleteVPCAssociationAuthorization — destructive operation
+  category: cloud
+- name: aws-route53-disable-hosted-zone-d-n-s-s-e-c
+  pattern: (?i)aws\s+disable\-hosted\-zone\-d\-n\-s\-s\-e\-c\b
+  severity: block
+  message: DisableHostedZoneDNSSEC — destructive operation
+  category: cloud
+- name: aws-route53-disassociate-v-p-c-from-hosted-zone
+  pattern: (?i)aws\s+disassociate\-v\-p\-c\-from\-hosted\-zone\b
+  severity: block
+  message: DisassociateVPCFromHostedZone — destructive operation
+  category: cloud

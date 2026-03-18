@@ -1,0 +1,10 @@
+- name: aws-cognito-sync-delete-dataset
+  pattern: (?i)aws\s+delete\-dataset\b
+  severity: block
+  message: DeleteDataset — destructive operation
+  category: cloud
+- name: aws-cognito-sync-unsubscribe-from-dataset
+  pattern: (?i)aws\s+unsubscribe\-from\-dataset\b
+  severity: warn
+  message: UnsubscribeFromDataset — destructive operation
+  category: cloud

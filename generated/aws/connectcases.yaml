@@ -1,0 +1,5 @@
+- name: aws-connectcases-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

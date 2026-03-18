@@ -1,0 +1,110 @@
+- name: aws-iotwireless-cancel-multicast-group-session
+  pattern: (?i)aws\s+cancel\-multicast\-group\-session\b
+  severity: block
+  message: CancelMulticastGroupSession — destructive operation
+  category: cloud
+- name: aws-iotwireless-delete-destination
+  pattern: (?i)aws\s+delete\-destination\b
+  severity: block
+  message: DeleteDestination — destructive operation
+  category: cloud
+- name: aws-iotwireless-delete-device-profile
+  pattern: (?i)aws\s+delete\-device\-profile\b
+  severity: block
+  message: DeleteDeviceProfile — destructive operation
+  category: cloud
+- name: aws-iotwireless-delete-fuota-task
+  pattern: (?i)aws\s+delete\-fuota\-task\b
+  severity: block
+  message: DeleteFuotaTask — destructive operation
+  category: cloud
+- name: aws-iotwireless-delete-multicast-group
+  pattern: (?i)aws\s+delete\-multicast\-group\b
+  severity: block
+  message: DeleteMulticastGroup — destructive operation
+  category: cloud
+- name: aws-iotwireless-delete-network-analyzer-configuration
+  pattern: (?i)aws\s+delete\-network\-analyzer\-configuration\b
+  severity: block
+  message: DeleteNetworkAnalyzerConfiguration — destructive operation
+  category: cloud
+- name: aws-iotwireless-delete-queued-messages
+  pattern: (?i)aws\s+delete\-queued\-messages\b
+  severity: warn
+  message: DeleteQueuedMessages — destructive operation
+  category: cloud
+- name: aws-iotwireless-delete-service-profile
+  pattern: (?i)aws\s+delete\-service\-profile\b
+  severity: block
+  message: DeleteServiceProfile — destructive operation
+  category: cloud
+- name: aws-iotwireless-delete-wireless-device
+  pattern: (?i)aws\s+delete\-wireless\-device\b
+  severity: block
+  message: DeleteWirelessDevice — destructive operation
+  category: cloud
+- name: aws-iotwireless-delete-wireless-gateway
+  pattern: (?i)aws\s+delete\-wireless\-gateway\b
+  severity: block
+  message: DeleteWirelessGateway — destructive operation
+  category: cloud
+- name: aws-iotwireless-delete-wireless-gateway-task
+  pattern: (?i)aws\s+delete\-wireless\-gateway\-task\b
+  severity: block
+  message: DeleteWirelessGatewayTask — destructive operation
+  category: cloud
+- name: aws-iotwireless-delete-wireless-gateway-task-definition
+  pattern: (?i)aws\s+delete\-wireless\-gateway\-task\-definition\b
+  severity: block
+  message: DeleteWirelessGatewayTaskDefinition — destructive operation
+  category: cloud
+- name: aws-iotwireless-disassociate-aws-account-from-partner-account
+  pattern: (?i)aws\s+disassociate\-aws\-account\-from\-partner\-account\b
+  severity: block
+  message: DisassociateAwsAccountFromPartnerAccount — destructive operation
+  category: cloud
+- name: aws-iotwireless-disassociate-multicast-group-from-fuota-task
+  pattern: (?i)aws\s+disassociate\-multicast\-group\-from\-fuota\-task\b
+  severity: block
+  message: DisassociateMulticastGroupFromFuotaTask — destructive operation
+  category: cloud
+- name: aws-iotwireless-disassociate-wireless-device-from-fuota-task
+  pattern: (?i)aws\s+disassociate\-wireless\-device\-from\-fuota\-task\b
+  severity: block
+  message: DisassociateWirelessDeviceFromFuotaTask — destructive operation
+  category: cloud
+- name: aws-iotwireless-disassociate-wireless-device-from-multicast-group
+  pattern: (?i)aws\s+disassociate\-wireless\-device\-from\-multicast\-group\b
+  severity: block
+  message: DisassociateWirelessDeviceFromMulticastGroup — destructive operation
+  category: cloud
+- name: aws-iotwireless-disassociate-wireless-device-from-thing
+  pattern: (?i)aws\s+disassociate\-wireless\-device\-from\-thing\b
+  severity: block
+  message: DisassociateWirelessDeviceFromThing — destructive operation
+  category: cloud
+- name: aws-iotwireless-disassociate-wireless-gateway-from-certificate
+  pattern: (?i)aws\s+disassociate\-wireless\-gateway\-from\-certificate\b
+  severity: block
+  message: DisassociateWirelessGatewayFromCertificate — destructive operation
+  category: cloud
+- name: aws-iotwireless-disassociate-wireless-gateway-from-thing
+  pattern: (?i)aws\s+disassociate\-wireless\-gateway\-from\-thing\b
+  severity: block
+  message: DisassociateWirelessGatewayFromThing — destructive operation
+  category: cloud
+- name: aws-iotwireless-reset-all-resource-log-levels
+  pattern: (?i)aws\s+reset\-all\-resource\-log\-levels\b
+  severity: warn
+  message: ResetAllResourceLogLevels — destructive operation
+  category: cloud
+- name: aws-iotwireless-reset-resource-log-level
+  pattern: (?i)aws\s+reset\-resource\-log\-level\b
+  severity: warn
+  message: ResetResourceLogLevel — destructive operation
+  category: cloud
+- name: aws-iotwireless-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

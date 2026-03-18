@@ -1,0 +1,35 @@
+- name: aws-elasticfilesystem-delete-access-point
+  pattern: (?i)aws\s+delete\-access\-point\b
+  severity: block
+  message: DeleteAccessPoint — destructive operation
+  category: cloud
+- name: aws-elasticfilesystem-delete-file-system
+  pattern: (?i)aws\s+delete\-file\-system\b
+  severity: block
+  message: DeleteFileSystem — destructive operation
+  category: cloud
+- name: aws-elasticfilesystem-delete-file-system-policy
+  pattern: (?i)aws\s+delete\-file\-system\-policy\b
+  severity: block
+  message: DeleteFileSystemPolicy — destructive operation
+  category: cloud
+- name: aws-elasticfilesystem-delete-mount-target
+  pattern: (?i)aws\s+delete\-mount\-target\b
+  severity: block
+  message: DeleteMountTarget — destructive operation
+  category: cloud
+- name: aws-elasticfilesystem-delete-replication-configuration
+  pattern: (?i)aws\s+delete\-replication\-configuration\b
+  severity: block
+  message: DeleteReplicationConfiguration — destructive operation
+  category: cloud
+- name: aws-elasticfilesystem-delete-tags
+  pattern: (?i)aws\s+delete\-tags\b
+  severity: warn
+  message: DeleteTags — destructive operation
+  category: cloud
+- name: aws-elasticfilesystem-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

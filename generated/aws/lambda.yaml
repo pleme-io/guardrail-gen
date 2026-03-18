@@ -1,0 +1,65 @@
+- name: aws-lambda-delete-alias
+  pattern: (?i)aws\s+delete\-alias\b
+  severity: block
+  message: DeleteAlias — destructive operation
+  category: cloud
+- name: aws-lambda-delete-code-signing-config
+  pattern: (?i)aws\s+delete\-code\-signing\-config\b
+  severity: block
+  message: DeleteCodeSigningConfig — destructive operation
+  category: cloud
+- name: aws-lambda-delete-event-source-mapping
+  pattern: (?i)aws\s+delete\-event\-source\-mapping\b
+  severity: warn
+  message: DeleteEventSourceMapping — destructive operation
+  category: cloud
+- name: aws-lambda-delete-function
+  pattern: (?i)aws\s+delete\-function\b
+  severity: block
+  message: DeleteFunction — destructive operation
+  category: cloud
+- name: aws-lambda-delete-function-code-signing-config
+  pattern: (?i)aws\s+delete\-function\-code\-signing\-config\b
+  severity: block
+  message: DeleteFunctionCodeSigningConfig — destructive operation
+  category: cloud
+- name: aws-lambda-delete-function-concurrency
+  pattern: (?i)aws\s+delete\-function\-concurrency\b
+  severity: block
+  message: DeleteFunctionConcurrency — destructive operation
+  category: cloud
+- name: aws-lambda-delete-function-event-invoke-config
+  pattern: (?i)aws\s+delete\-function\-event\-invoke\-config\b
+  severity: warn
+  message: DeleteFunctionEventInvokeConfig — destructive operation
+  category: cloud
+- name: aws-lambda-delete-function-url-config
+  pattern: (?i)aws\s+delete\-function\-url\-config\b
+  severity: block
+  message: DeleteFunctionUrlConfig — destructive operation
+  category: cloud
+- name: aws-lambda-delete-layer-version
+  pattern: (?i)aws\s+delete\-layer\-version\b
+  severity: block
+  message: DeleteLayerVersion — destructive operation
+  category: cloud
+- name: aws-lambda-delete-provisioned-concurrency-config
+  pattern: (?i)aws\s+delete\-provisioned\-concurrency\-config\b
+  severity: block
+  message: DeleteProvisionedConcurrencyConfig — destructive operation
+  category: cloud
+- name: aws-lambda-remove-layer-version-permission
+  pattern: (?i)aws\s+remove\-layer\-version\-permission\b
+  severity: block
+  message: RemoveLayerVersionPermission — destructive operation
+  category: cloud
+- name: aws-lambda-remove-permission
+  pattern: (?i)aws\s+remove\-permission\b
+  severity: block
+  message: RemovePermission — destructive operation
+  category: cloud
+- name: aws-lambda-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

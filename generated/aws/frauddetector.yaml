@@ -1,0 +1,85 @@
+- name: aws-frauddetector-cancel-batch-import-job
+  pattern: (?i)aws\s+cancel\-batch\-import\-job\b
+  severity: warn
+  message: CancelBatchImportJob — destructive operation
+  category: cloud
+- name: aws-frauddetector-cancel-batch-prediction-job
+  pattern: (?i)aws\s+cancel\-batch\-prediction\-job\b
+  severity: warn
+  message: CancelBatchPredictionJob — destructive operation
+  category: cloud
+- name: aws-frauddetector-delete-batch-import-job
+  pattern: (?i)aws\s+delete\-batch\-import\-job\b
+  severity: warn
+  message: DeleteBatchImportJob — destructive operation
+  category: cloud
+- name: aws-frauddetector-delete-batch-prediction-job
+  pattern: (?i)aws\s+delete\-batch\-prediction\-job\b
+  severity: warn
+  message: DeleteBatchPredictionJob — destructive operation
+  category: cloud
+- name: aws-frauddetector-delete-detector
+  pattern: (?i)aws\s+delete\-detector\b
+  severity: warn
+  message: DeleteDetector — destructive operation
+  category: cloud
+- name: aws-frauddetector-delete-detector-version
+  pattern: (?i)aws\s+delete\-detector\-version\b
+  severity: warn
+  message: DeleteDetectorVersion — destructive operation
+  category: cloud
+- name: aws-frauddetector-delete-entity-type
+  pattern: (?i)aws\s+delete\-entity\-type\b
+  severity: warn
+  message: DeleteEntityType — destructive operation
+  category: cloud
+- name: aws-frauddetector-delete-event
+  pattern: (?i)aws\s+delete\-event\b
+  severity: warn
+  message: DeleteEvent — destructive operation
+  category: cloud
+- name: aws-frauddetector-delete-event-type
+  pattern: (?i)aws\s+delete\-event\-type\b
+  severity: warn
+  message: DeleteEventType — destructive operation
+  category: cloud
+- name: aws-frauddetector-delete-events-by-event-type
+  pattern: (?i)aws\s+delete\-events\-by\-event\-type\b
+  severity: warn
+  message: DeleteEventsByEventType — destructive operation
+  category: cloud
+- name: aws-frauddetector-delete-external-model
+  pattern: (?i)aws\s+delete\-external\-model\b
+  severity: warn
+  message: DeleteExternalModel — destructive operation
+  category: cloud
+- name: aws-frauddetector-delete-label
+  pattern: (?i)aws\s+delete\-label\b
+  severity: warn
+  message: DeleteLabel — destructive operation
+  category: cloud
+- name: aws-frauddetector-delete-model
+  pattern: (?i)aws\s+delete\-model\b
+  severity: warn
+  message: DeleteModel — destructive operation
+  category: cloud
+- name: aws-frauddetector-delete-model-version
+  pattern: (?i)aws\s+delete\-model\-version\b
+  severity: warn
+  message: DeleteModelVersion — destructive operation
+  category: cloud
+- name: aws-frauddetector-delete-outcome
+  pattern: (?i)aws\s+delete\-outcome\b
+  severity: warn
+  message: DeleteOutcome — destructive operation
+  category: cloud
+- name: aws-frauddetector-delete-rule
+  pattern: (?i)aws\s+delete\-rule\b
+  severity: warn
+  message: DeleteRule — destructive operation
+  category: cloud
+- name: aws-frauddetector-delete-variable
+  pattern: (?i)aws\s+delete\-variable\b
+  severity: warn
+  message: DeleteVariable — destructive operation
+  category: cloud

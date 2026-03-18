@@ -1,0 +1,20 @@
+- name: aws-migrationhuborchestrator-delete-workflow
+  pattern: (?i)aws\s+delete\-workflow\b
+  severity: block
+  message: DeleteWorkflow — destructive operation
+  category: cloud
+- name: aws-migrationhuborchestrator-delete-workflow-step
+  pattern: (?i)aws\s+delete\-workflow\-step\b
+  severity: block
+  message: DeleteWorkflowStep — destructive operation
+  category: cloud
+- name: aws-migrationhuborchestrator-delete-workflow-step-group
+  pattern: (?i)aws\s+delete\-workflow\-step\-group\b
+  severity: block
+  message: DeleteWorkflowStepGroup — destructive operation
+  category: cloud
+- name: aws-migrationhuborchestrator-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

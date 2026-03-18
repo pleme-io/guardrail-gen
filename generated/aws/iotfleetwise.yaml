@@ -1,0 +1,35 @@
+- name: aws-iotfleetwise-delete-campaign
+  pattern: (?i)aws\s+delete\-campaign\b
+  severity: warn
+  message: DeleteCampaign — destructive operation
+  category: cloud
+- name: aws-iotfleetwise-delete-decoder-manifest
+  pattern: (?i)aws\s+delete\-decoder\-manifest\b
+  severity: warn
+  message: DeleteDecoderManifest — destructive operation
+  category: cloud
+- name: aws-iotfleetwise-delete-fleet
+  pattern: (?i)aws\s+delete\-fleet\b
+  severity: warn
+  message: DeleteFleet — destructive operation
+  category: cloud
+- name: aws-iotfleetwise-delete-model-manifest
+  pattern: (?i)aws\s+delete\-model\-manifest\b
+  severity: warn
+  message: DeleteModelManifest — destructive operation
+  category: cloud
+- name: aws-iotfleetwise-delete-signal-catalog
+  pattern: (?i)aws\s+delete\-signal\-catalog\b
+  severity: warn
+  message: DeleteSignalCatalog — destructive operation
+  category: cloud
+- name: aws-iotfleetwise-delete-vehicle
+  pattern: (?i)aws\s+delete\-vehicle\b
+  severity: warn
+  message: DeleteVehicle — destructive operation
+  category: cloud
+- name: aws-iotfleetwise-disassociate-vehicle-fleet
+  pattern: (?i)aws\s+disassociate\-vehicle\-fleet\b
+  severity: warn
+  message: DisassociateVehicleFleet — destructive operation
+  category: cloud

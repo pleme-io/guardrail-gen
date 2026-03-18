@@ -1,0 +1,40 @@
+- name: aws-codecommit-batch-disassociate-approval-rule-template-from-repositories
+  pattern: (?i)aws\s+batch\-disassociate\-approval\-rule\-template\-from\-repositories\b
+  severity: warn
+  message: BatchDisassociateApprovalRuleTemplateFromRepositories — destructive operation
+  category: cloud
+- name: aws-codecommit-delete-approval-rule-template
+  pattern: (?i)aws\s+delete\-approval\-rule\-template\b
+  severity: warn
+  message: DeleteApprovalRuleTemplate — destructive operation
+  category: cloud
+- name: aws-codecommit-delete-branch
+  pattern: (?i)aws\s+delete\-branch\b
+  severity: warn
+  message: DeleteBranch — destructive operation
+  category: cloud
+- name: aws-codecommit-delete-comment-content
+  pattern: (?i)aws\s+delete\-comment\-content\b
+  severity: warn
+  message: DeleteCommentContent — destructive operation
+  category: cloud
+- name: aws-codecommit-delete-file
+  pattern: (?i)aws\s+delete\-file\b
+  severity: warn
+  message: DeleteFile — destructive operation
+  category: cloud
+- name: aws-codecommit-delete-pull-request-approval-rule
+  pattern: (?i)aws\s+delete\-pull\-request\-approval\-rule\b
+  severity: warn
+  message: DeletePullRequestApprovalRule — destructive operation
+  category: cloud
+- name: aws-codecommit-delete-repository
+  pattern: (?i)aws\s+delete\-repository\b
+  severity: warn
+  message: DeleteRepository — destructive operation
+  category: cloud
+- name: aws-codecommit-disassociate-approval-rule-template-from-repository
+  pattern: (?i)aws\s+disassociate\-approval\-rule\-template\-from\-repository\b
+  severity: warn
+  message: DisassociateApprovalRuleTemplateFromRepository — destructive operation
+  category: cloud

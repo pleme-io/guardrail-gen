@@ -1,0 +1,135 @@
+- name: aws-rds-cancel-export-task
+  pattern: (?i)aws\s+cancel\-export\-task\b
+  severity: warn
+  message: CancelExportTask — destructive operation
+  category: cloud
+- name: aws-rds-delete-blue-green-deployment
+  pattern: (?i)aws\s+delete\-blue\-green\-deployment\b
+  severity: warn
+  message: DeleteBlueGreenDeployment — destructive operation
+  category: cloud
+- name: aws-rds-delete-custom-d-b-engine-version
+  pattern: (?i)aws\s+delete\-custom\-d\-b\-engine\-version\b
+  severity: block
+  message: DeleteCustomDBEngineVersion — destructive operation
+  category: cloud
+- name: aws-rds-delete-d-b-cluster
+  pattern: (?i)aws\s+delete\-d\-b\-cluster\b
+  severity: block
+  message: DeleteDBCluster — destructive operation
+  category: cloud
+- name: aws-rds-delete-d-b-cluster-endpoint
+  pattern: (?i)aws\s+delete\-d\-b\-cluster\-endpoint\b
+  severity: block
+  message: DeleteDBClusterEndpoint — destructive operation
+  category: cloud
+- name: aws-rds-delete-d-b-cluster-parameter-group
+  pattern: (?i)aws\s+delete\-d\-b\-cluster\-parameter\-group\b
+  severity: block
+  message: DeleteDBClusterParameterGroup — destructive operation
+  category: cloud
+- name: aws-rds-delete-d-b-cluster-snapshot
+  pattern: (?i)aws\s+delete\-d\-b\-cluster\-snapshot\b
+  severity: block
+  message: DeleteDBClusterSnapshot — destructive operation
+  category: cloud
+- name: aws-rds-delete-d-b-instance
+  pattern: (?i)aws\s+delete\-d\-b\-instance\b
+  severity: block
+  message: DeleteDBInstance — destructive operation
+  category: cloud
+- name: aws-rds-delete-d-b-instance-automated-backup
+  pattern: (?i)aws\s+delete\-d\-b\-instance\-automated\-backup\b
+  severity: block
+  message: DeleteDBInstanceAutomatedBackup — destructive operation
+  category: cloud
+- name: aws-rds-delete-d-b-parameter-group
+  pattern: (?i)aws\s+delete\-d\-b\-parameter\-group\b
+  severity: block
+  message: DeleteDBParameterGroup — destructive operation
+  category: cloud
+- name: aws-rds-delete-d-b-proxy
+  pattern: (?i)aws\s+delete\-d\-b\-proxy\b
+  severity: block
+  message: DeleteDBProxy — destructive operation
+  category: cloud
+- name: aws-rds-delete-d-b-proxy-endpoint
+  pattern: (?i)aws\s+delete\-d\-b\-proxy\-endpoint\b
+  severity: block
+  message: DeleteDBProxyEndpoint — destructive operation
+  category: cloud
+- name: aws-rds-delete-d-b-security-group
+  pattern: (?i)aws\s+delete\-d\-b\-security\-group\b
+  severity: block
+  message: DeleteDBSecurityGroup — destructive operation
+  category: cloud
+- name: aws-rds-delete-d-b-snapshot
+  pattern: (?i)aws\s+delete\-d\-b\-snapshot\b
+  severity: block
+  message: DeleteDBSnapshot — destructive operation
+  category: cloud
+- name: aws-rds-delete-d-b-subnet-group
+  pattern: (?i)aws\s+delete\-d\-b\-subnet\-group\b
+  severity: block
+  message: DeleteDBSubnetGroup — destructive operation
+  category: cloud
+- name: aws-rds-delete-event-subscription
+  pattern: (?i)aws\s+delete\-event\-subscription\b
+  severity: warn
+  message: DeleteEventSubscription — destructive operation
+  category: cloud
+- name: aws-rds-delete-global-cluster
+  pattern: (?i)aws\s+delete\-global\-cluster\b
+  severity: block
+  message: DeleteGlobalCluster — destructive operation
+  category: cloud
+- name: aws-rds-delete-option-group
+  pattern: (?i)aws\s+delete\-option\-group\b
+  severity: block
+  message: DeleteOptionGroup — destructive operation
+  category: cloud
+- name: aws-rds-deregister-d-b-proxy-targets
+  pattern: (?i)aws\s+deregister\-d\-b\-proxy\-targets\b
+  severity: block
+  message: DeregisterDBProxyTargets — destructive operation
+  category: cloud
+- name: aws-rds-remove-from-global-cluster
+  pattern: (?i)aws\s+remove\-from\-global\-cluster\b
+  severity: block
+  message: RemoveFromGlobalCluster — destructive operation
+  category: cloud
+- name: aws-rds-remove-role-from-d-b-cluster
+  pattern: (?i)aws\s+remove\-role\-from\-d\-b\-cluster\b
+  severity: block
+  message: RemoveRoleFromDBCluster — destructive operation
+  category: cloud
+- name: aws-rds-remove-role-from-d-b-instance
+  pattern: (?i)aws\s+remove\-role\-from\-d\-b\-instance\b
+  severity: block
+  message: RemoveRoleFromDBInstance — destructive operation
+  category: cloud
+- name: aws-rds-remove-source-identifier-from-subscription
+  pattern: (?i)aws\s+remove\-source\-identifier\-from\-subscription\b
+  severity: warn
+  message: RemoveSourceIdentifierFromSubscription — destructive operation
+  category: cloud
+- name: aws-rds-remove-tags-from-resource
+  pattern: (?i)aws\s+remove\-tags\-from\-resource\b
+  severity: warn
+  message: RemoveTagsFromResource — destructive operation
+  category: cloud
+- name: aws-rds-reset-d-b-cluster-parameter-group
+  pattern: (?i)aws\s+reset\-d\-b\-cluster\-parameter\-group\b
+  severity: block
+  message: ResetDBClusterParameterGroup — destructive operation
+  category: cloud
+- name: aws-rds-reset-d-b-parameter-group
+  pattern: (?i)aws\s+reset\-d\-b\-parameter\-group\b
+  severity: block
+  message: ResetDBParameterGroup — destructive operation
+  category: cloud
+- name: aws-rds-revoke-d-b-security-group-ingress
+  pattern: (?i)aws\s+revoke\-d\-b\-security\-group\-ingress\b
+  severity: block
+  message: RevokeDBSecurityGroupIngress — destructive operation
+  category: cloud

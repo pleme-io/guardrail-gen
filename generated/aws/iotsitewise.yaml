@@ -1,0 +1,60 @@
+- name: aws-iotsitewise-batch-disassociate-project-assets
+  pattern: (?i)aws\s+batch\-disassociate\-project\-assets\b
+  severity: block
+  message: BatchDisassociateProjectAssets — destructive operation
+  category: cloud
+- name: aws-iotsitewise-delete-access-policy
+  pattern: (?i)aws\s+delete\-access\-policy\b
+  severity: block
+  message: DeleteAccessPolicy — destructive operation
+  category: cloud
+- name: aws-iotsitewise-delete-asset
+  pattern: (?i)aws\s+delete\-asset\b
+  severity: block
+  message: DeleteAsset — destructive operation
+  category: cloud
+- name: aws-iotsitewise-delete-asset-model
+  pattern: (?i)aws\s+delete\-asset\-model\b
+  severity: block
+  message: DeleteAssetModel — destructive operation
+  category: cloud
+- name: aws-iotsitewise-delete-dashboard
+  pattern: (?i)aws\s+delete\-dashboard\b
+  severity: block
+  message: DeleteDashboard — destructive operation
+  category: cloud
+- name: aws-iotsitewise-delete-gateway
+  pattern: (?i)aws\s+delete\-gateway\b
+  severity: block
+  message: DeleteGateway — destructive operation
+  category: cloud
+- name: aws-iotsitewise-delete-portal
+  pattern: (?i)aws\s+delete\-portal\b
+  severity: block
+  message: DeletePortal — destructive operation
+  category: cloud
+- name: aws-iotsitewise-delete-project
+  pattern: (?i)aws\s+delete\-project\b
+  severity: block
+  message: DeleteProject — destructive operation
+  category: cloud
+- name: aws-iotsitewise-delete-time-series
+  pattern: (?i)aws\s+delete\-time\-series\b
+  severity: warn
+  message: DeleteTimeSeries — destructive operation
+  category: cloud
+- name: aws-iotsitewise-disassociate-assets
+  pattern: (?i)aws\s+disassociate\-assets\b
+  severity: warn
+  message: DisassociateAssets — destructive operation
+  category: cloud
+- name: aws-iotsitewise-disassociate-time-series-from-asset-property
+  pattern: (?i)aws\s+disassociate\-time\-series\-from\-asset\-property\b
+  severity: warn
+  message: DisassociateTimeSeriesFromAssetProperty — destructive operation
+  category: cloud
+- name: aws-iotsitewise-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

@@ -1,0 +1,55 @@
+- name: aws-auditmanager-batch-delete-delegation-by-assessment
+  pattern: (?i)aws\s+batch\-delete\-delegation\-by\-assessment\b
+  severity: warn
+  message: BatchDeleteDelegationByAssessment — destructive operation
+  category: cloud
+- name: aws-auditmanager-batch-disassociate-assessment-report-evidence
+  pattern: (?i)aws\s+batch\-disassociate\-assessment\-report\-evidence\b
+  severity: warn
+  message: BatchDisassociateAssessmentReportEvidence — destructive operation
+  category: cloud
+- name: aws-auditmanager-delete-assessment
+  pattern: (?i)aws\s+delete\-assessment\b
+  severity: block
+  message: DeleteAssessment — destructive operation
+  category: cloud
+- name: aws-auditmanager-delete-assessment-framework
+  pattern: (?i)aws\s+delete\-assessment\-framework\b
+  severity: block
+  message: DeleteAssessmentFramework — destructive operation
+  category: cloud
+- name: aws-auditmanager-delete-assessment-framework-share
+  pattern: (?i)aws\s+delete\-assessment\-framework\-share\b
+  severity: block
+  message: DeleteAssessmentFrameworkShare — destructive operation
+  category: cloud
+- name: aws-auditmanager-delete-assessment-report
+  pattern: (?i)aws\s+delete\-assessment\-report\b
+  severity: block
+  message: DeleteAssessmentReport — destructive operation
+  category: cloud
+- name: aws-auditmanager-delete-control
+  pattern: (?i)aws\s+delete\-control\b
+  severity: block
+  message: DeleteControl — destructive operation
+  category: cloud
+- name: aws-auditmanager-deregister-account
+  pattern: (?i)aws\s+deregister\-account\b
+  severity: block
+  message: DeregisterAccount — destructive operation
+  category: cloud
+- name: aws-auditmanager-deregister-organization-admin-account
+  pattern: (?i)aws\s+deregister\-organization\-admin\-account\b
+  severity: block
+  message: DeregisterOrganizationAdminAccount — destructive operation
+  category: cloud
+- name: aws-auditmanager-disassociate-assessment-report-evidence-folder
+  pattern: (?i)aws\s+disassociate\-assessment\-report\-evidence\-folder\b
+  severity: warn
+  message: DisassociateAssessmentReportEvidenceFolder — destructive operation
+  category: cloud
+- name: aws-auditmanager-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

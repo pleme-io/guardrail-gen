@@ -1,0 +1,35 @@
+- name: aws-mediaconnect-delete-flow
+  pattern: (?i)aws\s+delete\-flow\b
+  severity: block
+  message: DeleteFlow — destructive operation
+  category: cloud
+- name: aws-mediaconnect-remove-flow-media-stream
+  pattern: (?i)aws\s+remove\-flow\-media\-stream\b
+  severity: block
+  message: RemoveFlowMediaStream — destructive operation
+  category: cloud
+- name: aws-mediaconnect-remove-flow-output
+  pattern: (?i)aws\s+remove\-flow\-output\b
+  severity: block
+  message: RemoveFlowOutput — destructive operation
+  category: cloud
+- name: aws-mediaconnect-remove-flow-source
+  pattern: (?i)aws\s+remove\-flow\-source\b
+  severity: block
+  message: RemoveFlowSource — destructive operation
+  category: cloud
+- name: aws-mediaconnect-remove-flow-vpc-interface
+  pattern: (?i)aws\s+remove\-flow\-vpc\-interface\b
+  severity: block
+  message: RemoveFlowVpcInterface — destructive operation
+  category: cloud
+- name: aws-mediaconnect-revoke-flow-entitlement
+  pattern: (?i)aws\s+revoke\-flow\-entitlement\b
+  severity: block
+  message: RevokeFlowEntitlement — destructive operation
+  category: cloud
+- name: aws-mediaconnect-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

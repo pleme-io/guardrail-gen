@@ -1,0 +1,75 @@
+- name: aws-gamelift-delete-alias
+  pattern: (?i)aws\s+delete\-alias\b
+  severity: warn
+  message: DeleteAlias — destructive operation
+  category: cloud
+- name: aws-gamelift-delete-build
+  pattern: (?i)aws\s+delete\-build\b
+  severity: warn
+  message: DeleteBuild — destructive operation
+  category: cloud
+- name: aws-gamelift-delete-fleet
+  pattern: (?i)aws\s+delete\-fleet\b
+  severity: warn
+  message: DeleteFleet — destructive operation
+  category: cloud
+- name: aws-gamelift-delete-fleet-locations
+  pattern: (?i)aws\s+delete\-fleet\-locations\b
+  severity: warn
+  message: DeleteFleetLocations — destructive operation
+  category: cloud
+- name: aws-gamelift-delete-game-server-group
+  pattern: (?i)aws\s+delete\-game\-server\-group\b
+  severity: block
+  message: DeleteGameServerGroup — destructive operation
+  category: cloud
+- name: aws-gamelift-delete-game-session-queue
+  pattern: (?i)aws\s+delete\-game\-session\-queue\b
+  severity: warn
+  message: DeleteGameSessionQueue — destructive operation
+  category: cloud
+- name: aws-gamelift-delete-location
+  pattern: (?i)aws\s+delete\-location\b
+  severity: warn
+  message: DeleteLocation — destructive operation
+  category: cloud
+- name: aws-gamelift-delete-matchmaking-configuration
+  pattern: (?i)aws\s+delete\-matchmaking\-configuration\b
+  severity: warn
+  message: DeleteMatchmakingConfiguration — destructive operation
+  category: cloud
+- name: aws-gamelift-delete-matchmaking-rule-set
+  pattern: (?i)aws\s+delete\-matchmaking\-rule\-set\b
+  severity: warn
+  message: DeleteMatchmakingRuleSet — destructive operation
+  category: cloud
+- name: aws-gamelift-delete-scaling-policy
+  pattern: (?i)aws\s+delete\-scaling\-policy\b
+  severity: block
+  message: DeleteScalingPolicy — destructive operation
+  category: cloud
+- name: aws-gamelift-delete-script
+  pattern: (?i)aws\s+delete\-script\b
+  severity: warn
+  message: DeleteScript — destructive operation
+  category: cloud
+- name: aws-gamelift-delete-vpc-peering-authorization
+  pattern: (?i)aws\s+delete\-vpc\-peering\-authorization\b
+  severity: block
+  message: DeleteVpcPeeringAuthorization — destructive operation
+  category: cloud
+- name: aws-gamelift-delete-vpc-peering-connection
+  pattern: (?i)aws\s+delete\-vpc\-peering\-connection\b
+  severity: warn
+  message: DeleteVpcPeeringConnection — destructive operation
+  category: cloud
+- name: aws-gamelift-deregister-compute
+  pattern: (?i)aws\s+deregister\-compute\b
+  severity: warn
+  message: DeregisterCompute — destructive operation
+  category: cloud
+- name: aws-gamelift-deregister-game-server
+  pattern: (?i)aws\s+deregister\-game\-server\b
+  severity: block
+  message: DeregisterGameServer — destructive operation
+  category: cloud

@@ -1,0 +1,20 @@
+- name: aws-iot-roborunner-delete-destination
+  pattern: (?i)aws\s+delete\-destination\b
+  severity: warn
+  message: DeleteDestination — destructive operation
+  category: cloud
+- name: aws-iot-roborunner-delete-site
+  pattern: (?i)aws\s+delete\-site\b
+  severity: warn
+  message: DeleteSite — destructive operation
+  category: cloud
+- name: aws-iot-roborunner-delete-worker
+  pattern: (?i)aws\s+delete\-worker\b
+  severity: warn
+  message: DeleteWorker — destructive operation
+  category: cloud
+- name: aws-iot-roborunner-delete-worker-fleet
+  pattern: (?i)aws\s+delete\-worker\-fleet\b
+  severity: warn
+  message: DeleteWorkerFleet — destructive operation
+  category: cloud

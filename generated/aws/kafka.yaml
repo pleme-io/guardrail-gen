@@ -1,0 +1,20 @@
+- name: aws-kafka-delete-cluster
+  pattern: (?i)aws\s+delete\-cluster\b
+  severity: block
+  message: DeleteCluster — destructive operation
+  category: cloud
+- name: aws-kafka-delete-configuration
+  pattern: (?i)aws\s+delete\-configuration\b
+  severity: block
+  message: DeleteConfiguration — destructive operation
+  category: cloud
+- name: aws-kafka-batch-disassociate-scram-secret
+  pattern: (?i)aws\s+batch\-disassociate\-scram\-secret\b
+  severity: block
+  message: BatchDisassociateScramSecret — destructive operation
+  category: cloud
+- name: aws-kafka-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

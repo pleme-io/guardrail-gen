@@ -1,0 +1,50 @@
+- name: aws-medialive-batch-delete
+  pattern: (?i)aws\s+batch\-delete\b
+  severity: warn
+  message: BatchDelete — destructive operation
+  category: cloud
+- name: aws-medialive-cancel-input-device-transfer
+  pattern: (?i)aws\s+cancel\-input\-device\-transfer\b
+  severity: warn
+  message: CancelInputDeviceTransfer — destructive operation
+  category: cloud
+- name: aws-medialive-delete-channel
+  pattern: (?i)aws\s+delete\-channel\b
+  severity: block
+  message: DeleteChannel — destructive operation
+  category: cloud
+- name: aws-medialive-delete-input
+  pattern: (?i)aws\s+delete\-input\b
+  severity: block
+  message: DeleteInput — destructive operation
+  category: cloud
+- name: aws-medialive-delete-input-security-group
+  pattern: (?i)aws\s+delete\-input\-security\-group\b
+  severity: block
+  message: DeleteInputSecurityGroup — destructive operation
+  category: cloud
+- name: aws-medialive-delete-multiplex
+  pattern: (?i)aws\s+delete\-multiplex\b
+  severity: block
+  message: DeleteMultiplex — destructive operation
+  category: cloud
+- name: aws-medialive-delete-multiplex-program
+  pattern: (?i)aws\s+delete\-multiplex\-program\b
+  severity: block
+  message: DeleteMultiplexProgram — destructive operation
+  category: cloud
+- name: aws-medialive-delete-reservation
+  pattern: (?i)aws\s+delete\-reservation\b
+  severity: block
+  message: DeleteReservation — destructive operation
+  category: cloud
+- name: aws-medialive-delete-schedule
+  pattern: (?i)aws\s+delete\-schedule\b
+  severity: block
+  message: DeleteSchedule — destructive operation
+  category: cloud
+- name: aws-medialive-delete-tags
+  pattern: (?i)aws\s+delete\-tags\b
+  severity: warn
+  message: DeleteTags — destructive operation
+  category: cloud

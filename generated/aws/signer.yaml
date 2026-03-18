@@ -1,0 +1,25 @@
+- name: aws-signer-cancel-signing-profile
+  pattern: (?i)aws\s+cancel\-signing\-profile\b
+  severity: block
+  message: CancelSigningProfile — destructive operation
+  category: cloud
+- name: aws-signer-remove-profile-permission
+  pattern: (?i)aws\s+remove\-profile\-permission\b
+  severity: warn
+  message: RemoveProfilePermission — destructive operation
+  category: cloud
+- name: aws-signer-revoke-signature
+  pattern: (?i)aws\s+revoke\-signature\b
+  severity: warn
+  message: RevokeSignature — destructive operation
+  category: cloud
+- name: aws-signer-revoke-signing-profile
+  pattern: (?i)aws\s+revoke\-signing\-profile\b
+  severity: warn
+  message: RevokeSigningProfile — destructive operation
+  category: cloud
+- name: aws-signer-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

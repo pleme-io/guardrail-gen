@@ -1,0 +1,100 @@
+- name: aws-alexaforbusiness-delete-address-book
+  pattern: (?i)aws\s+delete\-address\-book\b
+  severity: warn
+  message: DeleteAddressBook — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-delete-business-report-schedule
+  pattern: (?i)aws\s+delete\-business\-report\-schedule\b
+  severity: warn
+  message: DeleteBusinessReportSchedule — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-delete-conference-provider
+  pattern: (?i)aws\s+delete\-conference\-provider\b
+  severity: warn
+  message: DeleteConferenceProvider — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-delete-contact
+  pattern: (?i)aws\s+delete\-contact\b
+  severity: warn
+  message: DeleteContact — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-delete-device
+  pattern: (?i)aws\s+delete\-device\b
+  severity: warn
+  message: DeleteDevice — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-delete-device-usage-data
+  pattern: (?i)aws\s+delete\-device\-usage\-data\b
+  severity: warn
+  message: DeleteDeviceUsageData — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-delete-gateway-group
+  pattern: (?i)aws\s+delete\-gateway\-group\b
+  severity: block
+  message: DeleteGatewayGroup — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-delete-network-profile
+  pattern: (?i)aws\s+delete\-network\-profile\b
+  severity: warn
+  message: DeleteNetworkProfile — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-delete-profile
+  pattern: (?i)aws\s+delete\-profile\b
+  severity: warn
+  message: DeleteProfile — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-delete-room
+  pattern: (?i)aws\s+delete\-room\b
+  severity: warn
+  message: DeleteRoom — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-delete-room-skill-parameter
+  pattern: (?i)aws\s+delete\-room\-skill\-parameter\b
+  severity: warn
+  message: DeleteRoomSkillParameter — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-delete-skill-authorization
+  pattern: (?i)aws\s+delete\-skill\-authorization\b
+  severity: block
+  message: DeleteSkillAuthorization — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-delete-skill-group
+  pattern: (?i)aws\s+delete\-skill\-group\b
+  severity: block
+  message: DeleteSkillGroup — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-delete-user
+  pattern: (?i)aws\s+delete\-user\b
+  severity: warn
+  message: DeleteUser — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-disassociate-contact-from-address-book
+  pattern: (?i)aws\s+disassociate\-contact\-from\-address\-book\b
+  severity: warn
+  message: DisassociateContactFromAddressBook — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-disassociate-device-from-room
+  pattern: (?i)aws\s+disassociate\-device\-from\-room\b
+  severity: warn
+  message: DisassociateDeviceFromRoom — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-disassociate-skill-from-skill-group
+  pattern: (?i)aws\s+disassociate\-skill\-from\-skill\-group\b
+  severity: block
+  message: DisassociateSkillFromSkillGroup — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-disassociate-skill-from-users
+  pattern: (?i)aws\s+disassociate\-skill\-from\-users\b
+  severity: warn
+  message: DisassociateSkillFromUsers — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-disassociate-skill-group-from-room
+  pattern: (?i)aws\s+disassociate\-skill\-group\-from\-room\b
+  severity: block
+  message: DisassociateSkillGroupFromRoom — destructive operation
+  category: cloud
+- name: aws-alexaforbusiness-revoke-invitation
+  pattern: (?i)aws\s+revoke\-invitation\b
+  severity: warn
+  message: RevokeInvitation — destructive operation
+  category: cloud

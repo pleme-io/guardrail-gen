@@ -1,0 +1,20 @@
+- name: aws-rum-batch-delete-rum-metric-definitions
+  pattern: (?i)aws\s+batch\-delete\-rum\-metric\-definitions\b
+  severity: warn
+  message: BatchDeleteRumMetricDefinitions — destructive operation
+  category: cloud
+- name: aws-rum-delete-app-monitor
+  pattern: (?i)aws\s+delete\-app\-monitor\b
+  severity: block
+  message: DeleteAppMonitor — destructive operation
+  category: cloud
+- name: aws-rum-delete-rum-metrics-destination
+  pattern: (?i)aws\s+delete\-rum\-metrics\-destination\b
+  severity: warn
+  message: DeleteRumMetricsDestination — destructive operation
+  category: cloud
+- name: aws-rum-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

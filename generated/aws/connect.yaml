@@ -1,0 +1,125 @@
+- name: aws-connect-delete-contact-flow
+  pattern: (?i)aws\s+delete\-contact\-flow\b
+  severity: block
+  message: DeleteContactFlow — destructive operation
+  category: cloud
+- name: aws-connect-delete-contact-flow-module
+  pattern: (?i)aws\s+delete\-contact\-flow\-module\b
+  severity: block
+  message: DeleteContactFlowModule — destructive operation
+  category: cloud
+- name: aws-connect-delete-hours-of-operation
+  pattern: (?i)aws\s+delete\-hours\-of\-operation\b
+  severity: block
+  message: DeleteHoursOfOperation — destructive operation
+  category: cloud
+- name: aws-connect-delete-instance
+  pattern: (?i)aws\s+delete\-instance\b
+  severity: block
+  message: DeleteInstance — destructive operation
+  category: cloud
+- name: aws-connect-delete-integration-association
+  pattern: (?i)aws\s+delete\-integration\-association\b
+  severity: block
+  message: DeleteIntegrationAssociation — destructive operation
+  category: cloud
+- name: aws-connect-delete-quick-connect
+  pattern: (?i)aws\s+delete\-quick\-connect\b
+  severity: block
+  message: DeleteQuickConnect — destructive operation
+  category: cloud
+- name: aws-connect-delete-rule
+  pattern: (?i)aws\s+delete\-rule\b
+  severity: block
+  message: DeleteRule — destructive operation
+  category: cloud
+- name: aws-connect-delete-security-profile
+  pattern: (?i)aws\s+delete\-security\-profile\b
+  severity: block
+  message: DeleteSecurityProfile — destructive operation
+  category: cloud
+- name: aws-connect-delete-task-template
+  pattern: (?i)aws\s+delete\-task\-template\b
+  severity: block
+  message: DeleteTaskTemplate — destructive operation
+  category: cloud
+- name: aws-connect-delete-traffic-distribution-group
+  pattern: (?i)aws\s+delete\-traffic\-distribution\-group\b
+  severity: block
+  message: DeleteTrafficDistributionGroup — destructive operation
+  category: cloud
+- name: aws-connect-delete-use-case
+  pattern: (?i)aws\s+delete\-use\-case\b
+  severity: block
+  message: DeleteUseCase — destructive operation
+  category: cloud
+- name: aws-connect-delete-user
+  pattern: (?i)aws\s+delete\-user\b
+  severity: block
+  message: DeleteUser — destructive operation
+  category: cloud
+- name: aws-connect-delete-user-hierarchy-group
+  pattern: (?i)aws\s+delete\-user\-hierarchy\-group\b
+  severity: block
+  message: DeleteUserHierarchyGroup — destructive operation
+  category: cloud
+- name: aws-connect-delete-vocabulary
+  pattern: (?i)aws\s+delete\-vocabulary\b
+  severity: block
+  message: DeleteVocabulary — destructive operation
+  category: cloud
+- name: aws-connect-disassociate-approved-origin
+  pattern: (?i)aws\s+disassociate\-approved\-origin\b
+  severity: block
+  message: DisassociateApprovedOrigin — destructive operation
+  category: cloud
+- name: aws-connect-disassociate-bot
+  pattern: (?i)aws\s+disassociate\-bot\b
+  severity: block
+  message: DisassociateBot — destructive operation
+  category: cloud
+- name: aws-connect-disassociate-instance-storage-config
+  pattern: (?i)aws\s+disassociate\-instance\-storage\-config\b
+  severity: block
+  message: DisassociateInstanceStorageConfig — destructive operation
+  category: cloud
+- name: aws-connect-disassociate-lambda-function
+  pattern: (?i)aws\s+disassociate\-lambda\-function\b
+  severity: block
+  message: DisassociateLambdaFunction — destructive operation
+  category: cloud
+- name: aws-connect-disassociate-lex-bot
+  pattern: (?i)aws\s+disassociate\-lex\-bot\b
+  severity: block
+  message: DisassociateLexBot — destructive operation
+  category: cloud
+- name: aws-connect-disassociate-phone-number-contact-flow
+  pattern: (?i)aws\s+disassociate\-phone\-number\-contact\-flow\b
+  severity: block
+  message: DisassociatePhoneNumberContactFlow — destructive operation
+  category: cloud
+- name: aws-connect-disassociate-queue-quick-connects
+  pattern: (?i)aws\s+disassociate\-queue\-quick\-connects\b
+  severity: block
+  message: DisassociateQueueQuickConnects — destructive operation
+  category: cloud
+- name: aws-connect-disassociate-routing-profile-queues
+  pattern: (?i)aws\s+disassociate\-routing\-profile\-queues\b
+  severity: block
+  message: DisassociateRoutingProfileQueues — destructive operation
+  category: cloud
+- name: aws-connect-disassociate-security-key
+  pattern: (?i)aws\s+disassociate\-security\-key\b
+  severity: block
+  message: DisassociateSecurityKey — destructive operation
+  category: cloud
+- name: aws-connect-release-phone-number
+  pattern: (?i)aws\s+release\-phone\-number\b
+  severity: block
+  message: ReleasePhoneNumber — destructive operation
+  category: cloud
+- name: aws-connect-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

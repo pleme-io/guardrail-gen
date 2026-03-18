@@ -1,0 +1,5 @@
+- name: aws-s3outposts-delete-endpoint
+  pattern: (?i)aws\s+delete\-endpoint\b
+  severity: block
+  message: DeleteEndpoint — destructive operation
+  category: cloud

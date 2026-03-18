@@ -1,0 +1,10 @@
+- name: aws-kinesisvideo-delete-signaling-channel
+  pattern: (?i)aws\s+delete\-signaling\-channel\b
+  severity: warn
+  message: DeleteSignalingChannel — destructive operation
+  category: cloud
+- name: aws-kinesisvideo-delete-stream
+  pattern: (?i)aws\s+delete\-stream\b
+  severity: warn
+  message: DeleteStream — destructive operation
+  category: cloud

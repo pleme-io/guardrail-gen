@@ -1,0 +1,40 @@
+- name: aws-securitylake-delete-aws-log-source
+  pattern: (?i)aws\s+delete\-aws\-log\-source\b
+  severity: warn
+  message: DeleteAwsLogSource — destructive operation
+  category: cloud
+- name: aws-securitylake-delete-custom-log-source
+  pattern: (?i)aws\s+delete\-custom\-log\-source\b
+  severity: warn
+  message: DeleteCustomLogSource — destructive operation
+  category: cloud
+- name: aws-securitylake-delete-datalake
+  pattern: (?i)aws\s+delete\-datalake\b
+  severity: block
+  message: DeleteDatalake — destructive operation
+  category: cloud
+- name: aws-securitylake-delete-datalake-auto-enable
+  pattern: (?i)aws\s+delete\-datalake\-auto\-enable\b
+  severity: warn
+  message: DeleteDatalakeAutoEnable — destructive operation
+  category: cloud
+- name: aws-securitylake-delete-datalake-delegated-admin
+  pattern: (?i)aws\s+delete\-datalake\-delegated\-admin\b
+  severity: block
+  message: DeleteDatalakeDelegatedAdmin — destructive operation
+  category: cloud
+- name: aws-securitylake-delete-datalake-exceptions-subscription
+  pattern: (?i)aws\s+delete\-datalake\-exceptions\-subscription\b
+  severity: warn
+  message: DeleteDatalakeExceptionsSubscription — destructive operation
+  category: cloud
+- name: aws-securitylake-delete-subscriber
+  pattern: (?i)aws\s+delete\-subscriber\b
+  severity: block
+  message: DeleteSubscriber — destructive operation
+  category: cloud
+- name: aws-securitylake-delete-subscription-notification-configuration
+  pattern: (?i)aws\s+delete\-subscription\-notification\-configuration\b
+  severity: warn
+  message: DeleteSubscriptionNotificationConfiguration — destructive operation
+  category: cloud

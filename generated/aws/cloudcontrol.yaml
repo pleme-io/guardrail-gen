@@ -1,0 +1,10 @@
+- name: aws-cloudcontrol-cancel-resource-request
+  pattern: (?i)aws\s+cancel\-resource\-request\b
+  severity: warn
+  message: CancelResourceRequest — destructive operation
+  category: cloud
+- name: aws-cloudcontrol-delete-resource
+  pattern: (?i)aws\s+delete\-resource\b
+  severity: warn
+  message: DeleteResource — destructive operation
+  category: cloud

@@ -1,0 +1,65 @@
+- name: aws-workspaces-web-delete-browser-settings
+  pattern: (?i)aws\s+delete\-browser\-settings\b
+  severity: block
+  message: DeleteBrowserSettings — destructive operation
+  category: cloud
+- name: aws-workspaces-web-delete-identity-provider
+  pattern: (?i)aws\s+delete\-identity\-provider\b
+  severity: block
+  message: DeleteIdentityProvider — destructive operation
+  category: cloud
+- name: aws-workspaces-web-delete-network-settings
+  pattern: (?i)aws\s+delete\-network\-settings\b
+  severity: block
+  message: DeleteNetworkSettings — destructive operation
+  category: cloud
+- name: aws-workspaces-web-delete-portal
+  pattern: (?i)aws\s+delete\-portal\b
+  severity: block
+  message: DeletePortal — destructive operation
+  category: cloud
+- name: aws-workspaces-web-delete-trust-store
+  pattern: (?i)aws\s+delete\-trust\-store\b
+  severity: block
+  message: DeleteTrustStore — destructive operation
+  category: cloud
+- name: aws-workspaces-web-delete-user-access-logging-settings
+  pattern: (?i)aws\s+delete\-user\-access\-logging\-settings\b
+  severity: warn
+  message: DeleteUserAccessLoggingSettings — destructive operation
+  category: cloud
+- name: aws-workspaces-web-delete-user-settings
+  pattern: (?i)aws\s+delete\-user\-settings\b
+  severity: block
+  message: DeleteUserSettings — destructive operation
+  category: cloud
+- name: aws-workspaces-web-disassociate-browser-settings
+  pattern: (?i)aws\s+disassociate\-browser\-settings\b
+  severity: block
+  message: DisassociateBrowserSettings — destructive operation
+  category: cloud
+- name: aws-workspaces-web-disassociate-network-settings
+  pattern: (?i)aws\s+disassociate\-network\-settings\b
+  severity: block
+  message: DisassociateNetworkSettings — destructive operation
+  category: cloud
+- name: aws-workspaces-web-disassociate-trust-store
+  pattern: (?i)aws\s+disassociate\-trust\-store\b
+  severity: block
+  message: DisassociateTrustStore — destructive operation
+  category: cloud
+- name: aws-workspaces-web-disassociate-user-access-logging-settings
+  pattern: (?i)aws\s+disassociate\-user\-access\-logging\-settings\b
+  severity: warn
+  message: DisassociateUserAccessLoggingSettings — destructive operation
+  category: cloud
+- name: aws-workspaces-web-disassociate-user-settings
+  pattern: (?i)aws\s+disassociate\-user\-settings\b
+  severity: block
+  message: DisassociateUserSettings — destructive operation
+  category: cloud
+- name: aws-workspaces-web-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

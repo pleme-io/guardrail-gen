@@ -1,0 +1,15 @@
+- name: aws-voice-id-delete-domain
+  pattern: (?i)aws\s+delete\-domain\b
+  severity: warn
+  message: DeleteDomain — destructive operation
+  category: cloud
+- name: aws-voice-id-delete-fraudster
+  pattern: (?i)aws\s+delete\-fraudster\b
+  severity: warn
+  message: DeleteFraudster — destructive operation
+  category: cloud
+- name: aws-voice-id-delete-speaker
+  pattern: (?i)aws\s+delete\-speaker\b
+  severity: warn
+  message: DeleteSpeaker — destructive operation
+  category: cloud

@@ -1,0 +1,15 @@
+- name: aws-sagemaker-geospatial-delete-earth-observation-job
+  pattern: (?i)aws\s+delete\-earth\-observation\-job\b
+  severity: block
+  message: DeleteEarthObservationJob — destructive operation
+  category: cloud
+- name: aws-sagemaker-geospatial-delete-vector-enrichment-job
+  pattern: (?i)aws\s+delete\-vector\-enrichment\-job\b
+  severity: block
+  message: DeleteVectorEnrichmentJob — destructive operation
+  category: cloud
+- name: aws-sagemaker-geospatial-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

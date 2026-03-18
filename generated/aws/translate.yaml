@@ -1,0 +1,10 @@
+- name: aws-translate-delete-parallel-data
+  pattern: (?i)aws\s+delete\-parallel\-data\b
+  severity: warn
+  message: DeleteParallelData — destructive operation
+  category: cloud
+- name: aws-translate-delete-terminology
+  pattern: (?i)aws\s+delete\-terminology\b
+  severity: warn
+  message: DeleteTerminology — destructive operation
+  category: cloud

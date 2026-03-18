@@ -1,0 +1,75 @@
+- name: aws-config-delete-aggregation-authorization
+  pattern: (?i)aws\s+delete\-aggregation\-authorization\b
+  severity: block
+  message: DeleteAggregationAuthorization — destructive operation
+  category: cloud
+- name: aws-config-delete-config-rule
+  pattern: (?i)aws\s+delete\-config\-rule\b
+  severity: warn
+  message: DeleteConfigRule — destructive operation
+  category: cloud
+- name: aws-config-delete-configuration-aggregator
+  pattern: (?i)aws\s+delete\-configuration\-aggregator\b
+  severity: warn
+  message: DeleteConfigurationAggregator — destructive operation
+  category: cloud
+- name: aws-config-delete-configuration-recorder
+  pattern: (?i)aws\s+delete\-configuration\-recorder\b
+  severity: warn
+  message: DeleteConfigurationRecorder — destructive operation
+  category: cloud
+- name: aws-config-delete-conformance-pack
+  pattern: (?i)aws\s+delete\-conformance\-pack\b
+  severity: warn
+  message: DeleteConformancePack — destructive operation
+  category: cloud
+- name: aws-config-delete-delivery-channel
+  pattern: (?i)aws\s+delete\-delivery\-channel\b
+  severity: warn
+  message: DeleteDeliveryChannel — destructive operation
+  category: cloud
+- name: aws-config-delete-evaluation-results
+  pattern: (?i)aws\s+delete\-evaluation\-results\b
+  severity: warn
+  message: DeleteEvaluationResults — destructive operation
+  category: cloud
+- name: aws-config-delete-organization-config-rule
+  pattern: (?i)aws\s+delete\-organization\-config\-rule\b
+  severity: warn
+  message: DeleteOrganizationConfigRule — destructive operation
+  category: cloud
+- name: aws-config-delete-organization-conformance-pack
+  pattern: (?i)aws\s+delete\-organization\-conformance\-pack\b
+  severity: warn
+  message: DeleteOrganizationConformancePack — destructive operation
+  category: cloud
+- name: aws-config-delete-pending-aggregation-request
+  pattern: (?i)aws\s+delete\-pending\-aggregation\-request\b
+  severity: warn
+  message: DeletePendingAggregationRequest — destructive operation
+  category: cloud
+- name: aws-config-delete-remediation-configuration
+  pattern: (?i)aws\s+delete\-remediation\-configuration\b
+  severity: warn
+  message: DeleteRemediationConfiguration — destructive operation
+  category: cloud
+- name: aws-config-delete-remediation-exceptions
+  pattern: (?i)aws\s+delete\-remediation\-exceptions\b
+  severity: warn
+  message: DeleteRemediationExceptions — destructive operation
+  category: cloud
+- name: aws-config-delete-resource-config
+  pattern: (?i)aws\s+delete\-resource\-config\b
+  severity: warn
+  message: DeleteResourceConfig — destructive operation
+  category: cloud
+- name: aws-config-delete-retention-configuration
+  pattern: (?i)aws\s+delete\-retention\-configuration\b
+  severity: warn
+  message: DeleteRetentionConfiguration — destructive operation
+  category: cloud
+- name: aws-config-delete-stored-query
+  pattern: (?i)aws\s+delete\-stored\-query\b
+  severity: warn
+  message: DeleteStoredQuery — destructive operation
+  category: cloud

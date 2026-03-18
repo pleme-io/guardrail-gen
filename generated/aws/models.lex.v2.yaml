@@ -1,0 +1,75 @@
+- name: aws-models.lex.v2-batch-delete-custom-vocabulary-item
+  pattern: (?i)aws\s+batch\-delete\-custom\-vocabulary\-item\b
+  severity: block
+  message: BatchDeleteCustomVocabularyItem — destructive operation
+  category: cloud
+- name: aws-models.lex.v2-delete-bot
+  pattern: (?i)aws\s+delete\-bot\b
+  severity: block
+  message: DeleteBot — destructive operation
+  category: cloud
+- name: aws-models.lex.v2-delete-bot-alias
+  pattern: (?i)aws\s+delete\-bot\-alias\b
+  severity: block
+  message: DeleteBotAlias — destructive operation
+  category: cloud
+- name: aws-models.lex.v2-delete-bot-locale
+  pattern: (?i)aws\s+delete\-bot\-locale\b
+  severity: block
+  message: DeleteBotLocale — destructive operation
+  category: cloud
+- name: aws-models.lex.v2-delete-bot-version
+  pattern: (?i)aws\s+delete\-bot\-version\b
+  severity: block
+  message: DeleteBotVersion — destructive operation
+  category: cloud
+- name: aws-models.lex.v2-delete-custom-vocabulary
+  pattern: (?i)aws\s+delete\-custom\-vocabulary\b
+  severity: block
+  message: DeleteCustomVocabulary — destructive operation
+  category: cloud
+- name: aws-models.lex.v2-delete-export
+  pattern: (?i)aws\s+delete\-export\b
+  severity: block
+  message: DeleteExport — destructive operation
+  category: cloud
+- name: aws-models.lex.v2-delete-import
+  pattern: (?i)aws\s+delete\-import\b
+  severity: block
+  message: DeleteImport — destructive operation
+  category: cloud
+- name: aws-models.lex.v2-delete-intent
+  pattern: (?i)aws\s+delete\-intent\b
+  severity: block
+  message: DeleteIntent — destructive operation
+  category: cloud
+- name: aws-models.lex.v2-delete-resource-policy
+  pattern: (?i)aws\s+delete\-resource\-policy\b
+  severity: block
+  message: DeleteResourcePolicy — destructive operation
+  category: cloud
+- name: aws-models.lex.v2-delete-resource-policy-statement
+  pattern: (?i)aws\s+delete\-resource\-policy\-statement\b
+  severity: block
+  message: DeleteResourcePolicyStatement — destructive operation
+  category: cloud
+- name: aws-models.lex.v2-delete-slot
+  pattern: (?i)aws\s+delete\-slot\b
+  severity: block
+  message: DeleteSlot — destructive operation
+  category: cloud
+- name: aws-models.lex.v2-delete-slot-type
+  pattern: (?i)aws\s+delete\-slot\-type\b
+  severity: block
+  message: DeleteSlotType — destructive operation
+  category: cloud
+- name: aws-models.lex.v2-delete-utterances
+  pattern: (?i)aws\s+delete\-utterances\b
+  severity: block
+  message: DeleteUtterances — destructive operation
+  category: cloud
+- name: aws-models.lex.v2-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

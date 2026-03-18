@@ -1,0 +1,30 @@
+- name: aws-wellarchitected-delete-lens
+  pattern: (?i)aws\s+delete\-lens\b
+  severity: block
+  message: DeleteLens — destructive operation
+  category: cloud
+- name: aws-wellarchitected-delete-lens-share
+  pattern: (?i)aws\s+delete\-lens\-share\b
+  severity: block
+  message: DeleteLensShare — destructive operation
+  category: cloud
+- name: aws-wellarchitected-delete-workload
+  pattern: (?i)aws\s+delete\-workload\b
+  severity: block
+  message: DeleteWorkload — destructive operation
+  category: cloud
+- name: aws-wellarchitected-delete-workload-share
+  pattern: (?i)aws\s+delete\-workload\-share\b
+  severity: block
+  message: DeleteWorkloadShare — destructive operation
+  category: cloud
+- name: aws-wellarchitected-disassociate-lenses
+  pattern: (?i)aws\s+disassociate\-lenses\b
+  severity: warn
+  message: DisassociateLenses — destructive operation
+  category: cloud
+- name: aws-wellarchitected-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

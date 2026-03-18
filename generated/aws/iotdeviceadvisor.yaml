@@ -1,0 +1,10 @@
+- name: aws-iotdeviceadvisor-delete-suite-definition
+  pattern: (?i)aws\s+delete\-suite\-definition\b
+  severity: block
+  message: DeleteSuiteDefinition — destructive operation
+  category: cloud
+- name: aws-iotdeviceadvisor-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

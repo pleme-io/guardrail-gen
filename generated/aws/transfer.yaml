@@ -1,0 +1,50 @@
+- name: aws-transfer-delete-access
+  pattern: (?i)aws\s+delete\-access\b
+  severity: warn
+  message: DeleteAccess — destructive operation
+  category: cloud
+- name: aws-transfer-delete-agreement
+  pattern: (?i)aws\s+delete\-agreement\b
+  severity: warn
+  message: DeleteAgreement — destructive operation
+  category: cloud
+- name: aws-transfer-delete-certificate
+  pattern: (?i)aws\s+delete\-certificate\b
+  severity: block
+  message: DeleteCertificate — destructive operation
+  category: cloud
+- name: aws-transfer-delete-connector
+  pattern: (?i)aws\s+delete\-connector\b
+  severity: warn
+  message: DeleteConnector — destructive operation
+  category: cloud
+- name: aws-transfer-delete-host-key
+  pattern: (?i)aws\s+delete\-host\-key\b
+  severity: block
+  message: DeleteHostKey — destructive operation
+  category: cloud
+- name: aws-transfer-delete-profile
+  pattern: (?i)aws\s+delete\-profile\b
+  severity: warn
+  message: DeleteProfile — destructive operation
+  category: cloud
+- name: aws-transfer-delete-server
+  pattern: (?i)aws\s+delete\-server\b
+  severity: block
+  message: DeleteServer — destructive operation
+  category: cloud
+- name: aws-transfer-delete-ssh-public-key
+  pattern: (?i)aws\s+delete\-ssh\-public\-key\b
+  severity: block
+  message: DeleteSshPublicKey — destructive operation
+  category: cloud
+- name: aws-transfer-delete-user
+  pattern: (?i)aws\s+delete\-user\b
+  severity: warn
+  message: DeleteUser — destructive operation
+  category: cloud
+- name: aws-transfer-delete-workflow
+  pattern: (?i)aws\s+delete\-workflow\b
+  severity: warn
+  message: DeleteWorkflow — destructive operation
+  category: cloud

@@ -1,0 +1,30 @@
+- name: aws-migration-hub-refactor-spaces-delete-application
+  pattern: (?i)aws\s+delete\-application\b
+  severity: block
+  message: DeleteApplication — destructive operation
+  category: cloud
+- name: aws-migration-hub-refactor-spaces-delete-environment
+  pattern: (?i)aws\s+delete\-environment\b
+  severity: block
+  message: DeleteEnvironment — destructive operation
+  category: cloud
+- name: aws-migration-hub-refactor-spaces-delete-resource-policy
+  pattern: (?i)aws\s+delete\-resource\-policy\b
+  severity: block
+  message: DeleteResourcePolicy — destructive operation
+  category: cloud
+- name: aws-migration-hub-refactor-spaces-delete-route
+  pattern: (?i)aws\s+delete\-route\b
+  severity: block
+  message: DeleteRoute — destructive operation
+  category: cloud
+- name: aws-migration-hub-refactor-spaces-delete-service
+  pattern: (?i)aws\s+delete\-service\b
+  severity: block
+  message: DeleteService — destructive operation
+  category: cloud
+- name: aws-migration-hub-refactor-spaces-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

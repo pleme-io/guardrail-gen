@@ -1,0 +1,35 @@
+- name: aws-eks-delete-addon
+  pattern: (?i)aws\s+delete\-addon\b
+  severity: block
+  message: DeleteAddon — destructive operation
+  category: cloud
+- name: aws-eks-delete-cluster
+  pattern: (?i)aws\s+delete\-cluster\b
+  severity: block
+  message: DeleteCluster — destructive operation
+  category: cloud
+- name: aws-eks-delete-fargate-profile
+  pattern: (?i)aws\s+delete\-fargate\-profile\b
+  severity: block
+  message: DeleteFargateProfile — destructive operation
+  category: cloud
+- name: aws-eks-delete-nodegroup
+  pattern: (?i)aws\s+delete\-nodegroup\b
+  severity: block
+  message: DeleteNodegroup — destructive operation
+  category: cloud
+- name: aws-eks-deregister-cluster
+  pattern: (?i)aws\s+deregister\-cluster\b
+  severity: block
+  message: DeregisterCluster — destructive operation
+  category: cloud
+- name: aws-eks-disassociate-identity-provider-config
+  pattern: (?i)aws\s+disassociate\-identity\-provider\-config\b
+  severity: block
+  message: DisassociateIdentityProviderConfig — destructive operation
+  category: cloud
+- name: aws-eks-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

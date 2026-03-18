@@ -1,0 +1,55 @@
+- name: aws-appsync-delete-api-cache
+  pattern: (?i)aws\s+delete\-api\-cache\b
+  severity: block
+  message: DeleteApiCache — destructive operation
+  category: cloud
+- name: aws-appsync-delete-api-key
+  pattern: (?i)aws\s+delete\-api\-key\b
+  severity: block
+  message: DeleteApiKey — destructive operation
+  category: cloud
+- name: aws-appsync-delete-data-source
+  pattern: (?i)aws\s+delete\-data\-source\b
+  severity: block
+  message: DeleteDataSource — destructive operation
+  category: cloud
+- name: aws-appsync-delete-domain-name
+  pattern: (?i)aws\s+delete\-domain\-name\b
+  severity: block
+  message: DeleteDomainName — destructive operation
+  category: cloud
+- name: aws-appsync-delete-function
+  pattern: (?i)aws\s+delete\-function\b
+  severity: block
+  message: DeleteFunction — destructive operation
+  category: cloud
+- name: aws-appsync-delete-graphql-api
+  pattern: (?i)aws\s+delete\-graphql\-api\b
+  severity: block
+  message: DeleteGraphqlApi — destructive operation
+  category: cloud
+- name: aws-appsync-delete-resolver
+  pattern: (?i)aws\s+delete\-resolver\b
+  severity: block
+  message: DeleteResolver — destructive operation
+  category: cloud
+- name: aws-appsync-delete-type
+  pattern: (?i)aws\s+delete\-type\b
+  severity: block
+  message: DeleteType — destructive operation
+  category: cloud
+- name: aws-appsync-disassociate-api
+  pattern: (?i)aws\s+disassociate\-api\b
+  severity: warn
+  message: DisassociateApi — destructive operation
+  category: cloud
+- name: aws-appsync-flush-api-cache
+  pattern: (?i)aws\s+flush\-api\-cache\b
+  severity: block
+  message: FlushApiCache — destructive operation
+  category: cloud
+- name: aws-appsync-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

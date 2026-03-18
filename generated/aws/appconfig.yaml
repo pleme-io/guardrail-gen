@@ -1,0 +1,45 @@
+- name: aws-appconfig-delete-application
+  pattern: (?i)aws\s+delete\-application\b
+  severity: block
+  message: DeleteApplication — destructive operation
+  category: cloud
+- name: aws-appconfig-delete-configuration-profile
+  pattern: (?i)aws\s+delete\-configuration\-profile\b
+  severity: block
+  message: DeleteConfigurationProfile — destructive operation
+  category: cloud
+- name: aws-appconfig-delete-deployment-strategy
+  pattern: (?i)aws\s+delete\-deployment\-strategy\b
+  severity: block
+  message: DeleteDeploymentStrategy — destructive operation
+  category: cloud
+- name: aws-appconfig-delete-environment
+  pattern: (?i)aws\s+delete\-environment\b
+  severity: block
+  message: DeleteEnvironment — destructive operation
+  category: cloud
+- name: aws-appconfig-delete-extension
+  pattern: (?i)aws\s+delete\-extension\b
+  severity: block
+  message: DeleteExtension — destructive operation
+  category: cloud
+- name: aws-appconfig-delete-extension-association
+  pattern: (?i)aws\s+delete\-extension\-association\b
+  severity: warn
+  message: DeleteExtensionAssociation — destructive operation
+  category: cloud
+- name: aws-appconfig-delete-hosted-configuration-version
+  pattern: (?i)aws\s+delete\-hosted\-configuration\-version\b
+  severity: block
+  message: DeleteHostedConfigurationVersion — destructive operation
+  category: cloud
+- name: aws-appconfig-stop-deployment
+  pattern: (?i)aws\s+stop\-deployment\b
+  severity: block
+  message: StopDeployment — destructive operation
+  category: cloud
+- name: aws-appconfig-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

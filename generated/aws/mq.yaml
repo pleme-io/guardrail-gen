@@ -1,0 +1,15 @@
+- name: aws-mq-delete-broker
+  pattern: (?i)aws\s+delete\-broker\b
+  severity: block
+  message: DeleteBroker — destructive operation
+  category: cloud
+- name: aws-mq-delete-tags
+  pattern: (?i)aws\s+delete\-tags\b
+  severity: warn
+  message: DeleteTags — destructive operation
+  category: cloud
+- name: aws-mq-delete-user
+  pattern: (?i)aws\s+delete\-user\b
+  severity: block
+  message: DeleteUser — destructive operation
+  category: cloud

@@ -1,0 +1,85 @@
+- name: aws-storagegateway-cancel-archival
+  pattern: (?i)aws\s+cancel\-archival\b
+  severity: warn
+  message: CancelArchival — destructive operation
+  category: cloud
+- name: aws-storagegateway-cancel-retrieval
+  pattern: (?i)aws\s+cancel\-retrieval\b
+  severity: warn
+  message: CancelRetrieval — destructive operation
+  category: cloud
+- name: aws-storagegateway-delete-automatic-tape-creation-policy
+  pattern: (?i)aws\s+delete\-automatic\-tape\-creation\-policy\b
+  severity: block
+  message: DeleteAutomaticTapeCreationPolicy — destructive operation
+  category: cloud
+- name: aws-storagegateway-delete-bandwidth-rate-limit
+  pattern: (?i)aws\s+delete\-bandwidth\-rate\-limit\b
+  severity: warn
+  message: DeleteBandwidthRateLimit — destructive operation
+  category: cloud
+- name: aws-storagegateway-delete-chap-credentials
+  pattern: (?i)aws\s+delete\-chap\-credentials\b
+  severity: block
+  message: DeleteChapCredentials — destructive operation
+  category: cloud
+- name: aws-storagegateway-delete-file-share
+  pattern: (?i)aws\s+delete\-file\-share\b
+  severity: warn
+  message: DeleteFileShare — destructive operation
+  category: cloud
+- name: aws-storagegateway-delete-gateway
+  pattern: (?i)aws\s+delete\-gateway\b
+  severity: block
+  message: DeleteGateway — destructive operation
+  category: cloud
+- name: aws-storagegateway-delete-snapshot-schedule
+  pattern: (?i)aws\s+delete\-snapshot\-schedule\b
+  severity: warn
+  message: DeleteSnapshotSchedule — destructive operation
+  category: cloud
+- name: aws-storagegateway-delete-tape
+  pattern: (?i)aws\s+delete\-tape\b
+  severity: warn
+  message: DeleteTape — destructive operation
+  category: cloud
+- name: aws-storagegateway-delete-tape-archive
+  pattern: (?i)aws\s+delete\-tape\-archive\b
+  severity: warn
+  message: DeleteTapeArchive — destructive operation
+  category: cloud
+- name: aws-storagegateway-delete-tape-pool
+  pattern: (?i)aws\s+delete\-tape\-pool\b
+  severity: warn
+  message: DeleteTapePool — destructive operation
+  category: cloud
+- name: aws-storagegateway-delete-volume
+  pattern: (?i)aws\s+delete\-volume\b
+  severity: block
+  message: DeleteVolume — destructive operation
+  category: cloud
+- name: aws-storagegateway-detach-volume
+  pattern: (?i)aws\s+detach\-volume\b
+  severity: block
+  message: DetachVolume — destructive operation
+  category: cloud
+- name: aws-storagegateway-disable-gateway
+  pattern: (?i)aws\s+disable\-gateway\b
+  severity: block
+  message: DisableGateway — destructive operation
+  category: cloud
+- name: aws-storagegateway-disassociate-file-system
+  pattern: (?i)aws\s+disassociate\-file\-system\b
+  severity: warn
+  message: DisassociateFileSystem — destructive operation
+  category: cloud
+- name: aws-storagegateway-remove-tags-from-resource
+  pattern: (?i)aws\s+remove\-tags\-from\-resource\b
+  severity: warn
+  message: RemoveTagsFromResource — destructive operation
+  category: cloud
+- name: aws-storagegateway-reset-cache
+  pattern: (?i)aws\s+reset\-cache\b
+  severity: warn
+  message: ResetCache — destructive operation
+  category: cloud

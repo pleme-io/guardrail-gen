@@ -1,0 +1,150 @@
+- name: aws-iam-delete-access-key
+  pattern: (?i)aws\s+delete\-access\-key\b
+  severity: block
+  message: DeleteAccessKey — destructive operation
+  category: cloud
+- name: aws-iam-delete-account-alias
+  pattern: (?i)aws\s+delete\-account\-alias\b
+  severity: block
+  message: DeleteAccountAlias — destructive operation
+  category: cloud
+- name: aws-iam-delete-account-password-policy
+  pattern: (?i)aws\s+delete\-account\-password\-policy\b
+  severity: block
+  message: DeleteAccountPasswordPolicy — destructive operation
+  category: cloud
+- name: aws-iam-delete-group
+  pattern: (?i)aws\s+delete\-group\b
+  severity: block
+  message: DeleteGroup — destructive operation
+  category: cloud
+- name: aws-iam-delete-group-policy
+  pattern: (?i)aws\s+delete\-group\-policy\b
+  severity: block
+  message: DeleteGroupPolicy — destructive operation
+  category: cloud
+- name: aws-iam-delete-instance-profile
+  pattern: (?i)aws\s+delete\-instance\-profile\b
+  severity: block
+  message: DeleteInstanceProfile — destructive operation
+  category: cloud
+- name: aws-iam-delete-login-profile
+  pattern: (?i)aws\s+delete\-login\-profile\b
+  severity: warn
+  message: DeleteLoginProfile — destructive operation
+  category: cloud
+- name: aws-iam-delete-open-i-d-connect-provider
+  pattern: (?i)aws\s+delete\-open\-i\-d\-connect\-provider\b
+  severity: warn
+  message: DeleteOpenIDConnectProvider — destructive operation
+  category: cloud
+- name: aws-iam-delete-policy
+  pattern: (?i)aws\s+delete\-policy\b
+  severity: block
+  message: DeletePolicy — destructive operation
+  category: cloud
+- name: aws-iam-delete-policy-version
+  pattern: (?i)aws\s+delete\-policy\-version\b
+  severity: block
+  message: DeletePolicyVersion — destructive operation
+  category: cloud
+- name: aws-iam-delete-role
+  pattern: (?i)aws\s+delete\-role\b
+  severity: block
+  message: DeleteRole — destructive operation
+  category: cloud
+- name: aws-iam-delete-role-permissions-boundary
+  pattern: (?i)aws\s+delete\-role\-permissions\-boundary\b
+  severity: block
+  message: DeleteRolePermissionsBoundary — destructive operation
+  category: cloud
+- name: aws-iam-delete-role-policy
+  pattern: (?i)aws\s+delete\-role\-policy\b
+  severity: block
+  message: DeleteRolePolicy — destructive operation
+  category: cloud
+- name: aws-iam-delete-s-a-m-l-provider
+  pattern: (?i)aws\s+delete\-s\-a\-m\-l\-provider\b
+  severity: warn
+  message: DeleteSAMLProvider — destructive operation
+  category: cloud
+- name: aws-iam-delete-s-s-h-public-key
+  pattern: (?i)aws\s+delete\-s\-s\-h\-public\-key\b
+  severity: block
+  message: DeleteSSHPublicKey — destructive operation
+  category: cloud
+- name: aws-iam-delete-server-certificate
+  pattern: (?i)aws\s+delete\-server\-certificate\b
+  severity: block
+  message: DeleteServerCertificate — destructive operation
+  category: cloud
+- name: aws-iam-delete-service-linked-role
+  pattern: (?i)aws\s+delete\-service\-linked\-role\b
+  severity: block
+  message: DeleteServiceLinkedRole — destructive operation
+  category: cloud
+- name: aws-iam-delete-service-specific-credential
+  pattern: (?i)aws\s+delete\-service\-specific\-credential\b
+  severity: block
+  message: DeleteServiceSpecificCredential — destructive operation
+  category: cloud
+- name: aws-iam-delete-signing-certificate
+  pattern: (?i)aws\s+delete\-signing\-certificate\b
+  severity: block
+  message: DeleteSigningCertificate — destructive operation
+  category: cloud
+- name: aws-iam-delete-user
+  pattern: (?i)aws\s+delete\-user\b
+  severity: warn
+  message: DeleteUser — destructive operation
+  category: cloud
+- name: aws-iam-delete-user-permissions-boundary
+  pattern: (?i)aws\s+delete\-user\-permissions\-boundary\b
+  severity: warn
+  message: DeleteUserPermissionsBoundary — destructive operation
+  category: cloud
+- name: aws-iam-delete-user-policy
+  pattern: (?i)aws\s+delete\-user\-policy\b
+  severity: block
+  message: DeleteUserPolicy — destructive operation
+  category: cloud
+- name: aws-iam-delete-virtual-m-f-a-device
+  pattern: (?i)aws\s+delete\-virtual\-m\-f\-a\-device\b
+  severity: warn
+  message: DeleteVirtualMFADevice — destructive operation
+  category: cloud
+- name: aws-iam-detach-group-policy
+  pattern: (?i)aws\s+detach\-group\-policy\b
+  severity: block
+  message: DetachGroupPolicy — destructive operation
+  category: cloud
+- name: aws-iam-detach-role-policy
+  pattern: (?i)aws\s+detach\-role\-policy\b
+  severity: block
+  message: DetachRolePolicy — destructive operation
+  category: cloud
+- name: aws-iam-detach-user-policy
+  pattern: (?i)aws\s+detach\-user\-policy\b
+  severity: block
+  message: DetachUserPolicy — destructive operation
+  category: cloud
+- name: aws-iam-remove-client-i-d-from-open-i-d-connect-provider
+  pattern: (?i)aws\s+remove\-client\-i\-d\-from\-open\-i\-d\-connect\-provider\b
+  severity: warn
+  message: RemoveClientIDFromOpenIDConnectProvider — destructive operation
+  category: cloud
+- name: aws-iam-remove-role-from-instance-profile
+  pattern: (?i)aws\s+remove\-role\-from\-instance\-profile\b
+  severity: block
+  message: RemoveRoleFromInstanceProfile — destructive operation
+  category: cloud
+- name: aws-iam-remove-user-from-group
+  pattern: (?i)aws\s+remove\-user\-from\-group\b
+  severity: block
+  message: RemoveUserFromGroup — destructive operation
+  category: cloud
+- name: aws-iam-reset-service-specific-credential
+  pattern: (?i)aws\s+reset\-service\-specific\-credential\b
+  severity: block
+  message: ResetServiceSpecificCredential — destructive operation
+  category: cloud

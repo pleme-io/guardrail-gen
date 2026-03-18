@@ -1,0 +1,35 @@
+- name: aws-dataexchange-cancel-job
+  pattern: (?i)aws\s+cancel\-job\b
+  severity: block
+  message: CancelJob — destructive operation
+  category: cloud
+- name: aws-dataexchange-delete-asset
+  pattern: (?i)aws\s+delete\-asset\b
+  severity: block
+  message: DeleteAsset — destructive operation
+  category: cloud
+- name: aws-dataexchange-delete-data-set
+  pattern: (?i)aws\s+delete\-data\-set\b
+  severity: block
+  message: DeleteDataSet — destructive operation
+  category: cloud
+- name: aws-dataexchange-delete-event-action
+  pattern: (?i)aws\s+delete\-event\-action\b
+  severity: warn
+  message: DeleteEventAction — destructive operation
+  category: cloud
+- name: aws-dataexchange-delete-revision
+  pattern: (?i)aws\s+delete\-revision\b
+  severity: block
+  message: DeleteRevision — destructive operation
+  category: cloud
+- name: aws-dataexchange-revoke-revision
+  pattern: (?i)aws\s+revoke\-revision\b
+  severity: warn
+  message: RevokeRevision — destructive operation
+  category: cloud
+- name: aws-dataexchange-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

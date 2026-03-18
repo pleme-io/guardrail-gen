@@ -1,0 +1,65 @@
+- name: aws-omics-batch-delete-read-set
+  pattern: (?i)aws\s+batch\-delete\-read\-set\b
+  severity: warn
+  message: BatchDeleteReadSet — destructive operation
+  category: cloud
+- name: aws-omics-cancel-annotation-import-job
+  pattern: (?i)aws\s+cancel\-annotation\-import\-job\b
+  severity: block
+  message: CancelAnnotationImportJob — destructive operation
+  category: cloud
+- name: aws-omics-cancel-run
+  pattern: (?i)aws\s+cancel\-run\b
+  severity: warn
+  message: CancelRun — destructive operation
+  category: cloud
+- name: aws-omics-cancel-variant-import-job
+  pattern: (?i)aws\s+cancel\-variant\-import\-job\b
+  severity: block
+  message: CancelVariantImportJob — destructive operation
+  category: cloud
+- name: aws-omics-delete-annotation-store
+  pattern: (?i)aws\s+delete\-annotation\-store\b
+  severity: block
+  message: DeleteAnnotationStore — destructive operation
+  category: cloud
+- name: aws-omics-delete-reference
+  pattern: (?i)aws\s+delete\-reference\b
+  severity: block
+  message: DeleteReference — destructive operation
+  category: cloud
+- name: aws-omics-delete-reference-store
+  pattern: (?i)aws\s+delete\-reference\-store\b
+  severity: block
+  message: DeleteReferenceStore — destructive operation
+  category: cloud
+- name: aws-omics-delete-run
+  pattern: (?i)aws\s+delete\-run\b
+  severity: block
+  message: DeleteRun — destructive operation
+  category: cloud
+- name: aws-omics-delete-run-group
+  pattern: (?i)aws\s+delete\-run\-group\b
+  severity: block
+  message: DeleteRunGroup — destructive operation
+  category: cloud
+- name: aws-omics-delete-sequence-store
+  pattern: (?i)aws\s+delete\-sequence\-store\b
+  severity: block
+  message: DeleteSequenceStore — destructive operation
+  category: cloud
+- name: aws-omics-delete-variant-store
+  pattern: (?i)aws\s+delete\-variant\-store\b
+  severity: block
+  message: DeleteVariantStore — destructive operation
+  category: cloud
+- name: aws-omics-delete-workflow
+  pattern: (?i)aws\s+delete\-workflow\b
+  severity: block
+  message: DeleteWorkflow — destructive operation
+  category: cloud
+- name: aws-omics-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

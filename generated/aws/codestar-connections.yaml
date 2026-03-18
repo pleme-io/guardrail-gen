@@ -1,0 +1,10 @@
+- name: aws-codestar-connections-delete-connection
+  pattern: (?i)aws\s+delete\-connection\b
+  severity: warn
+  message: DeleteConnection — destructive operation
+  category: cloud
+- name: aws-codestar-connections-delete-host
+  pattern: (?i)aws\s+delete\-host\b
+  severity: warn
+  message: DeleteHost — destructive operation
+  category: cloud

@@ -1,0 +1,25 @@
+- name: aws-ivs-delete-channel
+  pattern: (?i)aws\s+delete\-channel\b
+  severity: warn
+  message: DeleteChannel — destructive operation
+  category: cloud
+- name: aws-ivs-delete-playback-key-pair
+  pattern: (?i)aws\s+delete\-playback\-key\-pair\b
+  severity: block
+  message: DeletePlaybackKeyPair — destructive operation
+  category: cloud
+- name: aws-ivs-delete-recording-configuration
+  pattern: (?i)aws\s+delete\-recording\-configuration\b
+  severity: warn
+  message: DeleteRecordingConfiguration — destructive operation
+  category: cloud
+- name: aws-ivs-delete-stream-key
+  pattern: (?i)aws\s+delete\-stream\-key\b
+  severity: block
+  message: DeleteStreamKey — destructive operation
+  category: cloud
+- name: aws-ivs-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

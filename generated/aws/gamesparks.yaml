@@ -1,0 +1,15 @@
+- name: aws-gamesparks-delete-game
+  pattern: (?i)aws\s+delete\-game\b
+  severity: block
+  message: DeleteGame — destructive operation
+  category: cloud
+- name: aws-gamesparks-delete-stage
+  pattern: (?i)aws\s+delete\-stage\b
+  severity: warn
+  message: DeleteStage — destructive operation
+  category: cloud
+- name: aws-gamesparks-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

@@ -1,0 +1,20 @@
+- name: aws-chime-sdk-identity-delete-app-instance
+  pattern: (?i)aws\s+delete\-app\-instance\b
+  severity: block
+  message: DeleteAppInstance — destructive operation
+  category: cloud
+- name: aws-chime-sdk-identity-delete-app-instance-admin
+  pattern: (?i)aws\s+delete\-app\-instance\-admin\b
+  severity: block
+  message: DeleteAppInstanceAdmin — destructive operation
+  category: cloud
+- name: aws-chime-sdk-identity-delete-app-instance-user
+  pattern: (?i)aws\s+delete\-app\-instance\-user\b
+  severity: block
+  message: DeleteAppInstanceUser — destructive operation
+  category: cloud
+- name: aws-chime-sdk-identity-deregister-app-instance-user-endpoint
+  pattern: (?i)aws\s+deregister\-app\-instance\-user\-endpoint\b
+  severity: block
+  message: DeregisterAppInstanceUserEndpoint — destructive operation
+  category: cloud

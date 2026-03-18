@@ -1,0 +1,5 @@
+- name: aws-serverlessrepo-delete-application
+  pattern: (?i)aws\s+delete\-application\b
+  severity: block
+  message: DeleteApplication — destructive operation
+  category: cloud

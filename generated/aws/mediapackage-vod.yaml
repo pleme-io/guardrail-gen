@@ -1,0 +1,20 @@
+- name: aws-mediapackage-vod-delete-asset
+  pattern: (?i)aws\s+delete\-asset\b
+  severity: block
+  message: DeleteAsset — destructive operation
+  category: cloud
+- name: aws-mediapackage-vod-delete-packaging-configuration
+  pattern: (?i)aws\s+delete\-packaging\-configuration\b
+  severity: block
+  message: DeletePackagingConfiguration — destructive operation
+  category: cloud
+- name: aws-mediapackage-vod-delete-packaging-group
+  pattern: (?i)aws\s+delete\-packaging\-group\b
+  severity: block
+  message: DeletePackagingGroup — destructive operation
+  category: cloud
+- name: aws-mediapackage-vod-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

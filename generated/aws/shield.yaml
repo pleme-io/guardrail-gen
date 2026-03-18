@@ -1,0 +1,40 @@
+- name: aws-shield-delete-protection
+  pattern: (?i)aws\s+delete\-protection\b
+  severity: warn
+  message: DeleteProtection — destructive operation
+  category: cloud
+- name: aws-shield-delete-protection-group
+  pattern: (?i)aws\s+delete\-protection\-group\b
+  severity: block
+  message: DeleteProtectionGroup — destructive operation
+  category: cloud
+- name: aws-shield-delete-subscription
+  pattern: (?i)aws\s+delete\-subscription\b
+  severity: warn
+  message: DeleteSubscription — destructive operation
+  category: cloud
+- name: aws-shield-disable-application-layer-automatic-response
+  pattern: (?i)aws\s+disable\-application\-layer\-automatic\-response\b
+  severity: warn
+  message: DisableApplicationLayerAutomaticResponse — destructive operation
+  category: cloud
+- name: aws-shield-disable-proactive-engagement
+  pattern: (?i)aws\s+disable\-proactive\-engagement\b
+  severity: warn
+  message: DisableProactiveEngagement — destructive operation
+  category: cloud
+- name: aws-shield-disassociate-d-r-t-log-bucket
+  pattern: (?i)aws\s+disassociate\-d\-r\-t\-log\-bucket\b
+  severity: block
+  message: DisassociateDRTLogBucket — destructive operation
+  category: cloud
+- name: aws-shield-disassociate-d-r-t-role
+  pattern: (?i)aws\s+disassociate\-d\-r\-t\-role\b
+  severity: block
+  message: DisassociateDRTRole — destructive operation
+  category: cloud
+- name: aws-shield-disassociate-health-check
+  pattern: (?i)aws\s+disassociate\-health\-check\b
+  severity: warn
+  message: DisassociateHealthCheck — destructive operation
+  category: cloud

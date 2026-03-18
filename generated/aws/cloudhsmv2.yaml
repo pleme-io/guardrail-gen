@@ -1,0 +1,15 @@
+- name: aws-cloudhsmv2-delete-backup
+  pattern: (?i)aws\s+delete\-backup\b
+  severity: warn
+  message: DeleteBackup — destructive operation
+  category: cloud
+- name: aws-cloudhsmv2-delete-cluster
+  pattern: (?i)aws\s+delete\-cluster\b
+  severity: block
+  message: DeleteCluster — destructive operation
+  category: cloud
+- name: aws-cloudhsmv2-delete-hsm
+  pattern: (?i)aws\s+delete\-hsm\b
+  severity: warn
+  message: DeleteHsm — destructive operation
+  category: cloud

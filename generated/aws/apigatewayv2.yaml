@@ -1,0 +1,90 @@
+- name: aws-apigatewayv2-delete-access-log-settings
+  pattern: (?i)aws\s+delete\-access\-log\-settings\b
+  severity: warn
+  message: DeleteAccessLogSettings — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-delete-api
+  pattern: (?i)aws\s+delete\-api\b
+  severity: block
+  message: DeleteApi — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-delete-api-mapping
+  pattern: (?i)aws\s+delete\-api\-mapping\b
+  severity: block
+  message: DeleteApiMapping — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-delete-authorizer
+  pattern: (?i)aws\s+delete\-authorizer\b
+  severity: block
+  message: DeleteAuthorizer — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-delete-cors-configuration
+  pattern: (?i)aws\s+delete\-cors\-configuration\b
+  severity: block
+  message: DeleteCorsConfiguration — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-delete-deployment
+  pattern: (?i)aws\s+delete\-deployment\b
+  severity: block
+  message: DeleteDeployment — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-delete-domain-name
+  pattern: (?i)aws\s+delete\-domain\-name\b
+  severity: block
+  message: DeleteDomainName — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-delete-integration
+  pattern: (?i)aws\s+delete\-integration\b
+  severity: block
+  message: DeleteIntegration — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-delete-integration-response
+  pattern: (?i)aws\s+delete\-integration\-response\b
+  severity: block
+  message: DeleteIntegrationResponse — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-delete-model
+  pattern: (?i)aws\s+delete\-model\b
+  severity: block
+  message: DeleteModel — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-delete-route
+  pattern: (?i)aws\s+delete\-route\b
+  severity: block
+  message: DeleteRoute — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-delete-route-request-parameter
+  pattern: (?i)aws\s+delete\-route\-request\-parameter\b
+  severity: block
+  message: DeleteRouteRequestParameter — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-delete-route-response
+  pattern: (?i)aws\s+delete\-route\-response\b
+  severity: block
+  message: DeleteRouteResponse — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-delete-route-settings
+  pattern: (?i)aws\s+delete\-route\-settings\b
+  severity: block
+  message: DeleteRouteSettings — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-delete-stage
+  pattern: (?i)aws\s+delete\-stage\b
+  severity: warn
+  message: DeleteStage — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-delete-vpc-link
+  pattern: (?i)aws\s+delete\-vpc\-link\b
+  severity: block
+  message: DeleteVpcLink — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-reset-authorizers-cache
+  pattern: (?i)aws\s+reset\-authorizers\-cache\b
+  severity: block
+  message: ResetAuthorizersCache — destructive operation
+  category: cloud
+- name: aws-apigatewayv2-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

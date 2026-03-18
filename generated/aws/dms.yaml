@@ -1,0 +1,60 @@
+- name: aws-dms-cancel-replication-task-assessment-run
+  pattern: (?i)aws\s+cancel\-replication\-task\-assessment\-run\b
+  severity: warn
+  message: CancelReplicationTaskAssessmentRun — destructive operation
+  category: cloud
+- name: aws-dms-delete-certificate
+  pattern: (?i)aws\s+delete\-certificate\b
+  severity: block
+  message: DeleteCertificate — destructive operation
+  category: cloud
+- name: aws-dms-delete-connection
+  pattern: (?i)aws\s+delete\-connection\b
+  severity: warn
+  message: DeleteConnection — destructive operation
+  category: cloud
+- name: aws-dms-delete-endpoint
+  pattern: (?i)aws\s+delete\-endpoint\b
+  severity: warn
+  message: DeleteEndpoint — destructive operation
+  category: cloud
+- name: aws-dms-delete-event-subscription
+  pattern: (?i)aws\s+delete\-event\-subscription\b
+  severity: warn
+  message: DeleteEventSubscription — destructive operation
+  category: cloud
+- name: aws-dms-delete-fleet-advisor-collector
+  pattern: (?i)aws\s+delete\-fleet\-advisor\-collector\b
+  severity: warn
+  message: DeleteFleetAdvisorCollector — destructive operation
+  category: cloud
+- name: aws-dms-delete-fleet-advisor-databases
+  pattern: (?i)aws\s+delete\-fleet\-advisor\-databases\b
+  severity: block
+  message: DeleteFleetAdvisorDatabases — destructive operation
+  category: cloud
+- name: aws-dms-delete-replication-instance
+  pattern: (?i)aws\s+delete\-replication\-instance\b
+  severity: block
+  message: DeleteReplicationInstance — destructive operation
+  category: cloud
+- name: aws-dms-delete-replication-subnet-group
+  pattern: (?i)aws\s+delete\-replication\-subnet\-group\b
+  severity: block
+  message: DeleteReplicationSubnetGroup — destructive operation
+  category: cloud
+- name: aws-dms-delete-replication-task
+  pattern: (?i)aws\s+delete\-replication\-task\b
+  severity: warn
+  message: DeleteReplicationTask — destructive operation
+  category: cloud
+- name: aws-dms-delete-replication-task-assessment-run
+  pattern: (?i)aws\s+delete\-replication\-task\-assessment\-run\b
+  severity: warn
+  message: DeleteReplicationTaskAssessmentRun — destructive operation
+  category: cloud
+- name: aws-dms-remove-tags-from-resource
+  pattern: (?i)aws\s+remove\-tags\-from\-resource\b
+  severity: warn
+  message: RemoveTagsFromResource — destructive operation
+  category: cloud

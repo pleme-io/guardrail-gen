@@ -1,0 +1,90 @@
+- name: aws-s3-abort-multipart-upload
+  pattern: (?i)aws\s+abort\-multipart\-upload\b
+  severity: block
+  message: AbortMultipartUpload — destructive operation
+  category: cloud
+- name: aws-s3-delete-bucket
+  pattern: (?i)aws\s+delete\-bucket\b
+  severity: block
+  message: DeleteBucket — destructive operation
+  category: cloud
+- name: aws-s3-delete-bucket-analytics-configuration
+  pattern: (?i)aws\s+delete\-bucket\-analytics\-configuration\b
+  severity: block
+  message: DeleteBucketAnalyticsConfiguration — destructive operation
+  category: cloud
+- name: aws-s3-delete-bucket-cors
+  pattern: (?i)aws\s+delete\-bucket\-cors\b
+  severity: block
+  message: DeleteBucketCors — destructive operation
+  category: cloud
+- name: aws-s3-delete-bucket-encryption
+  pattern: (?i)aws\s+delete\-bucket\-encryption\b
+  severity: block
+  message: DeleteBucketEncryption — destructive operation
+  category: cloud
+- name: aws-s3-delete-bucket-intelligent-tiering-configuration
+  pattern: (?i)aws\s+delete\-bucket\-intelligent\-tiering\-configuration\b
+  severity: block
+  message: DeleteBucketIntelligentTieringConfiguration — destructive operation
+  category: cloud
+- name: aws-s3-delete-bucket-inventory-configuration
+  pattern: (?i)aws\s+delete\-bucket\-inventory\-configuration\b
+  severity: block
+  message: DeleteBucketInventoryConfiguration — destructive operation
+  category: cloud
+- name: aws-s3-delete-bucket-lifecycle
+  pattern: (?i)aws\s+delete\-bucket\-lifecycle\b
+  severity: block
+  message: DeleteBucketLifecycle — destructive operation
+  category: cloud
+- name: aws-s3-delete-bucket-metrics-configuration
+  pattern: (?i)aws\s+delete\-bucket\-metrics\-configuration\b
+  severity: block
+  message: DeleteBucketMetricsConfiguration — destructive operation
+  category: cloud
+- name: aws-s3-delete-bucket-ownership-controls
+  pattern: (?i)aws\s+delete\-bucket\-ownership\-controls\b
+  severity: block
+  message: DeleteBucketOwnershipControls — destructive operation
+  category: cloud
+- name: aws-s3-delete-bucket-policy
+  pattern: (?i)aws\s+delete\-bucket\-policy\b
+  severity: block
+  message: DeleteBucketPolicy — destructive operation
+  category: cloud
+- name: aws-s3-delete-bucket-replication
+  pattern: (?i)aws\s+delete\-bucket\-replication\b
+  severity: block
+  message: DeleteBucketReplication — destructive operation
+  category: cloud
+- name: aws-s3-delete-bucket-tagging
+  pattern: (?i)aws\s+delete\-bucket\-tagging\b
+  severity: block
+  message: DeleteBucketTagging — destructive operation
+  category: cloud
+- name: aws-s3-delete-bucket-website
+  pattern: (?i)aws\s+delete\-bucket\-website\b
+  severity: block
+  message: DeleteBucketWebsite — destructive operation
+  category: cloud
+- name: aws-s3-delete-object
+  pattern: (?i)aws\s+delete\-object\b
+  severity: block
+  message: DeleteObject — destructive operation
+  category: cloud
+- name: aws-s3-delete-object-tagging
+  pattern: (?i)aws\s+delete\-object\-tagging\b
+  severity: block
+  message: DeleteObjectTagging — destructive operation
+  category: cloud
+- name: aws-s3-delete-objects
+  pattern: (?i)aws\s+delete\-objects\b
+  severity: block
+  message: DeleteObjects — destructive operation
+  category: cloud
+- name: aws-s3-delete-public-access-block
+  pattern: (?i)aws\s+delete\-public\-access\-block\b
+  severity: block
+  message: DeletePublicAccessBlock — destructive operation
+  category: cloud

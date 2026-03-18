@@ -1,0 +1,25 @@
+- name: aws-panorama-delete-device
+  pattern: (?i)aws\s+delete\-device\b
+  severity: block
+  message: DeleteDevice — destructive operation
+  category: cloud
+- name: aws-panorama-delete-package
+  pattern: (?i)aws\s+delete\-package\b
+  severity: block
+  message: DeletePackage — destructive operation
+  category: cloud
+- name: aws-panorama-deregister-package-version
+  pattern: (?i)aws\s+deregister\-package\-version\b
+  severity: block
+  message: DeregisterPackageVersion — destructive operation
+  category: cloud
+- name: aws-panorama-remove-application-instance
+  pattern: (?i)aws\s+remove\-application\-instance\b
+  severity: block
+  message: RemoveApplicationInstance — destructive operation
+  category: cloud
+- name: aws-panorama-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

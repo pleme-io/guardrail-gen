@@ -1,0 +1,125 @@
+- name: aws-redshift-batch-delete-cluster-snapshots
+  pattern: (?i)aws\s+batch\-delete\-cluster\-snapshots\b
+  severity: block
+  message: BatchDeleteClusterSnapshots — destructive operation
+  category: cloud
+- name: aws-redshift-cancel-resize
+  pattern: (?i)aws\s+cancel\-resize\b
+  severity: warn
+  message: CancelResize — destructive operation
+  category: cloud
+- name: aws-redshift-delete-authentication-profile
+  pattern: (?i)aws\s+delete\-authentication\-profile\b
+  severity: block
+  message: DeleteAuthenticationProfile — destructive operation
+  category: cloud
+- name: aws-redshift-delete-cluster
+  pattern: (?i)aws\s+delete\-cluster\b
+  severity: block
+  message: DeleteCluster — destructive operation
+  category: cloud
+- name: aws-redshift-delete-cluster-parameter-group
+  pattern: (?i)aws\s+delete\-cluster\-parameter\-group\b
+  severity: block
+  message: DeleteClusterParameterGroup — destructive operation
+  category: cloud
+- name: aws-redshift-delete-cluster-security-group
+  pattern: (?i)aws\s+delete\-cluster\-security\-group\b
+  severity: block
+  message: DeleteClusterSecurityGroup — destructive operation
+  category: cloud
+- name: aws-redshift-delete-cluster-snapshot
+  pattern: (?i)aws\s+delete\-cluster\-snapshot\b
+  severity: block
+  message: DeleteClusterSnapshot — destructive operation
+  category: cloud
+- name: aws-redshift-delete-cluster-subnet-group
+  pattern: (?i)aws\s+delete\-cluster\-subnet\-group\b
+  severity: block
+  message: DeleteClusterSubnetGroup — destructive operation
+  category: cloud
+- name: aws-redshift-delete-endpoint-access
+  pattern: (?i)aws\s+delete\-endpoint\-access\b
+  severity: warn
+  message: DeleteEndpointAccess — destructive operation
+  category: cloud
+- name: aws-redshift-delete-event-subscription
+  pattern: (?i)aws\s+delete\-event\-subscription\b
+  severity: warn
+  message: DeleteEventSubscription — destructive operation
+  category: cloud
+- name: aws-redshift-delete-hsm-client-certificate
+  pattern: (?i)aws\s+delete\-hsm\-client\-certificate\b
+  severity: block
+  message: DeleteHsmClientCertificate — destructive operation
+  category: cloud
+- name: aws-redshift-delete-hsm-configuration
+  pattern: (?i)aws\s+delete\-hsm\-configuration\b
+  severity: warn
+  message: DeleteHsmConfiguration — destructive operation
+  category: cloud
+- name: aws-redshift-delete-partner
+  pattern: (?i)aws\s+delete\-partner\b
+  severity: warn
+  message: DeletePartner — destructive operation
+  category: cloud
+- name: aws-redshift-delete-scheduled-action
+  pattern: (?i)aws\s+delete\-scheduled\-action\b
+  severity: warn
+  message: DeleteScheduledAction — destructive operation
+  category: cloud
+- name: aws-redshift-delete-snapshot-copy-grant
+  pattern: (?i)aws\s+delete\-snapshot\-copy\-grant\b
+  severity: warn
+  message: DeleteSnapshotCopyGrant — destructive operation
+  category: cloud
+- name: aws-redshift-delete-snapshot-schedule
+  pattern: (?i)aws\s+delete\-snapshot\-schedule\b
+  severity: warn
+  message: DeleteSnapshotSchedule — destructive operation
+  category: cloud
+- name: aws-redshift-delete-tags
+  pattern: (?i)aws\s+delete\-tags\b
+  severity: warn
+  message: DeleteTags — destructive operation
+  category: cloud
+- name: aws-redshift-delete-usage-limit
+  pattern: (?i)aws\s+delete\-usage\-limit\b
+  severity: warn
+  message: DeleteUsageLimit — destructive operation
+  category: cloud
+- name: aws-redshift-disable-logging
+  pattern: (?i)aws\s+disable\-logging\b
+  severity: warn
+  message: DisableLogging — destructive operation
+  category: cloud
+- name: aws-redshift-disable-snapshot-copy
+  pattern: (?i)aws\s+disable\-snapshot\-copy\b
+  severity: warn
+  message: DisableSnapshotCopy — destructive operation
+  category: cloud
+- name: aws-redshift-disassociate-data-share-consumer
+  pattern: (?i)aws\s+disassociate\-data\-share\-consumer\b
+  severity: warn
+  message: DisassociateDataShareConsumer — destructive operation
+  category: cloud
+- name: aws-redshift-reset-cluster-parameter-group
+  pattern: (?i)aws\s+reset\-cluster\-parameter\-group\b
+  severity: block
+  message: ResetClusterParameterGroup — destructive operation
+  category: cloud
+- name: aws-redshift-revoke-cluster-security-group-ingress
+  pattern: (?i)aws\s+revoke\-cluster\-security\-group\-ingress\b
+  severity: block
+  message: RevokeClusterSecurityGroupIngress — destructive operation
+  category: cloud
+- name: aws-redshift-revoke-endpoint-access
+  pattern: (?i)aws\s+revoke\-endpoint\-access\b
+  severity: warn
+  message: RevokeEndpointAccess — destructive operation
+  category: cloud
+- name: aws-redshift-revoke-snapshot-access
+  pattern: (?i)aws\s+revoke\-snapshot\-access\b
+  severity: warn
+  message: RevokeSnapshotAccess — destructive operation
+  category: cloud

@@ -1,0 +1,25 @@
+- name: aws-codepipeline-delete-custom-action-type
+  pattern: (?i)aws\s+delete\-custom\-action\-type\b
+  severity: warn
+  message: DeleteCustomActionType — destructive operation
+  category: cloud
+- name: aws-codepipeline-delete-pipeline
+  pattern: (?i)aws\s+delete\-pipeline\b
+  severity: warn
+  message: DeletePipeline — destructive operation
+  category: cloud
+- name: aws-codepipeline-delete-webhook
+  pattern: (?i)aws\s+delete\-webhook\b
+  severity: warn
+  message: DeleteWebhook — destructive operation
+  category: cloud
+- name: aws-codepipeline-deregister-webhook-with-third-party
+  pattern: (?i)aws\s+deregister\-webhook\-with\-third\-party\b
+  severity: warn
+  message: DeregisterWebhookWithThirdParty — destructive operation
+  category: cloud
+- name: aws-codepipeline-disable-stage-transition
+  pattern: (?i)aws\s+disable\-stage\-transition\b
+  severity: warn
+  message: DisableStageTransition — destructive operation
+  category: cloud

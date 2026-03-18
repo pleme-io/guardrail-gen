@@ -1,0 +1,35 @@
+- name: aws-apprunner-delete-auto-scaling-configuration
+  pattern: (?i)aws\s+delete\-auto\-scaling\-configuration\b
+  severity: warn
+  message: DeleteAutoScalingConfiguration — destructive operation
+  category: cloud
+- name: aws-apprunner-delete-connection
+  pattern: (?i)aws\s+delete\-connection\b
+  severity: warn
+  message: DeleteConnection — destructive operation
+  category: cloud
+- name: aws-apprunner-delete-observability-configuration
+  pattern: (?i)aws\s+delete\-observability\-configuration\b
+  severity: warn
+  message: DeleteObservabilityConfiguration — destructive operation
+  category: cloud
+- name: aws-apprunner-delete-service
+  pattern: (?i)aws\s+delete\-service\b
+  severity: warn
+  message: DeleteService — destructive operation
+  category: cloud
+- name: aws-apprunner-delete-vpc-connector
+  pattern: (?i)aws\s+delete\-vpc\-connector\b
+  severity: warn
+  message: DeleteVpcConnector — destructive operation
+  category: cloud
+- name: aws-apprunner-delete-vpc-ingress-connection
+  pattern: (?i)aws\s+delete\-vpc\-ingress\-connection\b
+  severity: warn
+  message: DeleteVpcIngressConnection — destructive operation
+  category: cloud
+- name: aws-apprunner-disassociate-custom-domain
+  pattern: (?i)aws\s+disassociate\-custom\-domain\b
+  severity: warn
+  message: DisassociateCustomDomain — destructive operation
+  category: cloud

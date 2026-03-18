@@ -1,0 +1,10 @@
+- name: aws-snow-device-management-cancel-task
+  pattern: (?i)aws\s+cancel\-task\b
+  severity: warn
+  message: CancelTask — destructive operation
+  category: cloud
+- name: aws-snow-device-management-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

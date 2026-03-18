@@ -1,0 +1,5 @@
+- name: aws-redshift-data-cancel-statement
+  pattern: (?i)aws\s+cancel\-statement\b
+  severity: warn
+  message: CancelStatement — destructive operation
+  category: cloud

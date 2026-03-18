@@ -1,0 +1,25 @@
+- name: aws-mediastore-delete-container
+  pattern: (?i)aws\s+delete\-container\b
+  severity: warn
+  message: DeleteContainer — destructive operation
+  category: cloud
+- name: aws-mediastore-delete-container-policy
+  pattern: (?i)aws\s+delete\-container\-policy\b
+  severity: block
+  message: DeleteContainerPolicy — destructive operation
+  category: cloud
+- name: aws-mediastore-delete-cors-policy
+  pattern: (?i)aws\s+delete\-cors\-policy\b
+  severity: block
+  message: DeleteCorsPolicy — destructive operation
+  category: cloud
+- name: aws-mediastore-delete-lifecycle-policy
+  pattern: (?i)aws\s+delete\-lifecycle\-policy\b
+  severity: block
+  message: DeleteLifecyclePolicy — destructive operation
+  category: cloud
+- name: aws-mediastore-delete-metric-policy
+  pattern: (?i)aws\s+delete\-metric\-policy\b
+  severity: block
+  message: DeleteMetricPolicy — destructive operation
+  category: cloud

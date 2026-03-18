@@ -1,0 +1,15 @@
+- name: aws-docdb-elastic-delete-cluster
+  pattern: (?i)aws\s+delete\-cluster\b
+  severity: block
+  message: DeleteCluster — destructive operation
+  category: cloud
+- name: aws-docdb-elastic-delete-cluster-snapshot
+  pattern: (?i)aws\s+delete\-cluster\-snapshot\b
+  severity: block
+  message: DeleteClusterSnapshot — destructive operation
+  category: cloud
+- name: aws-docdb-elastic-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

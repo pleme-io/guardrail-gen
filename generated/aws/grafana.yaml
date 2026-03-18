@@ -1,0 +1,20 @@
+- name: aws-grafana-delete-workspace
+  pattern: (?i)aws\s+delete\-workspace\b
+  severity: block
+  message: DeleteWorkspace — destructive operation
+  category: cloud
+- name: aws-grafana-delete-workspace-api-key
+  pattern: (?i)aws\s+delete\-workspace\-api\-key\b
+  severity: block
+  message: DeleteWorkspaceApiKey — destructive operation
+  category: cloud
+- name: aws-grafana-disassociate-license
+  pattern: (?i)aws\s+disassociate\-license\b
+  severity: block
+  message: DisassociateLicense — destructive operation
+  category: cloud
+- name: aws-grafana-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

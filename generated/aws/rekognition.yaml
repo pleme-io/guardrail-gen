@@ -1,0 +1,35 @@
+- name: aws-rekognition-delete-collection
+  pattern: (?i)aws\s+delete\-collection\b
+  severity: warn
+  message: DeleteCollection — destructive operation
+  category: cloud
+- name: aws-rekognition-delete-dataset
+  pattern: (?i)aws\s+delete\-dataset\b
+  severity: warn
+  message: DeleteDataset — destructive operation
+  category: cloud
+- name: aws-rekognition-delete-faces
+  pattern: (?i)aws\s+delete\-faces\b
+  severity: warn
+  message: DeleteFaces — destructive operation
+  category: cloud
+- name: aws-rekognition-delete-project
+  pattern: (?i)aws\s+delete\-project\b
+  severity: block
+  message: DeleteProject — destructive operation
+  category: cloud
+- name: aws-rekognition-delete-project-policy
+  pattern: (?i)aws\s+delete\-project\-policy\b
+  severity: block
+  message: DeleteProjectPolicy — destructive operation
+  category: cloud
+- name: aws-rekognition-delete-project-version
+  pattern: (?i)aws\s+delete\-project\-version\b
+  severity: block
+  message: DeleteProjectVersion — destructive operation
+  category: cloud
+- name: aws-rekognition-delete-stream-processor
+  pattern: (?i)aws\s+delete\-stream\-processor\b
+  severity: warn
+  message: DeleteStreamProcessor — destructive operation
+  category: cloud

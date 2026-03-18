@@ -1,0 +1,15 @@
+- name: aws-AWSMigrationHub-delete-progress-update-stream
+  pattern: (?i)aws\s+delete\-progress\-update\-stream\b
+  severity: warn
+  message: DeleteProgressUpdateStream — destructive operation
+  category: cloud
+- name: aws-AWSMigrationHub-disassociate-created-artifact
+  pattern: (?i)aws\s+disassociate\-created\-artifact\b
+  severity: warn
+  message: DisassociateCreatedArtifact — destructive operation
+  category: cloud
+- name: aws-AWSMigrationHub-disassociate-discovered-resource
+  pattern: (?i)aws\s+disassociate\-discovered\-resource\b
+  severity: warn
+  message: DisassociateDiscoveredResource — destructive operation
+  category: cloud

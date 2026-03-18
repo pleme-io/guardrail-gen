@@ -1,0 +1,5 @@
+- name: aws-arc-zonal-shift-cancel-zonal-shift
+  pattern: (?i)aws\s+cancel\-zonal\-shift\b
+  severity: block
+  message: CancelZonalShift — destructive operation
+  category: cloud

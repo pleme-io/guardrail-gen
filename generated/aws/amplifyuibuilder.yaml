@@ -1,0 +1,15 @@
+- name: aws-amplifyuibuilder-delete-component
+  pattern: (?i)aws\s+delete\-component\b
+  severity: block
+  message: DeleteComponent — destructive operation
+  category: cloud
+- name: aws-amplifyuibuilder-delete-form
+  pattern: (?i)aws\s+delete\-form\b
+  severity: block
+  message: DeleteForm — destructive operation
+  category: cloud
+- name: aws-amplifyuibuilder-delete-theme
+  pattern: (?i)aws\s+delete\-theme\b
+  severity: block
+  message: DeleteTheme — destructive operation
+  category: cloud

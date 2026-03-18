@@ -1,0 +1,5 @@
+- name: aws-controltower-disable-control
+  pattern: (?i)aws\s+disable\-control\b
+  severity: warn
+  message: DisableControl — destructive operation
+  category: cloud

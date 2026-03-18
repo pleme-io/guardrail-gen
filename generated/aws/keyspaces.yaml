@@ -1,0 +1,10 @@
+- name: aws-keyspaces-delete-keyspace
+  pattern: (?i)aws\s+delete\-keyspace\b
+  severity: block
+  message: DeleteKeyspace — destructive operation
+  category: cloud
+- name: aws-keyspaces-delete-table
+  pattern: (?i)aws\s+delete\-table\b
+  severity: warn
+  message: DeleteTable — destructive operation
+  category: cloud

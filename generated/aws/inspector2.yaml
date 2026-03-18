@@ -1,0 +1,30 @@
+- name: aws-inspector2-cancel-findings-report
+  pattern: (?i)aws\s+cancel\-findings\-report\b
+  severity: warn
+  message: CancelFindingsReport — destructive operation
+  category: cloud
+- name: aws-inspector2-delete-filter
+  pattern: (?i)aws\s+delete\-filter\b
+  severity: warn
+  message: DeleteFilter — destructive operation
+  category: cloud
+- name: aws-inspector2-disable
+  pattern: (?i)aws\s+disable\b
+  severity: warn
+  message: Disable — destructive operation
+  category: cloud
+- name: aws-inspector2-disable-delegated-admin-account
+  pattern: (?i)aws\s+disable\-delegated\-admin\-account\b
+  severity: block
+  message: DisableDelegatedAdminAccount — destructive operation
+  category: cloud
+- name: aws-inspector2-disassociate-member
+  pattern: (?i)aws\s+disassociate\-member\b
+  severity: warn
+  message: DisassociateMember — destructive operation
+  category: cloud
+- name: aws-inspector2-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

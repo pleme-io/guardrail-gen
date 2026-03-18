@@ -1,0 +1,20 @@
+- name: aws-connectcampaigns-delete-campaign
+  pattern: (?i)aws\s+delete\-campaign\b
+  severity: block
+  message: DeleteCampaign — destructive operation
+  category: cloud
+- name: aws-connectcampaigns-delete-connect-instance-config
+  pattern: (?i)aws\s+delete\-connect\-instance\-config\b
+  severity: block
+  message: DeleteConnectInstanceConfig — destructive operation
+  category: cloud
+- name: aws-connectcampaigns-delete-instance-onboarding-job
+  pattern: (?i)aws\s+delete\-instance\-onboarding\-job\b
+  severity: block
+  message: DeleteInstanceOnboardingJob — destructive operation
+  category: cloud
+- name: aws-connectcampaigns-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

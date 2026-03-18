@@ -1,0 +1,30 @@
+- name: aws-resiliencehub-delete-app
+  pattern: (?i)aws\s+delete\-app\b
+  severity: warn
+  message: DeleteApp — destructive operation
+  category: cloud
+- name: aws-resiliencehub-delete-app-assessment
+  pattern: (?i)aws\s+delete\-app\-assessment\b
+  severity: warn
+  message: DeleteAppAssessment — destructive operation
+  category: cloud
+- name: aws-resiliencehub-delete-recommendation-template
+  pattern: (?i)aws\s+delete\-recommendation\-template\b
+  severity: warn
+  message: DeleteRecommendationTemplate — destructive operation
+  category: cloud
+- name: aws-resiliencehub-delete-resiliency-policy
+  pattern: (?i)aws\s+delete\-resiliency\-policy\b
+  severity: block
+  message: DeleteResiliencyPolicy — destructive operation
+  category: cloud
+- name: aws-resiliencehub-remove-draft-app-version-resource-mappings
+  pattern: (?i)aws\s+remove\-draft\-app\-version\-resource\-mappings\b
+  severity: warn
+  message: RemoveDraftAppVersionResourceMappings — destructive operation
+  category: cloud
+- name: aws-resiliencehub-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

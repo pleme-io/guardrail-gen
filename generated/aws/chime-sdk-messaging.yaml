@@ -1,0 +1,35 @@
+- name: aws-chime-sdk-messaging-delete-channel
+  pattern: (?i)aws\s+delete\-channel\b
+  severity: block
+  message: DeleteChannel — destructive operation
+  category: cloud
+- name: aws-chime-sdk-messaging-delete-channel-ban
+  pattern: (?i)aws\s+delete\-channel\-ban\b
+  severity: block
+  message: DeleteChannelBan — destructive operation
+  category: cloud
+- name: aws-chime-sdk-messaging-delete-channel-flow
+  pattern: (?i)aws\s+delete\-channel\-flow\b
+  severity: block
+  message: DeleteChannelFlow — destructive operation
+  category: cloud
+- name: aws-chime-sdk-messaging-delete-channel-membership
+  pattern: (?i)aws\s+delete\-channel\-membership\b
+  severity: block
+  message: DeleteChannelMembership — destructive operation
+  category: cloud
+- name: aws-chime-sdk-messaging-delete-channel-message
+  pattern: (?i)aws\s+delete\-channel\-message\b
+  severity: block
+  message: DeleteChannelMessage — destructive operation
+  category: cloud
+- name: aws-chime-sdk-messaging-delete-channel-moderator
+  pattern: (?i)aws\s+delete\-channel\-moderator\b
+  severity: block
+  message: DeleteChannelModerator — destructive operation
+  category: cloud
+- name: aws-chime-sdk-messaging-disassociate-channel-flow
+  pattern: (?i)aws\s+disassociate\-channel\-flow\b
+  severity: block
+  message: DisassociateChannelFlow — destructive operation
+  category: cloud

@@ -1,0 +1,70 @@
+- name: aws-forecast-delete-dataset
+  pattern: (?i)aws\s+delete\-dataset\b
+  severity: warn
+  message: DeleteDataset — destructive operation
+  category: cloud
+- name: aws-forecast-delete-dataset-group
+  pattern: (?i)aws\s+delete\-dataset\-group\b
+  severity: block
+  message: DeleteDatasetGroup — destructive operation
+  category: cloud
+- name: aws-forecast-delete-dataset-import-job
+  pattern: (?i)aws\s+delete\-dataset\-import\-job\b
+  severity: warn
+  message: DeleteDatasetImportJob — destructive operation
+  category: cloud
+- name: aws-forecast-delete-explainability
+  pattern: (?i)aws\s+delete\-explainability\b
+  severity: warn
+  message: DeleteExplainability — destructive operation
+  category: cloud
+- name: aws-forecast-delete-explainability-export
+  pattern: (?i)aws\s+delete\-explainability\-export\b
+  severity: warn
+  message: DeleteExplainabilityExport — destructive operation
+  category: cloud
+- name: aws-forecast-delete-forecast
+  pattern: (?i)aws\s+delete\-forecast\b
+  severity: warn
+  message: DeleteForecast — destructive operation
+  category: cloud
+- name: aws-forecast-delete-forecast-export-job
+  pattern: (?i)aws\s+delete\-forecast\-export\-job\b
+  severity: warn
+  message: DeleteForecastExportJob — destructive operation
+  category: cloud
+- name: aws-forecast-delete-monitor
+  pattern: (?i)aws\s+delete\-monitor\b
+  severity: warn
+  message: DeleteMonitor — destructive operation
+  category: cloud
+- name: aws-forecast-delete-predictor
+  pattern: (?i)aws\s+delete\-predictor\b
+  severity: warn
+  message: DeletePredictor — destructive operation
+  category: cloud
+- name: aws-forecast-delete-predictor-backtest-export-job
+  pattern: (?i)aws\s+delete\-predictor\-backtest\-export\-job\b
+  severity: warn
+  message: DeletePredictorBacktestExportJob — destructive operation
+  category: cloud
+- name: aws-forecast-delete-resource-tree
+  pattern: (?i)aws\s+delete\-resource\-tree\b
+  severity: warn
+  message: DeleteResourceTree — destructive operation
+  category: cloud
+- name: aws-forecast-delete-what-if-analysis
+  pattern: (?i)aws\s+delete\-what\-if\-analysis\b
+  severity: warn
+  message: DeleteWhatIfAnalysis — destructive operation
+  category: cloud
+- name: aws-forecast-delete-what-if-forecast
+  pattern: (?i)aws\s+delete\-what\-if\-forecast\b
+  severity: warn
+  message: DeleteWhatIfForecast — destructive operation
+  category: cloud
+- name: aws-forecast-delete-what-if-forecast-export
+  pattern: (?i)aws\s+delete\-what\-if\-forecast\-export\b
+  severity: warn
+  message: DeleteWhatIfForecastExport — destructive operation
+  category: cloud

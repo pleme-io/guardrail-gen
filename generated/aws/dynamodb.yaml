@@ -1,0 +1,20 @@
+- name: aws-dynamodb-delete-backup
+  pattern: (?i)aws\s+delete\-backup\b
+  severity: warn
+  message: DeleteBackup — destructive operation
+  category: cloud
+- name: aws-dynamodb-delete-item
+  pattern: (?i)aws\s+delete\-item\b
+  severity: block
+  message: DeleteItem — destructive operation
+  category: cloud
+- name: aws-dynamodb-delete-table
+  pattern: (?i)aws\s+delete\-table\b
+  severity: warn
+  message: DeleteTable — destructive operation
+  category: cloud
+- name: aws-dynamodb-disable-kinesis-streaming-destination
+  pattern: (?i)aws\s+disable\-kinesis\-streaming\-destination\b
+  severity: warn
+  message: DisableKinesisStreamingDestination — destructive operation
+  category: cloud

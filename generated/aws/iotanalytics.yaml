@@ -1,0 +1,35 @@
+- name: aws-iotanalytics-cancel-pipeline-reprocessing
+  pattern: (?i)aws\s+cancel\-pipeline\-reprocessing\b
+  severity: block
+  message: CancelPipelineReprocessing — destructive operation
+  category: cloud
+- name: aws-iotanalytics-delete-channel
+  pattern: (?i)aws\s+delete\-channel\b
+  severity: block
+  message: DeleteChannel — destructive operation
+  category: cloud
+- name: aws-iotanalytics-delete-dataset
+  pattern: (?i)aws\s+delete\-dataset\b
+  severity: block
+  message: DeleteDataset — destructive operation
+  category: cloud
+- name: aws-iotanalytics-delete-dataset-content
+  pattern: (?i)aws\s+delete\-dataset\-content\b
+  severity: block
+  message: DeleteDatasetContent — destructive operation
+  category: cloud
+- name: aws-iotanalytics-delete-datastore
+  pattern: (?i)aws\s+delete\-datastore\b
+  severity: block
+  message: DeleteDatastore — destructive operation
+  category: cloud
+- name: aws-iotanalytics-delete-pipeline
+  pattern: (?i)aws\s+delete\-pipeline\b
+  severity: block
+  message: DeletePipeline — destructive operation
+  category: cloud
+- name: aws-iotanalytics-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

@@ -1,0 +1,25 @@
+- name: aws-pinpoint-email-delete-configuration-set
+  pattern: (?i)aws\s+delete\-configuration\-set\b
+  severity: block
+  message: DeleteConfigurationSet — destructive operation
+  category: cloud
+- name: aws-pinpoint-email-delete-configuration-set-event-destination
+  pattern: (?i)aws\s+delete\-configuration\-set\-event\-destination\b
+  severity: warn
+  message: DeleteConfigurationSetEventDestination — destructive operation
+  category: cloud
+- name: aws-pinpoint-email-delete-dedicated-ip-pool
+  pattern: (?i)aws\s+delete\-dedicated\-ip\-pool\b
+  severity: block
+  message: DeleteDedicatedIpPool — destructive operation
+  category: cloud
+- name: aws-pinpoint-email-delete-email-identity
+  pattern: (?i)aws\s+delete\-email\-identity\b
+  severity: block
+  message: DeleteEmailIdentity — destructive operation
+  category: cloud
+- name: aws-pinpoint-email-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

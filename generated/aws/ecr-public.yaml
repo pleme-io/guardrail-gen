@@ -1,0 +1,15 @@
+- name: aws-ecr-public-batch-delete-image
+  pattern: (?i)aws\s+batch\-delete\-image\b
+  severity: warn
+  message: BatchDeleteImage — destructive operation
+  category: cloud
+- name: aws-ecr-public-delete-repository
+  pattern: (?i)aws\s+delete\-repository\b
+  severity: warn
+  message: DeleteRepository — destructive operation
+  category: cloud
+- name: aws-ecr-public-delete-repository-policy
+  pattern: (?i)aws\s+delete\-repository\-policy\b
+  severity: block
+  message: DeleteRepositoryPolicy — destructive operation
+  category: cloud

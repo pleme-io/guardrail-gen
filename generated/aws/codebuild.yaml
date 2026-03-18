@@ -1,0 +1,40 @@
+- name: aws-codebuild-batch-delete-builds
+  pattern: (?i)aws\s+batch\-delete\-builds\b
+  severity: warn
+  message: BatchDeleteBuilds — destructive operation
+  category: cloud
+- name: aws-codebuild-delete-build-batch
+  pattern: (?i)aws\s+delete\-build\-batch\b
+  severity: block
+  message: DeleteBuildBatch — destructive operation
+  category: cloud
+- name: aws-codebuild-delete-project
+  pattern: (?i)aws\s+delete\-project\b
+  severity: block
+  message: DeleteProject — destructive operation
+  category: cloud
+- name: aws-codebuild-delete-report
+  pattern: (?i)aws\s+delete\-report\b
+  severity: warn
+  message: DeleteReport — destructive operation
+  category: cloud
+- name: aws-codebuild-delete-report-group
+  pattern: (?i)aws\s+delete\-report\-group\b
+  severity: block
+  message: DeleteReportGroup — destructive operation
+  category: cloud
+- name: aws-codebuild-delete-resource-policy
+  pattern: (?i)aws\s+delete\-resource\-policy\b
+  severity: block
+  message: DeleteResourcePolicy — destructive operation
+  category: cloud
+- name: aws-codebuild-delete-source-credentials
+  pattern: (?i)aws\s+delete\-source\-credentials\b
+  severity: block
+  message: DeleteSourceCredentials — destructive operation
+  category: cloud
+- name: aws-codebuild-delete-webhook
+  pattern: (?i)aws\s+delete\-webhook\b
+  severity: warn
+  message: DeleteWebhook — destructive operation
+  category: cloud

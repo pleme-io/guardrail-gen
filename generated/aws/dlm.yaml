@@ -1,0 +1,10 @@
+- name: aws-dlm-delete-lifecycle-policy
+  pattern: (?i)aws\s+delete\-lifecycle\-policy\b
+  severity: block
+  message: DeleteLifecyclePolicy — destructive operation
+  category: cloud
+- name: aws-dlm-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

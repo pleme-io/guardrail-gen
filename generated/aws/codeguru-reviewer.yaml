@@ -1,0 +1,10 @@
+- name: aws-codeguru-reviewer-disassociate-repository
+  pattern: (?i)aws\s+disassociate\-repository\b
+  severity: warn
+  message: DisassociateRepository — destructive operation
+  category: cloud
+- name: aws-codeguru-reviewer-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

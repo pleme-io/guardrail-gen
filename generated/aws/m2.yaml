@@ -1,0 +1,25 @@
+- name: aws-m2-cancel-batch-job-execution
+  pattern: (?i)aws\s+cancel\-batch\-job\-execution\b
+  severity: warn
+  message: CancelBatchJobExecution — destructive operation
+  category: cloud
+- name: aws-m2-delete-application
+  pattern: (?i)aws\s+delete\-application\b
+  severity: block
+  message: DeleteApplication — destructive operation
+  category: cloud
+- name: aws-m2-delete-application-from-environment
+  pattern: (?i)aws\s+delete\-application\-from\-environment\b
+  severity: block
+  message: DeleteApplicationFromEnvironment — destructive operation
+  category: cloud
+- name: aws-m2-delete-environment
+  pattern: (?i)aws\s+delete\-environment\b
+  severity: block
+  message: DeleteEnvironment — destructive operation
+  category: cloud
+- name: aws-m2-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

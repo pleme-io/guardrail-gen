@@ -1,0 +1,25 @@
+- name: aws-route53domains-cancel-domain-transfer-to-another-aws-account
+  pattern: (?i)aws\s+cancel\-domain\-transfer\-to\-another\-aws\-account\b
+  severity: block
+  message: CancelDomainTransferToAnotherAwsAccount — destructive operation
+  category: cloud
+- name: aws-route53domains-delete-domain
+  pattern: (?i)aws\s+delete\-domain\b
+  severity: warn
+  message: DeleteDomain — destructive operation
+  category: cloud
+- name: aws-route53domains-delete-tags-for-domain
+  pattern: (?i)aws\s+delete\-tags\-for\-domain\b
+  severity: warn
+  message: DeleteTagsForDomain — destructive operation
+  category: cloud
+- name: aws-route53domains-disable-domain-auto-renew
+  pattern: (?i)aws\s+disable\-domain\-auto\-renew\b
+  severity: warn
+  message: DisableDomainAutoRenew — destructive operation
+  category: cloud
+- name: aws-route53domains-disable-domain-transfer-lock
+  pattern: (?i)aws\s+disable\-domain\-transfer\-lock\b
+  severity: warn
+  message: DisableDomainTransferLock — destructive operation
+  category: cloud

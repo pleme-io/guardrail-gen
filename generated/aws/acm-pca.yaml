@@ -1,0 +1,20 @@
+- name: aws-acm-pca-delete-certificate-authority
+  pattern: (?i)aws\s+delete\-certificate\-authority\b
+  severity: block
+  message: DeleteCertificateAuthority — destructive operation
+  category: cloud
+- name: aws-acm-pca-delete-permission
+  pattern: (?i)aws\s+delete\-permission\b
+  severity: warn
+  message: DeletePermission — destructive operation
+  category: cloud
+- name: aws-acm-pca-delete-policy
+  pattern: (?i)aws\s+delete\-policy\b
+  severity: block
+  message: DeletePolicy — destructive operation
+  category: cloud
+- name: aws-acm-pca-revoke-certificate
+  pattern: (?i)aws\s+revoke\-certificate\b
+  severity: block
+  message: RevokeCertificate — destructive operation
+  category: cloud

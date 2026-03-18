@@ -1,0 +1,15 @@
+- name: aws-codestar-delete-project
+  pattern: (?i)aws\s+delete\-project\b
+  severity: block
+  message: DeleteProject — destructive operation
+  category: cloud
+- name: aws-codestar-delete-user-profile
+  pattern: (?i)aws\s+delete\-user\-profile\b
+  severity: warn
+  message: DeleteUserProfile — destructive operation
+  category: cloud
+- name: aws-codestar-disassociate-team-member
+  pattern: (?i)aws\s+disassociate\-team\-member\b
+  severity: warn
+  message: DisassociateTeamMember — destructive operation
+  category: cloud

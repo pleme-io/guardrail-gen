@@ -1,0 +1,15 @@
+- name: aws-sdb-batch-delete-attributes
+  pattern: (?i)aws\s+batch\-delete\-attributes\b
+  severity: warn
+  message: BatchDeleteAttributes — destructive operation
+  category: cloud
+- name: aws-sdb-delete-attributes
+  pattern: (?i)aws\s+delete\-attributes\b
+  severity: warn
+  message: DeleteAttributes — destructive operation
+  category: cloud
+- name: aws-sdb-delete-domain
+  pattern: (?i)aws\s+delete\-domain\b
+  severity: warn
+  message: DeleteDomain — destructive operation
+  category: cloud

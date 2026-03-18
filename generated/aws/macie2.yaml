@@ -1,0 +1,55 @@
+- name: aws-macie2-delete-allow-list
+  pattern: (?i)aws\s+delete\-allow\-list\b
+  severity: block
+  message: DeleteAllowList — destructive operation
+  category: cloud
+- name: aws-macie2-delete-custom-data-identifier
+  pattern: (?i)aws\s+delete\-custom\-data\-identifier\b
+  severity: block
+  message: DeleteCustomDataIdentifier — destructive operation
+  category: cloud
+- name: aws-macie2-delete-findings-filter
+  pattern: (?i)aws\s+delete\-findings\-filter\b
+  severity: block
+  message: DeleteFindingsFilter — destructive operation
+  category: cloud
+- name: aws-macie2-delete-invitations
+  pattern: (?i)aws\s+delete\-invitations\b
+  severity: warn
+  message: DeleteInvitations — destructive operation
+  category: cloud
+- name: aws-macie2-delete-member
+  pattern: (?i)aws\s+delete\-member\b
+  severity: block
+  message: DeleteMember — destructive operation
+  category: cloud
+- name: aws-macie2-disable-macie
+  pattern: (?i)aws\s+disable\-macie\b
+  severity: block
+  message: DisableMacie — destructive operation
+  category: cloud
+- name: aws-macie2-disable-organization-admin-account
+  pattern: (?i)aws\s+disable\-organization\-admin\-account\b
+  severity: block
+  message: DisableOrganizationAdminAccount — destructive operation
+  category: cloud
+- name: aws-macie2-disassociate-from-administrator-account
+  pattern: (?i)aws\s+disassociate\-from\-administrator\-account\b
+  severity: block
+  message: DisassociateFromAdministratorAccount — destructive operation
+  category: cloud
+- name: aws-macie2-disassociate-from-master-account
+  pattern: (?i)aws\s+disassociate\-from\-master\-account\b
+  severity: block
+  message: DisassociateFromMasterAccount — destructive operation
+  category: cloud
+- name: aws-macie2-disassociate-member
+  pattern: (?i)aws\s+disassociate\-member\b
+  severity: warn
+  message: DisassociateMember — destructive operation
+  category: cloud
+- name: aws-macie2-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

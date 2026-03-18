@@ -1,0 +1,55 @@
+- name: aws-logs-cancel-export-task
+  pattern: (?i)aws\s+cancel\-export\-task\b
+  severity: warn
+  message: CancelExportTask — destructive operation
+  category: cloud
+- name: aws-logs-delete-data-protection-policy
+  pattern: (?i)aws\s+delete\-data\-protection\-policy\b
+  severity: block
+  message: DeleteDataProtectionPolicy — destructive operation
+  category: cloud
+- name: aws-logs-delete-destination
+  pattern: (?i)aws\s+delete\-destination\b
+  severity: warn
+  message: DeleteDestination — destructive operation
+  category: cloud
+- name: aws-logs-delete-log-group
+  pattern: (?i)aws\s+delete\-log\-group\b
+  severity: block
+  message: DeleteLogGroup — destructive operation
+  category: cloud
+- name: aws-logs-delete-log-stream
+  pattern: (?i)aws\s+delete\-log\-stream\b
+  severity: warn
+  message: DeleteLogStream — destructive operation
+  category: cloud
+- name: aws-logs-delete-metric-filter
+  pattern: (?i)aws\s+delete\-metric\-filter\b
+  severity: warn
+  message: DeleteMetricFilter — destructive operation
+  category: cloud
+- name: aws-logs-delete-query-definition
+  pattern: (?i)aws\s+delete\-query\-definition\b
+  severity: warn
+  message: DeleteQueryDefinition — destructive operation
+  category: cloud
+- name: aws-logs-delete-resource-policy
+  pattern: (?i)aws\s+delete\-resource\-policy\b
+  severity: block
+  message: DeleteResourcePolicy — destructive operation
+  category: cloud
+- name: aws-logs-delete-retention-policy
+  pattern: (?i)aws\s+delete\-retention\-policy\b
+  severity: block
+  message: DeleteRetentionPolicy — destructive operation
+  category: cloud
+- name: aws-logs-delete-subscription-filter
+  pattern: (?i)aws\s+delete\-subscription\-filter\b
+  severity: warn
+  message: DeleteSubscriptionFilter — destructive operation
+  category: cloud
+- name: aws-logs-disassociate-kms-key
+  pattern: (?i)aws\s+disassociate\-kms\-key\b
+  severity: block
+  message: DisassociateKmsKey — destructive operation
+  category: cloud

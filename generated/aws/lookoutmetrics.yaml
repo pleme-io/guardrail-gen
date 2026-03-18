@@ -1,0 +1,15 @@
+- name: aws-lookoutmetrics-delete-alert
+  pattern: (?i)aws\s+delete\-alert\b
+  severity: warn
+  message: DeleteAlert — destructive operation
+  category: cloud
+- name: aws-lookoutmetrics-delete-anomaly-detector
+  pattern: (?i)aws\s+delete\-anomaly\-detector\b
+  severity: warn
+  message: DeleteAnomalyDetector — destructive operation
+  category: cloud
+- name: aws-lookoutmetrics-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

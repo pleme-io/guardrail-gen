@@ -1,0 +1,10 @@
+- name: aws-kafkaconnect-delete-connector
+  pattern: (?i)aws\s+delete\-connector\b
+  severity: block
+  message: DeleteConnector — destructive operation
+  category: cloud
+- name: aws-kafkaconnect-delete-custom-plugin
+  pattern: (?i)aws\s+delete\-custom\-plugin\b
+  severity: block
+  message: DeleteCustomPlugin — destructive operation
+  category: cloud

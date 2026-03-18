@@ -1,0 +1,25 @@
+- name: aws-finspace-data-delete-dataset
+  pattern: (?i)aws\s+delete\-dataset\b
+  severity: block
+  message: DeleteDataset — destructive operation
+  category: cloud
+- name: aws-finspace-data-delete-permission-group
+  pattern: (?i)aws\s+delete\-permission\-group\b
+  severity: block
+  message: DeletePermissionGroup — destructive operation
+  category: cloud
+- name: aws-finspace-data-disable-user
+  pattern: (?i)aws\s+disable\-user\b
+  severity: warn
+  message: DisableUser — destructive operation
+  category: cloud
+- name: aws-finspace-data-disassociate-user-from-permission-group
+  pattern: (?i)aws\s+disassociate\-user\-from\-permission\-group\b
+  severity: block
+  message: DisassociateUserFromPermissionGroup — destructive operation
+  category: cloud
+- name: aws-finspace-data-reset-user-password
+  pattern: (?i)aws\s+reset\-user\-password\b
+  severity: warn
+  message: ResetUserPassword — destructive operation
+  category: cloud

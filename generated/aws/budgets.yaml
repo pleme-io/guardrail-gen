@@ -1,0 +1,20 @@
+- name: aws-budgets-delete-budget
+  pattern: (?i)aws\s+delete\-budget\b
+  severity: warn
+  message: DeleteBudget — destructive operation
+  category: cloud
+- name: aws-budgets-delete-budget-action
+  pattern: (?i)aws\s+delete\-budget\-action\b
+  severity: warn
+  message: DeleteBudgetAction — destructive operation
+  category: cloud
+- name: aws-budgets-delete-notification
+  pattern: (?i)aws\s+delete\-notification\b
+  severity: warn
+  message: DeleteNotification — destructive operation
+  category: cloud
+- name: aws-budgets-delete-subscriber
+  pattern: (?i)aws\s+delete\-subscriber\b
+  severity: warn
+  message: DeleteSubscriber — destructive operation
+  category: cloud

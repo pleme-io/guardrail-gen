@@ -1,0 +1,5 @@
+- name: aws-resource-groups-delete-group
+  pattern: (?i)aws\s+delete\-group\b
+  severity: block
+  message: DeleteGroup — destructive operation
+  category: cloud

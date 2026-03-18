@@ -1,0 +1,75 @@
+- name: aws-autoscaling-batch-delete-scheduled-action
+  pattern: (?i)aws\s+batch\-delete\-scheduled\-action\b
+  severity: warn
+  message: BatchDeleteScheduledAction — destructive operation
+  category: cloud
+- name: aws-autoscaling-cancel-instance-refresh
+  pattern: (?i)aws\s+cancel\-instance\-refresh\b
+  severity: block
+  message: CancelInstanceRefresh — destructive operation
+  category: cloud
+- name: aws-autoscaling-delete-auto-scaling-group
+  pattern: (?i)aws\s+delete\-auto\-scaling\-group\b
+  severity: block
+  message: DeleteAutoScalingGroup — destructive operation
+  category: cloud
+- name: aws-autoscaling-delete-launch-configuration
+  pattern: (?i)aws\s+delete\-launch\-configuration\b
+  severity: warn
+  message: DeleteLaunchConfiguration — destructive operation
+  category: cloud
+- name: aws-autoscaling-delete-lifecycle-hook
+  pattern: (?i)aws\s+delete\-lifecycle\-hook\b
+  severity: warn
+  message: DeleteLifecycleHook — destructive operation
+  category: cloud
+- name: aws-autoscaling-delete-notification-configuration
+  pattern: (?i)aws\s+delete\-notification\-configuration\b
+  severity: warn
+  message: DeleteNotificationConfiguration — destructive operation
+  category: cloud
+- name: aws-autoscaling-delete-policy
+  pattern: (?i)aws\s+delete\-policy\b
+  severity: block
+  message: DeletePolicy — destructive operation
+  category: cloud
+- name: aws-autoscaling-delete-scheduled-action
+  pattern: (?i)aws\s+delete\-scheduled\-action\b
+  severity: warn
+  message: DeleteScheduledAction — destructive operation
+  category: cloud
+- name: aws-autoscaling-delete-tags
+  pattern: (?i)aws\s+delete\-tags\b
+  severity: warn
+  message: DeleteTags — destructive operation
+  category: cloud
+- name: aws-autoscaling-delete-warm-pool
+  pattern: (?i)aws\s+delete\-warm\-pool\b
+  severity: warn
+  message: DeleteWarmPool — destructive operation
+  category: cloud
+- name: aws-autoscaling-detach-instances
+  pattern: (?i)aws\s+detach\-instances\b
+  severity: block
+  message: DetachInstances — destructive operation
+  category: cloud
+- name: aws-autoscaling-detach-load-balancer-target-groups
+  pattern: (?i)aws\s+detach\-load\-balancer\-target\-groups\b
+  severity: block
+  message: DetachLoadBalancerTargetGroups — destructive operation
+  category: cloud
+- name: aws-autoscaling-detach-load-balancers
+  pattern: (?i)aws\s+detach\-load\-balancers\b
+  severity: block
+  message: DetachLoadBalancers — destructive operation
+  category: cloud
+- name: aws-autoscaling-disable-metrics-collection
+  pattern: (?i)aws\s+disable\-metrics\-collection\b
+  severity: warn
+  message: DisableMetricsCollection — destructive operation
+  category: cloud
+- name: aws-autoscaling-terminate-instance-in-auto-scaling-group
+  pattern: (?i)aws\s+terminate\-instance\-in\-auto\-scaling\-group\b
+  severity: block
+  message: TerminateInstanceInAutoScalingGroup — destructive operation
+  category: cloud

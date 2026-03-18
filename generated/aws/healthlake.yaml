@@ -1,0 +1,5 @@
+- name: aws-healthlake-delete-f-h-i-r-datastore
+  pattern: (?i)aws\s+delete\-f\-h\-i\-r\-datastore\b
+  severity: warn
+  message: DeleteFHIRDatastore — destructive operation
+  category: cloud

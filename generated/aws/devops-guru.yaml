@@ -1,0 +1,10 @@
+- name: aws-devops-guru-delete-insight
+  pattern: (?i)aws\s+delete\-insight\b
+  severity: block
+  message: DeleteInsight — destructive operation
+  category: cloud
+- name: aws-devops-guru-remove-notification-channel
+  pattern: (?i)aws\s+remove\-notification\-channel\b
+  severity: warn
+  message: RemoveNotificationChannel — destructive operation
+  category: cloud

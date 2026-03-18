@@ -1,0 +1,5 @@
+- name: aws-iot-data-delete-thing-shadow
+  pattern: (?i)aws\s+delete\-thing\-shadow\b
+  severity: block
+  message: DeleteThingShadow — destructive operation
+  category: cloud

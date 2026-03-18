@@ -1,0 +1,10 @@
+- name: aws-codecatalyst-delete-access-token
+  pattern: (?i)aws\s+delete\-access\-token\b
+  severity: block
+  message: DeleteAccessToken — destructive operation
+  category: cloud
+- name: aws-codecatalyst-delete-dev-environment
+  pattern: (?i)aws\s+delete\-dev\-environment\b
+  severity: block
+  message: DeleteDevEnvironment — destructive operation
+  category: cloud

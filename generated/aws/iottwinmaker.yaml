@@ -1,0 +1,25 @@
+- name: aws-iottwinmaker-delete-component-type
+  pattern: (?i)aws\s+delete\-component\-type\b
+  severity: block
+  message: DeleteComponentType — destructive operation
+  category: cloud
+- name: aws-iottwinmaker-delete-entity
+  pattern: (?i)aws\s+delete\-entity\b
+  severity: block
+  message: DeleteEntity — destructive operation
+  category: cloud
+- name: aws-iottwinmaker-delete-scene
+  pattern: (?i)aws\s+delete\-scene\b
+  severity: block
+  message: DeleteScene — destructive operation
+  category: cloud
+- name: aws-iottwinmaker-delete-workspace
+  pattern: (?i)aws\s+delete\-workspace\b
+  severity: block
+  message: DeleteWorkspace — destructive operation
+  category: cloud
+- name: aws-iottwinmaker-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

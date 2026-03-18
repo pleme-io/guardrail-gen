@@ -1,0 +1,15 @@
+- name: aws-qldb-cancel-journal-kinesis-stream
+  pattern: (?i)aws\s+cancel\-journal\-kinesis\-stream\b
+  severity: block
+  message: CancelJournalKinesisStream — destructive operation
+  category: cloud
+- name: aws-qldb-delete-ledger
+  pattern: (?i)aws\s+delete\-ledger\b
+  severity: block
+  message: DeleteLedger — destructive operation
+  category: cloud
+- name: aws-qldb-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

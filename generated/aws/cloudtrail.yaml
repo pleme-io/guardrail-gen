@@ -1,0 +1,25 @@
+- name: aws-cloudtrail-cancel-query
+  pattern: (?i)aws\s+cancel\-query\b
+  severity: warn
+  message: CancelQuery — destructive operation
+  category: cloud
+- name: aws-cloudtrail-delete-event-data-store
+  pattern: (?i)aws\s+delete\-event\-data\-store\b
+  severity: warn
+  message: DeleteEventDataStore — destructive operation
+  category: cloud
+- name: aws-cloudtrail-delete-trail
+  pattern: (?i)aws\s+delete\-trail\b
+  severity: warn
+  message: DeleteTrail — destructive operation
+  category: cloud
+- name: aws-cloudtrail-deregister-organization-delegated-admin
+  pattern: (?i)aws\s+deregister\-organization\-delegated\-admin\b
+  severity: warn
+  message: DeregisterOrganizationDelegatedAdmin — destructive operation
+  category: cloud
+- name: aws-cloudtrail-remove-tags
+  pattern: (?i)aws\s+remove\-tags\b
+  severity: warn
+  message: RemoveTags — destructive operation
+  category: cloud

@@ -1,0 +1,25 @@
+- name: aws-servicecatalog-appregistry-delete-application
+  pattern: (?i)aws\s+delete\-application\b
+  severity: block
+  message: DeleteApplication — destructive operation
+  category: cloud
+- name: aws-servicecatalog-appregistry-delete-attribute-group
+  pattern: (?i)aws\s+delete\-attribute\-group\b
+  severity: block
+  message: DeleteAttributeGroup — destructive operation
+  category: cloud
+- name: aws-servicecatalog-appregistry-disassociate-attribute-group
+  pattern: (?i)aws\s+disassociate\-attribute\-group\b
+  severity: block
+  message: DisassociateAttributeGroup — destructive operation
+  category: cloud
+- name: aws-servicecatalog-appregistry-disassociate-resource
+  pattern: (?i)aws\s+disassociate\-resource\b
+  severity: block
+  message: DisassociateResource — destructive operation
+  category: cloud
+- name: aws-servicecatalog-appregistry-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

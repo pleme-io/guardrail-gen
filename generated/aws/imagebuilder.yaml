@@ -1,0 +1,45 @@
+- name: aws-imagebuilder-cancel-image-creation
+  pattern: (?i)aws\s+cancel\-image\-creation\b
+  severity: warn
+  message: CancelImageCreation — destructive operation
+  category: cloud
+- name: aws-imagebuilder-delete-component
+  pattern: (?i)aws\s+delete\-component\b
+  severity: block
+  message: DeleteComponent — destructive operation
+  category: cloud
+- name: aws-imagebuilder-delete-container-recipe
+  pattern: (?i)aws\s+delete\-container\-recipe\b
+  severity: block
+  message: DeleteContainerRecipe — destructive operation
+  category: cloud
+- name: aws-imagebuilder-delete-distribution-configuration
+  pattern: (?i)aws\s+delete\-distribution\-configuration\b
+  severity: block
+  message: DeleteDistributionConfiguration — destructive operation
+  category: cloud
+- name: aws-imagebuilder-delete-image
+  pattern: (?i)aws\s+delete\-image\b
+  severity: block
+  message: DeleteImage — destructive operation
+  category: cloud
+- name: aws-imagebuilder-delete-image-pipeline
+  pattern: (?i)aws\s+delete\-image\-pipeline\b
+  severity: block
+  message: DeleteImagePipeline — destructive operation
+  category: cloud
+- name: aws-imagebuilder-delete-image-recipe
+  pattern: (?i)aws\s+delete\-image\-recipe\b
+  severity: block
+  message: DeleteImageRecipe — destructive operation
+  category: cloud
+- name: aws-imagebuilder-delete-infrastructure-configuration
+  pattern: (?i)aws\s+delete\-infrastructure\-configuration\b
+  severity: block
+  message: DeleteInfrastructureConfiguration — destructive operation
+  category: cloud
+- name: aws-imagebuilder-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

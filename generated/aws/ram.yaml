@@ -1,0 +1,15 @@
+- name: aws-ram-delete-resource-share
+  pattern: (?i)aws\s+delete\-resource\-share\b
+  severity: block
+  message: DeleteResourceShare — destructive operation
+  category: cloud
+- name: aws-ram-disassociate-resource-share
+  pattern: (?i)aws\s+disassociate\-resource\-share\b
+  severity: warn
+  message: DisassociateResourceShare — destructive operation
+  category: cloud
+- name: aws-ram-disassociate-resource-share-permission
+  pattern: (?i)aws\s+disassociate\-resource\-share\-permission\b
+  severity: warn
+  message: DisassociateResourceSharePermission — destructive operation
+  category: cloud

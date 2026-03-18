@@ -1,0 +1,10 @@
+- name: aws-snowball-cancel-cluster
+  pattern: (?i)aws\s+cancel\-cluster\b
+  severity: block
+  message: CancelCluster — destructive operation
+  category: cloud
+- name: aws-snowball-cancel-job
+  pattern: (?i)aws\s+cancel\-job\b
+  severity: warn
+  message: CancelJob — destructive operation
+  category: cloud

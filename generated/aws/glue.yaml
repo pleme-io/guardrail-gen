@@ -1,0 +1,175 @@
+- name: aws-glue-batch-delete-connection
+  pattern: (?i)aws\s+batch\-delete\-connection\b
+  severity: warn
+  message: BatchDeleteConnection — destructive operation
+  category: cloud
+- name: aws-glue-batch-delete-partition
+  pattern: (?i)aws\s+batch\-delete\-partition\b
+  severity: warn
+  message: BatchDeletePartition — destructive operation
+  category: cloud
+- name: aws-glue-batch-delete-table
+  pattern: (?i)aws\s+batch\-delete\-table\b
+  severity: warn
+  message: BatchDeleteTable — destructive operation
+  category: cloud
+- name: aws-glue-batch-delete-table-version
+  pattern: (?i)aws\s+batch\-delete\-table\-version\b
+  severity: warn
+  message: BatchDeleteTableVersion — destructive operation
+  category: cloud
+- name: aws-glue-cancel-data-quality-rule-recommendation-run
+  pattern: (?i)aws\s+cancel\-data\-quality\-rule\-recommendation\-run\b
+  severity: warn
+  message: CancelDataQualityRuleRecommendationRun — destructive operation
+  category: cloud
+- name: aws-glue-cancel-data-quality-ruleset-evaluation-run
+  pattern: (?i)aws\s+cancel\-data\-quality\-ruleset\-evaluation\-run\b
+  severity: warn
+  message: CancelDataQualityRulesetEvaluationRun — destructive operation
+  category: cloud
+- name: aws-glue-cancel-m-l-task-run
+  pattern: (?i)aws\s+cancel\-m\-l\-task\-run\b
+  severity: warn
+  message: CancelMLTaskRun — destructive operation
+  category: cloud
+- name: aws-glue-cancel-statement
+  pattern: (?i)aws\s+cancel\-statement\b
+  severity: warn
+  message: CancelStatement — destructive operation
+  category: cloud
+- name: aws-glue-delete-blueprint
+  pattern: (?i)aws\s+delete\-blueprint\b
+  severity: warn
+  message: DeleteBlueprint — destructive operation
+  category: cloud
+- name: aws-glue-delete-classifier
+  pattern: (?i)aws\s+delete\-classifier\b
+  severity: warn
+  message: DeleteClassifier — destructive operation
+  category: cloud
+- name: aws-glue-delete-column-statistics-for-partition
+  pattern: (?i)aws\s+delete\-column\-statistics\-for\-partition\b
+  severity: warn
+  message: DeleteColumnStatisticsForPartition — destructive operation
+  category: cloud
+- name: aws-glue-delete-column-statistics-for-table
+  pattern: (?i)aws\s+delete\-column\-statistics\-for\-table\b
+  severity: warn
+  message: DeleteColumnStatisticsForTable — destructive operation
+  category: cloud
+- name: aws-glue-delete-connection
+  pattern: (?i)aws\s+delete\-connection\b
+  severity: warn
+  message: DeleteConnection — destructive operation
+  category: cloud
+- name: aws-glue-delete-crawler
+  pattern: (?i)aws\s+delete\-crawler\b
+  severity: warn
+  message: DeleteCrawler — destructive operation
+  category: cloud
+- name: aws-glue-delete-custom-entity-type
+  pattern: (?i)aws\s+delete\-custom\-entity\-type\b
+  severity: warn
+  message: DeleteCustomEntityType — destructive operation
+  category: cloud
+- name: aws-glue-delete-data-quality-ruleset
+  pattern: (?i)aws\s+delete\-data\-quality\-ruleset\b
+  severity: warn
+  message: DeleteDataQualityRuleset — destructive operation
+  category: cloud
+- name: aws-glue-delete-database
+  pattern: (?i)aws\s+delete\-database\b
+  severity: block
+  message: DeleteDatabase — destructive operation
+  category: cloud
+- name: aws-glue-delete-dev-endpoint
+  pattern: (?i)aws\s+delete\-dev\-endpoint\b
+  severity: warn
+  message: DeleteDevEndpoint — destructive operation
+  category: cloud
+- name: aws-glue-delete-job
+  pattern: (?i)aws\s+delete\-job\b
+  severity: warn
+  message: DeleteJob — destructive operation
+  category: cloud
+- name: aws-glue-delete-m-l-transform
+  pattern: (?i)aws\s+delete\-m\-l\-transform\b
+  severity: warn
+  message: DeleteMLTransform — destructive operation
+  category: cloud
+- name: aws-glue-delete-partition
+  pattern: (?i)aws\s+delete\-partition\b
+  severity: warn
+  message: DeletePartition — destructive operation
+  category: cloud
+- name: aws-glue-delete-partition-index
+  pattern: (?i)aws\s+delete\-partition\-index\b
+  severity: warn
+  message: DeletePartitionIndex — destructive operation
+  category: cloud
+- name: aws-glue-delete-registry
+  pattern: (?i)aws\s+delete\-registry\b
+  severity: warn
+  message: DeleteRegistry — destructive operation
+  category: cloud
+- name: aws-glue-delete-resource-policy
+  pattern: (?i)aws\s+delete\-resource\-policy\b
+  severity: block
+  message: DeleteResourcePolicy — destructive operation
+  category: cloud
+- name: aws-glue-delete-schema
+  pattern: (?i)aws\s+delete\-schema\b
+  severity: warn
+  message: DeleteSchema — destructive operation
+  category: cloud
+- name: aws-glue-delete-schema-versions
+  pattern: (?i)aws\s+delete\-schema\-versions\b
+  severity: warn
+  message: DeleteSchemaVersions — destructive operation
+  category: cloud
+- name: aws-glue-delete-security-configuration
+  pattern: (?i)aws\s+delete\-security\-configuration\b
+  severity: warn
+  message: DeleteSecurityConfiguration — destructive operation
+  category: cloud
+- name: aws-glue-delete-session
+  pattern: (?i)aws\s+delete\-session\b
+  severity: warn
+  message: DeleteSession — destructive operation
+  category: cloud
+- name: aws-glue-delete-table
+  pattern: (?i)aws\s+delete\-table\b
+  severity: warn
+  message: DeleteTable — destructive operation
+  category: cloud
+- name: aws-glue-delete-table-version
+  pattern: (?i)aws\s+delete\-table\-version\b
+  severity: warn
+  message: DeleteTableVersion — destructive operation
+  category: cloud
+- name: aws-glue-delete-trigger
+  pattern: (?i)aws\s+delete\-trigger\b
+  severity: warn
+  message: DeleteTrigger — destructive operation
+  category: cloud
+- name: aws-glue-delete-user-defined-function
+  pattern: (?i)aws\s+delete\-user\-defined\-function\b
+  severity: warn
+  message: DeleteUserDefinedFunction — destructive operation
+  category: cloud
+- name: aws-glue-delete-workflow
+  pattern: (?i)aws\s+delete\-workflow\b
+  severity: warn
+  message: DeleteWorkflow — destructive operation
+  category: cloud
+- name: aws-glue-remove-schema-version-metadata
+  pattern: (?i)aws\s+remove\-schema\-version\-metadata\b
+  severity: warn
+  message: RemoveSchemaVersionMetadata — destructive operation
+  category: cloud
+- name: aws-glue-reset-job-bookmark
+  pattern: (?i)aws\s+reset\-job\-bookmark\b
+  severity: warn
+  message: ResetJobBookmark — destructive operation
+  category: cloud

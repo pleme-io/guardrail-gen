@@ -1,0 +1,60 @@
+- name: aws-greengrass-delete-connector-definition
+  pattern: (?i)aws\s+delete\-connector\-definition\b
+  severity: block
+  message: DeleteConnectorDefinition — destructive operation
+  category: cloud
+- name: aws-greengrass-delete-core-definition
+  pattern: (?i)aws\s+delete\-core\-definition\b
+  severity: block
+  message: DeleteCoreDefinition — destructive operation
+  category: cloud
+- name: aws-greengrass-delete-device-definition
+  pattern: (?i)aws\s+delete\-device\-definition\b
+  severity: block
+  message: DeleteDeviceDefinition — destructive operation
+  category: cloud
+- name: aws-greengrass-delete-function-definition
+  pattern: (?i)aws\s+delete\-function\-definition\b
+  severity: block
+  message: DeleteFunctionDefinition — destructive operation
+  category: cloud
+- name: aws-greengrass-delete-group
+  pattern: (?i)aws\s+delete\-group\b
+  severity: block
+  message: DeleteGroup — destructive operation
+  category: cloud
+- name: aws-greengrass-delete-logger-definition
+  pattern: (?i)aws\s+delete\-logger\-definition\b
+  severity: warn
+  message: DeleteLoggerDefinition — destructive operation
+  category: cloud
+- name: aws-greengrass-delete-resource-definition
+  pattern: (?i)aws\s+delete\-resource\-definition\b
+  severity: block
+  message: DeleteResourceDefinition — destructive operation
+  category: cloud
+- name: aws-greengrass-delete-subscription-definition
+  pattern: (?i)aws\s+delete\-subscription\-definition\b
+  severity: warn
+  message: DeleteSubscriptionDefinition — destructive operation
+  category: cloud
+- name: aws-greengrass-disassociate-role-from-group
+  pattern: (?i)aws\s+disassociate\-role\-from\-group\b
+  severity: block
+  message: DisassociateRoleFromGroup — destructive operation
+  category: cloud
+- name: aws-greengrass-disassociate-service-role-from-account
+  pattern: (?i)aws\s+disassociate\-service\-role\-from\-account\b
+  severity: block
+  message: DisassociateServiceRoleFromAccount — destructive operation
+  category: cloud
+- name: aws-greengrass-reset-deployments
+  pattern: (?i)aws\s+reset\-deployments\b
+  severity: block
+  message: ResetDeployments — destructive operation
+  category: cloud
+- name: aws-greengrass-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

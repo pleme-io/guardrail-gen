@@ -1,0 +1,15 @@
+- name: aws-ssm-sap-delete-resource-permission
+  pattern: (?i)aws\s+delete\-resource\-permission\b
+  severity: warn
+  message: DeleteResourcePermission — destructive operation
+  category: cloud
+- name: aws-ssm-sap-deregister-application
+  pattern: (?i)aws\s+deregister\-application\b
+  severity: warn
+  message: DeregisterApplication — destructive operation
+  category: cloud
+- name: aws-ssm-sap-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

@@ -1,0 +1,65 @@
+- name: aws-robomaker-batch-delete-worlds
+  pattern: (?i)aws\s+batch\-delete\-worlds\b
+  severity: warn
+  message: BatchDeleteWorlds — destructive operation
+  category: cloud
+- name: aws-robomaker-cancel-deployment-job
+  pattern: (?i)aws\s+cancel\-deployment\-job\b
+  severity: warn
+  message: CancelDeploymentJob — destructive operation
+  category: cloud
+- name: aws-robomaker-cancel-simulation-job
+  pattern: (?i)aws\s+cancel\-simulation\-job\b
+  severity: warn
+  message: CancelSimulationJob — destructive operation
+  category: cloud
+- name: aws-robomaker-cancel-simulation-job-batch
+  pattern: (?i)aws\s+cancel\-simulation\-job\-batch\b
+  severity: warn
+  message: CancelSimulationJobBatch — destructive operation
+  category: cloud
+- name: aws-robomaker-cancel-world-export-job
+  pattern: (?i)aws\s+cancel\-world\-export\-job\b
+  severity: warn
+  message: CancelWorldExportJob — destructive operation
+  category: cloud
+- name: aws-robomaker-cancel-world-generation-job
+  pattern: (?i)aws\s+cancel\-world\-generation\-job\b
+  severity: warn
+  message: CancelWorldGenerationJob — destructive operation
+  category: cloud
+- name: aws-robomaker-delete-fleet
+  pattern: (?i)aws\s+delete\-fleet\b
+  severity: warn
+  message: DeleteFleet — destructive operation
+  category: cloud
+- name: aws-robomaker-delete-robot
+  pattern: (?i)aws\s+delete\-robot\b
+  severity: warn
+  message: DeleteRobot — destructive operation
+  category: cloud
+- name: aws-robomaker-delete-robot-application
+  pattern: (?i)aws\s+delete\-robot\-application\b
+  severity: warn
+  message: DeleteRobotApplication — destructive operation
+  category: cloud
+- name: aws-robomaker-delete-simulation-application
+  pattern: (?i)aws\s+delete\-simulation\-application\b
+  severity: warn
+  message: DeleteSimulationApplication — destructive operation
+  category: cloud
+- name: aws-robomaker-delete-world-template
+  pattern: (?i)aws\s+delete\-world\-template\b
+  severity: warn
+  message: DeleteWorldTemplate — destructive operation
+  category: cloud
+- name: aws-robomaker-deregister-robot
+  pattern: (?i)aws\s+deregister\-robot\b
+  severity: warn
+  message: DeregisterRobot — destructive operation
+  category: cloud
+- name: aws-robomaker-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

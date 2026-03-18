@@ -1,0 +1,50 @@
+- name: aws-route53resolver-delete-firewall-domain-list
+  pattern: (?i)aws\s+delete\-firewall\-domain\-list\b
+  severity: warn
+  message: DeleteFirewallDomainList — destructive operation
+  category: cloud
+- name: aws-route53resolver-delete-firewall-rule
+  pattern: (?i)aws\s+delete\-firewall\-rule\b
+  severity: warn
+  message: DeleteFirewallRule — destructive operation
+  category: cloud
+- name: aws-route53resolver-delete-firewall-rule-group
+  pattern: (?i)aws\s+delete\-firewall\-rule\-group\b
+  severity: block
+  message: DeleteFirewallRuleGroup — destructive operation
+  category: cloud
+- name: aws-route53resolver-delete-resolver-endpoint
+  pattern: (?i)aws\s+delete\-resolver\-endpoint\b
+  severity: warn
+  message: DeleteResolverEndpoint — destructive operation
+  category: cloud
+- name: aws-route53resolver-delete-resolver-query-log-config
+  pattern: (?i)aws\s+delete\-resolver\-query\-log\-config\b
+  severity: warn
+  message: DeleteResolverQueryLogConfig — destructive operation
+  category: cloud
+- name: aws-route53resolver-delete-resolver-rule
+  pattern: (?i)aws\s+delete\-resolver\-rule\b
+  severity: warn
+  message: DeleteResolverRule — destructive operation
+  category: cloud
+- name: aws-route53resolver-disassociate-firewall-rule-group
+  pattern: (?i)aws\s+disassociate\-firewall\-rule\-group\b
+  severity: block
+  message: DisassociateFirewallRuleGroup — destructive operation
+  category: cloud
+- name: aws-route53resolver-disassociate-resolver-endpoint-ip-address
+  pattern: (?i)aws\s+disassociate\-resolver\-endpoint\-ip\-address\b
+  severity: warn
+  message: DisassociateResolverEndpointIpAddress — destructive operation
+  category: cloud
+- name: aws-route53resolver-disassociate-resolver-query-log-config
+  pattern: (?i)aws\s+disassociate\-resolver\-query\-log\-config\b
+  severity: warn
+  message: DisassociateResolverQueryLogConfig — destructive operation
+  category: cloud
+- name: aws-route53resolver-disassociate-resolver-rule
+  pattern: (?i)aws\s+disassociate\-resolver\-rule\b
+  severity: warn
+  message: DisassociateResolverRule — destructive operation
+  category: cloud

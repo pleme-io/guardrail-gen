@@ -1,0 +1,40 @@
+- name: aws-ecs-delete-account-setting
+  pattern: (?i)aws\s+delete\-account\-setting\b
+  severity: block
+  message: DeleteAccountSetting — destructive operation
+  category: cloud
+- name: aws-ecs-delete-attributes
+  pattern: (?i)aws\s+delete\-attributes\b
+  severity: warn
+  message: DeleteAttributes — destructive operation
+  category: cloud
+- name: aws-ecs-delete-capacity-provider
+  pattern: (?i)aws\s+delete\-capacity\-provider\b
+  severity: warn
+  message: DeleteCapacityProvider — destructive operation
+  category: cloud
+- name: aws-ecs-delete-cluster
+  pattern: (?i)aws\s+delete\-cluster\b
+  severity: block
+  message: DeleteCluster — destructive operation
+  category: cloud
+- name: aws-ecs-delete-service
+  pattern: (?i)aws\s+delete\-service\b
+  severity: warn
+  message: DeleteService — destructive operation
+  category: cloud
+- name: aws-ecs-delete-task-set
+  pattern: (?i)aws\s+delete\-task\-set\b
+  severity: warn
+  message: DeleteTaskSet — destructive operation
+  category: cloud
+- name: aws-ecs-deregister-container-instance
+  pattern: (?i)aws\s+deregister\-container\-instance\b
+  severity: block
+  message: DeregisterContainerInstance — destructive operation
+  category: cloud
+- name: aws-ecs-deregister-task-definition
+  pattern: (?i)aws\s+deregister\-task\-definition\b
+  severity: warn
+  message: DeregisterTaskDefinition — destructive operation
+  category: cloud

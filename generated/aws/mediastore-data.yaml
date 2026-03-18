@@ -1,0 +1,5 @@
+- name: aws-mediastore-data-delete-object
+  pattern: (?i)aws\s+delete\-object\b
+  severity: block
+  message: DeleteObject — destructive operation
+  category: cloud

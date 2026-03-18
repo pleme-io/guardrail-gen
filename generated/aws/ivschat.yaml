@@ -1,0 +1,20 @@
+- name: aws-ivschat-delete-logging-configuration
+  pattern: (?i)aws\s+delete\-logging\-configuration\b
+  severity: warn
+  message: DeleteLoggingConfiguration — destructive operation
+  category: cloud
+- name: aws-ivschat-delete-message
+  pattern: (?i)aws\s+delete\-message\b
+  severity: warn
+  message: DeleteMessage — destructive operation
+  category: cloud
+- name: aws-ivschat-delete-room
+  pattern: (?i)aws\s+delete\-room\b
+  severity: warn
+  message: DeleteRoom — destructive operation
+  category: cloud
+- name: aws-ivschat-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

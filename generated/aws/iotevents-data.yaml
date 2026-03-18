@@ -1,0 +1,15 @@
+- name: aws-iotevents-data-batch-delete-detector
+  pattern: (?i)aws\s+batch\-delete\-detector\b
+  severity: warn
+  message: BatchDeleteDetector — destructive operation
+  category: cloud
+- name: aws-iotevents-data-batch-disable-alarm
+  pattern: (?i)aws\s+batch\-disable\-alarm\b
+  severity: warn
+  message: BatchDisableAlarm — destructive operation
+  category: cloud
+- name: aws-iotevents-data-batch-reset-alarm
+  pattern: (?i)aws\s+batch\-reset\-alarm\b
+  severity: warn
+  message: BatchResetAlarm — destructive operation
+  category: cloud

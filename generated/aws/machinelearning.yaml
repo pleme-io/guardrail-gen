@@ -1,0 +1,30 @@
+- name: aws-machinelearning-delete-batch-prediction
+  pattern: (?i)aws\s+delete\-batch\-prediction\b
+  severity: warn
+  message: DeleteBatchPrediction — destructive operation
+  category: cloud
+- name: aws-machinelearning-delete-data-source
+  pattern: (?i)aws\s+delete\-data\-source\b
+  severity: warn
+  message: DeleteDataSource — destructive operation
+  category: cloud
+- name: aws-machinelearning-delete-evaluation
+  pattern: (?i)aws\s+delete\-evaluation\b
+  severity: warn
+  message: DeleteEvaluation — destructive operation
+  category: cloud
+- name: aws-machinelearning-delete-m-l-model
+  pattern: (?i)aws\s+delete\-m\-l\-model\b
+  severity: warn
+  message: DeleteMLModel — destructive operation
+  category: cloud
+- name: aws-machinelearning-delete-realtime-endpoint
+  pattern: (?i)aws\s+delete\-realtime\-endpoint\b
+  severity: warn
+  message: DeleteRealtimeEndpoint — destructive operation
+  category: cloud
+- name: aws-machinelearning-delete-tags
+  pattern: (?i)aws\s+delete\-tags\b
+  severity: warn
+  message: DeleteTags — destructive operation
+  category: cloud

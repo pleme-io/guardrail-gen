@@ -1,0 +1,30 @@
+- name: aws-drs-delete-job
+  pattern: (?i)aws\s+delete\-job\b
+  severity: warn
+  message: DeleteJob — destructive operation
+  category: cloud
+- name: aws-drs-delete-recovery-instance
+  pattern: (?i)aws\s+delete\-recovery\-instance\b
+  severity: block
+  message: DeleteRecoveryInstance — destructive operation
+  category: cloud
+- name: aws-drs-delete-replication-configuration-template
+  pattern: (?i)aws\s+delete\-replication\-configuration\-template\b
+  severity: warn
+  message: DeleteReplicationConfigurationTemplate — destructive operation
+  category: cloud
+- name: aws-drs-delete-source-server
+  pattern: (?i)aws\s+delete\-source\-server\b
+  severity: block
+  message: DeleteSourceServer — destructive operation
+  category: cloud
+- name: aws-drs-terminate-recovery-instances
+  pattern: (?i)aws\s+terminate\-recovery\-instances\b
+  severity: block
+  message: TerminateRecoveryInstances — destructive operation
+  category: cloud
+- name: aws-drs-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

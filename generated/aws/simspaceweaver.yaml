@@ -1,0 +1,15 @@
+- name: aws-simspaceweaver-delete-app
+  pattern: (?i)aws\s+delete\-app\b
+  severity: block
+  message: DeleteApp — destructive operation
+  category: cloud
+- name: aws-simspaceweaver-delete-simulation
+  pattern: (?i)aws\s+delete\-simulation\b
+  severity: block
+  message: DeleteSimulation — destructive operation
+  category: cloud
+- name: aws-simspaceweaver-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

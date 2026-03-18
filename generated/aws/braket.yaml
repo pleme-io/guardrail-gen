@@ -1,0 +1,15 @@
+- name: aws-braket-cancel-job
+  pattern: (?i)aws\s+cancel\-job\b
+  severity: warn
+  message: CancelJob — destructive operation
+  category: cloud
+- name: aws-braket-cancel-quantum-task
+  pattern: (?i)aws\s+cancel\-quantum\-task\b
+  severity: warn
+  message: CancelQuantumTask — destructive operation
+  category: cloud
+- name: aws-braket-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

@@ -1,0 +1,5 @@
+- name: aws-cur-delete-report-definition
+  pattern: (?i)aws\s+delete\-report\-definition\b
+  severity: warn
+  message: DeleteReportDefinition — destructive operation
+  category: cloud

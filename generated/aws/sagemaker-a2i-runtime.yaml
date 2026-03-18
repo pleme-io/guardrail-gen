@@ -1,0 +1,5 @@
+- name: aws-sagemaker-a2i-runtime-delete-human-loop
+  pattern: (?i)aws\s+delete\-human\-loop\b
+  severity: block
+  message: DeleteHumanLoop — destructive operation
+  category: cloud

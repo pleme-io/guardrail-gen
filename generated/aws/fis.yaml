@@ -1,0 +1,15 @@
+- name: aws-fis-delete-experiment-template
+  pattern: (?i)aws\s+delete\-experiment\-template\b
+  severity: block
+  message: DeleteExperimentTemplate — destructive operation
+  category: cloud
+- name: aws-fis-stop-experiment
+  pattern: (?i)aws\s+stop\-experiment\b
+  severity: block
+  message: StopExperiment — destructive operation
+  category: cloud
+- name: aws-fis-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

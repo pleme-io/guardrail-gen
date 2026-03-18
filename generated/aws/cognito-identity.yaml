@@ -1,0 +1,10 @@
+- name: aws-cognito-identity-delete-identities
+  pattern: (?i)aws\s+delete\-identities\b
+  severity: warn
+  message: DeleteIdentities — destructive operation
+  category: cloud
+- name: aws-cognito-identity-delete-identity-pool
+  pattern: (?i)aws\s+delete\-identity\-pool\b
+  severity: warn
+  message: DeleteIdentityPool — destructive operation
+  category: cloud

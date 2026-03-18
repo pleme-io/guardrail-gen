@@ -1,0 +1,35 @@
+- name: aws-greengrassv2-batch-disassociate-client-device-from-core-device
+  pattern: (?i)aws\s+batch\-disassociate\-client\-device\-from\-core\-device\b
+  severity: warn
+  message: BatchDisassociateClientDeviceFromCoreDevice — destructive operation
+  category: cloud
+- name: aws-greengrassv2-cancel-deployment
+  pattern: (?i)aws\s+cancel\-deployment\b
+  severity: warn
+  message: CancelDeployment — destructive operation
+  category: cloud
+- name: aws-greengrassv2-delete-component
+  pattern: (?i)aws\s+delete\-component\b
+  severity: block
+  message: DeleteComponent — destructive operation
+  category: cloud
+- name: aws-greengrassv2-delete-core-device
+  pattern: (?i)aws\s+delete\-core\-device\b
+  severity: block
+  message: DeleteCoreDevice — destructive operation
+  category: cloud
+- name: aws-greengrassv2-delete-deployment
+  pattern: (?i)aws\s+delete\-deployment\b
+  severity: block
+  message: DeleteDeployment — destructive operation
+  category: cloud
+- name: aws-greengrassv2-disassociate-service-role-from-account
+  pattern: (?i)aws\s+disassociate\-service\-role\-from\-account\b
+  severity: block
+  message: DisassociateServiceRoleFromAccount — destructive operation
+  category: cloud
+- name: aws-greengrassv2-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

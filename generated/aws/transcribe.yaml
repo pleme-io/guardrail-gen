@@ -1,0 +1,40 @@
+- name: aws-transcribe-delete-call-analytics-category
+  pattern: (?i)aws\s+delete\-call\-analytics\-category\b
+  severity: warn
+  message: DeleteCallAnalyticsCategory — destructive operation
+  category: cloud
+- name: aws-transcribe-delete-call-analytics-job
+  pattern: (?i)aws\s+delete\-call\-analytics\-job\b
+  severity: warn
+  message: DeleteCallAnalyticsJob — destructive operation
+  category: cloud
+- name: aws-transcribe-delete-language-model
+  pattern: (?i)aws\s+delete\-language\-model\b
+  severity: warn
+  message: DeleteLanguageModel — destructive operation
+  category: cloud
+- name: aws-transcribe-delete-medical-transcription-job
+  pattern: (?i)aws\s+delete\-medical\-transcription\-job\b
+  severity: warn
+  message: DeleteMedicalTranscriptionJob — destructive operation
+  category: cloud
+- name: aws-transcribe-delete-medical-vocabulary
+  pattern: (?i)aws\s+delete\-medical\-vocabulary\b
+  severity: warn
+  message: DeleteMedicalVocabulary — destructive operation
+  category: cloud
+- name: aws-transcribe-delete-transcription-job
+  pattern: (?i)aws\s+delete\-transcription\-job\b
+  severity: warn
+  message: DeleteTranscriptionJob — destructive operation
+  category: cloud
+- name: aws-transcribe-delete-vocabulary
+  pattern: (?i)aws\s+delete\-vocabulary\b
+  severity: warn
+  message: DeleteVocabulary — destructive operation
+  category: cloud
+- name: aws-transcribe-delete-vocabulary-filter
+  pattern: (?i)aws\s+delete\-vocabulary\-filter\b
+  severity: warn
+  message: DeleteVocabularyFilter — destructive operation
+  category: cloud

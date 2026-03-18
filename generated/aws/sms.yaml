@@ -1,0 +1,40 @@
+- name: aws-sms-delete-app
+  pattern: (?i)aws\s+delete\-app\b
+  severity: warn
+  message: DeleteApp — destructive operation
+  category: cloud
+- name: aws-sms-delete-app-launch-configuration
+  pattern: (?i)aws\s+delete\-app\-launch\-configuration\b
+  severity: warn
+  message: DeleteAppLaunchConfiguration — destructive operation
+  category: cloud
+- name: aws-sms-delete-app-replication-configuration
+  pattern: (?i)aws\s+delete\-app\-replication\-configuration\b
+  severity: warn
+  message: DeleteAppReplicationConfiguration — destructive operation
+  category: cloud
+- name: aws-sms-delete-app-validation-configuration
+  pattern: (?i)aws\s+delete\-app\-validation\-configuration\b
+  severity: warn
+  message: DeleteAppValidationConfiguration — destructive operation
+  category: cloud
+- name: aws-sms-delete-replication-job
+  pattern: (?i)aws\s+delete\-replication\-job\b
+  severity: warn
+  message: DeleteReplicationJob — destructive operation
+  category: cloud
+- name: aws-sms-delete-server-catalog
+  pattern: (?i)aws\s+delete\-server\-catalog\b
+  severity: block
+  message: DeleteServerCatalog — destructive operation
+  category: cloud
+- name: aws-sms-disassociate-connector
+  pattern: (?i)aws\s+disassociate\-connector\b
+  severity: warn
+  message: DisassociateConnector — destructive operation
+  category: cloud
+- name: aws-sms-terminate-app
+  pattern: (?i)aws\s+terminate\-app\b
+  severity: warn
+  message: TerminateApp — destructive operation
+  category: cloud

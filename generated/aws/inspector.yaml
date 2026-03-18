@@ -1,0 +1,20 @@
+- name: aws-inspector-delete-assessment-run
+  pattern: (?i)aws\s+delete\-assessment\-run\b
+  severity: warn
+  message: DeleteAssessmentRun — destructive operation
+  category: cloud
+- name: aws-inspector-delete-assessment-target
+  pattern: (?i)aws\s+delete\-assessment\-target\b
+  severity: block
+  message: DeleteAssessmentTarget — destructive operation
+  category: cloud
+- name: aws-inspector-delete-assessment-template
+  pattern: (?i)aws\s+delete\-assessment\-template\b
+  severity: warn
+  message: DeleteAssessmentTemplate — destructive operation
+  category: cloud
+- name: aws-inspector-remove-attributes-from-findings
+  pattern: (?i)aws\s+remove\-attributes\-from\-findings\b
+  severity: warn
+  message: RemoveAttributesFromFindings — destructive operation
+  category: cloud

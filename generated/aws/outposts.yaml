@@ -1,0 +1,20 @@
+- name: aws-outposts-cancel-order
+  pattern: (?i)aws\s+cancel\-order\b
+  severity: warn
+  message: CancelOrder — destructive operation
+  category: cloud
+- name: aws-outposts-delete-outpost
+  pattern: (?i)aws\s+delete\-outpost\b
+  severity: block
+  message: DeleteOutpost — destructive operation
+  category: cloud
+- name: aws-outposts-delete-site
+  pattern: (?i)aws\s+delete\-site\b
+  severity: block
+  message: DeleteSite — destructive operation
+  category: cloud
+- name: aws-outposts-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

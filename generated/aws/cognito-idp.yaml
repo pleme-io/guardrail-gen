@@ -1,0 +1,75 @@
+- name: aws-cognito-idp-admin-delete-user
+  pattern: (?i)aws\s+admin\-delete\-user\b
+  severity: warn
+  message: AdminDeleteUser — destructive operation
+  category: cloud
+- name: aws-cognito-idp-admin-delete-user-attributes
+  pattern: (?i)aws\s+admin\-delete\-user\-attributes\b
+  severity: warn
+  message: AdminDeleteUserAttributes — destructive operation
+  category: cloud
+- name: aws-cognito-idp-admin-disable-provider-for-user
+  pattern: (?i)aws\s+admin\-disable\-provider\-for\-user\b
+  severity: warn
+  message: AdminDisableProviderForUser — destructive operation
+  category: cloud
+- name: aws-cognito-idp-admin-disable-user
+  pattern: (?i)aws\s+admin\-disable\-user\b
+  severity: warn
+  message: AdminDisableUser — destructive operation
+  category: cloud
+- name: aws-cognito-idp-admin-remove-user-from-group
+  pattern: (?i)aws\s+admin\-remove\-user\-from\-group\b
+  severity: block
+  message: AdminRemoveUserFromGroup — destructive operation
+  category: cloud
+- name: aws-cognito-idp-admin-reset-user-password
+  pattern: (?i)aws\s+admin\-reset\-user\-password\b
+  severity: warn
+  message: AdminResetUserPassword — destructive operation
+  category: cloud
+- name: aws-cognito-idp-delete-group
+  pattern: (?i)aws\s+delete\-group\b
+  severity: block
+  message: DeleteGroup — destructive operation
+  category: cloud
+- name: aws-cognito-idp-delete-identity-provider
+  pattern: (?i)aws\s+delete\-identity\-provider\b
+  severity: warn
+  message: DeleteIdentityProvider — destructive operation
+  category: cloud
+- name: aws-cognito-idp-delete-resource-server
+  pattern: (?i)aws\s+delete\-resource\-server\b
+  severity: block
+  message: DeleteResourceServer — destructive operation
+  category: cloud
+- name: aws-cognito-idp-delete-user
+  pattern: (?i)aws\s+delete\-user\b
+  severity: warn
+  message: DeleteUser — destructive operation
+  category: cloud
+- name: aws-cognito-idp-delete-user-attributes
+  pattern: (?i)aws\s+delete\-user\-attributes\b
+  severity: warn
+  message: DeleteUserAttributes — destructive operation
+  category: cloud
+- name: aws-cognito-idp-delete-user-pool
+  pattern: (?i)aws\s+delete\-user\-pool\b
+  severity: warn
+  message: DeleteUserPool — destructive operation
+  category: cloud
+- name: aws-cognito-idp-delete-user-pool-client
+  pattern: (?i)aws\s+delete\-user\-pool\-client\b
+  severity: warn
+  message: DeleteUserPoolClient — destructive operation
+  category: cloud
+- name: aws-cognito-idp-delete-user-pool-domain
+  pattern: (?i)aws\s+delete\-user\-pool\-domain\b
+  severity: warn
+  message: DeleteUserPoolDomain — destructive operation
+  category: cloud
+- name: aws-cognito-idp-revoke-token
+  pattern: (?i)aws\s+revoke\-token\b
+  severity: warn
+  message: RevokeToken — destructive operation
+  category: cloud

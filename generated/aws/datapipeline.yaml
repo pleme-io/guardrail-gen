@@ -1,0 +1,10 @@
+- name: aws-datapipeline-delete-pipeline
+  pattern: (?i)aws\s+delete\-pipeline\b
+  severity: warn
+  message: DeletePipeline — destructive operation
+  category: cloud
+- name: aws-datapipeline-remove-tags
+  pattern: (?i)aws\s+remove\-tags\b
+  severity: warn
+  message: RemoveTags — destructive operation
+  category: cloud

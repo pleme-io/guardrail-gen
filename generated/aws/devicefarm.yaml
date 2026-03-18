@@ -1,0 +1,45 @@
+- name: aws-devicefarm-delete-device-pool
+  pattern: (?i)aws\s+delete\-device\-pool\b
+  severity: warn
+  message: DeleteDevicePool — destructive operation
+  category: cloud
+- name: aws-devicefarm-delete-instance-profile
+  pattern: (?i)aws\s+delete\-instance\-profile\b
+  severity: block
+  message: DeleteInstanceProfile — destructive operation
+  category: cloud
+- name: aws-devicefarm-delete-network-profile
+  pattern: (?i)aws\s+delete\-network\-profile\b
+  severity: warn
+  message: DeleteNetworkProfile — destructive operation
+  category: cloud
+- name: aws-devicefarm-delete-project
+  pattern: (?i)aws\s+delete\-project\b
+  severity: block
+  message: DeleteProject — destructive operation
+  category: cloud
+- name: aws-devicefarm-delete-remote-access-session
+  pattern: (?i)aws\s+delete\-remote\-access\-session\b
+  severity: warn
+  message: DeleteRemoteAccessSession — destructive operation
+  category: cloud
+- name: aws-devicefarm-delete-run
+  pattern: (?i)aws\s+delete\-run\b
+  severity: warn
+  message: DeleteRun — destructive operation
+  category: cloud
+- name: aws-devicefarm-delete-test-grid-project
+  pattern: (?i)aws\s+delete\-test\-grid\-project\b
+  severity: block
+  message: DeleteTestGridProject — destructive operation
+  category: cloud
+- name: aws-devicefarm-delete-upload
+  pattern: (?i)aws\s+delete\-upload\b
+  severity: warn
+  message: DeleteUpload — destructive operation
+  category: cloud
+- name: aws-devicefarm-delete-v-p-c-e-configuration
+  pattern: (?i)aws\s+delete\-v\-p\-c\-e\-configuration\b
+  severity: warn
+  message: DeleteVPCEConfiguration — destructive operation
+  category: cloud

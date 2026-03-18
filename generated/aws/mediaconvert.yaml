@@ -1,0 +1,30 @@
+- name: aws-mediaconvert-cancel-job
+  pattern: (?i)aws\s+cancel\-job\b
+  severity: block
+  message: CancelJob — destructive operation
+  category: cloud
+- name: aws-mediaconvert-delete-job-template
+  pattern: (?i)aws\s+delete\-job\-template\b
+  severity: block
+  message: DeleteJobTemplate — destructive operation
+  category: cloud
+- name: aws-mediaconvert-delete-policy
+  pattern: (?i)aws\s+delete\-policy\b
+  severity: block
+  message: DeletePolicy — destructive operation
+  category: cloud
+- name: aws-mediaconvert-delete-preset
+  pattern: (?i)aws\s+delete\-preset\b
+  severity: block
+  message: DeletePreset — destructive operation
+  category: cloud
+- name: aws-mediaconvert-delete-queue
+  pattern: (?i)aws\s+delete\-queue\b
+  severity: warn
+  message: DeleteQueue — destructive operation
+  category: cloud
+- name: aws-mediaconvert-disassociate-certificate
+  pattern: (?i)aws\s+disassociate\-certificate\b
+  severity: block
+  message: DisassociateCertificate — destructive operation
+  category: cloud

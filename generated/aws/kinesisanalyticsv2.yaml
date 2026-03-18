@@ -1,0 +1,35 @@
+- name: aws-kinesisanalyticsv2-delete-application
+  pattern: (?i)aws\s+delete\-application\b
+  severity: warn
+  message: DeleteApplication — destructive operation
+  category: cloud
+- name: aws-kinesisanalyticsv2-delete-application-cloud-watch-logging-option
+  pattern: (?i)aws\s+delete\-application\-cloud\-watch\-logging\-option\b
+  severity: warn
+  message: DeleteApplicationCloudWatchLoggingOption — destructive operation
+  category: cloud
+- name: aws-kinesisanalyticsv2-delete-application-input-processing-configuration
+  pattern: (?i)aws\s+delete\-application\-input\-processing\-configuration\b
+  severity: warn
+  message: DeleteApplicationInputProcessingConfiguration — destructive operation
+  category: cloud
+- name: aws-kinesisanalyticsv2-delete-application-output
+  pattern: (?i)aws\s+delete\-application\-output\b
+  severity: warn
+  message: DeleteApplicationOutput — destructive operation
+  category: cloud
+- name: aws-kinesisanalyticsv2-delete-application-reference-data-source
+  pattern: (?i)aws\s+delete\-application\-reference\-data\-source\b
+  severity: warn
+  message: DeleteApplicationReferenceDataSource — destructive operation
+  category: cloud
+- name: aws-kinesisanalyticsv2-delete-application-snapshot
+  pattern: (?i)aws\s+delete\-application\-snapshot\b
+  severity: warn
+  message: DeleteApplicationSnapshot — destructive operation
+  category: cloud
+- name: aws-kinesisanalyticsv2-delete-application-vpc-configuration
+  pattern: (?i)aws\s+delete\-application\-vpc\-configuration\b
+  severity: warn
+  message: DeleteApplicationVpcConfiguration — destructive operation
+  category: cloud

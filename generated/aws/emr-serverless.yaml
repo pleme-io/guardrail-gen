@@ -1,0 +1,15 @@
+- name: aws-emr-serverless-cancel-job-run
+  pattern: (?i)aws\s+cancel\-job\-run\b
+  severity: block
+  message: CancelJobRun — destructive operation
+  category: cloud
+- name: aws-emr-serverless-delete-application
+  pattern: (?i)aws\s+delete\-application\b
+  severity: block
+  message: DeleteApplication — destructive operation
+  category: cloud
+- name: aws-emr-serverless-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

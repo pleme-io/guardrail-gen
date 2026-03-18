@@ -1,0 +1,20 @@
+- name: aws-codeguruprofiler-delete-profiling-group
+  pattern: (?i)aws\s+delete\-profiling\-group\b
+  severity: block
+  message: DeleteProfilingGroup — destructive operation
+  category: cloud
+- name: aws-codeguruprofiler-remove-notification-channel
+  pattern: (?i)aws\s+remove\-notification\-channel\b
+  severity: block
+  message: RemoveNotificationChannel — destructive operation
+  category: cloud
+- name: aws-codeguruprofiler-remove-permission
+  pattern: (?i)aws\s+remove\-permission\b
+  severity: block
+  message: RemovePermission — destructive operation
+  category: cloud
+- name: aws-codeguruprofiler-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

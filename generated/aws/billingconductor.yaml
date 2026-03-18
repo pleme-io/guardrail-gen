@@ -1,0 +1,40 @@
+- name: aws-billingconductor-batch-disassociate-resources-from-custom-line-item
+  pattern: (?i)aws\s+batch\-disassociate\-resources\-from\-custom\-line\-item\b
+  severity: block
+  message: BatchDisassociateResourcesFromCustomLineItem — destructive operation
+  category: cloud
+- name: aws-billingconductor-delete-billing-group
+  pattern: (?i)aws\s+delete\-billing\-group\b
+  severity: block
+  message: DeleteBillingGroup — destructive operation
+  category: cloud
+- name: aws-billingconductor-delete-custom-line-item
+  pattern: (?i)aws\s+delete\-custom\-line\-item\b
+  severity: block
+  message: DeleteCustomLineItem — destructive operation
+  category: cloud
+- name: aws-billingconductor-delete-pricing-plan
+  pattern: (?i)aws\s+delete\-pricing\-plan\b
+  severity: warn
+  message: DeletePricingPlan — destructive operation
+  category: cloud
+- name: aws-billingconductor-delete-pricing-rule
+  pattern: (?i)aws\s+delete\-pricing\-rule\b
+  severity: warn
+  message: DeletePricingRule — destructive operation
+  category: cloud
+- name: aws-billingconductor-disassociate-accounts
+  pattern: (?i)aws\s+disassociate\-accounts\b
+  severity: block
+  message: DisassociateAccounts — destructive operation
+  category: cloud
+- name: aws-billingconductor-disassociate-pricing-rules
+  pattern: (?i)aws\s+disassociate\-pricing\-rules\b
+  severity: warn
+  message: DisassociatePricingRules — destructive operation
+  category: cloud
+- name: aws-billingconductor-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

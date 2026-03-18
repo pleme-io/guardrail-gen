@@ -1,0 +1,25 @@
+- name: aws-sqs-delete-message
+  pattern: (?i)aws\s+delete\-message\b
+  severity: warn
+  message: DeleteMessage — destructive operation
+  category: cloud
+- name: aws-sqs-delete-message-batch
+  pattern: (?i)aws\s+delete\-message\-batch\b
+  severity: warn
+  message: DeleteMessageBatch — destructive operation
+  category: cloud
+- name: aws-sqs-delete-queue
+  pattern: (?i)aws\s+delete\-queue\b
+  severity: warn
+  message: DeleteQueue — destructive operation
+  category: cloud
+- name: aws-sqs-purge-queue
+  pattern: (?i)aws\s+purge\-queue\b
+  severity: warn
+  message: PurgeQueue — destructive operation
+  category: cloud
+- name: aws-sqs-remove-permission
+  pattern: (?i)aws\s+remove\-permission\b
+  severity: warn
+  message: RemovePermission — destructive operation
+  category: cloud

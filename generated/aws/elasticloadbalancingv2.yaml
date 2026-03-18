@@ -1,0 +1,35 @@
+- name: aws-elasticloadbalancingv2-delete-listener
+  pattern: (?i)aws\s+delete\-listener\b
+  severity: warn
+  message: DeleteListener — destructive operation
+  category: cloud
+- name: aws-elasticloadbalancingv2-delete-load-balancer
+  pattern: (?i)aws\s+delete\-load\-balancer\b
+  severity: block
+  message: DeleteLoadBalancer — destructive operation
+  category: cloud
+- name: aws-elasticloadbalancingv2-delete-rule
+  pattern: (?i)aws\s+delete\-rule\b
+  severity: warn
+  message: DeleteRule — destructive operation
+  category: cloud
+- name: aws-elasticloadbalancingv2-delete-target-group
+  pattern: (?i)aws\s+delete\-target\-group\b
+  severity: block
+  message: DeleteTargetGroup — destructive operation
+  category: cloud
+- name: aws-elasticloadbalancingv2-deregister-targets
+  pattern: (?i)aws\s+deregister\-targets\b
+  severity: block
+  message: DeregisterTargets — destructive operation
+  category: cloud
+- name: aws-elasticloadbalancingv2-remove-listener-certificates
+  pattern: (?i)aws\s+remove\-listener\-certificates\b
+  severity: block
+  message: RemoveListenerCertificates — destructive operation
+  category: cloud
+- name: aws-elasticloadbalancingv2-remove-tags
+  pattern: (?i)aws\s+remove\-tags\b
+  severity: warn
+  message: RemoveTags — destructive operation
+  category: cloud

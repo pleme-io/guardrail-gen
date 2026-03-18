@@ -1,0 +1,55 @@
+- name: aws-eventbridge-cancel-replay
+  pattern: (?i)aws\s+cancel\-replay\b
+  severity: warn
+  message: CancelReplay — destructive operation
+  category: cloud
+- name: aws-eventbridge-delete-api-destination
+  pattern: (?i)aws\s+delete\-api\-destination\b
+  severity: warn
+  message: DeleteApiDestination — destructive operation
+  category: cloud
+- name: aws-eventbridge-delete-archive
+  pattern: (?i)aws\s+delete\-archive\b
+  severity: warn
+  message: DeleteArchive — destructive operation
+  category: cloud
+- name: aws-eventbridge-delete-connection
+  pattern: (?i)aws\s+delete\-connection\b
+  severity: warn
+  message: DeleteConnection — destructive operation
+  category: cloud
+- name: aws-eventbridge-delete-endpoint
+  pattern: (?i)aws\s+delete\-endpoint\b
+  severity: warn
+  message: DeleteEndpoint — destructive operation
+  category: cloud
+- name: aws-eventbridge-delete-event-bus
+  pattern: (?i)aws\s+delete\-event\-bus\b
+  severity: warn
+  message: DeleteEventBus — destructive operation
+  category: cloud
+- name: aws-eventbridge-delete-partner-event-source
+  pattern: (?i)aws\s+delete\-partner\-event\-source\b
+  severity: warn
+  message: DeletePartnerEventSource — destructive operation
+  category: cloud
+- name: aws-eventbridge-delete-rule
+  pattern: (?i)aws\s+delete\-rule\b
+  severity: warn
+  message: DeleteRule — destructive operation
+  category: cloud
+- name: aws-eventbridge-disable-rule
+  pattern: (?i)aws\s+disable\-rule\b
+  severity: warn
+  message: DisableRule — destructive operation
+  category: cloud
+- name: aws-eventbridge-remove-permission
+  pattern: (?i)aws\s+remove\-permission\b
+  severity: warn
+  message: RemovePermission — destructive operation
+  category: cloud
+- name: aws-eventbridge-remove-targets
+  pattern: (?i)aws\s+remove\-targets\b
+  severity: block
+  message: RemoveTargets — destructive operation
+  category: cloud

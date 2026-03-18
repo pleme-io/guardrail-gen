@@ -1,0 +1,35 @@
+- name: aws-elasticloadbalancing-delete-load-balancer
+  pattern: (?i)aws\s+delete\-load\-balancer\b
+  severity: block
+  message: DeleteLoadBalancer — destructive operation
+  category: cloud
+- name: aws-elasticloadbalancing-delete-load-balancer-listeners
+  pattern: (?i)aws\s+delete\-load\-balancer\-listeners\b
+  severity: block
+  message: DeleteLoadBalancerListeners — destructive operation
+  category: cloud
+- name: aws-elasticloadbalancing-delete-load-balancer-policy
+  pattern: (?i)aws\s+delete\-load\-balancer\-policy\b
+  severity: block
+  message: DeleteLoadBalancerPolicy — destructive operation
+  category: cloud
+- name: aws-elasticloadbalancing-deregister-instances-from-load-balancer
+  pattern: (?i)aws\s+deregister\-instances\-from\-load\-balancer\b
+  severity: block
+  message: DeregisterInstancesFromLoadBalancer — destructive operation
+  category: cloud
+- name: aws-elasticloadbalancing-detach-load-balancer-from-subnets
+  pattern: (?i)aws\s+detach\-load\-balancer\-from\-subnets\b
+  severity: block
+  message: DetachLoadBalancerFromSubnets — destructive operation
+  category: cloud
+- name: aws-elasticloadbalancing-disable-availability-zones-for-load-balancer
+  pattern: (?i)aws\s+disable\-availability\-zones\-for\-load\-balancer\b
+  severity: block
+  message: DisableAvailabilityZonesForLoadBalancer — destructive operation
+  category: cloud
+- name: aws-elasticloadbalancing-remove-tags
+  pattern: (?i)aws\s+remove\-tags\b
+  severity: warn
+  message: RemoveTags — destructive operation
+  category: cloud

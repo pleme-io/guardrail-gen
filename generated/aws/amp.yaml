@@ -1,0 +1,25 @@
+- name: aws-amp-delete-alert-manager-definition
+  pattern: (?i)aws\s+delete\-alert\-manager\-definition\b
+  severity: block
+  message: DeleteAlertManagerDefinition — destructive operation
+  category: cloud
+- name: aws-amp-delete-logging-configuration
+  pattern: (?i)aws\s+delete\-logging\-configuration\b
+  severity: warn
+  message: DeleteLoggingConfiguration — destructive operation
+  category: cloud
+- name: aws-amp-delete-rule-groups-namespace
+  pattern: (?i)aws\s+delete\-rule\-groups\-namespace\b
+  severity: block
+  message: DeleteRuleGroupsNamespace — destructive operation
+  category: cloud
+- name: aws-amp-delete-workspace
+  pattern: (?i)aws\s+delete\-workspace\b
+  severity: block
+  message: DeleteWorkspace — destructive operation
+  category: cloud
+- name: aws-amp-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

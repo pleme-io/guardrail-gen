@@ -1,0 +1,65 @@
+- name: aws-securityhub-batch-disable-standards
+  pattern: (?i)aws\s+batch\-disable\-standards\b
+  severity: warn
+  message: BatchDisableStandards — destructive operation
+  category: cloud
+- name: aws-securityhub-delete-action-target
+  pattern: (?i)aws\s+delete\-action\-target\b
+  severity: block
+  message: DeleteActionTarget — destructive operation
+  category: cloud
+- name: aws-securityhub-delete-finding-aggregator
+  pattern: (?i)aws\s+delete\-finding\-aggregator\b
+  severity: block
+  message: DeleteFindingAggregator — destructive operation
+  category: cloud
+- name: aws-securityhub-delete-insight
+  pattern: (?i)aws\s+delete\-insight\b
+  severity: block
+  message: DeleteInsight — destructive operation
+  category: cloud
+- name: aws-securityhub-delete-invitations
+  pattern: (?i)aws\s+delete\-invitations\b
+  severity: warn
+  message: DeleteInvitations — destructive operation
+  category: cloud
+- name: aws-securityhub-delete-members
+  pattern: (?i)aws\s+delete\-members\b
+  severity: warn
+  message: DeleteMembers — destructive operation
+  category: cloud
+- name: aws-securityhub-disable-import-findings-for-product
+  pattern: (?i)aws\s+disable\-import\-findings\-for\-product\b
+  severity: warn
+  message: DisableImportFindingsForProduct — destructive operation
+  category: cloud
+- name: aws-securityhub-disable-organization-admin-account
+  pattern: (?i)aws\s+disable\-organization\-admin\-account\b
+  severity: block
+  message: DisableOrganizationAdminAccount — destructive operation
+  category: cloud
+- name: aws-securityhub-disable-security-hub
+  pattern: (?i)aws\s+disable\-security\-hub\b
+  severity: block
+  message: DisableSecurityHub — destructive operation
+  category: cloud
+- name: aws-securityhub-disassociate-from-administrator-account
+  pattern: (?i)aws\s+disassociate\-from\-administrator\-account\b
+  severity: block
+  message: DisassociateFromAdministratorAccount — destructive operation
+  category: cloud
+- name: aws-securityhub-disassociate-from-master-account
+  pattern: (?i)aws\s+disassociate\-from\-master\-account\b
+  severity: block
+  message: DisassociateFromMasterAccount — destructive operation
+  category: cloud
+- name: aws-securityhub-disassociate-members
+  pattern: (?i)aws\s+disassociate\-members\b
+  severity: warn
+  message: DisassociateMembers — destructive operation
+  category: cloud
+- name: aws-securityhub-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

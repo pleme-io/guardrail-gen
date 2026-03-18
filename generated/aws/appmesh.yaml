@@ -1,0 +1,35 @@
+- name: aws-appmesh-delete-gateway-route
+  pattern: (?i)aws\s+delete\-gateway\-route\b
+  severity: block
+  message: DeleteGatewayRoute — destructive operation
+  category: cloud
+- name: aws-appmesh-delete-mesh
+  pattern: (?i)aws\s+delete\-mesh\b
+  severity: block
+  message: DeleteMesh — destructive operation
+  category: cloud
+- name: aws-appmesh-delete-route
+  pattern: (?i)aws\s+delete\-route\b
+  severity: block
+  message: DeleteRoute — destructive operation
+  category: cloud
+- name: aws-appmesh-delete-virtual-gateway
+  pattern: (?i)aws\s+delete\-virtual\-gateway\b
+  severity: block
+  message: DeleteVirtualGateway — destructive operation
+  category: cloud
+- name: aws-appmesh-delete-virtual-node
+  pattern: (?i)aws\s+delete\-virtual\-node\b
+  severity: block
+  message: DeleteVirtualNode — destructive operation
+  category: cloud
+- name: aws-appmesh-delete-virtual-router
+  pattern: (?i)aws\s+delete\-virtual\-router\b
+  severity: block
+  message: DeleteVirtualRouter — destructive operation
+  category: cloud
+- name: aws-appmesh-delete-virtual-service
+  pattern: (?i)aws\s+delete\-virtual\-service\b
+  severity: block
+  message: DeleteVirtualService — destructive operation
+  category: cloud

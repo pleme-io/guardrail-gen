@@ -1,0 +1,5 @@
+- name: aws-health-disable-health-service-access-for-organization
+  pattern: (?i)aws\s+disable\-health\-service\-access\-for\-organization\b
+  severity: warn
+  message: DisableHealthServiceAccessForOrganization — destructive operation
+  category: cloud

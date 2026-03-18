@@ -1,0 +1,10 @@
+- name: aws-timestream-query-cancel-query
+  pattern: (?i)aws\s+cancel\-query\b
+  severity: warn
+  message: CancelQuery — destructive operation
+  category: cloud
+- name: aws-timestream-query-delete-scheduled-query
+  pattern: (?i)aws\s+delete\-scheduled\-query\b
+  severity: warn
+  message: DeleteScheduledQuery — destructive operation
+  category: cloud

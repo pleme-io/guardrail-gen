@@ -1,0 +1,20 @@
+- name: aws-datasync-cancel-task-execution
+  pattern: (?i)aws\s+cancel\-task\-execution\b
+  severity: warn
+  message: CancelTaskExecution — destructive operation
+  category: cloud
+- name: aws-datasync-delete-agent
+  pattern: (?i)aws\s+delete\-agent\b
+  severity: warn
+  message: DeleteAgent — destructive operation
+  category: cloud
+- name: aws-datasync-delete-location
+  pattern: (?i)aws\s+delete\-location\b
+  severity: warn
+  message: DeleteLocation — destructive operation
+  category: cloud
+- name: aws-datasync-delete-task
+  pattern: (?i)aws\s+delete\-task\b
+  severity: warn
+  message: DeleteTask — destructive operation
+  category: cloud

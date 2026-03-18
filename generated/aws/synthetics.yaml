@@ -1,0 +1,20 @@
+- name: aws-synthetics-delete-canary
+  pattern: (?i)aws\s+delete\-canary\b
+  severity: block
+  message: DeleteCanary — destructive operation
+  category: cloud
+- name: aws-synthetics-delete-group
+  pattern: (?i)aws\s+delete\-group\b
+  severity: block
+  message: DeleteGroup — destructive operation
+  category: cloud
+- name: aws-synthetics-disassociate-resource
+  pattern: (?i)aws\s+disassociate\-resource\b
+  severity: block
+  message: DisassociateResource — destructive operation
+  category: cloud
+- name: aws-synthetics-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

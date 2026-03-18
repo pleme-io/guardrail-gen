@@ -1,0 +1,5 @@
+- name: aws-compute-optimizer-delete-recommendation-preferences
+  pattern: (?i)aws\s+delete\-recommendation\-preferences\b
+  severity: warn
+  message: DeleteRecommendationPreferences — destructive operation
+  category: cloud

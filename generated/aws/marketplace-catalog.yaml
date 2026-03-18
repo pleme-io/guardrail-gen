@@ -1,0 +1,5 @@
+- name: aws-marketplace-catalog-cancel-change-set
+  pattern: (?i)aws\s+cancel\-change\-set\b
+  severity: warn
+  message: CancelChangeSet — destructive operation
+  category: cloud

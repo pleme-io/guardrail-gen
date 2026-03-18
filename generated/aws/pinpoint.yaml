@@ -1,0 +1,125 @@
+- name: aws-pinpoint-delete-adm-channel
+  pattern: (?i)aws\s+delete\-adm\-channel\b
+  severity: block
+  message: DeleteAdmChannel — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-apns-channel
+  pattern: (?i)aws\s+delete\-apns\-channel\b
+  severity: block
+  message: DeleteApnsChannel — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-apns-sandbox-channel
+  pattern: (?i)aws\s+delete\-apns\-sandbox\-channel\b
+  severity: block
+  message: DeleteApnsSandboxChannel — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-apns-voip-channel
+  pattern: (?i)aws\s+delete\-apns\-voip\-channel\b
+  severity: block
+  message: DeleteApnsVoipChannel — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-apns-voip-sandbox-channel
+  pattern: (?i)aws\s+delete\-apns\-voip\-sandbox\-channel\b
+  severity: block
+  message: DeleteApnsVoipSandboxChannel — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-app
+  pattern: (?i)aws\s+delete\-app\b
+  severity: block
+  message: DeleteApp — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-baidu-channel
+  pattern: (?i)aws\s+delete\-baidu\-channel\b
+  severity: block
+  message: DeleteBaiduChannel — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-campaign
+  pattern: (?i)aws\s+delete\-campaign\b
+  severity: block
+  message: DeleteCampaign — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-email-channel
+  pattern: (?i)aws\s+delete\-email\-channel\b
+  severity: block
+  message: DeleteEmailChannel — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-email-template
+  pattern: (?i)aws\s+delete\-email\-template\b
+  severity: block
+  message: DeleteEmailTemplate — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-endpoint
+  pattern: (?i)aws\s+delete\-endpoint\b
+  severity: block
+  message: DeleteEndpoint — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-event-stream
+  pattern: (?i)aws\s+delete\-event\-stream\b
+  severity: warn
+  message: DeleteEventStream — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-gcm-channel
+  pattern: (?i)aws\s+delete\-gcm\-channel\b
+  severity: block
+  message: DeleteGcmChannel — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-in-app-template
+  pattern: (?i)aws\s+delete\-in\-app\-template\b
+  severity: block
+  message: DeleteInAppTemplate — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-journey
+  pattern: (?i)aws\s+delete\-journey\b
+  severity: block
+  message: DeleteJourney — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-push-template
+  pattern: (?i)aws\s+delete\-push\-template\b
+  severity: block
+  message: DeletePushTemplate — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-recommender-configuration
+  pattern: (?i)aws\s+delete\-recommender\-configuration\b
+  severity: block
+  message: DeleteRecommenderConfiguration — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-segment
+  pattern: (?i)aws\s+delete\-segment\b
+  severity: block
+  message: DeleteSegment — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-sms-channel
+  pattern: (?i)aws\s+delete\-sms\-channel\b
+  severity: block
+  message: DeleteSmsChannel — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-sms-template
+  pattern: (?i)aws\s+delete\-sms\-template\b
+  severity: block
+  message: DeleteSmsTemplate — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-user-endpoints
+  pattern: (?i)aws\s+delete\-user\-endpoints\b
+  severity: block
+  message: DeleteUserEndpoints — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-voice-channel
+  pattern: (?i)aws\s+delete\-voice\-channel\b
+  severity: block
+  message: DeleteVoiceChannel — destructive operation
+  category: cloud
+- name: aws-pinpoint-delete-voice-template
+  pattern: (?i)aws\s+delete\-voice\-template\b
+  severity: block
+  message: DeleteVoiceTemplate — destructive operation
+  category: cloud
+- name: aws-pinpoint-remove-attributes
+  pattern: (?i)aws\s+remove\-attributes\b
+  severity: warn
+  message: RemoveAttributes — destructive operation
+  category: cloud
+- name: aws-pinpoint-untag-resource
+  pattern: (?i)aws\s+untag\-resource\b
+  severity: warn
+  message: UntagResource — destructive operation
+  category: cloud

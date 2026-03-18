@@ -1,0 +1,35 @@
+- name: aws-elasticbeanstalk-delete-application
+  pattern: (?i)aws\s+delete\-application\b
+  severity: warn
+  message: DeleteApplication — destructive operation
+  category: cloud
+- name: aws-elasticbeanstalk-delete-application-version
+  pattern: (?i)aws\s+delete\-application\-version\b
+  severity: warn
+  message: DeleteApplicationVersion — destructive operation
+  category: cloud
+- name: aws-elasticbeanstalk-delete-configuration-template
+  pattern: (?i)aws\s+delete\-configuration\-template\b
+  severity: warn
+  message: DeleteConfigurationTemplate — destructive operation
+  category: cloud
+- name: aws-elasticbeanstalk-delete-environment-configuration
+  pattern: (?i)aws\s+delete\-environment\-configuration\b
+  severity: warn
+  message: DeleteEnvironmentConfiguration — destructive operation
+  category: cloud
+- name: aws-elasticbeanstalk-delete-platform-version
+  pattern: (?i)aws\s+delete\-platform\-version\b
+  severity: warn
+  message: DeletePlatformVersion — destructive operation
+  category: cloud
+- name: aws-elasticbeanstalk-disassociate-environment-operations-role
+  pattern: (?i)aws\s+disassociate\-environment\-operations\-role\b
+  severity: block
+  message: DisassociateEnvironmentOperationsRole — destructive operation
+  category: cloud
+- name: aws-elasticbeanstalk-terminate-environment
+  pattern: (?i)aws\s+terminate\-environment\b
+  severity: warn
+  message: TerminateEnvironment — destructive operation
+  category: cloud

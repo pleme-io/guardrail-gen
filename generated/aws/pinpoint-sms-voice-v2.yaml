@@ -1,0 +1,60 @@
+- name: aws-pinpoint-sms-voice-v2-delete-configuration-set
+  pattern: (?i)aws\s+delete\-configuration\-set\b
+  severity: warn
+  message: DeleteConfigurationSet — destructive operation
+  category: cloud
+- name: aws-pinpoint-sms-voice-v2-delete-default-message-type
+  pattern: (?i)aws\s+delete\-default\-message\-type\b
+  severity: warn
+  message: DeleteDefaultMessageType — destructive operation
+  category: cloud
+- name: aws-pinpoint-sms-voice-v2-delete-default-sender-id
+  pattern: (?i)aws\s+delete\-default\-sender\-id\b
+  severity: warn
+  message: DeleteDefaultSenderId — destructive operation
+  category: cloud
+- name: aws-pinpoint-sms-voice-v2-delete-event-destination
+  pattern: (?i)aws\s+delete\-event\-destination\b
+  severity: warn
+  message: DeleteEventDestination — destructive operation
+  category: cloud
+- name: aws-pinpoint-sms-voice-v2-delete-keyword
+  pattern: (?i)aws\s+delete\-keyword\b
+  severity: block
+  message: DeleteKeyword — destructive operation
+  category: cloud
+- name: aws-pinpoint-sms-voice-v2-delete-opt-out-list
+  pattern: (?i)aws\s+delete\-opt\-out\-list\b
+  severity: warn
+  message: DeleteOptOutList — destructive operation
+  category: cloud
+- name: aws-pinpoint-sms-voice-v2-delete-opted-out-number
+  pattern: (?i)aws\s+delete\-opted\-out\-number\b
+  severity: warn
+  message: DeleteOptedOutNumber — destructive operation
+  category: cloud
+- name: aws-pinpoint-sms-voice-v2-delete-pool
+  pattern: (?i)aws\s+delete\-pool\b
+  severity: warn
+  message: DeletePool — destructive operation
+  category: cloud
+- name: aws-pinpoint-sms-voice-v2-delete-text-message-spend-limit-override
+  pattern: (?i)aws\s+delete\-text\-message\-spend\-limit\-override\b
+  severity: warn
+  message: DeleteTextMessageSpendLimitOverride — destructive operation
+  category: cloud
+- name: aws-pinpoint-sms-voice-v2-delete-voice-message-spend-limit-override
+  pattern: (?i)aws\s+delete\-voice\-message\-spend\-limit\-override\b
+  severity: warn
+  message: DeleteVoiceMessageSpendLimitOverride — destructive operation
+  category: cloud
+- name: aws-pinpoint-sms-voice-v2-disassociate-origination-identity
+  pattern: (?i)aws\s+disassociate\-origination\-identity\b
+  severity: warn
+  message: DisassociateOriginationIdentity — destructive operation
+  category: cloud
+- name: aws-pinpoint-sms-voice-v2-release-phone-number
+  pattern: (?i)aws\s+release\-phone\-number\b
+  severity: warn
+  message: ReleasePhoneNumber — destructive operation
+  category: cloud
