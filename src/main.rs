@@ -108,9 +108,11 @@ fn main() -> Result<()> {
             let ops = spec::all_operations(&parsed);
             let destructive = guardrail_gen::filter::filter_destructive(&ops);
 
-            let title = parsed.info.as_ref()
-                .and_then(|i| i.title.as_deref())
-                .unwrap_or("Unknown API");
+            let title = if parsed.info.title.is_empty() {
+                "Unknown API"
+            } else {
+                &parsed.info.title
+            };
 
             eprintln!("API: {title}");
             eprintln!("Total operations: {}", ops.len());

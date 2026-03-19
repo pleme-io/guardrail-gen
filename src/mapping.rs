@@ -33,7 +33,7 @@ pub struct OperationMapping {
 /// Returns an error if the file can't be read or parsed.
 pub fn load_mapping(path: &Path) -> anyhow::Result<CliMapping> {
     let content = std::fs::read_to_string(path)?;
-    Ok(serde_yaml::from_str(&content)?)
+    Ok(serde_yaml_ng::from_str(&content)?)
 }
 
 /// Convert a camelCase/PascalCase operation ID to kebab-case CLI pattern.
@@ -116,7 +116,7 @@ services:
       TerminateInstances:
         cli: "ec2 terminate-instances"
 "#;
-        let mapping: CliMapping = serde_yaml::from_str(yaml).unwrap();
+        let mapping: CliMapping = serde_yaml_ng::from_str(yaml).unwrap();
         let pattern = build_pattern("aws", "TerminateInstances", Some(&mapping));
         assert!(pattern.contains("ec2 terminate\\-instances"));
     }

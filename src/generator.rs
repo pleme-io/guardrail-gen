@@ -13,6 +13,10 @@ pub struct Rule {
     pub severity: String,
     pub message: String,
     pub category: String,
+    /// Command that MUST match this rule (for testing).
+    pub test_block: String,
+    /// Command that must NOT match this rule (for testing).
+    pub test_allow: String,
 }
 
 /// Generate guardrail rules from a list of operations.
@@ -33,11 +37,23 @@ pub fn generate_rules(
         .map(|op| {
             let severity = risk::classify(op);
             let pattern = mapping::build_pattern(cli_prefix, &op.operation_id, mapping);
-            let name = format!("{}-{}", provider, mapping::to_kebab_case(&op.operation_id));
+            let kebab = mapping::to_kebab_case(&op.operation_id);
+            let name = format!("{provider}-{kebab}");
             let message = if op.summary.is_empty() {
                 format!("{} — destructive operation", op.operation_id)
             } else {
                 op.summary.clone()
+            };
+
+            // Derive the CLI command from the mapping or kebab-case operation
+            let cli_op = if let Some(m) = mapping {
+                m.services.values()
+                    .flat_map(|s| s.operations.get(&op.operation_id))
+                    .map(|o| o.cli.clone())
+                    .next()
+                    .unwrap_or(kebab.clone())
+            } else {
+                kebab.clone()
             };
 
             Rule {
@@ -46,6 +62,8 @@ pub fn generate_rules(
                 severity: severity.as_str().to_owned(),
                 message,
                 category: category.to_owned(),
+                test_block: format!("{cli_prefix} {cli_op} --id test-123"),
+                test_allow: format!("{cli_prefix} list-resources --output json"),
             }
         })
         .collect()
@@ -57,7 +75,7 @@ pub fn generate_rules(
 ///
 /// Returns an error if serialization fails.
 pub fn to_yaml(rules: &[Rule]) -> anyhow::Result<String> {
-    Ok(serde_yaml::to_string(rules)?)
+    Ok(serde_yaml_ng::to_string(rules)?)
 }
 
 #[cfg(test)]
