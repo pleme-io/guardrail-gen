@@ -19,30 +19,25 @@ const SAFE_VERBS: &[&str] = &[
 ];
 
 /// Check if an operation is destructive based on HTTP method + operation name.
+///
+/// DELETE HTTP method is always destructive. For other methods, checks the
+/// operation ID against known destructive verb patterns (after excluding
+/// operations that start with safe verb prefixes).
 #[must_use]
 pub fn is_destructive(op: &ResolvedOperation) -> bool {
-    // DELETE HTTP method is always destructive
     if op.method == "DELETE" {
         return true;
     }
 
     let id_lower = op.operation_id.to_lowercase();
 
-    // Check safe verbs first — if the operation starts with a safe verb, skip it
-    for safe in SAFE_VERBS {
-        if id_lower.starts_with(safe) {
-            return false;
-        }
+    if SAFE_VERBS.iter().any(|safe| id_lower.starts_with(safe)) {
+        return false;
     }
 
-    // Check destructive verbs
-    for verb in DESTRUCTIVE_VERBS {
-        if id_lower.contains(verb) {
-            return true;
-        }
-    }
-
-    false
+    DESTRUCTIVE_VERBS
+        .iter()
+        .any(|verb| id_lower.contains(verb))
 }
 
 /// Filter a list of operations to only destructive ones.

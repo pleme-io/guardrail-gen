@@ -3,17 +3,26 @@ use crate::spec::ResolvedOperation;
 /// Risk severity for guardrail rules.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Severity {
+    /// High-risk: the command should be blocked by default.
     Block,
+    /// Medium-risk: the command should trigger a warning.
     Warn,
 }
 
 impl Severity {
+    /// Returns the severity as a lowercase string slice.
     #[must_use]
     pub fn as_str(&self) -> &str {
         match self {
             Self::Block => "block",
             Self::Warn => "warn",
         }
+    }
+}
+
+impl std::fmt::Display for Severity {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.write_str(self.as_str())
     }
 }
 
@@ -34,37 +43,34 @@ const LOW_RISK: &[&str] = &[
 ];
 
 /// Classify an operation's risk severity based on resource type.
+///
+/// DELETE on high-risk resources → Block, DELETE on low-risk → Warn,
+/// DELETE on unknown → Block (safer default).
+/// Non-DELETE destructive verbs on high-risk → Block, otherwise Warn.
 #[must_use]
 pub fn classify(op: &ResolvedOperation) -> Severity {
     let id_lower = op.operation_id.to_lowercase();
     let path_lower = op.path.to_lowercase();
     let combined = format!("{id_lower} {path_lower}");
 
-    // DELETE HTTP method on high-risk resources → block
+    let matches_high = || HIGH_RISK.iter().any(|p| combined.contains(p));
+    let matches_low = || LOW_RISK.iter().any(|p| combined.contains(p));
+
     if op.method == "DELETE" {
-        for pattern in HIGH_RISK {
-            if combined.contains(pattern) {
-                return Severity::Block;
-            }
+        if matches_high() {
+            return Severity::Block;
         }
-        // DELETE on low-risk → warn
-        for pattern in LOW_RISK {
-            if combined.contains(pattern) {
-                return Severity::Warn;
-            }
+        if matches_low() {
+            return Severity::Warn;
         }
-        // DELETE on unknown resource → block (safer default)
         return Severity::Block;
     }
 
-    // Non-DELETE destructive verbs (e.g. POST deleteItem)
-    for pattern in HIGH_RISK {
-        if combined.contains(pattern) {
-            return Severity::Block;
-        }
+    if matches_high() {
+        Severity::Block
+    } else {
+        Severity::Warn
     }
-
-    Severity::Warn
 }
 
 #[cfg(test)]

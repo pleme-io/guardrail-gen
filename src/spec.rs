@@ -30,10 +30,15 @@ pub enum ParseError {
 /// A parsed operation with its HTTP method and path.
 #[derive(Debug, Clone)]
 pub struct ResolvedOperation {
+    /// HTTP method (e.g. `GET`, `POST`, `DELETE`).
     pub method: String,
+    /// URL path template (e.g. `/items/{id}`).
     pub path: String,
+    /// Unique operation identifier from the spec.
     pub operation_id: String,
+    /// Human-readable summary or description.
     pub summary: String,
+    /// Tags assigned to this operation.
     pub tags: Vec<String>,
 }
 
