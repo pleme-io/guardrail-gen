@@ -28,7 +28,7 @@ pub enum ParseError {
 }
 
 /// A parsed operation with its HTTP method and path.
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Default, PartialEq, Eq)]
 pub struct ResolvedOperation {
     /// HTTP method (e.g. `GET`, `POST`, `DELETE`).
     pub method: String,
@@ -40,6 +40,34 @@ pub struct ResolvedOperation {
     pub summary: String,
     /// Tags assigned to this operation.
     pub tags: Vec<String>,
+}
+
+impl ResolvedOperation {
+    /// Create a new operation with the given method and operation ID.
+    /// Path defaults to `"/"`, summary is empty, and tags are empty.
+    #[must_use]
+    pub fn new(method: impl Into<String>, operation_id: impl Into<String>) -> Self {
+        Self {
+            method: method.into(),
+            operation_id: operation_id.into(),
+            path: "/".to_owned(),
+            ..Self::default()
+        }
+    }
+
+    /// Builder method: set the path.
+    #[must_use]
+    pub fn with_path(mut self, path: impl Into<String>) -> Self {
+        self.path = path.into();
+        self
+    }
+
+    /// Builder method: set the summary.
+    #[must_use]
+    pub fn with_summary(mut self, summary: impl Into<String>) -> Self {
+        self.summary = summary.into();
+        self
+    }
 }
 
 /// Parse an `OpenAPI` spec from a YAML or JSON file.
@@ -192,6 +220,36 @@ mod tests {
     use super::*;
     use pretty_assertions::assert_eq;
     use std::io::Write;
+
+    #[test]
+    fn resolved_operation_default() {
+        let op = ResolvedOperation::default();
+        assert!(op.method.is_empty());
+        assert!(op.path.is_empty());
+        assert!(op.operation_id.is_empty());
+        assert!(op.summary.is_empty());
+        assert!(op.tags.is_empty());
+    }
+
+    #[test]
+    fn resolved_operation_builder() {
+        let op = ResolvedOperation::new("DELETE", "removeItem")
+            .with_path("/items/{id}")
+            .with_summary("Remove an item");
+        assert_eq!(op.method, "DELETE");
+        assert_eq!(op.operation_id, "removeItem");
+        assert_eq!(op.path, "/items/{id}");
+        assert_eq!(op.summary, "Remove an item");
+        assert!(op.tags.is_empty());
+    }
+
+    #[test]
+    fn resolved_operation_new_defaults() {
+        let op = ResolvedOperation::new("POST", "deleteItem");
+        assert_eq!(op.path, "/");
+        assert!(op.summary.is_empty());
+        assert!(op.tags.is_empty());
+    }
 
     #[test]
     fn parse_minimal_spec() {
