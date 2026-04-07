@@ -26,7 +26,7 @@ pub enum MappingError {
 
 /// CLI mapping spec — maps API operations to CLI command patterns.
 /// For providers where CLI syntax doesn't match operation names directly.
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Clone, Deserialize)]
 pub struct CliMapping {
     /// Cloud provider name (e.g. `aws`, `gcp`).
     pub provider: String,
@@ -38,7 +38,7 @@ pub struct CliMapping {
 }
 
 /// Mapping of operations within a single service.
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Clone, Deserialize)]
 pub struct ServiceMapping {
     /// Individual operation → CLI command mappings.
     #[serde(default)]
@@ -46,7 +46,7 @@ pub struct ServiceMapping {
 }
 
 /// A single operation's CLI command mapping.
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Clone, Deserialize)]
 pub struct OperationMapping {
     /// Primary CLI command string (e.g. `ec2 terminate-instances`).
     pub cli: String,

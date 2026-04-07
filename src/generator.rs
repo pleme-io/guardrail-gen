@@ -1,4 +1,4 @@
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
 
 use crate::filter;
 use crate::mapping::{self, CliMapping};
@@ -14,7 +14,7 @@ pub struct SerializeError {
 }
 
 /// A generated guardrail rule (matches guardrail's Rule format).
-#[derive(Debug, Serialize)]
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct Rule {
     /// Unique rule name (e.g. `aws-terminate-instances`).
     pub name: String,
@@ -58,21 +58,18 @@ pub fn generate_rules(
                 op.summary.clone()
             };
 
-            // Derive the CLI command from the mapping or kebab-case operation
-            let cli_op = if let Some(m) = mapping {
-                m.services.values()
-                    .filter_map(|s| s.operations.get(&op.operation_id))
-                    .map(|o| o.cli.clone())
-                    .next()
-                    .unwrap_or(kebab.clone())
-            } else {
-                kebab.clone()
-            };
+            let cli_op = mapping
+                .and_then(|m| {
+                    m.services.values()
+                        .find_map(|s| s.operations.get(&op.operation_id))
+                        .map(|o| o.cli.clone())
+                })
+                .unwrap_or_else(|| kebab.clone());
 
             Rule {
                 name,
                 pattern,
-                severity: severity.as_str().to_owned(),
+                severity: severity.to_string(),
                 message,
                 category: category.to_owned(),
                 test_block: format!("{cli_prefix} {cli_op} --id test-123"),
@@ -358,5 +355,13 @@ services:
         };
         let msg = err.to_string();
         assert!(msg.contains("failed to serialize rules to YAML"));
+    }
+
+    #[test]
+    fn rule_yaml_deserialize_round_trip() {
+        let rules = generate_rules(&ops(), "test", "test-cli", "test", None);
+        let yaml = to_yaml(&rules).unwrap();
+        let back: Vec<Rule> = serde_yaml_ng::from_str(&yaml).unwrap();
+        assert_eq!(rules, back);
     }
 }
