@@ -88,11 +88,102 @@ mod tests {
         }
     }
 
+    // ── Existing: DELETE on high-risk ─────────────────────────────
+
     #[test] fn delete_database_blocks() { assert_eq!(classify(&op("DELETE", "deleteDatabase", "/databases/{id}")), Severity::Block); }
     #[test] fn delete_instance_blocks() { assert_eq!(classify(&op("DELETE", "deleteInstance", "/instances/{id}")), Severity::Block); }
+
+    // ── Existing: DELETE on low-risk ────────────────────────────
+
     #[test] fn delete_tag_warns() { assert_eq!(classify(&op("DELETE", "deleteTag", "/tags/{id}")), Severity::Warn); }
+
+    // ── Existing: POST (non-DELETE) on high-risk ────────────────
+
     #[test] fn post_delete_item_blocks() { assert_eq!(classify(&op("POST", "deleteItem", "/delete-item")), Severity::Block); }
     #[test] fn post_delete_role_blocks() { assert_eq!(classify(&op("POST", "deleteRole", "/delete-role")), Severity::Block); }
-    #[test] fn delete_unknown_blocks() { assert_eq!(classify(&op("DELETE", "deleteFoo", "/foos/{id}")), Severity::Block); }
     #[test] fn post_revoke_credential_blocks() { assert_eq!(classify(&op("POST", "revokeCredential", "/revoke")), Severity::Block); }
+
+    // ── Existing: DELETE on unknown resource defaults to block ───
+
+    #[test] fn delete_unknown_blocks() { assert_eq!(classify(&op("DELETE", "deleteFoo", "/foos/{id}")), Severity::Block); }
+
+    // ── New: DELETE on various high-risk resources ──────────────
+
+    #[test] fn delete_cluster_blocks() { assert_eq!(classify(&op("DELETE", "deleteCluster", "/clusters/{id}")), Severity::Block); }
+    #[test] fn delete_volume_blocks() { assert_eq!(classify(&op("DELETE", "deleteVolume", "/volumes/{id}")), Severity::Block); }
+    #[test] fn delete_bucket_blocks() { assert_eq!(classify(&op("DELETE", "deleteBucket", "/buckets/{id}")), Severity::Block); }
+    #[test] fn delete_secret_blocks() { assert_eq!(classify(&op("DELETE", "deleteSecret", "/secrets/{id}")), Severity::Block); }
+    #[test] fn delete_vault_blocks() { assert_eq!(classify(&op("DELETE", "deleteVault", "/vaults/{id}")), Severity::Block); }
+    #[test] fn delete_namespace_blocks() { assert_eq!(classify(&op("DELETE", "deleteNamespace", "/ns/{id}")), Severity::Block); }
+    #[test] fn delete_account_blocks() { assert_eq!(classify(&op("DELETE", "deleteAccount", "/accounts/{id}")), Severity::Block); }
+
+    // ── New: DELETE on various low-risk resources ───────────────
+
+    #[test] fn delete_label_warns() { assert_eq!(classify(&op("DELETE", "deleteLabel", "/labels/{id}")), Severity::Warn); }
+    #[test] fn delete_metric_warns() { assert_eq!(classify(&op("DELETE", "deleteMetric", "/metrics/{id}")), Severity::Warn); }
+    #[test] fn delete_alarm_warns() { assert_eq!(classify(&op("DELETE", "deleteAlarm", "/alarms/{id}")), Severity::Warn); }
+    #[test] fn delete_subscription_warns() { assert_eq!(classify(&op("DELETE", "deleteSubscription", "/subs/{id}")), Severity::Warn); }
+    #[test] fn delete_topic_warns() { assert_eq!(classify(&op("DELETE", "deleteTopic", "/topics/{id}")), Severity::Warn); }
+    #[test] fn delete_queue_warns() { assert_eq!(classify(&op("DELETE", "deleteQueue", "/queues/{id}")), Severity::Warn); }
+
+    // ── New: non-DELETE destructive on low-risk resource warns ──
+
+    #[test] fn post_revoke_label_warns() { assert_eq!(classify(&op("POST", "revokeLabel", "/labels")), Severity::Warn); }
+    #[test] fn post_disable_alarm_warns() { assert_eq!(classify(&op("POST", "disableAlarm", "/alarms")), Severity::Warn); }
+
+    // ── New: non-DELETE destructive on high-risk resource blocks ─
+
+    #[test] fn post_terminate_instance_blocks() { assert_eq!(classify(&op("POST", "terminateInstance", "/instances")), Severity::Block); }
+    #[test] fn post_destroy_cluster_blocks() { assert_eq!(classify(&op("POST", "destroyCluster", "/clusters")), Severity::Block); }
+    #[test] fn post_purge_vault_blocks() { assert_eq!(classify(&op("POST", "purgeVault", "/vaults")), Severity::Block); }
+
+    // ── New: path-based classification ──────────────────────────
+
+    #[test]
+    fn high_risk_detected_from_path_only() {
+        assert_eq!(classify(&op("POST", "removeXyz", "/databases/xyz")), Severity::Block);
+    }
+
+    #[test]
+    fn low_risk_detected_from_path_only() {
+        assert_eq!(classify(&op("DELETE", "deleteFoo", "/notifications/{id}")), Severity::Warn);
+    }
+
+    // ── Severity Display / as_str ───────────────────────────────
+
+    #[test]
+    fn severity_display_block() {
+        assert_eq!(format!("{}", Severity::Block), "block");
+    }
+
+    #[test]
+    fn severity_display_warn() {
+        assert_eq!(format!("{}", Severity::Warn), "warn");
+    }
+
+    #[test]
+    fn severity_as_str_block() {
+        assert_eq!(Severity::Block.as_str(), "block");
+    }
+
+    #[test]
+    fn severity_as_str_warn() {
+        assert_eq!(Severity::Warn.as_str(), "warn");
+    }
+
+    #[test]
+    fn severity_clone_and_copy() {
+        let s = Severity::Block;
+        let s2 = s;
+        #[allow(clippy::clone_on_copy)]
+        let s3 = s.clone();
+        assert_eq!(s, s2);
+        assert_eq!(s, s3);
+    }
+
+    #[test]
+    fn severity_debug_format() {
+        assert_eq!(format!("{:?}", Severity::Block), "Block");
+        assert_eq!(format!("{:?}", Severity::Warn), "Warn");
+    }
 }
