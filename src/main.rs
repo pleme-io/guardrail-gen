@@ -15,9 +15,9 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Command {
-    /// Generate guardrail rules from an OpenAPI spec.
+    /// Generate guardrail rules from an `OpenAPI` spec.
     Generate {
-        /// Path to the OpenAPI spec (YAML or JSON).
+        /// Path to the `OpenAPI` spec (YAML or JSON).
         #[arg(long)]
         spec: PathBuf,
 
@@ -44,7 +44,7 @@ enum Command {
 
     /// Show stats about destructive operations in a spec without generating rules.
     Analyze {
-        /// Path to the OpenAPI spec.
+        /// Path to the `OpenAPI` spec.
         #[arg(long)]
         spec: PathBuf,
     },

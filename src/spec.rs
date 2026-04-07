@@ -15,7 +15,7 @@ pub struct ResolvedOperation {
     pub tags: Vec<String>,
 }
 
-/// Parse an OpenAPI spec from a YAML or JSON file.
+/// Parse an `OpenAPI` spec from a YAML or JSON file.
 /// Also supports AWS SDK `.min.json` model format.
 ///
 /// # Errors
@@ -25,10 +25,11 @@ pub fn parse_spec(path: &Path) -> anyhow::Result<OpenApiSpec> {
     let content = std::fs::read_to_string(path)?;
 
     // Try AWS SDK model format first (has "operations" at top level, no "paths")
-    if let Ok(aws) = serde_json::from_str::<AwsSdkModel>(&content) {
-        if !aws.operations.is_empty() && aws.metadata.is_some() {
-            return Ok(aws_to_openapi(aws));
-        }
+    if let Ok(aws) = serde_json::from_str::<AwsSdkModel>(&content)
+        && !aws.operations.is_empty()
+        && aws.metadata.is_some()
+    {
+        return Ok(aws_to_openapi(aws));
     }
 
     // Standard OpenAPI — use sekkei's loader
@@ -102,7 +103,6 @@ fn aws_to_openapi(aws: AwsSdkModel) -> OpenApiSpec {
         };
         match method.as_str() {
             "GET" => item.get = Some(operation),
-            "POST" => item.post = Some(operation),
             "PUT" => item.put = Some(operation),
             "DELETE" => item.delete = Some(operation),
             "PATCH" => item.patch = Some(operation),
@@ -130,6 +130,7 @@ fn aws_to_openapi(aws: AwsSdkModel) -> OpenApiSpec {
 }
 
 /// Extract all operations from a spec with their HTTP methods.
+#[must_use]
 pub fn all_operations(spec: &OpenApiSpec) -> Vec<ResolvedOperation> {
     sekkei::all_operations(spec)
         .into_iter()

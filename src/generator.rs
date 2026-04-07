@@ -48,7 +48,7 @@ pub fn generate_rules(
             // Derive the CLI command from the mapping or kebab-case operation
             let cli_op = if let Some(m) = mapping {
                 m.services.values()
-                    .flat_map(|s| s.operations.get(&op.operation_id))
+                    .filter_map(|s| s.operations.get(&op.operation_id))
                     .map(|o| o.cli.clone())
                     .next()
                     .unwrap_or(kebab.clone())

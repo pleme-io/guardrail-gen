@@ -46,6 +46,7 @@ pub fn is_destructive(op: &ResolvedOperation) -> bool {
 }
 
 /// Filter a list of operations to only destructive ones.
+#[must_use]
 pub fn filter_destructive(ops: &[ResolvedOperation]) -> Vec<&ResolvedOperation> {
     ops.iter().filter(|op| is_destructive(op)).collect()
 }

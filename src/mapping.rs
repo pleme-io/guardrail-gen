@@ -36,8 +36,8 @@ pub fn load_mapping(path: &Path) -> anyhow::Result<CliMapping> {
     Ok(serde_yaml_ng::from_str(&content)?)
 }
 
-/// Convert a camelCase/PascalCase operation ID to kebab-case CLI pattern.
-/// e.g. "deleteItem" → "delete-item", "DeleteAuthMethod" → "delete-auth-method"
+/// Convert a `camelCase`/`PascalCase` operation ID to kebab-case CLI pattern.
+/// e.g. `deleteItem` → `delete-item`, `DeleteAuthMethod` → `delete-auth-method`
 #[must_use]
 pub fn to_kebab_case(s: &str) -> String {
     let mut result = String::with_capacity(s.len() + 4);
@@ -62,7 +62,7 @@ pub fn build_pattern(
 ) -> String {
     // Check mapping first
     if let Some(m) = mapping {
-        for (_service, svc) in &m.services {
+        for svc in m.services.values() {
             if let Some(op) = svc.operations.get(operation_id) {
                 let escaped = regex::escape(&op.cli);
                 return format!("(?i){}\\s+{}", regex::escape(&m.prefix), escaped);
