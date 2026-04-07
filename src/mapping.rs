@@ -114,6 +114,10 @@ pub fn build_pattern(
 #[cfg(test)]
 mod tests {
     use super::*;
+    use pretty_assertions::assert_eq;
+    use std::io::Write;
+
+    // ── to_kebab_case ───────────────────────────────────────────
 
     #[test]
     fn kebab_camel_case() {
@@ -136,6 +140,33 @@ mod tests {
     }
 
     #[test]
+    fn kebab_single_char() {
+        assert_eq!(to_kebab_case("x"), "x");
+    }
+
+    #[test]
+    fn kebab_empty_string() {
+        assert_eq!(to_kebab_case(""), "");
+    }
+
+    #[test]
+    fn kebab_all_uppercase() {
+        assert_eq!(to_kebab_case("ABC"), "a-b-c");
+    }
+
+    #[test]
+    fn kebab_trailing_uppercase() {
+        assert_eq!(to_kebab_case("listA"), "list-a");
+    }
+
+    #[test]
+    fn kebab_numbers_preserved() {
+        assert_eq!(to_kebab_case("deleteV2Item"), "delete-v2-item");
+    }
+
+    // ── build_pattern ───────────────────────────────────────────
+
+    #[test]
     fn pattern_without_mapping() {
         let pattern = build_pattern("akeyless", "deleteItem", None);
         assert_eq!(pattern, r"(?i)akeyless\s+delete\-item\b");
@@ -155,5 +186,152 @@ services:
         let mapping: CliMapping = serde_yaml_ng::from_str(yaml).unwrap();
         let pattern = build_pattern("aws", "TerminateInstances", Some(&mapping));
         assert!(pattern.contains("ec2 terminate\\-instances"));
+    }
+
+    #[test]
+    fn pattern_mapping_miss_falls_back_to_kebab() {
+        let yaml = r#"
+provider: aws
+prefix: aws
+services:
+  ec2:
+    operations:
+      TerminateInstances:
+        cli: "ec2 terminate-instances"
+"#;
+        let mapping: CliMapping = serde_yaml_ng::from_str(yaml).unwrap();
+        let pattern = build_pattern("aws", "DeleteBucket", Some(&mapping));
+        assert_eq!(pattern, r"(?i)aws\s+delete\-bucket\b");
+    }
+
+    #[test]
+    fn pattern_escapes_special_chars_in_prefix() {
+        let pattern = build_pattern("my.cli", "deleteItem", None);
+        assert!(pattern.contains(r"my\.cli"));
+    }
+
+    #[test]
+    fn pattern_with_mapping_uses_mapping_prefix() {
+        let yaml = r#"
+provider: gcp
+prefix: gcloud
+services:
+  compute:
+    operations:
+      deleteInstance:
+        cli: "compute instances delete"
+"#;
+        let mapping: CliMapping = serde_yaml_ng::from_str(yaml).unwrap();
+        let pattern = build_pattern("gcloud", "deleteInstance", Some(&mapping));
+        assert!(pattern.starts_with("(?i)gcloud"));
+        assert!(pattern.contains("compute instances delete"));
+    }
+
+    // ── load_mapping ────────────────────────────────────────────
+
+    #[test]
+    fn load_mapping_from_file() {
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("mapping.yaml");
+        let mut f = std::fs::File::create(&path).unwrap();
+        write!(
+            f,
+            r#"
+provider: aws
+prefix: aws
+services:
+  s3:
+    operations:
+      DeleteBucket:
+        cli: "s3 rb"
+        cli_alt: "s3api delete-bucket"
+"#
+        )
+        .unwrap();
+
+        let mapping = load_mapping(&path).unwrap();
+        assert_eq!(mapping.provider, "aws");
+        assert_eq!(mapping.prefix, "aws");
+        assert!(mapping.services.contains_key("s3"));
+        let s3 = &mapping.services["s3"];
+        let op = &s3.operations["DeleteBucket"];
+        assert_eq!(op.cli, "s3 rb");
+        assert_eq!(op.cli_alt.as_deref(), Some("s3api delete-bucket"));
+    }
+
+    #[test]
+    fn load_mapping_nonexistent_file() {
+        let err = load_mapping(Path::new("/nonexistent/mapping.yaml")).unwrap_err();
+        assert!(matches!(err, MappingError::ReadFile { .. }));
+        assert!(err.to_string().contains("failed to read mapping file"));
+    }
+
+    #[test]
+    fn load_mapping_invalid_yaml() {
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("bad.yaml");
+        std::fs::write(&path, "{{{{not valid yaml at all}}}}").unwrap();
+
+        let err = load_mapping(&path).unwrap_err();
+        assert!(matches!(err, MappingError::Parse { .. }));
+        assert!(err.to_string().contains("failed to parse mapping"));
+    }
+
+    #[test]
+    fn load_mapping_empty_services() {
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("mapping.yaml");
+        let mut f = std::fs::File::create(&path).unwrap();
+        write!(
+            f,
+            r#"
+provider: test
+prefix: test
+"#
+        )
+        .unwrap();
+
+        let mapping = load_mapping(&path).unwrap();
+        assert!(mapping.services.is_empty());
+    }
+
+    // ── CliMapping deserialization ───────────────────────────────
+
+    #[test]
+    fn cli_mapping_multiple_services() {
+        let yaml = r#"
+provider: aws
+prefix: aws
+services:
+  ec2:
+    operations:
+      TerminateInstances:
+        cli: "ec2 terminate-instances"
+  s3:
+    operations:
+      DeleteBucket:
+        cli: "s3 rb"
+"#;
+        let mapping: CliMapping = serde_yaml_ng::from_str(yaml).unwrap();
+        assert_eq!(mapping.services.len(), 2);
+        assert!(mapping.services.contains_key("ec2"));
+        assert!(mapping.services.contains_key("s3"));
+    }
+
+    #[test]
+    fn operation_mapping_without_cli_alt() {
+        let yaml = r#"
+provider: test
+prefix: test
+services:
+  svc:
+    operations:
+      DoThing:
+        cli: "do-thing"
+"#;
+        let mapping: CliMapping = serde_yaml_ng::from_str(yaml).unwrap();
+        let op = &mapping.services["svc"].operations["DoThing"];
+        assert_eq!(op.cli, "do-thing");
+        assert!(op.cli_alt.is_none());
     }
 }
