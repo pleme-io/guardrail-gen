@@ -9,7 +9,6 @@ description = "Auto-generate guardrail rules from OpenAPI specs"
 [dependencies]
 anyhow = "1"
 clap = { version = "4", features = ["derive"] }
-indexmap = { version = "2", features = ["serde"] }
 regex = "1"
 sekkei = { git = "https://github.com/pleme-io/sekkei" }
 serde = { version = "1", features = ["derive"] }

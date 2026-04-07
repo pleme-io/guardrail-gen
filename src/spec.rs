@@ -1,6 +1,6 @@
+use std::collections::BTreeMap;
 use std::path::{Path, PathBuf};
 
-use indexmap::IndexMap;
 use serde::Deserialize;
 
 pub use sekkei::{Info, OpenApiSpec, Operation, PathItem};
@@ -72,7 +72,7 @@ pub fn parse_spec(path: &Path) -> Result<OpenApiSpec, ParseError> {
 struct AwsSdkModel {
     metadata: Option<AwsMetadata>,
     #[serde(default)]
-    operations: IndexMap<String, AwsOperation>,
+    operations: BTreeMap<String, AwsOperation>,
 }
 
 #[derive(Debug, Deserialize)]
