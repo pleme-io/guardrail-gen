@@ -1,27 +1,56 @@
 use std::collections::BTreeMap;
-use std::path::Path;
+use std::path::{Path, PathBuf};
 
 use serde::Deserialize;
+
+/// Errors that can occur when loading a CLI mapping file.
+#[derive(Debug, thiserror::Error)]
+pub enum MappingError {
+    /// Failed to read the mapping file from disk.
+    #[error("failed to read mapping file {path}: {source}")]
+    ReadFile {
+        /// Path that could not be read.
+        path: PathBuf,
+        /// Underlying I/O error.
+        source: std::io::Error,
+    },
+    /// Failed to parse the mapping YAML.
+    #[error("failed to parse mapping from {path}: {source}")]
+    Parse {
+        /// Path whose content failed to parse.
+        path: PathBuf,
+        /// Underlying YAML parse error.
+        source: serde_yaml_ng::Error,
+    },
+}
 
 /// CLI mapping spec — maps API operations to CLI command patterns.
 /// For providers where CLI syntax doesn't match operation names directly.
 #[derive(Debug, Deserialize)]
 pub struct CliMapping {
+    /// Cloud provider name (e.g. `aws`, `gcp`).
     pub provider: String,
+    /// CLI binary prefix (e.g. `aws`, `gcloud`).
     pub prefix: String,
+    /// Per-service operation mappings.
     #[serde(default)]
     pub services: BTreeMap<String, ServiceMapping>,
 }
 
+/// Mapping of operations within a single service.
 #[derive(Debug, Deserialize)]
 pub struct ServiceMapping {
+    /// Individual operation → CLI command mappings.
     #[serde(default)]
     pub operations: BTreeMap<String, OperationMapping>,
 }
 
+/// A single operation's CLI command mapping.
 #[derive(Debug, Deserialize)]
 pub struct OperationMapping {
+    /// Primary CLI command string (e.g. `ec2 terminate-instances`).
     pub cli: String,
+    /// Alternative CLI command form, if any.
     #[serde(default)]
     pub cli_alt: Option<String>,
 }
@@ -30,10 +59,17 @@ pub struct OperationMapping {
 ///
 /// # Errors
 ///
-/// Returns an error if the file can't be read or parsed.
-pub fn load_mapping(path: &Path) -> anyhow::Result<CliMapping> {
-    let content = std::fs::read_to_string(path)?;
-    Ok(serde_yaml_ng::from_str(&content)?)
+/// Returns [`MappingError::ReadFile`] if the file cannot be read,
+/// or [`MappingError::Parse`] if the YAML content is invalid.
+pub fn load_mapping(path: &Path) -> Result<CliMapping, MappingError> {
+    let content = std::fs::read_to_string(path).map_err(|e| MappingError::ReadFile {
+        path: path.to_path_buf(),
+        source: e,
+    })?;
+    serde_yaml_ng::from_str(&content).map_err(|e| MappingError::Parse {
+        path: path.to_path_buf(),
+        source: e,
+    })
 }
 
 /// Convert a `camelCase`/`PascalCase` operation ID to kebab-case CLI pattern.

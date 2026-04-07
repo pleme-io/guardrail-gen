@@ -5,13 +5,26 @@ use crate::mapping::{self, CliMapping};
 use crate::risk;
 use crate::spec::ResolvedOperation;
 
+/// Errors that can occur during YAML serialization of rules.
+#[derive(Debug, thiserror::Error)]
+#[error("failed to serialize rules to YAML: {source}")]
+pub struct SerializeError {
+    #[from]
+    source: serde_yaml_ng::Error,
+}
+
 /// A generated guardrail rule (matches guardrail's Rule format).
 #[derive(Debug, Serialize)]
 pub struct Rule {
+    /// Unique rule name (e.g. `aws-terminate-instances`).
     pub name: String,
+    /// Regex pattern to match CLI commands.
     pub pattern: String,
+    /// Risk severity: `block` or `warn`.
     pub severity: String,
+    /// Human-readable description of the operation.
     pub message: String,
+    /// Rule category (e.g. `cloud`, `akeyless`).
     pub category: String,
     /// Command that MUST match this rule (for testing).
     pub test_block: String,
@@ -73,8 +86,8 @@ pub fn generate_rules(
 ///
 /// # Errors
 ///
-/// Returns an error if serialization fails.
-pub fn to_yaml(rules: &[Rule]) -> anyhow::Result<String> {
+/// Returns [`SerializeError`] if serialization fails.
+pub fn to_yaml(rules: &[Rule]) -> Result<String, SerializeError> {
     Ok(serde_yaml_ng::to_string(rules)?)
 }
 

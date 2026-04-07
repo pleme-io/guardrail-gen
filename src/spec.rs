@@ -1,9 +1,31 @@
+use std::path::{Path, PathBuf};
+
 use indexmap::IndexMap;
 use serde::Deserialize;
-use std::path::Path;
 
-// Re-export sekkei OpenAPI types for consumers
 pub use sekkei::{Info, OpenApiSpec, Operation, PathItem};
+
+/// Errors that can occur when parsing an `OpenAPI` or AWS SDK spec file.
+#[derive(Debug, thiserror::Error)]
+pub enum ParseError {
+    /// Failed to read the spec file from disk.
+    #[error("failed to read spec file {path}: {source}")]
+    ReadFile {
+        /// Path that could not be read.
+        path: PathBuf,
+        /// Underlying I/O error.
+        source: std::io::Error,
+    },
+    /// Failed to parse the spec content.
+    #[error("failed to parse spec from {path}: {source}")]
+    Parse {
+        /// Path whose content failed to parse.
+        path: PathBuf,
+        /// Underlying parse error from sekkei.
+        #[source]
+        source: anyhow::Error,
+    },
+}
 
 /// A parsed operation with its HTTP method and path.
 #[derive(Debug, Clone)]
@@ -20,9 +42,13 @@ pub struct ResolvedOperation {
 ///
 /// # Errors
 ///
-/// Returns an error if the file can't be read or parsed.
-pub fn parse_spec(path: &Path) -> anyhow::Result<OpenApiSpec> {
-    let content = std::fs::read_to_string(path)?;
+/// Returns [`ParseError::ReadFile`] if the file cannot be read,
+/// or [`ParseError::Parse`] if the content is not valid.
+pub fn parse_spec(path: &Path) -> Result<OpenApiSpec, ParseError> {
+    let content = std::fs::read_to_string(path).map_err(|e| ParseError::ReadFile {
+        path: path.to_path_buf(),
+        source: e,
+    })?;
 
     // Try AWS SDK model format first (has "operations" at top level, no "paths")
     if let Ok(aws) = serde_json::from_str::<AwsSdkModel>(&content)
@@ -32,8 +58,10 @@ pub fn parse_spec(path: &Path) -> anyhow::Result<OpenApiSpec> {
         return Ok(aws_to_openapi(aws));
     }
 
-    // Standard OpenAPI — use sekkei's loader
-    sekkei::load_spec_from_str(&content, path)
+    sekkei::load_spec_from_str(&content, path).map_err(|e| ParseError::Parse {
+        path: path.to_path_buf(),
+        source: e,
+    })
 }
 
 // ═══════════════════════════════════════════════════════════════════
