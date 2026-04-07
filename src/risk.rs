@@ -1,7 +1,11 @@
+use std::str::FromStr;
+
 use crate::spec::ResolvedOperation;
 
 /// Risk severity for guardrail rules.
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize)]
+#[serde(rename_all = "lowercase")]
+#[non_exhaustive]
 pub enum Severity {
     /// High-risk: the command should be blocked by default.
     Block,
@@ -12,7 +16,7 @@ pub enum Severity {
 impl Severity {
     /// Returns the severity as a lowercase string slice.
     #[must_use]
-    pub fn as_str(&self) -> &str {
+    pub fn as_str(self) -> &'static str {
         match self {
             Self::Block => "block",
             Self::Warn => "warn",
@@ -25,6 +29,23 @@ impl std::fmt::Display for Severity {
         f.write_str(self.as_str())
     }
 }
+
+impl FromStr for Severity {
+    type Err = ParseSeverityError;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "block" => Ok(Self::Block),
+            "warn" => Ok(Self::Warn),
+            _ => Err(ParseSeverityError(s.to_owned())),
+        }
+    }
+}
+
+/// Error returned when parsing an invalid severity string.
+#[derive(Debug, Clone, thiserror::Error)]
+#[error("unknown severity: {0:?} (expected \"block\" or \"warn\")")]
+pub struct ParseSeverityError(String);
 
 /// High-risk resource patterns — operations on these always block.
 const HIGH_RISK: &[&str] = &[
@@ -185,5 +206,40 @@ mod tests {
     fn severity_debug_format() {
         assert_eq!(format!("{:?}", Severity::Block), "Block");
         assert_eq!(format!("{:?}", Severity::Warn), "Warn");
+    }
+
+    // ── FromStr ──────────────────────────────────────────────────
+
+    #[test]
+    fn from_str_block() {
+        assert_eq!("block".parse::<Severity>().unwrap(), Severity::Block);
+    }
+
+    #[test]
+    fn from_str_warn() {
+        assert_eq!("warn".parse::<Severity>().unwrap(), Severity::Warn);
+    }
+
+    #[test]
+    fn from_str_invalid() {
+        assert!("critical".parse::<Severity>().is_err());
+    }
+
+    #[test]
+    fn display_from_str_round_trip() {
+        for sev in [Severity::Block, Severity::Warn] {
+            assert_eq!(sev.to_string().parse::<Severity>().unwrap(), sev);
+        }
+    }
+
+    // ── Serde ────────────────────────────────────────────────────
+
+    #[test]
+    fn serde_json_round_trip() {
+        for sev in [Severity::Block, Severity::Warn] {
+            let json = serde_json::to_string(&sev).unwrap();
+            let back: Severity = serde_json::from_str(&json).unwrap();
+            assert_eq!(sev, back);
+        }
     }
 }
