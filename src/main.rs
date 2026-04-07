@@ -1,7 +1,7 @@
 use std::fs;
 use std::path::PathBuf;
 
-use anyhow::{Context, Result};
+use anyhow::Result;
 use clap::{Parser, Subcommand};
 
 use guardrail_gen::{generator, mapping, spec};
@@ -62,15 +62,13 @@ fn main() -> Result<()> {
             cli_mapping,
             output,
         } => {
-            let parsed = spec::parse_spec(&spec_path)
-                .with_context(|| format!("parsing {}", spec_path.display()))?;
+            let parsed = spec::parse_spec(&spec_path)?;
             let ops = spec::all_operations(&parsed);
 
             let mapping = cli_mapping
                 .as_ref()
                 .map(mapping::load_mapping)
-                .transpose()
-                .context("loading CLI mapping")?;
+                .transpose()?;
 
             let rules = generator::generate_rules(
                 &ops,
@@ -83,8 +81,7 @@ fn main() -> Result<()> {
             let yaml = generator::to_yaml(&rules)?;
 
             if let Some(out) = output {
-                fs::write(&out, &yaml)
-                    .with_context(|| format!("writing {}", out.display()))?;
+                fs::write(&out, &yaml)?;
                 eprintln!(
                     "guardrail-gen: {} rules generated from {} operations → {}",
                     rules.len(),
@@ -103,8 +100,7 @@ fn main() -> Result<()> {
             Ok(())
         }
         Command::Analyze { spec: spec_path } => {
-            let parsed = spec::parse_spec(&spec_path)
-                .with_context(|| format!("parsing {}", spec_path.display()))?;
+            let parsed = spec::parse_spec(&spec_path)?;
             let ops = spec::all_operations(&parsed);
             let destructive = guardrail_gen::filter::filter_destructive(&ops);
 
@@ -123,7 +119,7 @@ fn main() -> Result<()> {
                 let sev = guardrail_gen::risk::classify(op);
                 eprintln!(
                     "  [{:5}] {:6} {:<40} {}",
-                    sev.as_str().to_uppercase(),
+                    sev.to_string().to_uppercase(),
                     op.method,
                     op.operation_id,
                     if op.summary.is_empty() { "-" } else { &op.summary }
