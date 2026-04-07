@@ -68,7 +68,7 @@ fn main() -> Result<()> {
 
             let mapping = cli_mapping
                 .as_ref()
-                .map(|p| mapping::load_mapping(p))
+                .map(mapping::load_mapping)
                 .transpose()
                 .context("loading CLI mapping")?;
 

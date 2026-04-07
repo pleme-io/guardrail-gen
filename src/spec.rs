@@ -77,7 +77,8 @@ impl ResolvedOperation {
 ///
 /// Returns [`ParseError::ReadFile`] if the file cannot be read,
 /// or [`ParseError::Parse`] if the content is not valid.
-pub fn parse_spec(path: &Path) -> Result<OpenApiSpec, ParseError> {
+pub fn parse_spec(path: impl AsRef<Path>) -> Result<OpenApiSpec, ParseError> {
+    let path = path.as_ref();
     let content = std::fs::read_to_string(path).map_err(|e| ParseError::ReadFile {
         path: path.to_path_buf(),
         source: e,

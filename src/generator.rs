@@ -38,11 +38,14 @@ pub struct Rule {
 #[must_use]
 pub fn generate_rules(
     ops: &[ResolvedOperation],
-    provider: &str,
-    cli_prefix: &str,
-    category: &str,
+    provider: impl AsRef<str>,
+    cli_prefix: impl AsRef<str>,
+    category: impl AsRef<str>,
     mapping: Option<&CliMapping>,
 ) -> Vec<Rule> {
+    let provider = provider.as_ref();
+    let cli_prefix = cli_prefix.as_ref();
+    let category = category.as_ref();
     let destructive = filter::filter_destructive(ops);
 
     destructive

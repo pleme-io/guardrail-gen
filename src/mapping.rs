@@ -61,7 +61,8 @@ pub struct OperationMapping {
 ///
 /// Returns [`MappingError::ReadFile`] if the file cannot be read,
 /// or [`MappingError::Parse`] if the YAML content is invalid.
-pub fn load_mapping(path: &Path) -> Result<CliMapping, MappingError> {
+pub fn load_mapping(path: impl AsRef<Path>) -> Result<CliMapping, MappingError> {
+    let path = path.as_ref();
     let content = std::fs::read_to_string(path).map_err(|e| MappingError::ReadFile {
         path: path.to_path_buf(),
         source: e,
@@ -73,15 +74,16 @@ pub fn load_mapping(path: &Path) -> Result<CliMapping, MappingError> {
 }
 
 /// Convert a `camelCase`/`PascalCase` operation ID to kebab-case CLI pattern.
-/// e.g. `deleteItem` → `delete-item`, `DeleteAuthMethod` → `delete-auth-method`
+/// e.g. `"deleteItem"` → `"delete-item"`, `"DeleteAuthMethod"` → `"delete-auth-method"`
 #[must_use]
-pub fn to_kebab_case(s: &str) -> String {
+pub fn to_kebab_case(s: impl AsRef<str>) -> String {
+    let s = s.as_ref();
     let mut result = String::with_capacity(s.len() + 4);
     for (i, ch) in s.chars().enumerate() {
         if ch.is_uppercase() && i > 0 {
             result.push('-');
         }
-        result.push(ch.to_lowercase().next().unwrap_or(ch));
+        result.extend(ch.to_lowercase());
     }
     result
 }
@@ -89,24 +91,24 @@ pub fn to_kebab_case(s: &str) -> String {
 /// Build a CLI regex pattern for a given provider + operation.
 ///
 /// If a CLI mapping is available, uses the exact mapping.
-/// Otherwise, derives from operationId via kebab-case conversion.
+/// Otherwise, derives from `operationId` via kebab-case conversion.
 #[must_use]
 pub fn build_pattern(
-    provider_prefix: &str,
-    operation_id: &str,
+    provider_prefix: impl AsRef<str>,
+    operation_id: impl AsRef<str>,
     mapping: Option<&CliMapping>,
 ) -> String {
-    // Check mapping first
-    if let Some(m) = mapping {
-        for svc in m.services.values() {
-            if let Some(op) = svc.operations.get(operation_id) {
-                let escaped = regex::escape(&op.cli);
-                return format!("(?i){}\\s+{}", regex::escape(&m.prefix), escaped);
-            }
-        }
+    let provider_prefix = provider_prefix.as_ref();
+    let operation_id = operation_id.as_ref();
+
+    if let Some(m) = mapping
+        && let Some(op) = m.services.values()
+            .find_map(|svc| svc.operations.get(operation_id))
+    {
+        let escaped = regex::escape(&op.cli);
+        return format!("(?i){}\\s+{}", regex::escape(&m.prefix), escaped);
     }
 
-    // Default: kebab-case conversion
     let kebab = to_kebab_case(operation_id);
     format!("(?i){}\\s+{}\\b", regex::escape(provider_prefix), regex::escape(&kebab))
 }
