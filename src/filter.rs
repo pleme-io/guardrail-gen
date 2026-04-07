@@ -1,7 +1,7 @@
 use crate::spec::ResolvedOperation;
 
 /// Destructive verb patterns — matched case-insensitively against operation IDs.
-const DESTRUCTIVE_VERBS: &[&str] = &[
+pub(crate) const DESTRUCTIVE_VERBS: &[&str] = &[
     "delete", "destroy", "terminate", "remove", "purge",
     "revoke", "drop", "truncate", "flush", "reset",
     "disable", "deregister", "cancel", "uninstall",
@@ -18,6 +18,18 @@ const SAFE_VERBS: &[&str] = &[
     "tag", "untag", "start", "begin",
 ];
 
+/// Returns `true` if `haystack` contains any of the given `needles`.
+#[must_use]
+pub(crate) fn contains_any(haystack: &str, needles: &[&str]) -> bool {
+    needles.iter().any(|n| haystack.contains(n))
+}
+
+/// Returns `true` if `haystack` starts with any of the given `prefixes`.
+#[must_use]
+pub(crate) fn starts_with_any(haystack: &str, prefixes: &[&str]) -> bool {
+    prefixes.iter().any(|p| haystack.starts_with(p))
+}
+
 /// Check if an operation is destructive based on HTTP method + operation name.
 ///
 /// DELETE HTTP method is always destructive. For other methods, checks the
@@ -31,13 +43,11 @@ pub fn is_destructive(op: &ResolvedOperation) -> bool {
 
     let id_lower = op.operation_id.to_lowercase();
 
-    if SAFE_VERBS.iter().any(|safe| id_lower.starts_with(safe)) {
+    if starts_with_any(&id_lower, SAFE_VERBS) {
         return false;
     }
 
-    DESTRUCTIVE_VERBS
-        .iter()
-        .any(|verb| id_lower.contains(verb))
+    contains_any(&id_lower, DESTRUCTIVE_VERBS)
 }
 
 /// Filter a list of operations to only destructive ones.
@@ -59,6 +69,28 @@ mod tests {
             summary: String::new(),
             tags: vec![],
         }
+    }
+
+    // ── Shared helpers ──────────────────────────────────────────
+
+    #[test]
+    fn contains_any_found() {
+        assert!(contains_any("delete-item", &["delete", "remove"]));
+    }
+
+    #[test]
+    fn contains_any_not_found() {
+        assert!(!contains_any("list-items", &["delete", "remove"]));
+    }
+
+    #[test]
+    fn starts_with_any_found() {
+        assert!(starts_with_any("getItems", &["get", "list"]));
+    }
+
+    #[test]
+    fn starts_with_any_not_found() {
+        assert!(!starts_with_any("deleteItem", &["get", "list"]));
     }
 
     // ── DELETE method ────────────────────────────────────────────

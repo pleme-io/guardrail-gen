@@ -1,5 +1,6 @@
 use std::str::FromStr;
 
+use crate::filter::contains_any;
 use crate::spec::ResolvedOperation;
 
 /// Risk severity for guardrail rules.
@@ -74,20 +75,17 @@ pub fn classify(op: &ResolvedOperation) -> Severity {
     let path_lower = op.path.to_lowercase();
     let combined = format!("{id_lower} {path_lower}");
 
-    let matches_high = || HIGH_RISK.iter().any(|p| combined.contains(p));
-    let matches_low = || LOW_RISK.iter().any(|p| combined.contains(p));
-
     if op.method == "DELETE" {
-        if matches_high() {
+        if contains_any(&combined, HIGH_RISK) {
             return Severity::Block;
         }
-        if matches_low() {
+        if contains_any(&combined, LOW_RISK) {
             return Severity::Warn;
         }
         return Severity::Block;
     }
 
-    if matches_high() {
+    if contains_any(&combined, HIGH_RISK) {
         Severity::Block
     } else {
         Severity::Warn
