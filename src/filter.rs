@@ -1,7 +1,7 @@
 use crate::spec::ResolvedOperation;
 
 /// Destructive verb patterns — matched case-insensitively against operation IDs.
-const DESTRUCTIVE_VERBS: &[&str] = &[
+pub(crate) const DESTRUCTIVE_VERBS: &[&str] = &[
     "delete", "destroy", "terminate", "remove", "purge",
     "revoke", "drop", "truncate", "flush", "reset",
     "disable", "deregister", "cancel", "uninstall",
@@ -18,34 +18,40 @@ const SAFE_VERBS: &[&str] = &[
     "tag", "untag", "start", "begin",
 ];
 
+/// Returns `true` if `haystack` contains any of the given `needles`.
+#[must_use]
+pub(crate) fn contains_any(haystack: &str, needles: &[&str]) -> bool {
+    needles.iter().any(|n| haystack.contains(n))
+}
+
+/// Returns `true` if `haystack` starts with any of the given `prefixes`.
+#[must_use]
+pub(crate) fn starts_with_any(haystack: &str, prefixes: &[&str]) -> bool {
+    prefixes.iter().any(|p| haystack.starts_with(p))
+}
+
 /// Check if an operation is destructive based on HTTP method + operation name.
+///
+/// DELETE HTTP method is always destructive. For other methods, checks the
+/// operation ID against known destructive verb patterns (after excluding
+/// operations that start with safe verb prefixes).
 #[must_use]
 pub fn is_destructive(op: &ResolvedOperation) -> bool {
-    // DELETE HTTP method is always destructive
     if op.method == "DELETE" {
         return true;
     }
 
     let id_lower = op.operation_id.to_lowercase();
 
-    // Check safe verbs first — if the operation starts with a safe verb, skip it
-    for safe in SAFE_VERBS {
-        if id_lower.starts_with(safe) {
-            return false;
-        }
+    if starts_with_any(&id_lower, SAFE_VERBS) {
+        return false;
     }
 
-    // Check destructive verbs
-    for verb in DESTRUCTIVE_VERBS {
-        if id_lower.contains(verb) {
-            return true;
-        }
-    }
-
-    false
+    contains_any(&id_lower, DESTRUCTIVE_VERBS)
 }
 
 /// Filter a list of operations to only destructive ones.
+#[must_use]
 pub fn filter_destructive(ops: &[ResolvedOperation]) -> Vec<&ResolvedOperation> {
     ops.iter().filter(|op| is_destructive(op)).collect()
 }
@@ -63,6 +69,28 @@ mod tests {
             summary: String::new(),
             tags: vec![],
         }
+    }
+
+    // ── Shared helpers ──────────────────────────────────────────
+
+    #[test]
+    fn contains_any_found() {
+        assert!(contains_any("delete-item", &["delete", "remove"]));
+    }
+
+    #[test]
+    fn contains_any_not_found() {
+        assert!(!contains_any("list-items", &["delete", "remove"]));
+    }
+
+    #[test]
+    fn starts_with_any_found() {
+        assert!(starts_with_any("getItems", &["get", "list"]));
+    }
+
+    #[test]
+    fn starts_with_any_not_found() {
+        assert!(!starts_with_any("deleteItem", &["get", "list"]));
     }
 
     // ── DELETE method ────────────────────────────────────────────
@@ -94,11 +122,49 @@ mod tests {
     #[test] fn post_update_item() { assert!(!is_destructive(&op("POST", "updateItem"))); }
     #[test] fn put_update_role() { assert!(!is_destructive(&op("PUT", "updateRole"))); }
 
+    // ── Additional destructive verbs ────────────────────────────
+
+    #[test] fn post_uninstall() { assert!(is_destructive(&op("POST", "uninstallAgent"))); }
+    #[test] fn post_detach() { assert!(is_destructive(&op("POST", "detachVolume"))); }
+    #[test] fn post_disassociate() { assert!(is_destructive(&op("POST", "disassociateAddress"))); }
+    #[test] fn post_release() { assert!(is_destructive(&op("POST", "releaseAddress"))); }
+    #[test] fn post_abandon() { assert!(is_destructive(&op("POST", "abandonLifecycleAction"))); }
+
+    // ── Additional safe operations ──────────────────────────────
+
+    #[test] fn get_fetch_item() { assert!(!is_destructive(&op("GET", "fetchItem"))); }
+    #[test] fn get_search_items() { assert!(!is_destructive(&op("GET", "searchItems"))); }
+    #[test] fn get_query_logs() { assert!(!is_destructive(&op("GET", "queryLogs"))); }
+    #[test] fn post_validate() { assert!(!is_destructive(&op("POST", "validateConfig"))); }
+    #[test] fn post_enable_user() { assert!(!is_destructive(&op("POST", "enableUser"))); }
+    #[test] fn post_register() { assert!(!is_destructive(&op("POST", "registerTarget"))); }
+    #[test] fn post_associate() { assert!(!is_destructive(&op("POST", "associateAddress"))); }
+    #[test] fn post_attach() { assert!(!is_destructive(&op("POST", "attachVolume"))); }
+    #[test] fn post_tag() { assert!(!is_destructive(&op("POST", "tagResource"))); }
+    #[test] fn post_start() { assert!(!is_destructive(&op("POST", "startInstance"))); }
+
     // ── Edge cases ───────────────────────────────────────────────
 
     #[test] fn camel_case_delete() { assert!(is_destructive(&op("POST", "DeleteItem"))); }
     #[test] fn snake_case_delete() { assert!(is_destructive(&op("POST", "delete_item"))); }
     #[test] fn mixed_case() { assert!(is_destructive(&op("POST", "DELETEITEM"))); }
+
+    #[test]
+    fn unknown_verb_is_not_destructive() {
+        assert!(!is_destructive(&op("POST", "doSomething")));
+    }
+
+    #[test]
+    fn empty_operation_id_not_destructive() {
+        assert!(!is_destructive(&op("POST", "")));
+    }
+
+    #[test]
+    fn delete_method_any_operation_id() {
+        assert!(is_destructive(&op("DELETE", "")));
+        assert!(is_destructive(&op("DELETE", "listItems")));
+        assert!(is_destructive(&op("DELETE", "createFoo")));
+    }
 
     // ── Filter ───────────────────────────────────────────────────
 
@@ -114,5 +180,34 @@ mod tests {
         assert_eq!(filtered.len(), 2);
         assert!(filtered.iter().any(|o| o.operation_id == "deleteItem"));
         assert!(filtered.iter().any(|o| o.operation_id == "removeUser"));
+    }
+
+    #[test]
+    fn filter_empty_input() {
+        let ops: Vec<ResolvedOperation> = vec![];
+        let filtered = filter_destructive(&ops);
+        assert!(filtered.is_empty());
+    }
+
+    #[test]
+    fn filter_all_destructive() {
+        let ops = vec![
+            op("DELETE", "deleteA"),
+            op("POST", "destroyB"),
+            op("POST", "terminateC"),
+        ];
+        let filtered = filter_destructive(&ops);
+        assert_eq!(filtered.len(), 3);
+    }
+
+    #[test]
+    fn filter_all_safe() {
+        let ops = vec![
+            op("GET", "listItems"),
+            op("POST", "createItem"),
+            op("PUT", "updateItem"),
+        ];
+        let filtered = filter_destructive(&ops);
+        assert!(filtered.is_empty());
     }
 }

@@ -1,38 +1,101 @@
-use indexmap::IndexMap;
-use serde::Deserialize;
-use std::path::Path;
+use std::collections::BTreeMap;
+use std::path::{Path, PathBuf};
 
-// Re-export sekkei OpenAPI types for consumers
+use serde::Deserialize;
+
 pub use sekkei::{Info, OpenApiSpec, Operation, PathItem};
 
+/// Errors that can occur when parsing an `OpenAPI` or AWS SDK spec file.
+#[derive(Debug, thiserror::Error)]
+pub enum ParseError {
+    /// Failed to read the spec file from disk.
+    #[error("failed to read spec file {path}: {source}")]
+    ReadFile {
+        /// Path that could not be read.
+        path: PathBuf,
+        /// Underlying I/O error.
+        source: std::io::Error,
+    },
+    /// Failed to parse the spec content.
+    #[error("failed to parse spec from {path}: {source}")]
+    Parse {
+        /// Path whose content failed to parse.
+        path: PathBuf,
+        /// Underlying parse error from sekkei.
+        #[source]
+        source: anyhow::Error,
+    },
+}
+
 /// A parsed operation with its HTTP method and path.
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Default, PartialEq, Eq)]
 pub struct ResolvedOperation {
+    /// HTTP method (e.g. `GET`, `POST`, `DELETE`).
     pub method: String,
+    /// URL path template (e.g. `/items/{id}`).
     pub path: String,
+    /// Unique operation identifier from the spec.
     pub operation_id: String,
+    /// Human-readable summary or description.
     pub summary: String,
+    /// Tags assigned to this operation.
     pub tags: Vec<String>,
 }
 
-/// Parse an OpenAPI spec from a YAML or JSON file.
+impl ResolvedOperation {
+    /// Create a new operation with the given method and operation ID.
+    /// Path defaults to `"/"`, summary is empty, and tags are empty.
+    #[must_use]
+    pub fn new(method: impl Into<String>, operation_id: impl Into<String>) -> Self {
+        Self {
+            method: method.into(),
+            operation_id: operation_id.into(),
+            path: "/".to_owned(),
+            ..Self::default()
+        }
+    }
+
+    /// Builder method: set the path.
+    #[must_use]
+    pub fn with_path(mut self, path: impl Into<String>) -> Self {
+        self.path = path.into();
+        self
+    }
+
+    /// Builder method: set the summary.
+    #[must_use]
+    pub fn with_summary(mut self, summary: impl Into<String>) -> Self {
+        self.summary = summary.into();
+        self
+    }
+}
+
+/// Parse an `OpenAPI` spec from a YAML or JSON file.
 /// Also supports AWS SDK `.min.json` model format.
 ///
 /// # Errors
 ///
-/// Returns an error if the file can't be read or parsed.
-pub fn parse_spec(path: &Path) -> anyhow::Result<OpenApiSpec> {
-    let content = std::fs::read_to_string(path)?;
+/// Returns [`ParseError::ReadFile`] if the file cannot be read,
+/// or [`ParseError::Parse`] if the content is not valid.
+pub fn parse_spec(path: impl AsRef<Path>) -> Result<OpenApiSpec, ParseError> {
+    let path = path.as_ref();
+    let content = std::fs::read_to_string(path).map_err(|e| ParseError::ReadFile {
+        path: path.to_path_buf(),
+        source: e,
+    })?;
 
     // Try AWS SDK model format first (has "operations" at top level, no "paths")
-    if let Ok(aws) = serde_json::from_str::<AwsSdkModel>(&content) {
-        if !aws.operations.is_empty() && aws.metadata.is_some() {
-            return Ok(aws_to_openapi(aws));
-        }
+    if let Ok(aws) = serde_json::from_str::<AwsSdkModel>(&content)
+        && !aws.operations.is_empty()
+        && aws.metadata.is_some()
+    {
+        return Ok(aws_to_openapi(aws));
     }
 
-    // Standard OpenAPI — use sekkei's loader
-    sekkei::load_spec_from_str(&content, path)
+    sekkei::load_spec_from_str(&content, path).map_err(|e| ParseError::Parse {
+        path: path.to_path_buf(),
+        source: e,
+    })
 }
 
 // ═══════════════════════════════════════════════════════════════════
@@ -43,7 +106,7 @@ pub fn parse_spec(path: &Path) -> anyhow::Result<OpenApiSpec> {
 struct AwsSdkModel {
     metadata: Option<AwsMetadata>,
     #[serde(default)]
-    operations: IndexMap<String, AwsOperation>,
+    operations: BTreeMap<String, AwsOperation>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -102,7 +165,6 @@ fn aws_to_openapi(aws: AwsSdkModel) -> OpenApiSpec {
         };
         match method.as_str() {
             "GET" => item.get = Some(operation),
-            "POST" => item.post = Some(operation),
             "PUT" => item.put = Some(operation),
             "DELETE" => item.delete = Some(operation),
             "PATCH" => item.patch = Some(operation),
@@ -130,6 +192,7 @@ fn aws_to_openapi(aws: AwsSdkModel) -> OpenApiSpec {
 }
 
 /// Extract all operations from a spec with their HTTP methods.
+#[must_use]
 pub fn all_operations(spec: &OpenApiSpec) -> Vec<ResolvedOperation> {
     sekkei::all_operations(spec)
         .into_iter()
@@ -156,6 +219,38 @@ pub fn all_operations(spec: &OpenApiSpec) -> Vec<ResolvedOperation> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use pretty_assertions::assert_eq;
+    use std::io::Write;
+
+    #[test]
+    fn resolved_operation_default() {
+        let op = ResolvedOperation::default();
+        assert!(op.method.is_empty());
+        assert!(op.path.is_empty());
+        assert!(op.operation_id.is_empty());
+        assert!(op.summary.is_empty());
+        assert!(op.tags.is_empty());
+    }
+
+    #[test]
+    fn resolved_operation_builder() {
+        let op = ResolvedOperation::new("DELETE", "removeItem")
+            .with_path("/items/{id}")
+            .with_summary("Remove an item");
+        assert_eq!(op.method, "DELETE");
+        assert_eq!(op.operation_id, "removeItem");
+        assert_eq!(op.path, "/items/{id}");
+        assert_eq!(op.summary, "Remove an item");
+        assert!(op.tags.is_empty());
+    }
+
+    #[test]
+    fn resolved_operation_new_defaults() {
+        let op = ResolvedOperation::new("POST", "deleteItem");
+        assert_eq!(op.path, "/");
+        assert!(op.summary.is_empty());
+        assert!(op.tags.is_empty());
+    }
 
     #[test]
     fn parse_minimal_spec() {
@@ -186,5 +281,304 @@ paths:
         assert!(ops
             .iter()
             .any(|o| o.operation_id == "listItems" && o.method == "GET"));
+    }
+
+    #[test]
+    fn parse_spec_from_yaml_file() {
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("spec.yaml");
+        let mut f = std::fs::File::create(&path).unwrap();
+        write!(
+            f,
+            r#"
+openapi: "3.0.0"
+info:
+  title: File API
+  version: "2.0.0"
+paths:
+  /things:
+    get:
+      operationId: listThings
+      summary: List things
+"#
+        )
+        .unwrap();
+
+        let spec = parse_spec(&path).unwrap();
+        assert_eq!(spec.info.title, "File API");
+        let ops = all_operations(&spec);
+        assert_eq!(ops.len(), 1);
+        assert_eq!(ops[0].operation_id, "listThings");
+    }
+
+    #[test]
+    fn parse_spec_from_json_file() {
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("spec.json");
+        let mut f = std::fs::File::create(&path).unwrap();
+        write!(
+            f,
+            r#"{{
+  "info": {{ "title": "JSON API", "version": "1.0.0" }},
+  "paths": {{
+    "/items": {{
+      "delete": {{
+        "operationId": "deleteItem",
+        "summary": "Delete item"
+      }}
+    }}
+  }}
+}}"#
+        )
+        .unwrap();
+
+        let spec = parse_spec(&path).unwrap();
+        assert_eq!(spec.info.title, "JSON API");
+        let ops = all_operations(&spec);
+        assert_eq!(ops.len(), 1);
+        assert_eq!(ops[0].method, "DELETE");
+    }
+
+    #[test]
+    fn parse_spec_nonexistent_file() {
+        let err = parse_spec(Path::new("/nonexistent/spec.yaml")).unwrap_err();
+        assert!(matches!(err, ParseError::ReadFile { .. }));
+        let msg = err.to_string();
+        assert!(msg.contains("failed to read spec file"));
+    }
+
+    #[test]
+    fn parse_aws_sdk_model() {
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("service.min.json");
+        let mut f = std::fs::File::create(&path).unwrap();
+        write!(
+            f,
+            r#"{{
+  "metadata": {{
+    "serviceFullName": "AWS Test Service"
+  }},
+  "operations": {{
+    "DeleteBucket": {{
+      "http": {{ "method": "DELETE", "requestUri": "/buckets/{{Bucket}}" }}
+    }},
+    "ListBuckets": {{
+      "http": {{ "method": "GET", "requestUri": "/buckets" }}
+    }},
+    "CreateThing": {{}}
+  }}
+}}"#
+        )
+        .unwrap();
+
+        let spec = parse_spec(&path).unwrap();
+        assert_eq!(spec.info.title, "AWS Test Service");
+
+        let ops = all_operations(&spec);
+        assert_eq!(ops.len(), 3);
+        assert!(ops.iter().any(|o| o.operation_id == "DeleteBucket" && o.method == "DELETE"));
+        assert!(ops.iter().any(|o| o.operation_id == "ListBuckets" && o.method == "GET"));
+        assert!(ops.iter().any(|o| o.operation_id == "CreateThing" && o.method == "POST"));
+    }
+
+    #[test]
+    fn aws_model_without_metadata_falls_through() {
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("no-meta.json");
+        let mut f = std::fs::File::create(&path).unwrap();
+        write!(
+            f,
+            r#"{{
+  "operations": {{
+    "Foo": {{}}
+  }}
+}}"#
+        )
+        .unwrap();
+
+        let result = parse_spec(&path);
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn aws_model_empty_operations_falls_through() {
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("empty-ops.json");
+        let mut f = std::fs::File::create(&path).unwrap();
+        write!(
+            f,
+            r#"{{
+  "metadata": {{ "serviceFullName": "Empty" }},
+  "operations": {{}}
+}}"#
+        )
+        .unwrap();
+
+        let result = parse_spec(&path);
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn all_operations_skips_missing_operation_id() {
+        let yaml = r#"
+openapi: "3.0.0"
+info:
+  title: Test
+  version: "1.0.0"
+paths:
+  /items:
+    get:
+      operationId: listItems
+      summary: List items
+    post:
+      summary: No operation ID here
+"#;
+        let spec: OpenApiSpec = serde_yaml_ng::from_str(yaml).unwrap();
+        let ops = all_operations(&spec);
+        assert_eq!(ops.len(), 1);
+        assert_eq!(ops[0].operation_id, "listItems");
+    }
+
+    #[test]
+    fn all_operations_uses_description_as_fallback_summary() {
+        let yaml = r#"
+openapi: "3.0.0"
+info:
+  title: Test
+  version: "1.0.0"
+paths:
+  /items:
+    get:
+      operationId: getItem
+      description: Fetches a single item
+"#;
+        let spec: OpenApiSpec = serde_yaml_ng::from_str(yaml).unwrap();
+        let ops = all_operations(&spec);
+        assert_eq!(ops.len(), 1);
+        assert_eq!(ops[0].summary, "Fetches a single item");
+    }
+
+    #[test]
+    fn all_operations_prefers_summary_over_description() {
+        let yaml = r#"
+openapi: "3.0.0"
+info:
+  title: Test
+  version: "1.0.0"
+paths:
+  /items:
+    get:
+      operationId: getItem
+      summary: Get item
+      description: Long description
+"#;
+        let spec: OpenApiSpec = serde_yaml_ng::from_str(yaml).unwrap();
+        let ops = all_operations(&spec);
+        assert_eq!(ops[0].summary, "Get item");
+    }
+
+    #[test]
+    fn all_operations_method_uppercased() {
+        let yaml = r#"
+openapi: "3.0.0"
+info:
+  title: Test
+  version: "1.0.0"
+paths:
+  /items:
+    put:
+      operationId: updateItem
+    patch:
+      operationId: patchItem
+"#;
+        let spec: OpenApiSpec = serde_yaml_ng::from_str(yaml).unwrap();
+        let ops = all_operations(&spec);
+        assert!(ops.iter().any(|o| o.method == "PUT"));
+        assert!(ops.iter().any(|o| o.method == "PATCH"));
+    }
+
+    #[test]
+    fn all_operations_empty_paths() {
+        let yaml = r#"
+openapi: "3.0.0"
+info:
+  title: Empty
+  version: "1.0.0"
+paths: {}
+"#;
+        let spec: OpenApiSpec = serde_yaml_ng::from_str(yaml).unwrap();
+        let ops = all_operations(&spec);
+        assert!(ops.is_empty());
+    }
+
+    #[test]
+    fn aws_model_default_method_is_post() {
+        let json = r#"{
+  "metadata": { "serviceFullName": "Test" },
+  "operations": {
+    "DoSomething": {}
+  }
+}"#;
+        let aws: AwsSdkModel = serde_json::from_str(json).unwrap();
+        let spec = aws_to_openapi(aws);
+        let ops = all_operations(&spec);
+        assert_eq!(ops.len(), 1);
+        assert_eq!(ops[0].method, "POST");
+    }
+
+    #[test]
+    fn aws_model_title_defaults_when_missing_service_name() {
+        let json = r#"{
+  "metadata": {},
+  "operations": {
+    "Foo": {}
+  }
+}"#;
+        let aws: AwsSdkModel = serde_json::from_str(json).unwrap();
+        let spec = aws_to_openapi(aws);
+        assert!(spec.info.title.is_empty());
+    }
+
+    #[test]
+    fn aws_model_put_method() {
+        let json = r#"{
+  "metadata": { "serviceFullName": "PutTest" },
+  "operations": {
+    "PutObject": {
+      "http": { "method": "PUT", "requestUri": "/objects" }
+    }
+  }
+}"#;
+        let aws: AwsSdkModel = serde_json::from_str(json).unwrap();
+        let spec = aws_to_openapi(aws);
+        let ops = all_operations(&spec);
+        assert_eq!(ops[0].method, "PUT");
+    }
+
+    #[test]
+    fn aws_model_patch_method() {
+        let json = r#"{
+  "metadata": { "serviceFullName": "PatchTest" },
+  "operations": {
+    "UpdateItem": {
+      "http": { "method": "PATCH", "requestUri": "/items" }
+    }
+  }
+}"#;
+        let aws: AwsSdkModel = serde_json::from_str(json).unwrap();
+        let spec = aws_to_openapi(aws);
+        let ops = all_operations(&spec);
+        assert_eq!(ops[0].method, "PATCH");
+    }
+
+    #[test]
+    fn parse_error_display() {
+        let err = ParseError::ReadFile {
+            path: PathBuf::from("/foo/bar.yaml"),
+            source: std::io::Error::new(std::io::ErrorKind::NotFound, "no such file"),
+        };
+        let msg = err.to_string();
+        assert!(msg.contains("/foo/bar.yaml"));
+        assert!(msg.contains("no such file"));
     }
 }

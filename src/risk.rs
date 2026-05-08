@@ -1,21 +1,52 @@
+use std::str::FromStr;
+
+use crate::filter::contains_any;
 use crate::spec::ResolvedOperation;
 
 /// Risk severity for guardrail rules.
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize)]
+#[serde(rename_all = "lowercase")]
+#[non_exhaustive]
 pub enum Severity {
+    /// High-risk: the command should be blocked by default.
     Block,
+    /// Medium-risk: the command should trigger a warning.
     Warn,
 }
 
 impl Severity {
+    /// Returns the severity as a lowercase string slice.
     #[must_use]
-    pub fn as_str(&self) -> &str {
+    pub fn as_str(self) -> &'static str {
         match self {
             Self::Block => "block",
             Self::Warn => "warn",
         }
     }
 }
+
+impl std::fmt::Display for Severity {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.write_str(self.as_str())
+    }
+}
+
+impl FromStr for Severity {
+    type Err = ParseSeverityError;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "block" => Ok(Self::Block),
+            "warn" => Ok(Self::Warn),
+            _ => Err(ParseSeverityError(s.to_owned())),
+        }
+    }
+}
+
+/// Error returned when parsing an invalid severity string.
+#[derive(Debug, Clone, thiserror::Error)]
+#[error("unknown severity: {0:?} (expected \"block\" or \"warn\")")]
+pub struct ParseSeverityError(String);
 
 /// High-risk resource patterns — operations on these always block.
 const HIGH_RISK: &[&str] = &[
@@ -34,37 +65,31 @@ const LOW_RISK: &[&str] = &[
 ];
 
 /// Classify an operation's risk severity based on resource type.
+///
+/// DELETE on high-risk resources → Block, DELETE on low-risk → Warn,
+/// DELETE on unknown → Block (safer default).
+/// Non-DELETE destructive verbs on high-risk → Block, otherwise Warn.
 #[must_use]
 pub fn classify(op: &ResolvedOperation) -> Severity {
     let id_lower = op.operation_id.to_lowercase();
     let path_lower = op.path.to_lowercase();
     let combined = format!("{id_lower} {path_lower}");
 
-    // DELETE HTTP method on high-risk resources → block
     if op.method == "DELETE" {
-        for pattern in HIGH_RISK {
-            if combined.contains(pattern) {
-                return Severity::Block;
-            }
+        if contains_any(&combined, HIGH_RISK) {
+            return Severity::Block;
         }
-        // DELETE on low-risk → warn
-        for pattern in LOW_RISK {
-            if combined.contains(pattern) {
-                return Severity::Warn;
-            }
+        if contains_any(&combined, LOW_RISK) {
+            return Severity::Warn;
         }
-        // DELETE on unknown resource → block (safer default)
         return Severity::Block;
     }
 
-    // Non-DELETE destructive verbs (e.g. POST deleteItem)
-    for pattern in HIGH_RISK {
-        if combined.contains(pattern) {
-            return Severity::Block;
-        }
+    if contains_any(&combined, HIGH_RISK) {
+        Severity::Block
+    } else {
+        Severity::Warn
     }
-
-    Severity::Warn
 }
 
 #[cfg(test)]
@@ -82,11 +107,137 @@ mod tests {
         }
     }
 
+    // ── Existing: DELETE on high-risk ─────────────────────────────
+
     #[test] fn delete_database_blocks() { assert_eq!(classify(&op("DELETE", "deleteDatabase", "/databases/{id}")), Severity::Block); }
     #[test] fn delete_instance_blocks() { assert_eq!(classify(&op("DELETE", "deleteInstance", "/instances/{id}")), Severity::Block); }
+
+    // ── Existing: DELETE on low-risk ────────────────────────────
+
     #[test] fn delete_tag_warns() { assert_eq!(classify(&op("DELETE", "deleteTag", "/tags/{id}")), Severity::Warn); }
+
+    // ── Existing: POST (non-DELETE) on high-risk ────────────────
+
     #[test] fn post_delete_item_blocks() { assert_eq!(classify(&op("POST", "deleteItem", "/delete-item")), Severity::Block); }
     #[test] fn post_delete_role_blocks() { assert_eq!(classify(&op("POST", "deleteRole", "/delete-role")), Severity::Block); }
-    #[test] fn delete_unknown_blocks() { assert_eq!(classify(&op("DELETE", "deleteFoo", "/foos/{id}")), Severity::Block); }
     #[test] fn post_revoke_credential_blocks() { assert_eq!(classify(&op("POST", "revokeCredential", "/revoke")), Severity::Block); }
+
+    // ── Existing: DELETE on unknown resource defaults to block ───
+
+    #[test] fn delete_unknown_blocks() { assert_eq!(classify(&op("DELETE", "deleteFoo", "/foos/{id}")), Severity::Block); }
+
+    // ── New: DELETE on various high-risk resources ──────────────
+
+    #[test] fn delete_cluster_blocks() { assert_eq!(classify(&op("DELETE", "deleteCluster", "/clusters/{id}")), Severity::Block); }
+    #[test] fn delete_volume_blocks() { assert_eq!(classify(&op("DELETE", "deleteVolume", "/volumes/{id}")), Severity::Block); }
+    #[test] fn delete_bucket_blocks() { assert_eq!(classify(&op("DELETE", "deleteBucket", "/buckets/{id}")), Severity::Block); }
+    #[test] fn delete_secret_blocks() { assert_eq!(classify(&op("DELETE", "deleteSecret", "/secrets/{id}")), Severity::Block); }
+    #[test] fn delete_vault_blocks() { assert_eq!(classify(&op("DELETE", "deleteVault", "/vaults/{id}")), Severity::Block); }
+    #[test] fn delete_namespace_blocks() { assert_eq!(classify(&op("DELETE", "deleteNamespace", "/ns/{id}")), Severity::Block); }
+    #[test] fn delete_account_blocks() { assert_eq!(classify(&op("DELETE", "deleteAccount", "/accounts/{id}")), Severity::Block); }
+
+    // ── New: DELETE on various low-risk resources ───────────────
+
+    #[test] fn delete_label_warns() { assert_eq!(classify(&op("DELETE", "deleteLabel", "/labels/{id}")), Severity::Warn); }
+    #[test] fn delete_metric_warns() { assert_eq!(classify(&op("DELETE", "deleteMetric", "/metrics/{id}")), Severity::Warn); }
+    #[test] fn delete_alarm_warns() { assert_eq!(classify(&op("DELETE", "deleteAlarm", "/alarms/{id}")), Severity::Warn); }
+    #[test] fn delete_subscription_warns() { assert_eq!(classify(&op("DELETE", "deleteSubscription", "/subs/{id}")), Severity::Warn); }
+    #[test] fn delete_topic_warns() { assert_eq!(classify(&op("DELETE", "deleteTopic", "/topics/{id}")), Severity::Warn); }
+    #[test] fn delete_queue_warns() { assert_eq!(classify(&op("DELETE", "deleteQueue", "/queues/{id}")), Severity::Warn); }
+
+    // ── New: non-DELETE destructive on low-risk resource warns ──
+
+    #[test] fn post_revoke_label_warns() { assert_eq!(classify(&op("POST", "revokeLabel", "/labels")), Severity::Warn); }
+    #[test] fn post_disable_alarm_warns() { assert_eq!(classify(&op("POST", "disableAlarm", "/alarms")), Severity::Warn); }
+
+    // ── New: non-DELETE destructive on high-risk resource blocks ─
+
+    #[test] fn post_terminate_instance_blocks() { assert_eq!(classify(&op("POST", "terminateInstance", "/instances")), Severity::Block); }
+    #[test] fn post_destroy_cluster_blocks() { assert_eq!(classify(&op("POST", "destroyCluster", "/clusters")), Severity::Block); }
+    #[test] fn post_purge_vault_blocks() { assert_eq!(classify(&op("POST", "purgeVault", "/vaults")), Severity::Block); }
+
+    // ── New: path-based classification ──────────────────────────
+
+    #[test]
+    fn high_risk_detected_from_path_only() {
+        assert_eq!(classify(&op("POST", "removeXyz", "/databases/xyz")), Severity::Block);
+    }
+
+    #[test]
+    fn low_risk_detected_from_path_only() {
+        assert_eq!(classify(&op("DELETE", "deleteFoo", "/notifications/{id}")), Severity::Warn);
+    }
+
+    // ── Severity Display / as_str ───────────────────────────────
+
+    #[test]
+    fn severity_display_block() {
+        assert_eq!(format!("{}", Severity::Block), "block");
+    }
+
+    #[test]
+    fn severity_display_warn() {
+        assert_eq!(format!("{}", Severity::Warn), "warn");
+    }
+
+    #[test]
+    fn severity_as_str_block() {
+        assert_eq!(Severity::Block.as_str(), "block");
+    }
+
+    #[test]
+    fn severity_as_str_warn() {
+        assert_eq!(Severity::Warn.as_str(), "warn");
+    }
+
+    #[test]
+    fn severity_clone_and_copy() {
+        let s = Severity::Block;
+        let s2 = s;
+        #[allow(clippy::clone_on_copy)]
+        let s3 = s.clone();
+        assert_eq!(s, s2);
+        assert_eq!(s, s3);
+    }
+
+    #[test]
+    fn severity_debug_format() {
+        assert_eq!(format!("{:?}", Severity::Block), "Block");
+        assert_eq!(format!("{:?}", Severity::Warn), "Warn");
+    }
+
+    // ── FromStr ──────────────────────────────────────────────────
+
+    #[test]
+    fn from_str_block() {
+        assert_eq!("block".parse::<Severity>().unwrap(), Severity::Block);
+    }
+
+    #[test]
+    fn from_str_warn() {
+        assert_eq!("warn".parse::<Severity>().unwrap(), Severity::Warn);
+    }
+
+    #[test]
+    fn from_str_invalid() {
+        assert!("critical".parse::<Severity>().is_err());
+    }
+
+    #[test]
+    fn display_from_str_round_trip() {
+        for sev in [Severity::Block, Severity::Warn] {
+            assert_eq!(sev.to_string().parse::<Severity>().unwrap(), sev);
+        }
+    }
+
+    // ── Serde ────────────────────────────────────────────────────
+
+    #[test]
+    fn serde_json_round_trip() {
+        for sev in [Severity::Block, Severity::Warn] {
+            let json = serde_json::to_string(&sev).unwrap();
+            let back: Severity = serde_json::from_str(&json).unwrap();
+            assert_eq!(sev, back);
+        }
+    }
 }
